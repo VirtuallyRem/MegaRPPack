@@ -1,0 +1,19 @@
+objectTypes = {
+
+	#########################################################
+	#														#
+	#						Horror				      		#
+	#														#
+	#########################################################
+
+	pdxmesh = {
+		name = "humanoid_hor_01_mesh"
+		file = "gfx/models/portraits/horror/humanoid_hor_01.mesh"
+		scale = 1.05
+		
+		animation = { id = "idle"	type = "humanoid_hor_01_idle_animation" }
+		animation = { id = "idle2"	type = "humanoid_hor_01_idle_2_animation" }
+		animation = { id = "idle3"	type = "humanoid_hor_01_idle_3_animation" }
+		animation = { id = "idle4"	type = "humanoid_hor_01_idle_4_animation" }
+	}
+}

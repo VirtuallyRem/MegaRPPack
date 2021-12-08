@@ -1,0 +1,256 @@
+﻿
+Beren = {
+	randomized = no
+
+	ship_names = {
+
+		generic = {
+			Mystic Naiad Nautilus Nebula Nimble "North Star" Nymph Obdurate Ocean Onward Oracle Paradox Paragon Pearl Peregrine Perseverance Marksman Rifleman Sniper Trident Trojan Trumpet Truncheon Typhoon Undaunted Venture Versatile Vigorous Viper Vivacious Winger Wizard Wyvern Wolfhound Devastator Warhammer Retribution Senator Tornado Infinity Usurper Utmost Valorous Whirlwind Athena Artemis Vigilance Decimator Indomitable Goliath Sentinel Brilliant Blazer Audacity Gallant Nova Shadow Allegiance Challenger Fearless Protector Guardian Victorious Courageous Defiance Valorous Azrael
+		}
+
+		corvette = {
+			Agile Archer Arrow Bruiser Cherub Chimera Claymore Broadsword Battleaxe Crossbow Cutlass Deterrent Errant Faithful Fierce Gladius Longbow 
+			Grappler Hammer Vampire Velox Venator Vendetta Venerable Venomous Taciturn Supreme Success Shredder Seraph Serpent Spitfire Stalker Stratagem
+			Scimitar Scorcher Scourge Scythe Revenant Redoubtable Raptor Reaver Prodigal Rapier Prudent Persistent Peerless Myrmidon Indignant Javelin Knight
+			Starwolf Bonaventure Adventure Boxer Buccaneer Cavalier Celestial Chariot Comet Crucible Cyclone Decisive Dexterous Diadem Earnest Eclipse Forger Fortune 
+			Gauntlet Griffin Horizon Hotspur Hurricane Hussar Jubilant Lancer Lightning Magic Mediator Mermaid Meteor Minstrel Miranda Mustang Sharpshooter
+		}
+		
+		destroyer = {
+			Cyclops Centaur Adversary Assassin Dagger Daring Duty Havoc Hero Hunter Justice Impeccable Interceptor Infernal Loyal Matchless Mauler Mayhem Malice
+			Menace Merciless Mischief Monarch Patriot Predator Powerful Punisher Ravager Reaper Savage Spiteful Templar Terminator Terror Thrasher Minotaur
+			Manticore Interdictor Intruder Hydra Enfield Harasser Unbeaten Werewolf Zealous Petulant Phantom Phoenix Pike Pursuer Raider Rainbow Rapid Redemption 
+			Relentless Rigorous Robust Sabre Salvation Sanguine Scarab Scepter "Sea Witch" Siren Sorceress Spearhead Specter Spirit Splendid Stallion Stalwart 
+			Steadfast Strenuous Superb Supernova Surprise Swiftsure Talent Talisman Talon Taurus Tenacious "Thunder Child" Thunderous Tireless Trenchant Righteous
+		}
+		
+		cruiser = {
+			Acheron Achilles Agamemnon Amphion Aquilon Argonaut Argus Ariel Aurora Avernus Bacchus Bucephalus Calliope Calypso Castor Charybdis Circe
+			Cleopatra Constantine Cordelia Cyrus Damocles Daedalus Darius Diomede Dryad Electra Endymion Erebus Fenris Freya Gilgamesh Gorgon Halcyon Hecate
+			Hector Hesperus Janus Jason Juno Jupiter Lancelot Lazarus Leander Leonidas Lysander Maenad Mars Medea Medusa Menestheus Mercury Merlin Minerva
+			Minos Neptune Nessus Nestor Nimrod Niobe Oberon Odin Ophelia Orestes Orpheus Osiris Pandora Penelope Persephone Perseus Phoebe Pluto Poseidon
+			Proteus Pylades Serapis Stygian Tantalus Telemachus Theseus Thor Trajan Triton Venus Adamant Ardent Assail Austere Archon Adroit Aegis Anchor 
+			Corsair Banshee Enchantress Eradicator Tormentor Legion Reprisal Aggressor Assault Eviscerator Imperator Excellence Unrivalled Warlord 
+		}
+		
+		battleship = {
+			Vengeance Triumphant Nemesis Avenger Champion Conqueror Crusader Glory Immortal Judicator Vanguard Renown Demolisher Dragon Executor Furious Gladiator
+			Magnificent Ogre Onslaught Revenge Vanquisher Vehement Basilisk Tempest Overlord Warrior Titan Colossus Prometheus Nike Paladin Sovereign Repulse
+			Majestic Avatar Behemoth Centurion Citadel Dreadnought Harbinger Juggernaut Leviathan Katana Kraken Cerberus Valkyrie Hyperion Galatea Ambush Vindicator
+		}
+		
+		science = {
+			Crescent Diligent Zephyr Enigma Conquistador Scylla Arbiter Asperity Eminence Astute Alacrity Satyr Prospero Untiring Zenith Torch Remembrance Pilgrim
+			Trailblazer Vagabond Wayfarer Ambassador Emissary Nomad Pathfinder Wanderer Traveler
+		}
+		
+		colonizer = {
+			Godspeed Prophecy "Manifest Destiny" Virtue Potential Expansion "Pioneer Spirit" Prosperity Summit Pinnacle Seeder Harvest Demeter Isis Ceres Exodus
+			Foundation Scion Progeny Obligation Purpose Provider "Shining City" Acquirer Cultivator "Dawn of Civilization" Purity Community Brotherhood
+		}
+		
+		constructor = {
+			Industry Assiduity Effort Laborer Builder Craftsman "Hard Hat" Progress Engineer Promise Service Shelter Beast Creator Developer Forger Foundry 
+			Factory Anvil Pillar Architect Accommodator Ptah Ilmarinen Creidhne Gobannus Luchtaine Goibniu Vishvakarman Tvastar Ikenga Qaynan Ucuetis Ogoun
+		}
+		
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		terraform_station = { }
+		observation_station = { }
+		outpost_station = {
+			#random_names = {
+				"Far Reach" Watchtower Sphered Influential Assertion SPACERAD "Watchful Eye" Sentinel Demarcator "Frontier Finalizer" "Ever Watchful" Divider Bastion "Home Turf" Wide
+			#}
+			#sequential_name = "%O% Frontier Outpost"
+		}
+		
+		transport = {
+			Xiphos Spatha Falchion Shashka Sica Spadroon Jian Dao Zhanmadao Makhaira Falcata Kopis Rhomphaia Falx Longsword Katzbalger Cinquedea Estoc Bolo 
+			Kilij Shamshir Kaskara Flyssa Takoba Yatagan Urumi Liuyedao Tachi Khanda Wodao Changdao Yanmaodao Miaodao Chokuto Tsurugi Odachi Wakizashi Uchigatana
+			Shikomizue Firangi Talwar Pata Kastane Macana Khopesh Acinaces Macuahuitl Belawa Nimcha Shotel Krabi Parang Klewang Surik Niabor Mandau Kampilan Gari 
+			Panabas
+		}
+		
+		military_station_small = {}
+		
+		#"Star Post 1" "Star Post 2" "Star Post 3" "Star Post 4" "Star Post 5" "Star Post 6" "Star Post 7" "Star Post 8" "Star Post 9" "Star Post 10" "Star Post 11" "Star Post 12"
+		#"Star Post 13" "Star Post 14" "Star Post 15" "Star Post 16" "Star Post 17" "Star Post 18" "Star Post 19" "Star Post 20" "Star Post 21" "Star Post 22" "Star Post 23"
+		#"Star Post 24" "Star Post 25" "Star Post 26" "Star Post 27" "Star Post 28" "Star Post 29" "Star Post 30" "Star Post 31" "Star Post 32" "Star Post 33" "Star Post 34"
+		#"Star Post 35" "Star Post 36" "Star Post 37" "Star Post 38" "Star Post 39" "Star Post 40"
+		
+		military_station_medium = {}
+		
+		#"Fort Victory" "Fort Success" "Fort Triumph" "Fort Supremacy" "Fort Superior" "Fort Adventure"
+		#"Fort Ascendancy" "Fort Paramount" "Fort Preponderous" "Fort Exemplary" "Fort Eximious"
+		#"Fort Acclaim" "Fort Honor" "Fort Renown" "Fort Glory" "Fort Superb" "Fort Magnificence" 
+		#"Fort Majestic" "Fort Splendor" "Fort Paradigm" "Fort Flawless" "Fort Consummate" "Fort Merit"
+		#"Fort Perfection" "Fort Virtue" "Fort Advantage" "Fort Rectitude" "Fort Incorruptible" 
+		#"Fort Integrity" "Fort Justice" "Fort Probity" "Fort Prudence" "Fort Purity" "Fort Resolute"
+		#"Fort Dignity" "Fort Distinction" "Fort Excellence" "Fort Faithful" "Fort Discipline"
+		#"Fort Recompense" "Fort Retribution" "Fort Requiem" "Fort Courage" "Fort Valor" "Fort Gallant"
+		#"Fort Daring" "Fort Constancy" "Fort Perseverence" "Fort Tenacity" "Fort Sedulity" "Fort Diligence"
+		#"Fort Pertinacity" "Fort Steadfast"
+		
+		military_station_large = {
+			Victory Success Triumph Supremacy Superior Adventure Ascendancy Paramount Preponderous Exemplary Eximious
+			Acclaim Honor Renown Glory Superb Magnificence Majestic Splendor Paradigm Flawless Consummate Merit
+			Perfection Virtue Advantage Rectitude Incorruptible Integrity Justice Probity Prudence Purity Resolute
+			Dignity Distinction Excellence Faithful Discipline Recompense Retribution Requiem Courage Valor Gallant
+			Daring Constancy Perseverence Tenacity Sedulity Diligence Pertinacity Steadfast
+		}
+		
+		
+		# "Battlestation Impregnable" "Battlestation Insurmountable" "Battlestation Impenetrable" "Battlestation Unbreakable" "Battlestation Implacable" 
+		# "Battlestation Impervious" "Battlestation Unswerving" "Battlestation Inexorable" "Battlestation Inflexible" "Battlestation Unyielding"
+		
+	}
+
+	fleet_names = {
+		random_names = {
+			"Löwengarde" "Drachengarde" "Greifengarde" "Bärengarde" "Prinzengarde" "Maulswurfsgarde"
+			"Goldene Lanze" "Perricumer Garde" "Wehrheimer Garde" "Ogerwacht" "Garderegiment Yaquir" "Ferdorker Garde"
+			"Ingerimms Hammer" "Elenviner Garde" "Garderegiment Drachenpforte" "Tralloper Garde" "Havener Flussgarde" "Winhaller Grenzgarde"
+			"Abilachter Reiter" "Mendenische Garde" "Greifenfurter Garde" "Garderegiment Breitenau" "Beilunker Seegarde" 
+		}
+		sequential_name = "%O% Guardregiment"
+	}
+	
+	army_names = {
+		generic = { 
+			sequential_name = "%O% Levys"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Guard Regiment"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Levys"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% Clone regiment"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Mechanized Regiment"
+		}
+		
+		android_army = {
+			sequential_name = "%O% Android Auxiliary"
+		}
+		
+		psionic_army = { 
+			random_names = { 
+				"Shadow Legion" "Ghost Legion" "Wraith Legion" "Specter Legion" "Phantom Legion" "Widowmaker Legion" "Skull Legion" "Banshee Legion"
+				"Warlock Legion" "Reaper Legion"
+			}
+			sequential_name = "%O% Mage Corps"
+		}
+		
+		xenomorph_army = {
+			random_names = { 
+				"Experimental Unit 'Rahab'" "Experimental Unit 'Jaculus'" "Experimental Unit 'Amaru'" "Experimental Unit 'Orochi'" "Experimental Unit 'Typhon'" "Experimental Unit 'Illuyanka'"
+				"Experimental Unit 'Bakunawa'" "Experimental Unit 'Fafnir'" "Experimental Unit 'Tarasque'" "Experimental Unit 'Tiamat'"
+			}
+			sequential_name = "%O% Mercenaries"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Knights"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {     
+				
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				Unau Mherwed Amhallah Malkillabad Rashdul Thalusa Fasar Selem
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				Al'Anfa Mirham Port Corrad Sylla Selem
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				Fasar Zorgan Baburin Elburum
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				Gareth Trallop Baliho Perainefurten Ilsur Greifenfurt Eslamsroden Zwerch Rommilys Havena Winhall Honingen Abilacht Harben Kyndoch Elenvina Albenhus Gratenfels 
+				      Angbar Ferdok Perricum Punin Ragath Eslamsgrund Warunk Beilunk Praiosdank Hôt-Alem
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				Vinsalt Kuslik Grangor Methumis Drôl Neetha Rethis Teremon Silas Belhanka Bethana
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				Khunchom Tuzak Boran Jergan
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				 Thorwal Donnerbach Tiefhusen Rorkvell Gashok Lowangen Tjolmar
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				Riva Prem Olport Enqui
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				Leomar Brin Reto Alrik Answin Raul Gerbald Ugdalf Eslam Perval Cuanu Konrad Geron Rondrian Konnar Praiotin Siegrain Voltan Bardo Baduar Voltan Valpo
+				Waldemar Gilborn Trautmann
+			}
+			first_names_female = {
+				Emer Rohaja Inver Idra Walpurga Tsaja Esmer Leonore Rondriane Oleana Aldessia Ayla
+			}
+			second_names = {
+				Bennain "vom Berg" "von Bregelsaum" "von Löwenhaupt" "vom Eberstamm" "von Rabenmund" "von Streitzig" "von Gareth" "vom Großen Fluss"
+			}
+			regnal_first_names_male = {
+				Brin Reto Selindian Hal Raul Eslam Perval
+			}
+			regnal_first_names_female = {
+				Emer Rohaja Idra Selinde Cella
+			}
+			regnal_second_names = {
+				"von Gareth"
+			}
+		}
+		
+		
+	}
+}

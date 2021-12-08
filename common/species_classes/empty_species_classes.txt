@@ -1,0 +1,104 @@
+AI_SHIP_SET = {
+	randomized = no
+    playable = { local_has_dlc = "" }
+    graphical_culture = ai_ship_set_01
+    move_pop_sound_effect = "moving_pop_confirmation"
+}
+Lithoid2 = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = altlithoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Fairy = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = fairy_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Eco_city = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = eco_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Silfae-Holofrixit = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = holofrixit_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Horror = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = horrorworm_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Hyena = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = hyenafolk_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Eagles = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = romaneagles_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Saur = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = saurischian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Xirmian = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = xirmian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-ThirdEye = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = slreptilian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Serpentoid = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = serpentoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+Silfae-Silicoid = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = silicoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Steampunk = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = steampunk_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Xenosec_city = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = xenosec_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+Vampire = {
+	randomized = no
+	playable = { local_has_dlc = "" }
+	graphical_culture = vamp_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}

@@ -1,0 +1,27 @@
+on_game_start_country = {
+	events = {
+		eo.2
+	}
+}
+
+on_press_begin = {
+	events = {
+		eo.10
+	}
+}
+
+# this = country
+on_decade_pulse_country = {
+	events = {
+		eo.8
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		eo.3
+	}
+}

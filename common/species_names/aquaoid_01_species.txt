@@ -1,0 +1,55 @@
+# Generated species derive their names from here
+
+### Aqua Boiz
+
+Aquaoid = {	
+	
+	
+	tropo = {
+		name = Tropo
+		plural = Tropo
+		home_planet = Tropos
+		home_system = Troponia
+		name_list = "aquaoid_01"
+	}
+	
+	philocye = {
+		name = Philocye
+		plural = Philocye
+		home_planet = Philocystis
+		home_system = Philo
+		name_list = "aquaoid_01"
+	}
+	
+	pando= {
+		name = Pando
+		plural = Pandoni
+		home_planet = Pandosoma
+		home_system = Pandodium 
+		name_list = "aquaoid_01"
+	}
+	
+	synbae = {
+		name = Synbae
+		plural = Synbae
+		home_planet = Synbaena
+		home_system = Syn
+		name_list = "aquaoid_01"
+	}
+	
+	eudophyceae = {
+		name = Eudophyceae
+		plural = Eudophyceaes
+		home_planet = Eudo
+		home_system = Phy
+		name_list = "aquaoid_01"
+	}
+		
+	cephao= {
+		name = Cephao
+		plural = Cephaos
+		home_planet = Cephaeomonas
+		home_system = Ceph
+		name_list = "aquaoid_01"
+	}
+}

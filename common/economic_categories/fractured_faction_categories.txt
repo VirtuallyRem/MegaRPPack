@@ -1,0 +1,84 @@
+fractured_factions = {
+	parent = pop_factions
+	generate_mult_modifiers = { produces }
+}
+
+bankers_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+conservative_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+environmentalist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+imperialist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+isolationist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+labourites_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+manufacturers_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+progressive_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+prosperity_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+socialists_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+supremacist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+technologist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+totalitarian_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+traditionalist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+xenoist_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}
+
+manifesti_faction = {
+	parent = fractured_factions
+	generate_add_modifiers = { produces }
+}

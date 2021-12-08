@@ -1,0 +1,432 @@
+namespace = plisan
+namespace = rakh
+namespace = tsagoth
+
+country_event = {
+    id = plisan.01
+    title = "plisan.01.name"
+    picture = GFX_evt_megastructure_construction
+    desc = plisan.01.desc
+    location = root
+	is_triggered_only = yes
+  	option = {
+		name = OK
+		if = {
+  			limit = { NOT = { has_technology = "tech_habitat_1" } }
+      		add_research_option = "tech_habitat_1"
+		}
+	}
+}
+fleet_event = {
+	id = plisan.11
+	title = plisan.11.name
+	desc = plisan.11.desc
+	picture = GFX_evt_ruined_system
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = plisan.11.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = plisan.12
+	title = plisan.12.name
+	desc = plisan.12.desc
+	picture = GFX_evt_derelict_interior
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = plisan.12.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = plisan.13
+	title = plisan.13.name
+	desc = plisan.13.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = plisan.13.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = plisan.14
+	title = plisan.14.name
+	desc = plisan.14.desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = plisan.14.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = plisan.15
+	title = plisan.15.name
+	desc = plisan.15.desc
+	picture = GFX_evt_cybernetics
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = plisan.15.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = plisan.16
+	title = plisan.16.name
+	desc = plisan.16.desc
+	picture = GFX_evt_ancient_artifact
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = plisan.16.a
+		owner = {
+			large_artifact_reward = yes
+			add_relic = r_plisan
+		}
+	}
+}
+
+country_event = {
+    id = rakh.01
+   	title = "rakh.01.name"
+   	picture = GFX_evt_emergency_workers
+   	desc = rakh.01.desc
+   	location = root
+	is_triggered_only = yes
+  	option = {
+		name = OK
+	}
+}
+
+
+fleet_event = {
+	id = rakh.11
+	title = rakh.11.name
+	desc = rakh.11.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = rakh.11.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = rakh.12
+	title = rakh.12.name
+	desc = rakh.12.desc
+	picture = GFX_evt_circuitry_modification
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = rakh.12.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = rakh.13
+	title = rakh.13.name
+	desc = rakh.13.desc
+	picture = GFX_evt_society_research
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = rakh.13.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = rakh.14
+	title = rakh.14.name
+	desc = rakh.14.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = rakh.14.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = rakh.15
+	title = rakh.15.name
+	desc = rakh.15.desc
+	picture = GFX_evt_ancient_artifact
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = rakh.15.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = rakh.16
+	title = rakh.16.name
+	desc = rakh.16.desc
+	picture = GFX_evt_genetic_modification
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = rakh.16.a
+		owner = {
+			large_artifact_reward = yes
+			add_relic = r_rakh
+		}
+	}
+}
+
+country_event = {
+    	id = tsagoth.01
+    	title = "tsagoth.01.name"
+    	picture = GFX_evt_zro_2
+    	desc = tsagoth.01.desc
+    	location = root
+	is_triggered_only = yes
+  	option = {
+		name = OK
+		if = {
+  			limit = { has_ethic = ethic_xenophobe }
+      			add_monthly_resource_mult = {
+				resource = unity
+				value = 18
+				min = 0
+				max = 100000
+			}
+		}
+		if = {
+			limit = { has_ethic = ethic_fanatic_xenophobe }
+      			add_monthly_resource_mult = {
+				resource = unity
+				value = 36
+				min = 0
+				max = 100000
+			}
+		}	
+	}
+}
+fleet_event = {
+	id = tsagoth.11
+	title = tsagoth.11.name
+	desc = tsagoth.11.desc
+	picture = GFX_evt_bone_building
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = tsagoth.11.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = tsagoth.12
+	title = tsagoth.12.name
+	desc = tsagoth.12.desc
+	picture = GFX_evt_zro_5
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = tsagoth.12.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = tsagoth.13
+	title = tsagoth.13.name
+	desc = tsagoth.13.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = tsagoth.13.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = tsagoth.14
+	title = tsagoth.14.name
+	desc = tsagoth.14.desc
+	picture = GFX_evt_society_research
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = tsagoth.14.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = tsagoth.15
+	title = tsagoth.15.name
+	desc = tsagoth.15.desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = tsagoth.15.a
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = tsagoth.16
+	title = tsagoth.16.name
+	desc = tsagoth.16.desc
+	picture = GFX_evt_space_monster
+	show_sound = event_dig_site
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = tsagoth.16.a
+		owner = {
+			large_artifact_reward = yes
+			add_relic = r_tsagoth
+		}
+	}
+}

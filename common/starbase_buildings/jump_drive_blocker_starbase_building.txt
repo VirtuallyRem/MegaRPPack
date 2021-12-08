@@ -1,0 +1,28 @@
+jump_drive_blocker = {
+	icon = "GFX_spaceport_module_navigators_guild"
+	construction_days = 360
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 2000
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_jump_drive_1 }
+	}	
+	
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 50
+	}	
+	
+	show_in_tech = "tech_jump_drive_1"
+}

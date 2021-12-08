@@ -1,0 +1,84 @@
+namespace = shattered_ring_fix
+
+event = {
+	id = shattered_ring_fix.0
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = has_shattered_ring_fix_mod
+		}
+	}
+	
+	immediate = { set_global_flag = has_shattered_ring_fix_mod }
+}
+
+event = {
+	id = shattered_ring_fix.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { has_origin = origin_shattered_ring }
+	}
+	immediate = {
+		planet_event = { id = shattered_ring_fix.2 }
+	}
+}
+
+
+planet_event = {
+    id = shattered_ring_fix.2
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        owner = { save_event_target_as = initializing_country }
+        solar_system = {
+            every_system_planet = {
+
+				if = { limit = { is_planet_class = pc_shattered_ring_habitable }
+					set_planet_entity = {
+						entity = ringworld_habitable_entity_01_entity
+						graphical_culture = event_target:initializing_country
+					}
+				}
+
+				else_if = { limit = { is_planet_class = pc_ringworld_tech }
+					set_planet_entity = {
+						entity = ringworld_tech_entity_01_entity
+						graphical_culture = event_target:initializing_country
+					}
+				}
+
+				else_if = { limit = { is_planet_class = pc_ringworld_seam }
+					set_planet_entity = {
+						entity = ringworld_seam_entity_01_entity
+						graphical_culture = event_target:initializing_country
+					}
+				}
+
+				else_if = { limit = { is_planet_class = pc_ringworld_tech_damaged }
+					set_planet_entity = {
+						entity = ringworld_tech_damaged_entity_01_entity
+						graphical_culture = event_target:initializing_country
+					}
+				}
+				
+				else_if = { limit = { is_planet_class =  pc_ringworld_seam_damaged }
+					set_planet_entity = {
+						entity = ringworld_seam_damaged_entity_01_entity
+						graphical_culture = event_target:initializing_country
+					}
+				}
+            }
+			
+            every_system_megastructure = {
+                limit = { is_megastructure_type = ring_world_ruined }
+                set_graphical_culture = event_target:initializing_country
+			}
+        }
+    }
+}

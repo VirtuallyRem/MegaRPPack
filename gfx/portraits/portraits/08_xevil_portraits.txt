@@ -1,0 +1,175 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# xevil
+	xevil_female_01 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_01"	greeting_sound = "human_female_greetings_03" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_01.dds"}}
+	xevil_female_02 = {	entity = "portrait_human_female_04_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_04"	greeting_sound = "human_female_greetings_05" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_04.dds"}}	
+	xevil_female_03 = {	entity = "portrait_human_female_06_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_06"	greeting_sound = "human_female_greetings_01" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_06.dds"}}
+	xevil_female_04 = {	entity = "portrait_human_female_08_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_08"	greeting_sound = "human_female_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_08.dds"}}
+	xevil_female_05 = {	entity = "portrait_human_female_10_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_10"	greeting_sound = "human_female_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_10.dds"}}
+	xevil_female_06 = {	entity = "portrait_human_female_10_entity"	clothes_selector = "xevil_female_clothes_01" 	hair_selector = "xevil_female_hair_11"	greeting_sound = "human_female_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_female_body_11.dds"}}
+	xevil_male_01 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_12"	greeting_sound = "human_male_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_12.dds"}}
+	xevil_male_02 = {	entity = "portrait_human_male_02_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_02"	greeting_sound = "human_male_greetings_04" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_02.dds"}}
+	xevil_male_03 = {	entity = "portrait_human_male_04_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_08"	greeting_sound = "human_male_greetings_01" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_04.dds"}}
+	xevil_male_04 = {	entity = "portrait_human_male_09_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_09"	greeting_sound = "human_male_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_09.dds"}}
+	xevil_male_05 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_11"	greeting_sound = "human_male_greetings_02" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_11.dds"}}
+	xevil_male_06 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "xevil_male_clothes_01" 	hair_selector = "xevil_male_hair_01"	greeting_sound = "human_male_greetings_03" character_textures = { "gfx/models/portraits/evil_bodies/xevil_male_body_01.dds"}}	
+	
+}
+
+portrait_groups = {
+	xevil = {
+		default = xevil_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					xevil_male_01
+					xevil_male_02
+					xevil_male_03
+					xevil_male_04
+					xevil_male_05
+					xevil_male_06
+					
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					xevil_female_01
+					xevil_female_02
+					xevil_female_03
+					xevil_female_04
+					xevil_female_05
+					xevil_female_06
+					
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					xevil_female_01
+					xevil_female_02
+					xevil_female_03
+					xevil_female_04
+					xevil_female_05
+					xevil_female_06
+					xevil_male_01
+					xevil_male_02
+					xevil_male_03
+					xevil_male_04
+					xevil_male_05
+					xevil_male_06
+					
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					xevil_female_01
+					xevil_female_02
+					xevil_female_03
+					xevil_female_04
+					xevil_female_05
+					xevil_female_06
+					xevil_male_01
+					xevil_male_02
+					xevil_male_03
+					xevil_male_04
+					xevil_male_05
+					xevil_male_06
+					
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					xevil_female_01
+					xevil_female_02
+					xevil_female_03
+					xevil_female_04
+					xevil_female_05
+					xevil_female_06
+					
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					xevil_male_01
+					xevil_male_02
+					xevil_male_03
+					xevil_male_04
+					xevil_male_05
+					xevil_male_06
+					
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					xevil_female_01
+					xevil_female_02
+					xevil_female_03
+					xevil_female_04
+					xevil_female_05
+					xevil_female_06
+	
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					xevil_male_01
+					xevil_male_02
+					xevil_male_03
+					xevil_male_04
+					xevil_male_05
+					xevil_male_06
+					
+				}
+			}
+		}
+	}
+}

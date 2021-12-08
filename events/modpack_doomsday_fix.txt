@@ -1,0 +1,180 @@
+# Doomsday 2
+planet_event = {
+	id = origin.61
+	title = "origin.61.name"
+	desc = "origin.61.desc"
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_wind_ruins
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = doomsday_1
+		add_modifier = {
+			modifier = doomsday_2
+		}
+		add_planet_devastation = 10
+		planet_event = { id = origin.65 days = 4050 random = 450 }
+	}
+
+	option = {
+		name = origin_61.a
+		tooltip = {
+			add_planet_devastation = 10
+			add_modifier = {
+				modifier = doomsday_2
+			}
+		}
+	}
+}
+
+# Doomsday 3
+planet_event = {
+	id = origin.65
+	title = "origin.65.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		text = "origin.65.desc"
+	}
+	desc = {
+		trigger = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = "origin.65.2.desc"
+	}
+	picture = GFX_evt_colony_settlement
+	show_sound = event_wind_ruins
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = doomsday_2
+		add_modifier = {
+			modifier = doomsday_3
+		}
+		add_planet_devastation = 15
+		planet_event = { id = origin.70 days = 4050 random = 450 }
+	}
+
+	option = {
+		name = origin_65.a
+		tooltip = {
+			add_planet_devastation = 15
+			add_modifier = {
+				modifier = doomsday_3
+			}
+		}
+	}
+}
+
+# Doomsday 4
+planet_event = {
+	id = origin.70
+	title = "origin.70.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		text = "origin.70.desc"
+	}
+	desc = {
+		trigger = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = "origin.70.2.desc"
+	}
+	picture = GFX_evt_tomb_world
+	show_sound = event_wind_ruins
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = doomsday_3
+		add_modifier = {
+			modifier = doomsday_4
+		}
+		add_planet_devastation = 20
+		planet_event = { id = origin.75 days = 4050 random = 450 }
+	}
+
+	option = {
+		name = origin_70.a
+		trigger = {
+			owner = {
+				NOT = { has_authority = auth_machine_intelligence }
+			}
+		}
+		tooltip = {
+			add_planet_devastation = 20
+			add_modifier = {
+				modifier = doomsday_4
+			}
+		}
+	}
+
+	option = {
+		name = origin_70.b
+		trigger = {
+			owner = { has_authority = auth_machine_intelligence }
+		}
+		tooltip = {
+			add_planet_devastation = 20
+			add_modifier = {
+				modifier = doomsday_4
+			}
+		}
+	}
+}
+
+# Doomsday 5
+planet_event = {
+	id = origin.75
+	title = "origin.75.name"
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		text = "origin.75.desc"
+	}
+	desc = {
+		trigger = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = "origin.75.2.desc"
+	}
+	picture = GFX_evt_outpost
+	show_sound = event_wind_ruins
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = doomsday_4
+		add_modifier = {
+			modifier = doomsday_5
+		}
+		add_planet_devastation = 25
+		planet_event = { id = origin.76 days = 4050 random = 450 }
+	}
+
+	option = {
+		name = origin_75.a
+		tooltip = {
+			add_planet_devastation = 25
+			add_modifier = {
+				modifier = doomsday_5
+			}
+		}
+	}
+}

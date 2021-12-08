@@ -1,0 +1,226 @@
+# xenosec
+
+category = {
+
+	name = "Effects"
+	
+	soundeffects = {
+		
+		### xenosec ###
+		xenosec_pops_move
+		xenosec_generic_greeting
+		xenosec_01_greetings
+	
+		####### DEBUG
+		test_interface
+		test_engine_up
+		test_engine_loop
+	
+		####### UI
+		dismiss_notification
+		click
+		back_click
+		interface
+		tab_click
+		menu_over_01
+		click_decline_action
+		menu_slide_open
+		planet_view_menu_slide
+		planet_view_menu_click_01
+		spaceport_amb_view
+		menu_building_slide
+		research_click_01
+		ui_click_research_tab
+		ui_research_done
+		deactive_builing
+		active_building
+		destroy_building_01
+		confimation
+		ui_deselect
+		ui_select
+		assign_leader_click
+		ui_notification_leader_death
+		ui_galaxy_map_open
+		ui_galaxy_map_close
+		outliner_click_tab
+		click_outliner
+		click_army_menu
+		click_army_select
+		click_embark_all
+		click_land_all
+		notification_war
+		purge
+		enslave
+		ui_speed_down_time_click
+		ui_speed_up_time_click
+		ui_click_pause
+		click_move_fleet
+		ui_click_map_mode
+	
+	
+		####### NOTIFICATION
+		discovery
+		alert_construction_complete
+		spaceport_complete_alert
+		army_construction_done
+		fleet_under_attack
+		notification
+		survey_complete
+		alert_research_notification
+		alert_negative
+		diplomatic_notification
+		notification_hostile_fleet
+		notification_repair_fleet
+	
+		####### SELECT & ORDER FLEET + POPS
+		moving_pop_confirmation
+		robot_pops_move
+		arthopoid_pops_move
+		avian_pops_move
+		fungoid_pops_move
+		molluscoid_pops_move
+		reptilian_pops_move
+		select_fleet
+		select_colony_ship
+		select_construction_ship
+		select_science_ship
+		select_spacestation
+		select_mining_station
+		select_outpost_station
+		moving_out_corvette
+		moving_out_science
+		moving_out_construction
+		moving_out_colony_ship
+		moving_out_battleship
+		moving_out_transport
+		ship_engine_off
+	
+		######## BUILDINGS
+		queuing_army
+		queuing_ship
+		queuing_building
+		queing_spaceport_module
+		place_construction
+		building_destroyed_01
+		building_built_01
+	
+		####### EVENTS SFX
+		event_space_battle
+		event_ship_explosion
+		event_ship_bridge
+		event_radio_chatter
+		event_radio_chatter_02
+		event_planetary_riot
+		event_alien_signal
+		event_airlock
+		event_super_explosion
+		event_air_raid_siren
+		event_alien_nature
+		event_construction
+		event_default
+		event_mystic_reveal
+		event_mystic_reveal_light
+		event_primitive_civilization
+		event_scanner
+		event_ship_thrusters
+		event_ground_battle
+		event_activating_unknown_technology
+		event_cityscape
+		event_structural_collapse
+		event_laboratory_sound
+		event_administrative_work
+		event_red_alert
+		event_ghost_town
+		event_life_support_fail
+		event_sensor_ping
+		event_conversation
+		event_space_cloud
+		event_crystal_ship
+		event_space_amoeba
+		event_space_whale
+		event_ancient_drone
+		event_swarm
+		event_solar_fusion
+		event_swarm_started
+		incoming_swarm_message_state_1
+		incoming_swarm_message_state_2
+		event_ex_started
+		incoming_ex_message_state_01
+		incoming_ex_message_state_02
+		incoming_ex_message_state_03
+		event_ai_started
+		incoming_ai_message_state_01
+		incoming_ai_message_beep
+		notification_uplift
+		event_celebration
+		event_yellow_alert
+	
+		####### PLANET VIEW
+		pc_b_star
+		pc_a_star
+		pc_f_star
+		pc_g_star
+		pc_k_star
+		pc_m_star
+		pc_ai
+		pc_arid
+		pc_barren
+		pc_continental
+		pc_desert
+		pc_frozen
+		pc_molten
+		pc_nuked
+		pc_ocean
+		pc_toxic
+		pc_tropical
+		pc_tundra
+		pc_asteroid
+		pc_barren_cold
+		pc_arctic
+		pc_gas_giant
+		pc_infested
+		pc_gaia
+		pc_shielded
+		pc_savannah
+		pc_alpine
+
+		########## PHENOTYPES
+		avian_generic_greeting
+		fungoid_generic_greeting
+		human_female_greetings_01
+		human_female_greetings_02
+		human_female_greetings_03
+		human_female_greetings_04
+		human_female_greetings_05
+		human_male_greetings_01
+		human_male_greetings_02
+		human_male_greetings_03
+		human_male_greetings_04
+		human_male_greetings_05
+		human_generic_greeting
+		molluscoid_generic_greeting
+		reptilian_generic_greeting
+		arthropoid_01_greetings
+		cute_arthopoid_greetings
+		avian_01_greetings
+		fungoid_01_greetings
+		fungoid_02_greetings
+		cute_fungoid_greetings
+		mammalian_01_greetings
+		molluscoid_01_greetings
+		cute_molluscoid_snail_greetings
+		cute_molluscoid_starfish_greetings
+		reptilian_01_greetings
+		cute_reptilian_greetings
+		fallen_empire_01_greetings	
+	}
+	compressor = {
+		enabled = yes
+		pregain = 2.0
+		postgain = 1.5
+		ratio = 10.0
+		threshold = -8.0
+		attacktime = 0.30
+		releasetime = 0.020
+	}
+}

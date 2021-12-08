@@ -1,0 +1,138 @@
+##############################################################
+###	PORTRAITS SETTINGS
+### FOR DRYAS
+##############################################################
+
+portraits = {
+
+	magi_dryas_jo 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "magi_dryas_huku_jo"
+		hair_selector = "magi_dryas_kami_jo"
+		greeting_sound = "humanoid_female_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_01_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_02_cnt.dds"
+			# "gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_04_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_05_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_06_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_08_cnt.dds"
+			# "gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_09_cnt.dds"
+			# "gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_10_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_11_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_12_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_13_cnt.dds"
+			# "gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_14_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_16_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_17_cnt.dds"
+			"gfx/models/portraits/magi_dryas/JO_CONT/dryad_01_jo_18_cnt.dds"
+		}
+	}
+	
+
+	magi_dryas_dan 	= {
+		entity = "copy_05_male_01_entity"
+		clothes_selector = "magi_dryas_huku_dan"
+		hair_selector = "magi_dryas_kami_dan"
+		greeting_sound = "humanoid_male_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_04_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_05_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_06_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_08_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_11_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_12_cnt.dds"
+			"gfx/models/portraits/magi_dryas/DAN_CONT/dryas_01_dan_13_cnt.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	magi_dryas = {
+		default = magi_dryas_jo
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					magi_dryas_dan
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					magi_dryas_jo
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					magi_dryas_dan
+
+					magi_dryas_jo
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					magi_dryas_dan
+
+					magi_dryas_jo
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_dryas_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_dryas_dan
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_dryas_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_dryas_dan
+				}
+			}
+		}
+	}
+}

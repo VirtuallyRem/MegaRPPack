@@ -1,0 +1,697 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	humanoid_cyber_cyclope_female 	= {	entity = "humanoid_hp_13_entity"	clothes_selector = "humanoid_hp_13_clothes" hair_selector = "no_texture"	greeting_sound = "robot_human_female_greetings"	
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_female.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_female_green.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_female_purple.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_female_yellow.dds"
+			#"gfx/models/portraits/humanoid/humanoid_hp_13_female.dds"
+		}
+	}
+
+	humanoid_cyber_cyclope_male 	= {	entity = "humanoid_hp_13_entity"	clothes_selector = "humanoid_hp_13_clothes" hair_selector = "no_texture"	greeting_sound = "robot_human_male_greetings"	
+		character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_male.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_male_green.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_male_purple.dds"
+			"gfx/models/portraits/humanoid/humanoid_cyber_cyclope_male_yellow.dds"
+			#"gfx/models/portraits/humanoid/humanoid_hp_13.dds"
+		}
+	}
+
+	humanoid_robohobbit_female 	= {	entity = "humanoid_hp_02_entity"	clothes_selector = "humanoid_hp_02_clothes" hair_selector = "no_texture"	greeting_sound = "robot_human_female_greetings"	
+		character_textures = {
+			"gfx/models/portraits/humanoid/robohobbit_female_brown_red.dds"
+			"gfx/models/portraits/humanoid/robohobbit_female_green_yellow.dds"
+			"gfx/models/portraits/humanoid/robohobbit_female_pale_blue.dds"
+			"gfx/models/portraits/humanoid/robohobbit_female_blue_green.dds"
+			#"gfx/models/portraits/humanoid/humanoid_hp_02_female.dds"
+		}
+	}
+	
+	humanoid_robohobbit_male 	= {	entity = "humanoid_hp_02_entity"	clothes_selector = "humanoid_hp_02_clothes" hair_selector = "no_texture"	greeting_sound = "robot_human_male_greetings"	
+		character_textures = {
+			"gfx/models/portraits/humanoid/robohobbit_male_brown_red.dds"
+			"gfx/models/portraits/humanoid/robohobbit_male_green_yellow.dds"
+			"gfx/models/portraits/humanoid/robohobbit_male_pale_blue.dds"
+			"gfx/models/portraits/humanoid/robohobbit_male_blue_green.dds"
+			#"gfx/models/portraits/humanoid/humanoid_hp_02.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_hp_13 = {
+		default = humanoid_hp_13
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			set = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					humanoid_hp_13_female
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			set = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					humanoid_hp_13_female
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			set = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			set = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_hp_13_female
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_hp_13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	humanoid_cyber_cyclope = {
+		default = humanoid_cyber_cyclope_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+	}
+}
+	
+portrait_groups = {
+	humanoid_hp_02 = {
+		default = humanoid_hp_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			set = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					humanoid_hp_02_female
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					humanoid_robohobbit_female
+					humanoid_robohobbit_male
+				}
+			}
+		}
+		
+		# #pop scope
+		# pop = { #for a specific pop
+			# add = {
+				# trigger = {
+					# NOT = { has_trait = trait_cybernetic }
+				# }
+				# portraits = {
+					# humanoid_hp_02_female
+					# humanoid_hp_02
+				# }
+			# }
+			# add = {
+				# trigger = {
+					# has_trait = trait_cybernetic
+				# }
+				# portraits = {
+					# humanoid_robohobbit_female
+					# humanoid_robohobbit_male
+				# }
+			# }
+		# }
+		#pop scope
+		pop = { #for a specific pop
+			set = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					humanoid_hp_02_female
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					humanoid_robohobbit_female
+					humanoid_robohobbit_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			set = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			set = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_hp_02_female
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_hp_02
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	robohobbit {
+		default = humanoid_robohobbit_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					humanoid_robohobbit_male
+					humanoid_robohobbit_female
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					humanoid_robohobbit_male
+					humanoid_robohobbit_female
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_robohobbit_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_robohobbit_male
+				}
+			}
+		}
+	}
+}

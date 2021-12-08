@@ -1,0 +1,17 @@
+namespace = senate
+
+country_event = {
+	id = senate.01
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_modifier = galactic_headquarter_founder
+	}
+
+	immediate = {
+		cancel_resolution = "resolution_galactic_senate_form"
+		remove_modifier = galactic_headquarter_founder
+	}
+}

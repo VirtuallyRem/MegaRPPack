@@ -1,0 +1,454 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	# aquaoid
+	
+	aquaoid_male_01 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_01_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_08.dds"
+			}
+		}
+	aquaoid_male_02 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_02_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_08.dds"
+			}
+		}
+    aquaoid_male_03 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_03_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_08.dds"
+			}
+		}
+    aquaoid_male_04 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_04_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_08.dds"
+			}
+		}
+	aquaoid_male_05 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_05_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_08.dds"
+			}
+		}
+	aquaoid_male_06 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_06_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_08.dds"
+			}
+		}
+	aquaoid_male_07 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_07_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_08.dds"
+			}
+		}
+	aquaoid_male_08 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_male_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_08_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_08.dds"
+			}
+		}
+	aquaoid_female_01 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_01_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_01_08.dds"
+			}
+		}
+	aquaoid_female_02 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_02_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_02_08.dds"
+			}
+		}
+    aquaoid_female_03 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_03_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_03_08.dds"
+			}
+		}
+    aquaoid_female_04 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_04_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_04_08.dds"
+			}
+		}
+	aquaoid_female_05 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_05_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_05_08.dds"
+			}
+		}
+	aquaoid_female_06 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_06_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_06_08.dds"
+			}
+		}
+	aquaoid_female_07 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_07_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_07_08.dds"
+			}
+		}
+	aquaoid_female_08 = { entity = "aquaoid_01_entity"	clothes_selector = "aquaoid_01_outfits"  hair_selector = "no_texture"	greeting_sound = "aquaoid_female_greetings"
+		character_textures = { 
+			"gfx/models/portraits/aquaoid/aquaoid_08_01.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_02.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_03.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_04.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_05.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_06.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_07.dds"
+			"gfx/models/portraits/aquaoid/aquaoid_08_08.dds"
+			}
+		}
+	}
+portrait_groups = {
+	aquaoid = {
+		default = aquaoid_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					aquaoid_male_01
+					aquaoid_male_02
+					aquaoid_male_03
+					aquaoid_male_04
+					aquaoid_male_05
+					aquaoid_male_06
+					aquaoid_male_07
+					aquaoid_male_08
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					aquaoid_female_01
+					aquaoid_female_02
+					aquaoid_female_03
+					aquaoid_female_04
+					aquaoid_female_05
+					aquaoid_female_06
+					aquaoid_female_07
+					aquaoid_female_08
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					aquaoid_male_01
+					aquaoid_male_02
+					aquaoid_male_03
+					aquaoid_male_04
+					aquaoid_male_05
+					aquaoid_male_06
+					aquaoid_male_07
+					aquaoid_male_08
+					aquaoid_female_01
+					aquaoid_female_02
+					aquaoid_female_03
+					aquaoid_female_04
+					aquaoid_female_05
+					aquaoid_female_06
+					aquaoid_female_07
+					aquaoid_female_08
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					aquaoid_male_01
+					aquaoid_male_02
+					aquaoid_male_03
+					aquaoid_male_04
+					aquaoid_male_05
+					aquaoid_male_06
+					aquaoid_male_07
+					aquaoid_male_08
+					aquaoid_female_01
+					aquaoid_female_02
+					aquaoid_female_03
+					aquaoid_female_04
+					aquaoid_female_05
+					aquaoid_female_06
+					aquaoid_female_07
+					aquaoid_female_08
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aquaoid_female_01
+					aquaoid_female_02
+					aquaoid_female_03
+					aquaoid_female_04
+					aquaoid_female_05
+					aquaoid_female_06
+					aquaoid_female_07
+					aquaoid_female_08
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aquaoid_male_01
+					aquaoid_male_02
+					aquaoid_male_03
+					aquaoid_male_04
+					aquaoid_male_05
+					aquaoid_male_06
+					aquaoid_male_07
+					aquaoid_male_08
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aquaoid_female_01
+					aquaoid_female_02
+					aquaoid_female_03
+					aquaoid_female_04
+					aquaoid_female_05
+					aquaoid_female_06
+					aquaoid_female_07
+					aquaoid_female_08
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aquaoid_male_01
+					aquaoid_male_02
+					aquaoid_male_03
+					aquaoid_male_04
+					aquaoid_male_05
+					aquaoid_male_06
+					aquaoid_male_07
+					aquaoid_male_08
+				
+				}
+			}
+		
+		}
+	}
+	aquaoid_02 = {
+		default = aquaoid_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					aquaoid_02_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					aquaoid_02_female_01
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					aquaoid_02_female_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					aquaoid_02_female_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aquaoid_02_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aquaoid_02_male_01
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aquaoid_02_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aquaoid_02_male_01
+				
+				}
+			}
+		
+		}
+	}
+}

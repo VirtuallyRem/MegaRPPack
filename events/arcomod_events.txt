@@ -1,0 +1,99 @@
+################################
+#
+# Arcomod Events
+#
+###############################
+
+namespace = arcomod
+
+### Arcomod setup
+planet_event = {
+	id = arcomod.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { owner = { has_origin = origin_jph_arcology } }
+	
+	immediate = {
+		if = {
+			limit = { owner = { is_lithoid_empire = no } }
+			owner = { give_technology = { message = no tech = tech_hydroponics } }
+			add_building = building_hydroponics_farm
+			add_building = building_hydroponics_farm
+		}
+
+		add_building = building_foundry_1
+		add_building = building_factory_1
+		remove_building = building_commercial_zone
+		
+		remove_all_districts = yes
+
+		set_planet_size = 16
+		
+		IF = {
+			limit = { owner = { has_trait = trait_pc_aquatic_preference } }
+			set_planet_entity = {
+				entity = "aquaticcity_planet_01_entity"
+				picture = "pc_aquaticcity"
+			}
+		}
+		IF = {
+			limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+			IF = { limit = { NOT = { has_modifier = pdammoniaatmosphere } }	add_modifier = { modifier = pdammoniaatmosphere	} }
+			remove_modifier = ammonia
+			set_planet_entity = { picture = pc_ammoniacity }
+		}
+		IF = {
+			limit = { owner = { has_trait = trait_pc_sulfur_preference } }
+			IF = { limit = { NOT = { has_modifier = pdsulfuratmosphere } }	add_modifier = { modifier = pdsulfuratmosphere	} }
+			remove_modifier = pdsulfur
+			set_planet_entity = { picture = pc_sulfurcity }
+		}
+		IF = {
+			limit = { owner = { has_trait = trait_pc_methane_preference } }
+			IF = { limit = { NOT = { has_modifier = pdmethaneatmosphere } }	add_modifier = { modifier = pdmethaneatmosphere	} }
+			remove_modifier = methane
+			set_planet_entity = { picture = pc_methanecity }
+		}
+		IF = {
+			limit = { owner = { has_trait = trait_pc_ash_preference } }
+			IF = { limit = { NOT = { has_modifier = pdashatmosphere } }	add_modifier = { modifier = pdashatmosphere	} }
+			remove_modifier = ash
+			set_planet_entity = { picture = pc_ashcity }
+		}
+		IF = {
+			limit = { owner = { NOT = { has_trait = trait_pc_aquatic_preference } } }
+			set_planet_entity = {
+				entity = "city_planet_entity"
+				graphical_culture = owner
+			}
+		}
+		
+		add_district = district_arcology_housing
+		add_district = district_arcology_housing
+		add_district = district_arcology_housing
+		add_district = district_arcology_housing
+
+		every_owned_pop = {	clear_pop_category = yes }
+	}
+}
+
+country_event = {
+	id = arcomod.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = { has_origin = origin_jph_arcology }
+	
+	immediate = {
+		capital_scope = {
+			clear_deposits = yes
+		
+			add_deposit = d_plentiful_stockpile_arcomod
+			add_deposit = d_overloaded_infrastructure_arcomod
+			add_deposit = d_arcomod_1
+		}
+	}
+}

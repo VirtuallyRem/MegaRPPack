@@ -1,0 +1,231 @@
+# Generated species derive their names from here
+
+### Species
+
+SWGD_HUMAN = {
+
+	human = {
+		name = "Human"	
+		plural = "Human"
+		home_planet = "Coruscant"
+		home_system = "Coruscant"
+		name_list = "Republic"
+	}
+	imperial = {
+		name = "Human"	
+		plural = "Human"
+		home_planet = "Dromund Kaas"
+		home_system = "Dromund"
+		name_list = "Imperial"
+	}
+	mando = {
+		name = Mandalorian	
+		plural = Mandalorians
+		home_planet = "Mandalore"
+		home_system = "Mandalore"
+		name_list = "Mandalorian"
+	}
+	korunnai = {
+		name = "Korun"	
+		plural = "Korunnai"
+		home_planet = "Haruun Kal"
+		home_system = "Al'Har"
+		name_list = "Republic"
+	}
+	chalactan = {
+		name = "Chalactan"	
+		plural = "Chalactan"
+		home_planet = "Chalacta"
+		home_system = "Chalacta"
+		name_list = "Republic"
+	}
+
+	
+SWGD_NEAR_HUMAN = {
+	
+	echani = {
+		name = Echani	
+		plural = Echani
+		home_planet = "Eshan"
+		home_system = "Eshan"
+		name_list = "Republic"
+	}
+	thyrsian = {
+		name = Thyrsian	
+		plural = Thyrsian
+		home_planet = "Thyrsus"
+		home_system = "Thyrsus"
+		name_list = "Republic"
+	}
+	chiss = {
+		name = "Chiss"	
+		plural = "Chiss"
+		home_planet = "Csilla"
+		home_system = "Csilla"
+		name_list = "Chiss"
+	}
+	arkanian = {
+		name = "Arkanian"	
+		plural = "Arkanian"
+		home_planet = "Arkania"
+		home_system = "Perave"
+		name_list = "MAM2"
+	}
+	arkanianos = {
+		name = "Arkanian Offshoot"	
+		plural = "Arkanian Offshoots"
+		home_planet = "Arkania"
+		home_system = "Perave"
+		name_list = "MAM2"
+	}
+	miraluka = {
+		name = Miraluka
+		plural = Miralukan
+		home_planet = Alpheridies
+		home_system = Abron
+		name_list = "MAM2"
+	}
+	mirialan = {
+		name = Mirialan
+		plural = Mirialans
+		home_planet = Mirial
+		home_system = Mirial
+		name_list = "MAM2"
+	}
+	zeltron = {
+		name = "Zeltron"	
+		plural = "Zeltron"
+		home_planet = "Zeltros"
+		home_system = "Zel"
+		name_list = "Republic"
+	}	
+}
+	
+SWGD_HUMANOID = {
+
+	zabrak = {
+		name = Zabrak
+		plural = Zabraks
+		home_planet = Iridonia
+		home_system = Iridonia
+		name_list = "MAM3"
+	}
+	twi'lek = {
+		name = Twi'lek
+		plural = Twi'lek
+		home_planet = Ryloth
+		home_system = Ryloth
+		name_list = "Twilek"
+	}
+	togruta = {
+		name = Togruta
+		plural = Togruta
+		home_planet = Shili
+		home_system = Shili
+		name_list = "MAM1"
+	}
+	sith = {
+		name = Sith	
+		plural = Sith
+		home_planet = "Korriban"
+		home_system = "Horuset"
+		name_list = "Sith"
+	}
+	ithorian = {
+		name = Ithorian
+		plural = Ithorians
+		home_planet = Ithor
+		home_system = Ottega
+		name_list = "MAM1"
+	}
+	
+	abyssin = {
+		name = Abyssin
+		plural = Abyssin
+		home_planet = Byss
+		home_system = Byss
+		name_list = "MAM1"
+	}
+	devaronian = {
+		name = Devaronian
+		plural = Devaronians
+		home_planet = Devaron
+		home_system = Devaron
+		name_list = "MAM1"
+	}
+	kaleesh = {
+		name = Kaleesh
+		plural = Kaleesh
+		home_planet = Kalee
+		home_system = Kalee
+		name_list = "MAM1"
+	}
+	nautolan = {
+		name = Nautolan
+		plural = Nautolans
+		home_planet = "Glee Anselm"
+		home_system = "Glee Anselm"
+		name_list = "MAM1"
+	}
+	
+	weequay = {
+		name = Weequay
+		plural = Weequay
+		home_planet = Sriluur
+		home_system = Sriluur
+		name_list = "MAM1"
+	}
+	dashade = {
+		name = Dashade
+		plural = Dashades
+		home_planet = Urkupp
+		home_system = Urkupp
+		name_list = "MAM1"
+	}
+	neimoidian = {
+		name = Neimoidian
+		plural = Neimoidians
+		home_planet = "Neimoidia"
+		home_system = "Neimoidia"
+		name_list = "MAM1"
+	}
+	
+}	
+
+
+	
+	
+SWGD_MAM_1 = {
+
+	kel_dor = {
+		name = "Kel Dor"	
+		plural = "Kel Dor"
+		home_planet = "Dorin"
+		home_system = "Dorin"
+		name_list = "MAM3"
+	}
+
+}	
+
+	
+GAST = {
+	
+	hutt = {
+		name = "Hutt"	
+		plural = "Hutts"
+		home_planet = "Hutta"
+		home_system = "Hutta"
+		name_list = "Hutt"
+	}
+
+
+}	
+	
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+objectTypes = {
+
+#MALE
+	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+	
+	
+	pdxmesh = {
+		name = "portrait_cuelan_male_01_mesh"
+		file = "gfx/models/portraits/cuelan/cuelan_male_01.mesh"
+		animation = { id = "idle"	type = "mammalian_17_happy_animation" }
+		animation = { id = "idle2"	type = "mammalian_17_happy_2_animation" }
+		animation = { id = "idle3"	type = "mammalian_17_happy_3_animation" }
+		animation = { id = "idle4"	type = "mammalian_17_happy_4_animation" }
+
+		scale = 1.00
+	}	
+	
+#FEMALE
+	
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+	
+		
+	pdxmesh = {
+		name = "portrait_cuelan_female_01_mesh"
+		file = "gfx/models/portraits/cuelan/cuelan_female_01.mesh"
+		animation = { id = "idle"	type = "reptilian_13_happy_animation" }
+		animation = { id = "idle2"	type = "reptilian_13_happy_2_animation" }
+		animation = { id = "idle3"	type = "reptilian_13_happy_3_animation" }
+		scale = 1.00
+	}	
+		
+}

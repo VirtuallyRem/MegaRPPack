@@ -1,0 +1,20 @@
+﻿l_english:
+  decision_remove_the_interloper:0 "Remove the Interloper"
+  decision_remove_the_interloper_desc:0 "Before we can start repairing the damaged part of the ring, we need to dislodge the Interloper from its section."
+
+  decision_remove_the_interloper_tooltip_none:0 "Careful breakdown of the rogue planet is a most challenging project and, with our current technological level, is improbable, not to mention impractical and potentially dangerous. \n \nWe need a better  understanding of mining technologies, if we're expecting to find any sort of a solution to this project."
+  decision_remove_the_interloper_tooltip_one:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y20§! years to complete it and salvage the Interloper for £minerals£ §Y5000§!. \n \nWith a better understanding of mining technologies we may yield bigger mineral salvage and reduce the project's time."
+  decision_remove_the_interloper_tooltip_two:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y17§! years to complete it and salvage the Interloper for £minerals£ §Y5000§!. \n \nWith a better understanding of mining technologies we may yield bigger mineral salvage and reduce the project's time."
+  decision_remove_the_interloper_tooltip_three:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y15§! years to complete it and salvage the Interloper for £minerals£ §Y7500§!. \n \nWith a better understanding of mining technologies we may yield bigger mineral salvage and reduce the project's time."
+  decision_remove_the_interloper_tooltip_four:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y12§! years to complete it and salvage the Interloper for £minerals£ §Y7500§!. \n \nWith a better understanding of mining technologies we may yield bigger mineral salvage and reduce the project's time."
+  decision_remove_the_interloper_tooltip_five:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y10§! years to complete it and salvage the Interloper for £minerals£ §Y10000§!. \n \nCracking the principles behind mega-engineering may yield even bigger mineral salvage and reduce the project's time much further."
+  decision_remove_the_interloper_tooltip_six:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y7§! years to complete it and salvage the Interloper for £minerals£ §Y10000§!. \n \nWith a better understanding of mining technologies we may yield bigger mineral salvage and reduce the project's time."
+  decision_remove_the_interloper_tooltip_seven:0 "Careful breakdown of the rogue planet is a challenging project and, with our current technological level, it will take us §Y5§! years to complete it and salvage the Interloper for £minerals£ §Y15000§!."
+
+  the_interloper_emp:0 "The Interloper Removal"
+  the_interloper_emp_desc:0 ""
+  the_interloper_pln:0 "The Interloper Removal"
+  the_interloper_pln_desc:0 ""
+  fix_the_ring.2.name:0 "Rogue Out"
+  fix_the_ring.2.desc:0 "After years of hard, meticulous work the last fragment of the Interloper is safely removed from the ring, disposed and salvaged. With it gone, the way to broken ring section and its eventual restoration finally within our reach."
+  fix_the_ring.2.a:0 "Unreparable no more!"

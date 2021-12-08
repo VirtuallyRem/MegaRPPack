@@ -1,0 +1,295 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Plantoid
+	saladautomaton = {	entity = "portrait_plantoid_08_entity" clothes_selector = "plantoid_normal_clothes_01" hair_selector = "no_texture"	greeting_sound = "plantoid_greetings" 
+			character_textures = {
+					"gfx/models/portraits/plantoid/saladautomaton_teal.dds"
+					"gfx/models/portraits/plantoid/saladautomaton_yellow.dds"
+					"gfx/models/portraits/plantoid/saladautomaton_blue.dds"
+					"gfx/models/portraits/plantoid/saladautomaton_red.dds"	
+					#"gfx/models/portraits/plantoid/plantoid_08_green_pink.dds"		
+					
+			}
+	}
+	shredder_bot = {	entity = "portrait_plantoid_11_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "plantoid_greetings" 
+			character_textures = {
+					"gfx/models/portraits/plantoid/shredder_bot_cyan_steel.dds"
+					"gfx/models/portraits/plantoid/shredder_bot_orange_steel.dds"
+					"gfx/models/portraits/plantoid/shredder_bot_green_shine.dds"
+					"gfx/models/portraits/plantoid/shredder_bot_red_dark.dds"
+					#"gfx/models/portraits/plantoid/plantoid_11_brown_cyan.dds"
+			}
+	}
+}
+
+
+portrait_groups = {
+	pla8 = {
+		default = pla8
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					pla8
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					saladautomaton
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					pla8
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					saladautomaton
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					pla8
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					saladautomaton
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					pla8
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					saladautomaton
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					pla8
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					saladautomaton
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	pla11 = {
+		default = pla11
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					pla11
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					shredder_bot
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					pla11
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					shredder_bot
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					pla11
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					shredder_bot
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					pla11
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					shredder_bot
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					pla11
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					shredder_bot
+				}
+			}
+		}
+	}
+}
+

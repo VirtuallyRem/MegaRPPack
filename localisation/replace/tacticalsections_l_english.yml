@@ -1,0 +1,69 @@
+﻿l_english:
+
+ CORVETTE_GUNSHIP: "Gunship"
+ CORVETTE_ARMORED: "Patrol Boat"
+ CORVETTE_JAEGER: "Schiffjaeger"
+ 
+ DESTROYER_BOW_L1: "Missile Bow"
+ DESTROYER_BOW_ARTILLERY: "Artillery Bow"
+ DESTROYER_BOW_ARMORED: "Bulkhead Bow"
+ DESTROYER_BOW_HANGAR: "Hangar Bow"
+ DESTROYER_STERN_S1PD1: "Picket Interceptor Stern"
+ DESTROYER_STERN_ARMORED: "Bulkhead Stern"
+ DESTROYER_STERN_TORPEDO: "Missile Stern"
+ 
+ CRUISER_STERN_M1: "Missile Stern"
+ CRUISER_BOW_PICKET_SHIP: "Picket Ship Bow"
+ CRUISER_BOW_ARMORED: "Bulkhead Bow"
+ CRUISER_BOW_HANGAR: "Hangar Bow"
+ CRUISER_MID_ARMORED: "Bulkhead Core"
+ CRUISER_MID_CARRIER: "Carrier Core"
+ CRUISER_STERN_PICKET_SHIP: "Picket Ship Stern"
+ CRUISER_STERN_ARMORED: "Bulkhead Stern"
+ CRUISER_STERN_MISSILE: "Missile Salvo Stern"
+ CRUISER_STERN_BRIDGE: "Bridge Stern"
+ 
+ BATTLESHIP_BOW_L1M1S2: "Missile Bow"
+ BATTLESHIP_MID_L2M2: "Missile Core"
+ BATTLESHIP_STERN_M2: "Hangar Stern"
+ BATTLESHIP_BOW_ARMORED: "Bulkhead Bow"
+ BATTLESHIP_BOW_CARRIER: "Carrier Bow"
+ BATTLESHIP_MID_ARMORED: "Bulkhead Core"
+ BATTLESHIP_MID_SUPERCARRIER: "Supercarrier Core"
+ BATTLESHIP_STERN_MISSILE: "Missile Stern"
+ BATTLESHIP_STERN_ARMORED: "Bulkhead Stern"
+ BATTLESHIP_STERN_CARRIER: "Carrier Stern"
+ BATTLESHIP_STERN_BRIDGE: "Bridge Stern"
+ 
+ TITAN_MID_MISSILE: "Titan Missile Core"
+ TITAN_MID_CARRIER: "Titan Carrier Core"
+ TITAN_MID_ARMORED: "Titan Bulkhead Core"
+ TITAN_MID_MISSILE_ARTILLERY: "Titan Barrage Core"
+ TITAN_MID_PERDITION: "Titan Perdition Core"
+ TITAN_STERN_MISSILE: "Titan Missile Stern"
+ TITAN_STERN_CARRIER: "Titan Carrier Stern"
+ TITAN_STERN_ARMORED: "Titan Bulkhead Stern"
+ TITAN_STERN_MISSILE_ARTILLERY: "Titan Barrage Stern"
+ TITAN_STERN_PERDITION: "Titan Perdition Stern"
+ 
+ TECH_UNLOCK_CORVETTE_HULL_1_TITLE: "§HUnlocks Ship Section:§! Gunship\n§HUnlocks Ship Section:§! Patrol Boat";
+ TECH_UNLOCK_CORVETTE_HULL_1_DESC: "§HGunship:§! A ship equipped with a higher caliber weapon.\n§HPatrol Boat:§! A ship that sacrifices firepower for protection."
+ TECH_UNLOCK_CORVETTE_HULL_2_TITLE: "§HUnlocks Ship Section:§! Schiffjaeger";
+ TECH_UNLOCK_CORVETTE_HULL_2_DESC: "§HGunship:§! A ship that sacrifices protection for firepower."
+ TECH_UNLOCK_DESTROYER_HULL_1_TITLE: "§HUnlocks Ship Sections:§! Artillery Bow, Picket Interceptor Stern, Bulkhead Sections";
+ TECH_UNLOCK_DESTROYER_HULL_1_DESC: "§HArtillery Bow:§! A section equipped with a higher caliber weapon.\n§HPicket Interceptor Stern:§! A section that has only one point defense gun.\n§HBulkhead Sections:§! Sections that sacrifices firepower for protection."
+ TECH_UNLOCK_DESTROYER_HULL_2_TITLE: "§HUnlocks Ship Section:§! Hangar Bow\n§HUnlocks Ship Section:§! Missile Stern";
+ TECH_UNLOCK_DESTROYER_HULL_2_DESC: "§HHangar Bow:§! A section that sacrifices protection for strike craft capability.\n§HMissile Stern:§! A section that sacrifices protection for missile capability."
+ TECH_UNLOCK_CRUISER_HULL_1_TITLE: "§HUnlocks Ship Sections:§! Picket Ship Bow, Picket Ship Stern, Bulkhead Sections";
+ TECH_UNLOCK_CRUISER_HULL_1_DESC: "§HPicket Ship Bow/Stern:§! Sections that are specialized toward point defense.\n§HBulkhead Sections:§! Sections that sacrifices firepower for protection."
+ TECH_UNLOCK_CRUISER_HULL_2_TITLE: "§HUnlocks Ship Sections:§! Hangar Bow, Missile Hangar Core, Missile Salvo Stern, Bridge Stern";
+ TECH_UNLOCK_CRUISER_HULL_2_DESC: "§HHangar Bow:§! A section that sacrifices protection for strike craft capability.\n§HMissile Hangar Core:§! A section that sacrifices protection for combined missile and strike craft capability.\n§HMissile Salvo Stern:§! A section that sacrifices protection for an even greater missile capacity.\n§HBridge Stern:§! A section that sacrifices all weapons for a huge capacity of utility slots and an extra auxiliary slot."
+ TECH_UNLOCK_BATTLESHIP_HULL_1_TITLE: "§HUnlocks Ship Section:§! Missile Stern\n§HUnlocks Ship Section:§! Bulkhead Sections";
+ TECH_UNLOCK_BATTLESHIP_HULL_1_DESC: "§HMissile Stern:§! A section with missile capability.\n§HBulkhead Sections:§! Sections that sacrifices firepower for protection."
+ TECH_UNLOCK_BATTLESHIP_HULL_2_TITLE: "§HUnlocks Ship Sections:§! Carrier Bow, Supercarrier Core, Missile Hangar Stern, Bridge Stern";
+ TECH_UNLOCK_BATTLESHIP_HULL_2_DESC: "§HCarrier Bow:§! A section that sacrifices protection for an even greater strike craft capability.\n§HSupercarrier Core:§! A section that sacrifices protection for an even greater strike craft capability.\n§HMissile Hangar Stern:§! A section that sacrifices protection for combined missile and strike craft capability.\n§HBridge Stern:§! A section that sacrifices all weapons for a huge capacity of utility slots and an extra auxiliary slot."
+ TECH_UNLOCK_TITAN_HULL_1_TITLE: "§HUnlocks Ship Sections:§! Missile Sections, Carrier Sections, Bulkhead Sections, Missile Artillery Sections";
+ TECH_UNLOCK_TITAN_HULL_1_DESC: "§HMissile Sections:§! Sections solely dedicated to missile capacity.\n§HCarrier Sections:§! Sections solely dedicated to hangar capacity.\n§HBulkhead Sections:§! Sections that sacrifices firepower for protection.§HBarrage Sections:§! Sections that sacrifice protection for an increase in firepower with a combination of missiles and large weapons.\n"
+ TECH_UNLOCK_TITAN_HULL_2_TITLE: "§HUnlocks Ship Section:§! Perdition Core\n§HUnlocks Ship Section:§! Perdition Stern";
+ TECH_UNLOCK_TITAN_HULL_2_DESC: "§HPerdition Core/Stern:§! Sections dedicated entirely to extra large weapons."
+ 

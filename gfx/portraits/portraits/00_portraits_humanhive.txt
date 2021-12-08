@@ -1,0 +1,165 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Human Hive
+	humanhive_female_01 = {	entity = "portrait_humanhive_female_01_entity"	clothes_selector = "humanhive_female_clothes" hair_selector = "humanhive_female_hair"	greeting_sound = "human_female_greetings_03" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_female_body_01.dds"} }
+	humanhive_female_02 = {	entity = "portrait_humanhive_female_02_entity"	clothes_selector = "humanhive_female_clothes" hair_selector = "humanhive_female_hair"	greeting_sound = "human_female_greetings_04" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_female_body_02.dds"} }
+	humanhive_female_03 = {	entity = "portrait_humanhive_female_03_entity"	clothes_selector = "humanhive_female_clothes" hair_selector = "humanhive_female_hair"	greeting_sound = "human_female_greetings_05" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_female_body_03.dds"} }	
+	humanhive_female_04 = {	entity = "portrait_humanhive_female_04_entity"	clothes_selector = "humanhive_female_clothes" hair_selector = "humanhive_female_hair"	greeting_sound = "human_female_greetings_01" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_female_body_04.dds"} }
+	humanhive_female_05 = {	entity = "portrait_humanhive_female_05_entity"	clothes_selector = "humanhive_female_clothes" hair_selector = "humanhive_female_hair"	greeting_sound = "human_female_greetings_02" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_female_body_05.dds"} }
+	humanhive_male_01 = {	entity = "portrait_humanhive_male_01_entity"	clothes_selector = "humanhive_male_clothes" hair_selector = "humanhive_male_hair"	greeting_sound = "human_male_greetings_03" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_male_body_01.dds"}  }	
+	humanhive_male_02 = {	entity = "portrait_humanhive_male_02_entity"	clothes_selector = "humanhive_male_clothes" hair_selector = "humanhive_male_hair"	greeting_sound = "human_male_greetings_04" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_male_body_02.dds" } }
+	humanhive_male_03 = {	entity = "portrait_humanhive_male_03_entity"	clothes_selector = "humanhive_male_clothes" hair_selector = "humanhive_male_hair"	greeting_sound = "human_male_greetings_05" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_male_body_03.dds" } }		
+	humanhive_male_04 = {	entity = "portrait_humanhive_male_04_entity"	clothes_selector = "humanhive_male_clothes" hair_selector = "humanhive_male_hair"	greeting_sound = "human_male_greetings_01" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_male_body_04.dds" } }
+	humanhive_male_05 = {	entity = "portrait_humanhive_male_05_entity"	clothes_selector = "humanhive_male_clothes" hair_selector = "humanhive_male_hair"	greeting_sound = "human_male_greetings_02" character_textures = { 
+			"gfx/models/portraits/humanhive/humanhive_male_body_05.dds" } }
+	
+}
+
+portrait_groups = {
+	humanhive = {
+		default = humanhive_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					humanhive_male_01
+					humanhive_male_02
+					humanhive_male_03
+					humanhive_male_04
+					humanhive_male_05
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					humanhive_female_01
+					humanhive_female_02
+					humanhive_female_03
+					humanhive_female_04
+					humanhive_female_05
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					humanhive_female_01
+					humanhive_female_02
+					humanhive_female_03					
+					humanhive_female_04
+					humanhive_female_05
+					humanhive_male_01
+					humanhive_male_02
+					humanhive_male_03					
+					humanhive_male_04
+					humanhive_male_05
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					humanhive_female_01
+					humanhive_female_02
+					humanhive_female_03				
+					humanhive_female_04
+					humanhive_female_05
+					humanhive_male_01
+					humanhive_male_02
+					humanhive_male_03					
+					humanhive_male_04
+					humanhive_male_05
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanhive_female_01
+					humanhive_female_02
+					humanhive_female_03					
+					humanhive_female_04
+					humanhive_female_05
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanhive_male_01
+					humanhive_male_02
+					humanhive_male_03					
+					humanhive_male_04
+					humanhive_male_05
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanhive_female_01
+					humanhive_female_02
+					humanhive_female_03					
+					humanhive_female_04
+					humanhive_female_05
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanhive_male_01
+					humanhive_male_02
+					humanhive_male_03					
+					humanhive_male_04
+					humanhive_male_05
+				}
+			}
+		}
+	}
+}

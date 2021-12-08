@@ -1,0 +1,8 @@
+﻿l_english:
+
+ tech_repeatable_improved_leader_skill_level:0 "Universal Leader Development"
+ tech_repeatable_improved_leader_skill_level_desc:0 "Due to special training, the maximum level of the leader is increased"
+ tech_repeatable_improved_speedup_leader_skill:0 "Advanced Training"
+ tech_repeatable_improved_speedup_leader_skill_desc:0 "Advanced leader training allows him to gain experience faster"
+ edict_virtual_learning:0 "$unity_ambition$ Virtual learning"
+ edict_virtual_learning_desc:0 "Virtual learning greatly increases the gain of experience for leaders of any activities."

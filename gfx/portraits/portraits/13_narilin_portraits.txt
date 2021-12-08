@@ -1,0 +1,42 @@
+portraits = {
+narilin = {
+		entity = "portrait_robot_no_blink_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_human_greetings"
+		character_textures = {
+			"gfx/models/portraits/narilin/narilin_body_01.dds"
+			"gfx/models/portraits/narilin/narilin_body_02.dds"
+			"gfx/models/portraits/narilin/narilin_body_03.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	narilin_02 = {
+		default = narilin
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					narilin
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					narilin
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					narilin
+				}
+			}
+		}
+				
+	}
+}

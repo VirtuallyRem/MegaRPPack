@@ -1,0 +1,137 @@
+##############################################################
+###	PORTRAIT GROUPS SETTINGS
+###
+###	This file configures when to display the cyborg version 
+### or the organic version of a single species
+##############################################################
+
+
+portrait_groups = {
+	mam7 = {
+		default = mam7
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+	}
+}

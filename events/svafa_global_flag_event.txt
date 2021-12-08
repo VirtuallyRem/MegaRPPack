@@ -1,0 +1,11 @@
+namespace = svafa_flag_event
+
+country_event = {
+	id = svafa_flag_event.1
+	hide_window = yes
+	fire_only_once = yes
+	
+	trigger = { NOT = { has_global_flag = svafa_expanded_traits_active } }
+	
+	immediate = { set_global_flag = svafa_expanded_traits_active }
+}

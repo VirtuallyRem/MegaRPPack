@@ -1,0 +1,86 @@
+# xenosec
+
+### POPS MOVE
+sound = {
+	name = "xenosec_pops_move_01"
+	file = "ui/xenosec_pops_move_01.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_02"
+	file = "ui/xenosec_pops_move_02.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_03"
+	file = "ui/xenosec_pops_move_03.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_04"
+	file = "ui/xenosec_pops_move_04.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_05"
+	file = "ui/xenosec_pops_move_05.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_06"
+	file = "ui/xenosec_pops_move_06.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_07"
+	file = "ui/xenosec_pops_move_07.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_08"
+	file = "ui/xenosec_pops_move_08.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_09"
+	file = "ui/xenosec_pops_move_09.wav"
+	volume = 0.45
+}
+sound = {
+	name = "xenosec_pops_move_10"
+	file = "ui/xenosec_pops_move_10.wav"
+	volume = 0.45
+}
+### GENERIC GREETING
+sound = {
+	name = "xenosec_generic_greeting_01"
+	file = "vo/phenotypes/xenosec_generic_greeting_01.wav"
+	volume = 0.40
+	always_load = no
+}
+### GREETING
+sound = {
+	name = "xenosec_greetings_01"
+	file = "vo/phenotypes/xenosec/xenosec_greetings_01.wav"
+	volume = 0.40
+}
+sound = {
+	name = "xenosec_greetings_02"
+	file = "vo/phenotypes/xenosec/xenosec_greetings_02.wav"
+	volume = 0.40
+}
+sound = {
+	name = "xenosec_greetings_03"
+	file = "vo/phenotypes/xenosec/xenosec_greetings_03.wav"
+	volume = 0.40
+}
+sound = {
+	name = "xenosec_greetings_04"
+	file = "vo/phenotypes/xenosec/xenosec_greetings_04.wav"
+	volume = 0.40
+}
+sound = {
+	name = "xenosec_greetings_05"
+	file = "vo/phenotypes/xenosec/xenosec_greetings_05.wav"
+	volume = 0.40
+}

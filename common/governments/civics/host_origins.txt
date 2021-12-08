@@ -1,0 +1,35 @@
+
+### HOST ORIGINS
+
+origin_host = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_host.dds"
+	picture = GFX_origin_host
+
+	max_once_global = yes # easier for event firing, ai should still be able to use it any case
+	preferred_planet_class_neighbor = yes
+
+	playable = {
+		host_has_dlc = "Distant Stars Story Pack"
+	}
+
+	possible = {
+		species = {
+			NOT = { value = LITHOID }
+		}
+	}
+
+	description = "origin_tooltip_host"
+
+	#flags = { custom_start_screen }
+
+	traits = {
+		trait = trait_brainslug
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 5
+	}
+}

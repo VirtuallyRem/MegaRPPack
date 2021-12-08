@@ -1,0 +1,69 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	# Lithoid
+	lith16 = {	entity = "portrait_lithoid_16_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lithoid_portrait_7_pyrite" 
+		character_textures = {
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_blue.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_grey.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_red.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_purple.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_yellow.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_black.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_blue2.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_obsidian.dds"
+			"gfx/models/portraits/lithoid/lithoid_16_portrait_green.dds"
+		}
+	}
+	lith17 	= {	entity = "portrait_lithoid_17_entity"	clothes_selector = "lithoid_normal_clothes_01" hair_selector = "no_texture"	greeting_sound = "humanoid_portrait_c_male"	
+		character_textures = {
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_1.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_2.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_3.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_3v2.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_4.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_4v2.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_5.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_6.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_3v2.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_7.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_8.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_9.dds"
+			"gfx/models/portraits/lithoid/lithoid_17_portrait_10.dds"
+		}
+	}	
+	lith18 = {	entity = "portrait_lithoid_18_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lithoid_portrait_7_pyrite" 
+		character_textures = {
+			"gfx/models/portraits/lithoid/lithoid_18_BISMUTH RESERVED.dds"
+		}
+	}
+	lith19 = {	entity = "portrait_lithoid_19_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lithoid_portrait_1_golem" 
+		character_textures = {
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_magma.dds"
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_lava.dds"
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_lava2.dds"
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_lava3.dds"
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_basalt.dds"
+			"gfx/models/portraits/lithoid/lithoid_19_portrait_mossy.dds"
+		}
+	}
+	lithbaol = {	entity = "portrait_lithoid_baol_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lithoid_portrait_14_snake" 
+		character_textures = {
+			"gfx/models/portraits/lithoid/lithoid_baol_yellow.dds"
+			"gfx/models/portraits/lithoid/lithoid_baol_blue.dds"
+			"gfx/models/portraits/lithoid/lithoid_baol_red.dds"
+			"gfx/models/portraits/lithoid/lithoid_baol_orange.dds"
+			"gfx/models/portraits/lithoid/lithoid_baol_green.dds"
+			"gfx/models/portraits/lithoid/lithoid_baol_amber.dds"
+		}
+	}
+}

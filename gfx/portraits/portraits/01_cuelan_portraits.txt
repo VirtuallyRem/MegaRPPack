@@ -1,0 +1,133 @@
+portraits = {
+	cuelan_female_01 = {	entity = "portrait_cuelan_female_01_entity"	clothes_selector = "cuelan_female_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings"
+		character_textures = { 
+			"gfx/models/portraits/cuelan/cuelan_female_body_01.dds" 
+			"gfx/models/portraits/cuelan/cuelan_female_body_01 - A.dds" 
+			"gfx/models/portraits/cuelan/cuelan_female_body_01 - B.dds" 
+			"gfx/models/portraits/cuelan/cuelan_female_body_01 - C.dds" 	
+			}
+	}
+	cuelan_male_01 = {	entity = "portrait_cuelan_male_01_entity"	clothes_selector = "cuelan_male_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings"
+		character_textures = { 
+			"gfx/models/portraits/cuelan/cuelan_male_body_01.dds"
+			"gfx/models/portraits/cuelan/cuelan_male_body_01 - A.dds" 
+			"gfx/models/portraits/cuelan/cuelan_male_body_01 - B.dds" 
+			"gfx/models/portraits/cuelan/cuelan_male_body_01 - C.dds" 
+		}
+	}	
+	cuelan_robot_01 = {	entity = "portrait_cuelan_female_01_entity"	clothes_selector = "no_texture" hair_selector "no_texture"	greeting_sound = "avian_01_greetings"
+		character_textures = { 
+			"gfx/models/portraits/cuelan/cuelan_robo.dds" 
+		}
+	}	
+	
+}
+
+portrait_groups = {
+	
+	CuelanBot = {
+		default = cuelan_robot_01 
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					cuelan_robot_01 
+				}
+			}
+		}
+
+		#leader scope 
+		ruler = {
+				add = {
+				portraits = {
+					cuelan_robot_01 
+				}
+			}
+		
+		}
+	}
+
+
+	Cuelan = {
+		default = cuelan_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					cuelan_male_01								
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					cuelan_female_01	
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					cuelan_male_01
+					cuelan_female_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					cuelan_male_01
+					cuelan_female_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cuelan_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cuelan_male_01
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cuelan_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cuelan_male_01
+				}
+			}
+		}
+	}
+}

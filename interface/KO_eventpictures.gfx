@@ -1,0 +1,36 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_KO_psions"
+		texturefile = "gfx/event_pictures/origins/ko_psions.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_KO_ascendants"
+		texturefile = "gfx/event_pictures/origins/KO_ascendants.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_KO_codom"
+		texturefile = "gfx/event_pictures/origins/KO_codom.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_army"
+		texturefile = "gfx/event_pictures/origins/army.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name= "GFX_armageddon"
+		texturefile = "gfx/interface/icons/buildings/building_fragment_of_armageddon.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ass"
+		texturefile = "gfx/interface/icons/modules/asss.dds"
+	}
+	spriteType = {
+		name = "GFX_hive"
+		texturefile = "gfx/event_pictures/origins/KO_hive.dds"
+	}
+}

@@ -1,0 +1,136 @@
+
+portraits = {
+# elves-romans (because i can)
+	space_romans_elves_female_01 = {	
+	      entity = "portrait_human_female_01_entity"	clothes_selector = "humanoid_space_romans_female_clothes_01" hair_selector = "space_roman_elves_female_01_hair"	greeting_sound = "human_female_greetings_03"
+		  character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_05_female_body_01.dds"
+		    }
+		}
+	space_romans_elves_male_01 = {	
+	      entity = "portrait_human_male_01_entity"	clothes_selector = "humanoid_space_romans_male_clothes_01" hair_selector = "space_roman_elves_male_01_hair"	greeting_sound = "human_male_greetings_03" 
+		  character_textures = {
+			"gfx/models/portraits/humanoid/humanoid_05_male_body_01.dds"
+		    }
+		}	
+}
+
+portrait_groups = {
+    space_romans_elves = {
+		default = space_romans_elves_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					space_romans_elves_male_01
+					
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					space_romans_elves_female_01		
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					space_romans_elves_female_01
+					space_romans_elves_male_01
+					
+					 
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					space_romans_elves_female_01											 
+					space_romans_elves_male_01
+					
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					space_romans_elves_female_01
+					 
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					space_romans_elves_male_01
+					
+					 
+				}
+			}
+		}
+		
+        leader = generals
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					space_romans_elves_male_01
+					
+					 
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					space_romans_elves_female_01
+					
+					 
+				}
+			}
+		
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					space_romans_elves_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					space_romans_elves_male_01
+				}
+			}
+		}
+	}
+
+}		

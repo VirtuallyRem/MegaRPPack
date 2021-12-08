@@ -1,0 +1,746 @@
+####CHANGES
+
+@cb_subjugation_length = 360
+
+action_form_commercial_pact = {
+	icon = "GFX_diplomacy_status_commercial_pact"
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_actor_independence = no
+	AI_acceptance_base_value = -50
+	action_type = positive
+	possible = {
+		custom_tooltip = {
+			fail_text = "ACTION_ACTOR_MUST_BE_INDEPENDENT"
+			OR = {
+				is_subject = no
+				is_subject_type = scion
+			}
+		}
+		custom_tooltip = {
+			fail_text = "ACTION_RECIPIENT_MUST_BE_INDEPENDENT"
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_type = scion
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		#custom_tooltip = {
+		#	fail_text = "requires_actor_not_gestalt_consciousness"
+		#	is_gestalt = no
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_recipient_not_gestalt_consciousness"
+		#	from = { is_gestalt = no }
+		#}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_criminal_heritage"
+			OR = {
+				is_criminal_syndicate = no
+				AND = {
+					is_criminal_syndicate = yes
+					from = { is_corp = no }
+					is_ai = no #AIs should still act as criminals
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_corp = no
+				from = { is_criminal_syndicate = yes }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_criminal_heritage
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_actor_no_separate_treaties"
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = treaties_separate_no }
+					NOT = { federation = { any_member = { is_same_value = root.from } } }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "federation_recipient_no_separate_treaties"
+			from = {
+				NOT = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_law = treaties_separate_no
+						}
+						NOT = { federation = { any_member = { is_same_value = root } } }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_good_or_better_opinion"
+
+			OR = {
+				opinion_level = { who = from level >= good }
+				is_improving_relations_with = from
+			}
+		}
+	}
+}
+
+action_demand_vassalization = {
+	icon = "GFX_diplomacy_status_has_vassal"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+	AI_acceptance_base_value = -50
+	action_type = aggressive
+
+	potential = {
+		NOT = { has_authority = auth_corporate }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						has_authority = auth_machine_intelligence
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gal_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_btc"
+			from = { has_been_declared_crisis = no }
+		}
+	}
+
+	proposable = { custom_tooltip = grants_subjugation_cb }
+
+	on_decline = {
+		add_casus_belli = {
+			type = cb_subjugation
+			who = from
+			days = @cb_subjugation_length
+		}
+	}
+}
+
+action_demand_protectorate = {
+	icon = "GFX_diplomacy_status_has_vassal"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+	AI_acceptance_base_value = -50
+	action_type = aggressive
+
+	potential = {
+		NOT = { has_authority = auth_corporate }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						has_authority = auth_machine_intelligence
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gal_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_btc"
+			from = { has_been_declared_crisis = no }
+		}
+	}
+
+	proposable = { custom_tooltip = grants_subjugation_cb }
+
+	on_decline = {
+		add_casus_belli = {
+			type = cb_subjugation
+			who = from
+			days = @cb_subjugation_length
+		}
+	}
+}
+
+action_demand_tributary = {
+	icon = "GFX_diplomacy_status_has_vassal"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+	AI_acceptance_base_value = -50
+	action_type = aggressive
+
+	potential = {
+		NOT = { has_authority = auth_corporate }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						has_authority = auth_machine_intelligence
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gal_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_btc"
+			from = { has_been_declared_crisis = no }
+		}
+	}
+
+	proposable = { custom_tooltip = grants_subjugation_cb }
+
+	on_decline = {
+		add_casus_belli = {
+			type = cb_subjugation
+			who = from
+			days = @cb_subjugation_length
+		}
+	}
+}
+
+action_demand_subsidiary = {
+	icon = "GFX_diplomacy_status_has_vassal"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+	AI_acceptance_base_value = -50
+	action_type = aggressive
+
+	potential = {
+		has_authority = auth_corporate
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				is_galactic_community_member = no
+				from = { is_galactic_community_member = yes }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_custodian"
+			from = { is_galactic_custodian = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_gal_emperor"
+			from = { is_galactic_emperor = no }
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_btc"
+			from = { has_been_declared_crisis = no }
+		}
+	}
+
+	proposable = { custom_tooltip = grants_megacorp_subjugation_cb }
+
+	on_decline = {
+		add_casus_belli = {
+			type = cb_megacorp_subjugate
+			who = from
+			days = @cb_subjugation_length
+		}
+	}
+}
+
+action_ask_to_leave_federation = {
+	icon = "GFX_diplomacy_status_federation"
+	auto_accepted = no
+	requires_actor_peace = yes
+	show_to_alliance_members = yes
+	should_notify_all_communications = yes
+	action_type = negative
+
+	potential = {
+		hidden_trigger = {
+			has_federation = yes
+			federation = {
+				OR = {
+					has_federation_type = hegemony_federation
+					has_federation_type = feudal_federation
+				}
+			}
+		}
+	}
+
+	proposable = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_already_asked"
+			NOT = { has_country_flag = asked_to_leave_hegemony }
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_rebelled"
+			NOT = { has_country_flag = failed_hegemony_rebellion }
+		}
+	}
+}
+
+####AI FIXES
+
+action_declare_war = {
+	icon = "GFX_diplomacy_status_war"
+	requires_actor_independence = no # You are able to declare war only on your overlord when being a vassal, this special case is handled in code instead.
+	requires_recipient_independence = no
+	requires_alliance_vote = yes
+	requires_unanimous_vote = yes
+	auto_accepted = yes
+	should_show_auto_accept_message_actor = yes
+	should_show_auto_accept_message_recipient = yes
+	should_open_auto_accept_message_recipient = yes
+	should_notify_all_communications = yes
+	action_type = aggressive
+	
+	possible = {
+		OR = {
+			is_ai = no
+			is_multiplayer = no
+			NOT = { is_country_type = default }
+		}
+	}
+}
+
+action_invite_to_federation = {
+	icon = "GFX_diplomacy_status_federation"
+	requires_actor_peace = yes
+	requires_recipient_peace = yes
+	requires_alliance_vote = yes
+	diplo_view_acceptance_icon = yes
+	should_notify_all_communications = yes
+	AI_acceptance_base_value = -50
+	action_type = positive
+	should_show_auto_accept_message_recipient = yes
+	should_open_auto_accept_message_recipient = yes
+	should_notify_auto_recipient_on_vote_fail = yes
+
+	potential = {
+		hidden_trigger = {
+			is_fallen_machine_empire = no
+			from = { is_fallen_machine_empire = no }
+		}
+	}
+
+	possible = {
+		OR = {
+			is_ai = no
+			is_multiplayer = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = { has_valid_civic = civic_fanatic_purifiers	}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+		}
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_devouring_swarm"
+			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+		}
+
+		# When actor is terminator, requires target machine empire/synth
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = { has_civic = civic_machine_terminator }
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+			}
+		}
+		# When actor is organic, requires target is not exterminator
+		custom_tooltip = {
+			fail_text = "requires_recipient_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				from = { NOT = { has_civic = civic_machine_terminator } }
+				AND = {
+					from = { has_civic = civic_machine_terminator }
+					OR = {
+						has_country_flag = synthetic_empire
+						has_authority = auth_machine_intelligence
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
+		custom_tooltip = {
+			fail_text = "requires_excellent_or_better_opinion"
+
+			OR = {
+				from = { is_same_value = prevprev } # Bypass opinion check if we are proposing on behalf of recipient
+				opinion_level = { who = from level >= excellent }
+				is_improving_relations_with = from
+			}
+		}
+		if = {
+			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		# Members of the Galactic Empire can't be in federations
+		custom_tooltip = {
+			fail_text = "requires_actor_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				OR = {
+					is_galactic_community_member = yes
+					from = { is_galactic_community_member = yes }
+				}
+			}
+		}
+	}
+}
+
+action_integrate_subject = {
+	icon = "GFX_diplomacy_status_being_integrated"
+	auto_accepted = yes
+	requires_recipient_independence = no
+	should_notify_all_communications = yes
+	action_type = neutral
+
+	possible = {
+		OR = {
+			is_ai = no
+			is_multiplayer = no
+		}
+	}
+}

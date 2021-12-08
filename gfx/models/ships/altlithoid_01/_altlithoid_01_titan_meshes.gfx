@@ -1,0 +1,71 @@
+objectTypes = {
+	pdxmesh = {
+		name = "altlithoid_01_titan_frame_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_01_empty.mesh"
+		
+		animation = { id = "idle"						type = "arthropoid_01_titan_frame_idle_animation" }
+		animation = { id = "death"						type = "arthropoid_01_titan_frame_death_animation" }
+		
+	}	
+	
+	pdxmesh = {
+		name = "altlithoid_01_titan_bow_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_01_titan_bow.mesh"
+		scale = 3.0
+
+		meshsettings = {
+			name = "altlithoid_01_titan_bow_meshShape"
+			index = 0
+			texture_diffuse = "lithoidDiffv3.dds"
+			texture_normal = "lithoidNormv3.dds"
+			texture_specular = "lithoidSpecv2.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "altlithoid_01_titan_mid_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_01_titan_mid.mesh"
+		scale = 3.0
+
+		meshsettings = {
+			name = "altlithoid_01_titan_bow_meshShape"
+			index = 0
+			texture_diffuse = "lithoidDiffv3.dds"
+			texture_normal = "lithoidNormv3.dds"
+			texture_specular = "lithoidSpecv2.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "altlithoid_01_titan_stern_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_01_titan_stern.mesh"
+		scale = 3.0
+
+		meshsettings = {
+			name = "altlithoid_01_titan_bow_meshShape"
+			index = 0
+			texture_diffuse = "lithoidDiffv3.dds"
+			texture_normal = "lithoidNormv3.dds"
+			texture_specular = "lithoidSpecv2.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "altlithoid_01_titan_weapon_effect_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_empty.mesh"
+
+		meshsettings = {
+			name = "altlithoid_01_titan_weapon_effectShape"
+			index = 0
+			texture_diffuse = "nodiffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}
+
+}

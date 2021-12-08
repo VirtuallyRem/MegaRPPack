@@ -1,0 +1,16 @@
+d_pioneer_primitive = {
+	icon = unused/d_satellite_in_orbit
+	
+	is_for_colonizeable = yes
+
+	potential = { always = no }
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		pop_environment_tolerance = -0.1
+		pop_growth_speed = -0.3
+		planet_pop_assembly_mult = -0.5
+	}
+	
+	category = deposit_cat_rare_blocker
+}

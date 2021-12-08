@@ -1,0 +1,18 @@
+# xenosec
+	
+	animation = {
+		name = "xenosec_01_happy_animation"
+		file = "xenosec_01_portrait_happy.anim"
+	}
+	animation = {
+		name = "xenosec_01_happy_2_animation"
+		file = "xenosec_01_portrait_happy_2.anim"
+	}
+	animation = {
+		name = "xenosec_01_sad_animation"
+		file = "xenosec_01_portrait_sad.anim"
+	}
+	animation = {
+		name = "xenosec_01_sad_2_animation"
+		file = "xenosec_01_portrait_sad_2.anim"
+	}

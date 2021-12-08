@@ -1,0 +1,173 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+# GALACTIC FOCUS
+# Galactic Headquarters Resolution
+resolution_galactic_headquarter_form = {
+	icon = "GFX_resolution_create_council"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = yes
+
+	valid_target = {
+		is_same_value = from
+	}
+
+	effect = {
+		hidden_effect = { add_modifier = { modifier = resolution_passed_diplomatic_weight days = 2200 } }
+		hidden_effect = {
+			add_modifier = {
+				modifier = galactic_headquarter_founder
+				days = -1
+			}
+			set_global_flag = galactic_community_resolution_passed
+
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = { add_modifier = { modifier = resolution_failed_diplomatic_weight days = 2200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+		}
+	}
+
+	modifier = {
+		country_base_influence_produces_add = 0.25
+	}
+
+	potential = {
+		OR = {
+			has_federations_dlc = yes
+			has_nemesis = yes
+		}
+		NOT = {
+			any_country = {
+				has_modifier = galactic_headquarter_founder
+			}
+		}
+		is_gestalt = no
+		is_civic_diplomatic_corps = yes
+		has_galactic_emperor = no
+		is_homicidal = no
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = resolution_galactic_headquarter_form_five_members
+			count_country = {
+				limit = { is_galactic_community_member = yes }
+				count >= 3
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			always = yes
+		}
+	}
+}
+
+resolution_galactic_headquarter_relocate = {
+	icon = "GFX_resolution_galactic_headquarter_relocate"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = yes
+
+	valid_target = {
+		is_same_value = from
+	}
+
+	effect = {
+		hidden_effect = { add_modifier = { modifier = resolution_passed_diplomatic_weight days = 2200 } }
+		hidden_effect = {
+			any_country = {
+				limit = { has_modifier = galactic_headquarter_founder }
+				remove_modifier = galactic_headquarter_founder
+			}
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = galactic_headquarter_founder
+				days = -1
+			}
+
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+
+			set_timed_global_flag = { flag = resolution_galactic_headquarter_relocated_recently days = 18000 }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = { add_modifier = { modifier = resolution_failed_diplomatic_weight days = 2200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+
+	potential = {
+		OR = {
+			has_federations_dlc = yes
+			has_nemesis = yes
+		}
+		any_country = {
+			has_modifier = galactic_headquarter_founder
+		}
+		is_gestalt = no
+		is_civic_diplomatic_corps = yes
+		has_galactic_emperor = no
+		is_homicidal = no
+	}
+
+	allow = {
+		NOT = { has_modifier = galactic_headquarter_founder }
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			always = yes
+		}
+	}
+}

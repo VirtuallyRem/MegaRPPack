@@ -1,0 +1,69 @@
+change_ethics = {
+	length = 0
+	resources = {}
+	
+	effect = {
+		country_event = { id = change_ethics.50 }
+	}
+	
+	potential = {
+		NOT = {	has_ethic = ethic_gestalt_consciousness	}
+	}
+	
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+personalize_machine_world = {
+	length = 327
+	icon = "GFX_edict_type_time"
+	
+	resources = {
+	}
+	
+	potential = {
+		OR = {
+			has_origin = origin_machine
+			has_ascension_perk = ap_machine_worlds
+		}
+	}
+
+	allow = {
+	}
+
+	effect = {
+		hidden_effect = { country_event = { id = mod_change_style.5 } }
+	}
+}
+
+personalize_ecu = {
+	length = 327
+	icon = "GFX_edict_type_time"
+	
+	resources = {
+	}
+	
+	potential = {
+		OR = {
+			any_owned_planet = {
+				OR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+				}
+			}
+			has_ascension_perk = ap_arcology_project
+		}
+		NOT = { has_trait = trait_pc_aquatic_preference }
+	}
+
+	allow = {
+	}
+
+	effect = {
+		hidden_effect = { country_event = { id = mod_change_style.1 } }
+	}
+}

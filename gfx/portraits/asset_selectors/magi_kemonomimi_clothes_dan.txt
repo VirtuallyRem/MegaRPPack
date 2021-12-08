@@ -1,0 +1,87 @@
+# This is a template which multiple species can use. 
+
+magi_kemonomimi_clothes_dan = {
+	default = "gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2aka.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2ao.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2midori.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2murasaki.dds"
+			}
+		}
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2aka.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2ao.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2midori.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2murasaki.dds"
+			}
+		}
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku4.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku4.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2aka.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2ao.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2midori.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2murasaki.dds"
+			}
+		}
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/magi_kemonomimi/HUKU/huku_new1aka1.dds"
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku_new1aka1.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku_new1.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2aka.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2ao.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2midori.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku2murasaki.dds"
+				"gfx/models/portraits/magi_kemonomimi/HUKU/huku4.dds"
+			}
+		}
+	}
+}

@@ -1,0 +1,246 @@
+##################
+# Species Traits #
+##################
+
+#Handicap#
+
+trait_additrait_ephemeral = {
+	cost = -2
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = { leader_age = -20 }
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" "trait_additrait_immune" }
+}
+
+trait_additrait_easily_distracted = {
+	cost = -1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+	}
+	opposites = { "trait_erudite" "trait_intelligent" "trait_nerve_stapled" "trait_additrait_simple_minded" "trait_additrait_multitasking" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists"}
+}
+
+trait_additrait_simple_minded = {
+	cost = -2
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.1
+		planet_jobs_society_research_produces_mult = -0.1
+	}
+	opposites = { "trait_erudite" "trait_nerve_stapled" "trait_intelligent" "trait_additrait_multitasking" "trait_additrait_easily_distracted" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists"}
+}
+
+trait_additrait_lazy = {
+	cost = -2
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_minerals_produces_mult = -0.15
+	}
+	opposites = { "trait_industrious" }
+} 
+
+trait_additrait_prodigal = {
+	cost = -2
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.15
+	}
+	opposites = { "trait_thrifty" }
+} 
+
+trait_additrait_lethargic = {
+	cost = -3
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_damage_mult = -0.40
+		planet_jobs_worker_produces_mult = -0.05
+	}
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" }
+} 
+
+trait_additrait_unfit_engineers = {
+	cost = -1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.15
+	}
+	opposites = { "trait_natural_physicists" "trait_natural_sociologists" "trait_natural_engineers" "trait_nerve_stapled" "trait_additrait_unfit_physicists" "trait_additrait_unfit_sociologists" "trait_additrait_easily_distracted" "trait_additrait_simple_minded" "trait_additrait_multitasking" "trait_intelligent"}
+}
+
+trait_additrait_unfit_physicists = {
+	cost = -1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_physics_research_produces_mult = -0.15
+	}
+	opposites = { "trait_natural_engineers" "trait_natural_sociologists" "trait_natural_physicists" "trait_nerve_stapled" "trait_additrait_unfit_engineers" "trait_additrait_unfit_sociologists" "trait_additrait_easily_distracted" "trait_additrait_simple_minded" "trait_additrait_multitasking" "trait_intelligent"}
+}
+
+trait_additrait_unfit_sociologists = {
+	cost = -1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_society_research_produces_mult = -0.15
+	}
+	opposites = { "trait_natural_physicists" "trait_natural_engineers" "trait_natural_sociologists" "trait_nerve_stapled" "trait_additrait_unfit_engineers" "trait_additrait_unfit_physicists" "trait_additrait_easily_distracted" "trait_additrait_simple_minded" "trait_additrait_multitasking" "trait_intelligent"}
+}
+
+
+trait_additrait_very_slow_breeders = {
+	cost = -5
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		pop_growth_speed = -0.20
+	}
+	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_fertile" "trait_additrait_passionate" }
+}
+
+
+###########################################################################################################################################################
+#Neutral
+#What makes a trait turn neutral ? A really real choice, for sure.
+
+#trait_additrait_focused  = {
+#	cost = 0
+#	allowed_archetypes = { BIOLOGICAL }
+#	modifier = { #-1 tech research alternative #Doesn't work at this moment.
+#		planet_jobs_engineering_research_produces_mult = 0.05
+#		planet_jobs_physics_research_produces_mult = 0.05
+#		planet_jobs_society_research_produces_mult = 0.05
+#	}
+#	opposites = { "trait_additrait_easily_distracted" "trait_intelligent" "trait_additrait_simple_minded" "trait_additrait_multitasking" }
+#}
+
+###########################################################################################################################################################
+#Avantages#
+
+
+
+
+
+trait_additrait_multitasking = {
+	cost = 1
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+	opposites = { "trait_erudite" "trait_intelligent" "trait_additrait_simple_minded" "trait_additrait_easily_distracted" }
+}
+
+# trait_additrait_war_lovers = {
+	# cost = 2
+	# allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	# modifier = {
+		# pop_war_happiness = 0.15
+		# pop_peace_happiness = -0.05
+	# }
+	# valid_for_all_ethics = no #Has no effect except barring it for hivemind or if you took only one ethic, pacifist.
+	# allowed_ethics = {
+		# ethic_militarist
+		# ethic_fanatic_militarist
+	# }	
+	# opposites = { "trait_additrait_peace_lovers"}
+# }
+
+# trait_additrait_peace_lovers = {
+	# cost = 2
+	# allowed_classes = { HUM MAM REP AVI ART MOL FUN PLANT }
+	# modifier = {
+		# pop_peace_happiness = 0.15
+		# pop_war_happiness = -0.05
+	# }
+	# valid_for_all_ethics = no
+	# allowed_ethics = {
+		# ethic_pacifist
+		# ethic_fanatic_pacifist
+	# }	
+	# opposites = { "trait_additrait_war_lovers"}
+# }
+
+#trait_additrait_psionics = {
+#	cost = 1
+#	allowed_archetypes = { BIOLOGICAL }
+#	#give the tech psionic_theory
+#	sentient = yes
+#	modification = no
+#}
+
+
+trait_additrait_immune = {
+	cost = 4
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = { 
+		leader_age = 40 
+		pop_environment_tolerance = 0.10
+	}
+	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_robust" "trait_extremely_adaptive" "trait_venerable" "trait_enduring" "trait_fleeting" "trait_additrait_ephemeral" }
+}
+
+
+###########################################################################################################################################################
+#Presentients#
+
+trait_additrait_presapient_natural_inventors = {
+	cost = 1
+	initial = no
+	sapient = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_primitive.dds"
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.20
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = -0.1
+	}
+	opposites = { "trait_presapient_proles" "trait_presapient_natural_intellectuals" "trait_additrait_presapient_natural_savants"}
+}
+
+trait_additrait_presapient_natural_savants = {
+	cost = 1
+	initial = no
+	sapient = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_primitive.dds"
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = -0.1
+	}
+	opposites = { "trait_presapient_proles" "trait_presapient_natural_intellectuals" "trait_additrait_presapient_natural_inventors"}
+}
+
+trait_additrait_presapient_tasty = {
+	cost = 1
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	sapient = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	modifier = {
+		planet_livestock_food_produces_add = 1
+	}
+	opposites = { "trait_delicious" "trait_additrait_presapient_bitter" }
+}
+
+trait_additrait_presapient_bitter = {
+	cost = -1
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	sapient = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	modifier = {
+		planet_livestock_food_produces_add = -1
+	}
+	opposites = { "trait_delicious" "trait_additrait_presapient_tasty" }
+}

@@ -1,0 +1,10 @@
+portraits = { 
+hydra = { entity = "portrait_reptilian_14_entity" clothes_selector = "no_texture" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/hydra/hydra.dds"
+
+}
+}
+
+}

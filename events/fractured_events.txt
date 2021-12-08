@@ -1,0 +1,122 @@
+namespace = fractured
+
+#set up fractured, killing previous ruler and replacing them with a "blank" ruler (killing them if this happened at game start)
+country_event = {
+	id = fractured.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { has_authority = auth_fractured }
+
+	immediate = {
+
+		create_species = {
+			name = " "
+			class = ROBOT
+			namelist = AI
+			portrait = fractured_leader_portrait
+			traits = {}
+		}
+
+		ruler = { save_event_target_as = old_ruler }
+
+		create_leader = {
+			class = ruler
+			species = last_created_species
+			name = "N/A"
+			set_age = 1
+			event_leader = yes
+			gender = indeterminable
+			traits = {
+				trait = leader_trait_fractured
+			}
+			effect = {
+				set_leader_flag = fractured_leader
+				change_leader_portrait = fractured_leader_portrait
+			}
+		}
+		
+		
+		set_leader = last_created_leader
+
+		if = {
+			limit = { years_passed < 1}
+			event_target:old_ruler = { kill_leader = { show_notification = no } }
+			if = {
+				limit = { is_country_type = primitive }
+				every_owned_pop = { change_species = root.species }
+			}
+		}
+	}
+}
+
+#Check if removing ruler is needed
+country_event = {
+	id = fractured.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_fractured
+			AND = {
+				exists = ruler
+				ruler = { has_trait = leader_trait_fractured }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_authority = auth_fractured
+				NOT = { ruler = { has_trait = leader_trait_fractured } }
+			}
+			country_event = { id = fractured.1 } #"remove" ruler
+		}
+		else_if = {
+			limit = {
+				NOT = { has_authority = auth_fractured }
+				ruler = { has_trait = leader_trait_fractured }
+			}
+			country_event = { id = fractured.3 } #Reinstate Ruler
+		}
+	}
+}
+
+#Reinstate Ruler
+country_event = {
+	id = fractured.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { ruler = { kill_leader = { show_notification = no } } }
+}
+
+
+country_event = {
+	id = fractured.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_authority = auth_fractured
+	}
+	
+	immediate = { 
+		if = { limit = { has_modifier = fractured_faction_resources }
+			remove_modifier = fractured_faction_resources 
+		}	
+		if = { limit = { has_modifier = fractured_faction_influence_malus }
+			remove_modifier = fractured_faction_influence_malus 
+		}
+		
+		if = { 	limit = { years_passed < 10	}
+			add_modifier = { modifier = fractured_faction_influence_malus days = -1 }
+		}
+		add_modifier = { 
+			modifier = fractured_faction_resources
+			days = -1 
+			multiplier = trigger:num_pops
+		} 
+	}
+}

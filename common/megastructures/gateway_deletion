@@ -1,0 +1,216 @@
+gateway_destroy = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
+															# if this option is active, the placement_rules will be completely ignored
+	show_galactic_map_icon = no
+	potential = {
+		has_technology = tech_gateway_activation
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_gateway_construction"
+			from = { has_technology = tech_gateway_construction }
+		}
+	}
+	upgrade_from = {
+		gateway_final
+	}
+	build_time = 720
+	resources = {
+		category = megastructures
+		cost = {
+			volatile_motes = 200
+			influence = 100
+		}
+	}
+
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+  bypass_type = gateway
+	on_build_complete = {
+		remove_megastructure = fromfrom
+	}
+}
+
+gateway_restored_destroy = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
+															# if this option is active, the placement_rules will be completely ignored
+	show_galactic_map_icon = no
+	potential = {
+		has_technology = tech_gateway_activation
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_gateway_construction"
+			from = { has_technology = tech_gateway_construction }
+		}
+	}
+	upgrade_from = {
+		gateway_restored
+	}
+	build_time = 720
+	resources = {
+		category = megastructures
+		cost = {
+			volatile_motes = 200
+			influence = 100
+		}
+	}
+
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+  bypass_type = gateway
+	on_build_complete = {
+		remove_megastructure = fromfrom
+	}
+}
+
+# L-Gate
+
+#lgate_base0 = {
+#	entity = "construction_platform_entity"
+#	construction_entity = "construction_platform_entity"
+#	portrait = "GFX_megastructure_construction_background"
+#	place_entity_on_planet_plane = no
+#	# build_outside_gravity_well = yes
+#	show_galactic_map_icon = no
+#	build_time = 1080
+#	resources = {
+#		category = megastructures
+#		cost = {
+#			alloys = 2500
+#			influence = 100
+#		}
+#	}
+#
+#	potential = {
+#		has_technology = tech_gateway_construction
+#	}
+#
+#	possible = {
+#		exists = starbase
+#		custom_tooltip = {
+#			fail_text = "requires_inside_border"
+#			is_inside_border = from
+#		}
+#		custom_tooltip = {
+#			fail_text = "requires_surveyed_system"
+#			NOT = {
+#				any_system_planet = {
+#					is_surveyed = {
+#						who = prev.from
+#						status = no
+#					}
+#				}
+#			}
+#		}
+#		custom_tooltip = {
+#			fail_text = "requires_no_existing_lgate"
+#			NOT = {	has_megastructure = lgate_base }
+#		}
+#		custom_tooltip = {
+#			fail_text = "requires_technology_gateway_construction"
+#			from = { has_technology = tech_gateway_construction }
+#		}
+#	}
+#
+#	ai_weight = {
+#		factor = 0
+#	}
+#
+#	construction_blocks_others = no
+#
+#	on_build_start = {}
+#	on_build_cancel = {}
+#	on_build_complete = {}
+#}
+
+
+#lgate_base = {
+#	entity = "gatebuilder_01_gateway_entity"
+#	construction_entity = "gateway_portal_entity"
+#	portrait = "GFX_megastructure_construction_background"
+#	place_entity_on_planet_plane = no
+#	# build_outside_gravity_well = yes
+#	show_galactic_map_icon = no
+#
+#	potential = {
+#		has_technology = tech_gateway_activation
+#	}
+#
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_technology_gateway_activation"
+#			from = { has_technology = tech_gateway_activation }
+#		}
+#	}
+#
+#	upgrade_from = {
+#		lgate_base0
+#	}
+#
+#	build_time = 1800
+#	resources = {
+#		category = megastructures
+#		cost = {
+#			alloys = 2500
+#			energy = 6000
+#		}
+#	}
+#
+#	construction_blocks_others = no
+#
+#	bypass_type = lgate
+#	on_build_complete = {}
+#}
+
+lgate_destroy = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
+															# if this option is active, the placement_rules will be completely ignored
+	show_galactic_map_icon = no
+	potential = {
+		has_technology = tech_gateway_activation
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_gateway_construction"
+			from = { has_technology = tech_gateway_construction }
+		}
+		custom_tooltip = {
+			fail_text = "cannot_destroy_terminal_egress_gate"
+			NOT = { has_star_flag = lcluster_lgate }
+		}
+	}
+	upgrade_from = {
+		lgate_base
+	}
+	build_time = 720
+	resources = {
+		category = megastructures
+		cost = {
+			volatile_motes = 1000
+			influence = 250
+		}
+	}
+
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+	bypass_type = gateway
+	on_build_complete = {
+		remove_megastructure = fromfrom
+	}
+}

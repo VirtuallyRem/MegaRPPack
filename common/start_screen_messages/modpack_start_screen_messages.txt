@@ -1,0 +1,43 @@
+#Synthetic Evolution
+part = {
+	location = 0
+	localization = "START_SCREEN_SYNTH_0"
+	
+	trigger = {
+		has_origin = origin_synth_start
+	}
+}
+part = {
+	location = 2
+	localization = "START_SCREEN_SYNTH_1_EGAL"
+	
+	trigger = {
+		has_origin = origin_synth_start
+		is_authoritarian = no
+		NOR = {
+			has_ethic = ethic_elitist
+			has_ethic = ethic_fanatic_elitist
+		}
+	}
+}
+part = {
+	location = 2
+	localization = "START_SCREEN_SYNTH_1_AUTH"
+	
+	trigger = {
+		has_origin = origin_synth_start
+		OR = {
+			is_authoritarian = yes
+			has_ethic = ethic_elitist
+			has_ethic = ethic_fanatic_elitist
+		}
+	}
+}
+
+#Stranded
+part = {
+	location = 0
+	localization = "START_SCREEN_LOST_COLONY"
+	
+	trigger = { has_origin = origin_stranded }
+}

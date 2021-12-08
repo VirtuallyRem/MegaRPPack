@@ -1,0 +1,243 @@
+### Essor Interplanetary Coalition
+### Created by EvilBuggie
+
+RHEKARI = {
+	randomized = no
+	alias = "Rhekari"
+
+	ship_names = {
+
+		corvette = {
+			"General Kroskin" "Mitriak Dostrano" "Admiral Ko Tur" "Jakerska Zkitov" "Irsk Krastra" "Preker var Repatir" "Risar Tenesk" "General Tusker" 
+"Kenit Orpask" "Vlatak Stakir" "Admiral Sokoron" "Prentira Korusk" "Kratus Acorus" "Ket Ra" "Kolet Atranis" "Raprios" "Commander Estrask" "Matrok Rhessvik" "Admiral Krovis"
+"Pratas the Invinvible" "Emperor Marusk" "King Crotias" "Prince of Ressalis" "Dravak Zrotur" "King var Trisska" "Tarus Korturus" "Presk Mirtin" "Pretenik Copracht" 
+"Commander Rikzar" "Natasa Rox" "Melik Asaton" "President Iltaris" "Kristia Espak" "Makilian Sitrev" "Raukias the Great" "Sokor Ilikes" "Admiral Kleaska" "Topros Misra"
+"Akroma Tersin" "Lesk Ipsakra" "Rovkas Ikilovis" "Se To" "Marshall Kesken" "President Likon" "Kin Ot Pra" "Prince Karakis" "King Voskar" "Atres Makate" "Reptir Liaster"
+"Pakro Triskari" "Prok Tiris" "Prokes Tenessan" "Chairman Prozvek"
+		}
+
+		destroyer = {
+			Arbiter Reaper Striker Warrior Pioneer Herald Grenadier Harbinger Messenger Adventurer Defender Guardian Challenger Breacher Strider 
+"Seeker of Glory" Hunter Canoneer Ripper Harvester "Breaker of Foes" Brigand Councillor Butcher Soldier Stargazer Executioner Vassal Predator Blacksmith Shieldbearer 
+"Shadow Stalker" Sprinter Carnivore Catalyst Creator Chaplain Courier Cavalier Liberator Extinguisher Trumpeter "Bringer of Doom" Conqueror Subjugator Archer Thunderer 
+"Laughing Jester" Punisher Piercer Perpetrator Demolisher Decimator Enforcer Rebel Partisan Assassin Incinerator Headhunter Protector Watchman Sentinel Skirmisher 
+Vanquisher Wanderer Bruiser Marksman Devastator Spotter Scavenger Investigator Brawler Bellower Lecturer Mauler Annihilator Obliterator Keeper Preserver Campaigner 
+Combatant Trailblazer Perforator Pathfinder Mercenary Avenger Slayer Rascal Rogue Bloodletter Outrider Bastard Godbreaker Zealot Diplomat Duellist Gunslinger Justiciar 
+		}
+
+		cruiser = {
+			Endurance Resolute Stalwart Courage Aspirant Perseverance Purity Immunity Excellence Fortitude "Iron Will" Resistance Patience Valour 
+Destiny Retribution Tenacious Persistence Ascendance Defiance Providence Rigidity Triumph Liberty "Final Frontier" Promise "Righteous Fury" Pursuit Profit 
+Spirit Prophet "Gathering Storm" Respite Allegiance Purpose Stubborn "Event Horizon" Resurgence Pride Invincible Invulnerable Dominance Supremacy Superior 
+Contemplation Prosperity Furious Reckoning Disciple Judgement Vindication Brilliance Eminence Assault Relentless Dauntless Indomitable Renown Awe "Shining Light" 
+Unbreakable Glorious Colossus Venerable Triumphant Formidable Frenzy Conviction Retaliation Audacious Valiant Revenge Foresight Fearless Verdant Unstoppable Impervious 
+		}
+
+		battleship = {
+			"Var Carisco" "New Aricor" Ero Artren Korzkar "Ku Ke" Rialtis Koprenaken Taurakir Arakir Narcova Irskurk Rakivir Drekir "Rasku City" Testrak 
+Skotra Ekrast Teri Mrokvir Prekin Jereko Kerosalek "Var Dastran" Vrazkir Drakunok Sekara Tyrkarea Ostras Ceapra "Port Vrankar" Kirensk Szirik Ker Rhessakan Orikar Serikar 
+Orotes Torzokar Kaskor Setor Tirass Surikzir Rekistir Krotorak Oris Drisskar Ranos Krios Ozarask Eres Atos "Tara Krokar" "Ro Ki To" Kraniat Preverakor Tressiar
+		}
+
+		titan = {
+			Essor Overlord Colossus Pantokrator Reckoning
+		}
+
+		colossus = {
+			Adjudicator Executor "Hammer of Tessar" Unconquered Catapult
+		}
+
+		constructor = {
+			Jakara Prokius Trastir Seka Riakrin Perkir Vakraya Sirta Toriak Atranos
+		}
+
+		colonizer = {
+			"To New Shores" "Verdant Promise" Hope Forward "Horizon Approaches" Outbound "Broken Barrier" "Into Future" Salvation Temptation Wanderer
+		}
+
+		science = {
+			"Light in the Dark" Discovery "Krani Rektakir" Enlightenment "Power of Will" "Carrying the Flag" Jolavka "Unveiled Secret" Excavator "Brave into the Dark" Pathfinder Waymaker
+		}
+
+		transport = {
+			Kapar
+		}
+
+		military_station_small = {
+			Shield
+		}
+
+		ion_cannon = {
+			Ballista
+		}
+	}
+
+	fleet_names = {
+		sequential_name = "%O% Coalition Navy Group"
+	}
+
+	army_names = {
+
+		defense_army = {
+			sequential_name = "%O% Garrison Division"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Expedition Division"
+		}
+
+		slave_army = {
+			sequential_name = "%O% Penal Division"
+		}
+
+		clone_army = {
+			sequential_name = "%O% Clone Division"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Automated Division"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Automated Division"
+		}
+
+		psionic_army = {
+			sequential_name = "%O% Psiotic Division"
+		}
+
+		xenomorph_army = {
+			sequential_name = "%O% Bionic Division"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Division"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Police Division"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Automated Division"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+	}
+
+
+	character_names = {
+
+		names1 = {
+			weight = 30
+			first_names_male = {
+				Jor Brikan Pretak Atam Jakas Krelias Rakop Kristor Mirkral Kraton Kreok Ros Urkest Kert Sturak Prens Krator Kratun Atrias Atriak Prilep Etrun Travik Kary Toris Kretal Turas
+				Triak Priskan Ekris Krant Tavik Mikrok Tarren Nistran Ekret Koratir Markom Tarsan Nisket Arkom Batrok Prekan Ors Ukrin Trasan Preko Tokar Emekran Orsat Driskar
+				Proko Reko Tromu Riask Jorok Akur Kelek Kerek Torkram Irost Presker Kolet Prokes Reptir
+			}
+			first_names_female = {
+				Okira Ekiri Skoris Acira Skralet Ema Daski Ekva Sira Akreni Krasa Jaskin Kata Aleka Karisa Warki Vikira Lukir Pria Roskir Viorca Melias Irik Rokamu Saprian Sikil
+				Misirak Sekri Atunas Serkin Tereska Hikaru Carim Pirias Ykor Tiskor Takara Misika Juki Tauvir Rioka Rahakri Terin Akril Vikal Rihiko Likori
+				Sirka Marastir Tiska Hatar Piroi Piaka Markai Corstar Risar Matrok Piroki
+			}
+			second_names = {
+				Tisk "Ras Torria" Masko Prekins Stafok Prason Siklar Kimaran Sork "Ras Osko" Rykan Saratin Rokasor Rakton Stros Trosta Parast Strelik Asakro Veskars Ropan
+				"Ras Tekan" Skarlis Apreka Vikras Vinter Sarvak Pirk Grost Krosvel Snitar Aprik Otranis Surtan Merekor Horvan Hirkin Kanser Brakstal Kritaker Tarker Prassor
+				"Ras Vetril" Kenzis Pakton Skinar Karkon Tesker Kiprons Wirlok Kroskin Kesken Krastra Tenesk Tusker Resvik Espak Tersin Likon Tiris Rauton Ekrant Asrom
+			}
+			regnal_first_names_male = {
+				Priskan Kratus Varikan Tirus Rahakus Kramok Presker Reptir
+			}
+			regnal_first_names_female = {
+				Tekora Marastir Piroki Orika Jaskin Karisa Rahakri Terin
+			}
+			regnal_second_names = {
+				"Ras Vetril" "Ras Tekan" "Ras Osko"
+			}
+		}
+
+		names2 = {
+			weight = 30
+			first_names_male = {
+				Okov Skrato Vaskil Prozav Pikotr Vitri Serkej Rokev Vrisk Yukir Konstar Lovik Szakor Traskiv Torosk Vratiskor Merko Ikavo Korvask Karko Norz
+				Salosk Prevko Prazak Kiril Ratovis Tezkor Orzon Atrok Proskav Kenit Vlatak Dravok Aleskar Rekovik
+			}
+			first_names_female = {
+				Jevka Iljakar Tarika Ikrin Sirva Prikria Tariv Ajeka Kari Helkra Torjaka Itrai Viris Makozi Tipra Priav Nerisk Prevka Korvasi Nitris Maralka
+				Pirliv Misk Sorvan Jakerska
+			}
+			second_names = {
+				Rortask Prenezt Okrava Tirkosk Kolorosk Akarom Vrotask Ermisk Norsk Jakalov Tiraksk Treskja Kaltev Plersk Primsk Priask Trisk Jorvesk Oltrek
+				Rosk Palatrask Zkitov Orpask Stakir Sokoron Zratavak
+			}
+			regnal_first_names_male = {
+				Aleskar Ratovis Vratiskor Yukir Kiril
+			}
+			regnal_first_names_female = {
+				Iljakar Jakerska Tariv Torjaka Viris
+			}
+			regnal_second_names = {
+				Palatrask Sokoron Zratavak Treskja
+			}
+		}
+
+		names3 = {
+			weight = 30
+			first_names_male = {
+				Ke To "Ro Ku" Ri Ko Tra Ik Tir Kos Tar "Ki To" Ker Et Te Sa Ru "Te Mo" Nu Ran Kam Pos Sek Sot "Tar Pa" Pri Pre
+			}
+			first_names_female = {
+				Ai Ri Ti "Mi Sa" Sir Tai Kia Pas Sim To Kil Ni Tas Sia "Kia No" Eri Ne Ke Es "Sa Li" "Ki Tao" "Va Tai"
+			}
+			second_names = {
+				Siak Tor Soluk Ravi Iri Mika Tari Piat Ka Ve Teni Sito Kesi Keso Eska Pai Kir Sre Ati Isa Tur Katu
+			}
+			regnal_first_names_male = {
+				"Ro Ku" "Ki To" "Te Mo" "Tar Pa" "Pi Ku"
+			}
+			regnal_first_names_female = {
+				"Mi Sa" "Kia No" "Sa Li" "Ki Tao" "Va Tai"
+			}
+			regnal_second_names = {
+				Siak Mika Kesi Ati Katu
+			}
+		}
+
+		names4 = {
+			weigth = 30
+			first_names_male = {
+				Marasko Tressias Riskari Peretas Asrakor Torokras Prekirin Mirkas Orotrek Perkiras Tastrakir Arkatis Etreskor Sarkatun Tuskaris Erkrisk Assravik Triasskar
+				Oraskin Riokrat Skriskan Tirsat Ritroskar Polakras Tyrankor Kirvatro Perkron Taruskal Priokan Rahakyr Teskrin Salkaros
+			}
+			first_names_female = {
+				Reskia Atriessa Istraki Oskiras Kiriss Urkura Riskati Harakir Ikrani Lekren Sivirak Nariss Teryssar Akimar Pertossir Nituris Saravia Rikari Nesseral
+				Perteki Tirkari Kioras Aprakor Iskitar Marakir Tirkera Prentira Kristia Raukias Akroma
+			}
+			second_names = {
+				"Ar Sikata" "Ar Torvask" "Ar Perikir" "Ar Rikanis" "Ar Rialtir" "Ar Torkassa" "Ar Erprako" Katrasskir Previkan Inarskir Verkarak "Ar Verkarak" "Ar Sorala"
+				"Ar Toras" "Ar Iskorikir" Nurassok Pekterok Virkor "Ar Paravin" "Ar Selesk" "Ar Makrassin" Teltrak Tokorak Dostrano "Ar Repatir" Korusk Atranis Coprat "Ar Asaton"
+				Iltaris Ikilovis
+			}
+			regnal_first_names_male = {
+				Tressias Peretas Tyrankor Salkaros Priokan
+			}
+			regnal_first_names_female = {
+				Reskia Tirkari Marakir Ikrani Teryssa
+			}
+			regnal_second_names = {
+				"Ar Sikata" "Ar Paravin" "Ar Erprako" "Ar Toras" "Ar Asaton"
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+namespace = rapid_cyber
+
+country_event = {
+	id = rapid_cyber.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { owner = { has_origin = origin_rapid_cybernetification } }
+
+	immediate = {
+		add_modifier = { modifier = malfunctioning_implants days = 1800 }
+		if = { limit = { has_country_flag = flesh_weakened } remove_country_flag = flesh_weakened }
+		country_event = { id = rapid_cyber.2 days = 1800 }
+	}
+}
+
+country_event = {
+	id = rapid_cyber.2
+	title = rapid_cyber.2.name
+	desc = rapid_cyber.2.desc
+	picture = GFX_evt_cybernetics
+	show_sound = event_default
+	is_triggered_only = yes
+	
+	trigger = { owner = { has_origin = origin_rapid_cybernetification } }
+
+	immediate = { set_country_flag = flesh_weakened }
+	
+	option = {
+		name = "utopia.2501.a"
+		custom_tooltip = CYBORG_ASSIMILATION_CITIZENSHIP_ENABLED
+	}
+}

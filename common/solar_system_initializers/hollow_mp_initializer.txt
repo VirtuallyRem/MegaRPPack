@@ -1,0 +1,182 @@
+
+# Hollowed System
+Hollow_system_initializer = {
+	name = "Hollowed Visage"
+	class = "sc_black_hole"
+
+
+	usage = custom_empire
+
+	flags = { empire_home_system }
+
+	init_effect = {
+	
+		create_ambient_object = {
+				type = "rare_nebula_1"
+				location = solar_system
+			}
+		while = {
+			count = 4
+			create_ambient_object = {
+				type = "space_storm_1"
+				location = solar_system
+			}
+		}
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = yes
+		
+		while = {
+			count = 10
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 20
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 20
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				location = solar_system
+			}
+		}
+		while = {
+			count = 30
+			create_ambient_object = {
+				type = "small_debris_object"
+				location = solar_system
+			}
+		}
+	}
+
+	planet = {
+		name = "Hollowed Visage"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 50
+		has_ring = no
+	}
+
+	planet = {
+		name = "Shards of Ninety"
+		class = "pc_shattered"
+		orbit_distance = 90
+		orbit_angle = 29
+		size = 19
+		has_ring = no
+	}
+	
+	
+		planet = {
+		name = "Dream of Thirty"
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = 30
+		has_ring = no
+	}
+
+		
+	planet = {
+		name = "Malhadra"
+		class = "pc_desertislands"
+		orbit_distance = 40
+		orbit_angle = 180
+		size = 21
+		starting_planet = yes
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Visage of Eight Dusts"
+		class = "pc_barren"
+		orbit_distance = 20
+		orbit_angle = 190
+		size = 17
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Ocean of Two"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 20
+		size = 30
+		has_ring = no
+		
+		moon = {
+		name = "Touch of Copper"
+		class = "pc_frozen"
+		orbit_distance = 15
+		orbit_angle = 12
+		size = 10
+		has_ring = no
+	}
+	    moon = {
+		name = "Dread of Copper"
+		class = "pc_frozen"
+		orbit_distance = 10
+		orbit_angle = 80
+		size = 10
+		has_ring = no
+	}
+	}
+	planet = {
+		name = "Ocean of Three"
+		class = "pc_frozen"
+		orbit_distance = 30
+		orbit_angle = 120
+		size = 19
+		has_ring = no
+	}
+	planet = {
+		name = "Dreams of One Beloved"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 69
+		size = 27
+		has_ring = no
+		
+		moon = {
+		name = "Dread of Love"
+		class = "pc_frozen"
+		orbit_distance = 20
+		orbit_angle = 127
+		size = 10
+		has_ring = no
+	}
+	    moon = {
+		name = "Love of the Dread"
+		class = "pc_frozen"
+		orbit_distance = 18
+		orbit_angle = 108
+		size = 10
+		has_ring = no
+	}
+	}
+	
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 2 }
+        hyperlane_jumps = { min = 1 max = 3 }
+        initializer = "neighbor_t1"
+    }
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 1 }
+        hyperlane_jumps = { min = 1 max = 3 }
+        initializer = "neighbor_t1_first_colony"
+    }
+
+}

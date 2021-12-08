@@ -1,0 +1,22 @@
+# INTERRUPT TIME LOOP
+special_project = {
+	key = STOP_TIME_LOOP
+	days_to_research = 60
+	tech_department = physics_technology
+	picture = GFX_evt_shielded_planet
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		owner = { country_event = { id = distar.2032 } }
+	}
+	on_fail = {
+	}
+}

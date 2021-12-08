@@ -1,0 +1,11 @@
+	NGameplay = {
+		DIPLOMACY_WEIGHT_BASE					= 2000.0		# Base diplomacy weight for all empires
+		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
+		DIPLOMACY_WEIGHT_SPRAWL_FACTOR			= 0			# Factors Empire Sprawl before it is added to diplo weight
+		DIPLOMACY_WEIGHT_NAVAL_FACTOR			= 0.0025		# Factors Naval Power before it is added to diplo weight
+		DIPLOMACY_WEIGHT_GESTALT_WEIGHT			= 0		# Gestalts gets a flat base value
+		DIPLOMACY_WEIGHT_POP_BASE				= 0.1		# Base diplomacy weight for each pop
+		DIPLOMACY_WEIGHT_POP_HAPPINESS			= 0.2		# as in formula: DIPLOMACY_WEIGHT_POP_BASE + (DIPLOMACY_WEIGHT_POP_HAPPINESS * Happiness)
+		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.015		# Factors Economic Power before it is added to diplo weight
+		DIPLOMACY_WEIGHT_TECHNOLOGY_FACTOR		= 0.01		# Factors Technology Level before it is added to diplo weight
+	}

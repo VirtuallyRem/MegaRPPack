@@ -1,0 +1,131 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	
+	
+	zamite_female_01 	= {	entity = "zamite_female_01_entity"	clothes_selector = "zamite_female_clothes_01" hair_selector = "zamite_female_01_hair"		greeting_sound = "humanoid_female_greeting_a"
+             character_textures = {
+                          "gfx/models/portraits/zamite/zamite_grey_f.dds"
+                          "gfx/models/portraits/zamite/zamite_garnet_f.dds"
+                           "gfx/models/portraits/zamite/zamite_blue_f.dds"
+						   "gfx/models/portraits/zamite/zamite_beige_f.dds"
+						   "gfx/models/portraits/zamite/zamite_marked_f.dds"
+			               "gfx/models/portraits/zamite/zamite_red_f.dds"
+			               "gfx/models/portraits/zamite/zamite_green_f.dds"
+						   "gfx/models/portraits/zamite/zamite_white_f.dds"
+
+        }	
+    }
+	zamite_male_01 	= {	entity = "zamite_male_01_entity"	clothes_selector = "zamite_male_clothes_01" hair_selector = "zamite_male_01_hair"		greeting_sound = "humanoid_male_greeting_d" 
+	 character_textures = {
+                          "gfx/models/portraits/zamite/zamite_grey_m.dds"
+                          "gfx/models/portraits/zamite/zamite_garnet_m.dds"
+                          "gfx/models/portraits/zamite/zamite_blue_m.dds"
+			              "gfx/models/portraits/zamite/zamite_red_m.dds"
+			              "gfx/models/portraits/zamite/zamite_green_m.dds"
+						  "gfx/models/portraits/zamite/zamite_beige_m.dds"
+						  "gfx/models/portraits/zamite/zamite_marked_m.dds"
+						  "gfx/models/portraits/zamite/zamite_white_m.dds"
+			  
+            }	
+		}	
+	
+    }
+
+
+
+
+portrait_groups = {
+	zamite = {
+		default = zamite_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					zamite_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					zamite_female_01
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					zamite_female_01
+					zamite_male_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					zamite_female_01
+					zamite_male_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					zamite_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					zamite_male_01
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					zamite_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					zamite_male_01
+				}
+			}
+		}
+	}
+}

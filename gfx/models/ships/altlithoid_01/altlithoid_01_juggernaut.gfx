@@ -1,0 +1,21 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "jugger_01_juggernaut_frame_mesh"
+		file = "gfx/models/ships/juggernauts/molluscoid_01/molluscoid_01_juggernaut_frame.mesh"
+		animation = { id = "idle" 			type = "molluscoid_01_juggernaut_frame_idle_animation" }
+		animation = { id = "death" 			type = "molluscoid_01_juggernaut_frame_death_animation" }
+	}
+	
+	pdxmesh = {
+		name = "altlithoid_01_juggernaut_mesh"
+		file = "gfx/models/ships/altlithoid_01/altlithoid_01_juggernaut.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "ship"
+			index = 0
+			
+			shader = "PdxMeshShip"
+	}
+}

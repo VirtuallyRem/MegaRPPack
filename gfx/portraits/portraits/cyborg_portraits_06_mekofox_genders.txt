@@ -1,0 +1,96 @@
+##############################################################
+###	PORTRAIT GROUPS SETTINGS
+###
+###	This file configures when to display the female or male
+### mekofox portraits.
+##############################################################
+
+
+portrait_groups = {
+	mekofox {
+		default = mekofox_female
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+	}
+}

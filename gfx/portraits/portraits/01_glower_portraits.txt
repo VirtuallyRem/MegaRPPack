@@ -1,0 +1,12 @@
+portraits = { 
+glower = { entity = "portrait_mammalian_13_entity" clothes_selector = "no_texture" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/glower/glower.dds"
+"gfx/models/portraits/glower/glower_gray.dds"
+"gfx/models/portraits/glower/glower_brown.dds"
+
+}
+}
+
+}

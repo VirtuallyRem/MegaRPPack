@@ -1,0 +1,9 @@
+objectTypes = {
+	pdxmesh = {
+		name = "lgs_unicorn_mesh"
+		file = "gfx/models/portraits/lgsunicorns/lgs_unicorn_mesh.mesh"
+		animation = { id = "idle"	type = "mammalian_10_happy_animation" }
+		animation = { id = "idle2"	type = "mammalian_10_happy_2_animation" }
+		scale = 1.0
+	}	
+}

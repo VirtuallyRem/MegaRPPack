@@ -1,0 +1,155 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Arthropoid
+	
+	natfanconstruct = {	entity = "portrait_arthropoid_14_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "arthropoid_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/arthropoid/natfanconstruct_green.dds"
+					"gfx/models/portraits/arthropoid/natfanconstruct_yellow.dds"
+					"gfx/models/portraits/arthropoid/natfanconstruct_cyan.dds"
+					"gfx/models/portraits/arthropoid/natfanconstruct_blue.dds"
+					"gfx/models/portraits/arthropoid/natfanconstruct_rust.dds"
+					#"gfx/models/portraits/arthropoid/arthropoid_massive_14_blue_yellow.dds"
+			}
+	}
+}
+
+portrait_groups = {
+	art14 = {
+		default = art14
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					art14
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					natfanconstruct
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					art14
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					natfanconstruct
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					art14
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					natfanconstruct
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					art14
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					natfanconstruct
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					art14
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					natfanconstruct
+				}
+			}
+		}
+	}
+}

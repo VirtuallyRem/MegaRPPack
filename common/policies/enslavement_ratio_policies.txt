@@ -1,0 +1,408 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+enslavement_ratio = {
+
+	potential = {
+		is_gestalt = no
+	}
+
+	option = {
+		name = "ratio_no_enslavement"
+		
+
+		policy_flags = {
+			no_enslavement
+		}
+		
+		valid = {
+			NOR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.00
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ratio_enslavement_0"
+		
+
+		policy_flags = {
+			enslavement_0
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				is_authoritarian = yes
+				has_ethic = ethic_elitist
+				has_ethic = ethic_fanatic_elitist
+			}
+		}
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ratio_enslavement_1"
+		
+
+		policy_flags = {
+			enslavement_1
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				is_authoritarian = yes
+				has_ethic = ethic_elitist
+				has_ethic = ethic_fanatic_elitist
+			}
+		}			
+		
+		modifier = {		
+			country_pop_enslaved_mult = 0.20
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ratio_enslavement_2"
+		
+
+		policy_flags = {
+			enslavement_2
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				is_authoritarian = yes
+				has_ethic = ethic_elitist
+				has_ethic = ethic_fanatic_elitist
+			}
+		}
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.30
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ratio_enslavement_3"
+		
+
+		policy_flags = {
+			enslavement_3
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				is_authoritarian = yes
+				has_ethic = ethic_elitist
+				has_ethic = ethic_fanatic_elitist
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.40
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_valid_civic = civic_slaver_guilds
+					has_valid_civic = civic_indentured_assets
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ratio_enslavement_4"
+		
+
+		policy_flags = {
+			enslavement_4
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_corvee_system
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.50
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_valid_civic = civic_slaver_guilds
+					has_valid_civic = civic_indentured_assets
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ratio_enslavement_5"
+		
+
+		policy_flags = {
+			enslavement_5
+		}
+
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+		
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_corvee_system
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.60
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_valid_civic = civic_slaver_guilds
+					has_valid_civic = civic_indentured_assets
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ratio_enslavement_7"
+		
+
+		policy_flags = {
+			enslavement_7
+		}
+		
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_corvee_system
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.70
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_valid_civic = civic_slaver_guilds
+					has_valid_civic = civic_indentured_assets
+				}
+			}
+		}
+	}
+	option = {
+		name = "ratio_enslavement_8"
+		
+
+		policy_flags = {
+			enslavement_8
+		}
+		
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_corvee_system
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.80
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "ratio_enslavement_full"
+		
+
+		policy_flags = {
+			enslavement_full
+		}
+		
+		in_breach_of = {
+			{ key = resolution_greatergood_balance_in_the_middle }
+			{ key = resolution_greatergood_universal_prosperity_mandate }
+		}
+
+		valid = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_corvee_system
+			}
+		}		
+		
+		modifier = {			
+			country_pop_enslaved_mult = 0.90
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,25 @@
+on_game_start_country = {
+    events = {
+        fractured.1 #fractured Leadership
+	fractured.10 #set up fractured faction resources
+    }
+}
+
+on_post_government_changed = {
+    events = {
+	    fractured.2 #fractured Leadership check
+        fractured.10 #Check/set up fractured faction resources
+    }
+}
+
+on_leader_death = {
+    events = {
+	    fractured.2 #fractured Leadership check
+    }
+}
+
+on_yearly_pulse_country = {
+	events = {
+	    fractured.10 #Check/set up fractured faction resources
+	}
+}

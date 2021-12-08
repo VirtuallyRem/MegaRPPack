@@ -1,0 +1,19 @@
+portraits = {
+
+	# Labrat
+	labrat01 = {
+		entity = "portrait_labrat_entity"	clothes_selector = "labrat_clothes_01"	hair_selector = "no_texture"	greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/mammalian_labrat_01.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_02.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_03.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_04.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_05.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_06.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_07.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_08.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_09.dds"
+			"gfx/models/portraits/mammalian/mammalian_labrat_10.dds"
+		}
+	}	
+}

@@ -1,0 +1,176 @@
+greetings = {
+
+	### AI Personality Greetings
+
+	# Fractured authority
+	FRACTURED_GENERIC_GREETING_01 = {
+		weight = {
+			weight = 100000
+		}
+		trigger = {
+			has_authority = auth_fractured
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	FRACTURED_GENERIC_GREETING_02 = {
+		weight = {
+			weight = 100000
+		}
+		trigger = {
+			has_authority = auth_fractured
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	FRACTURED_GENERIC_GREETING_03 = {
+		weight = {
+			weight = 100000
+		}
+		trigger = {
+			has_authority = auth_fractured
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	FRACTURED_WAR_GREETING_01 = {
+		weight = {
+			weight = 100000
+		}
+		trigger = {
+			has_authority = auth_fractured
+			is_at_war_with = FROM
+		}
+	}
+	FRACTURED_VASSAL_GREETING_01 = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			NOT = { is_disloyal_to = FROM }
+			FROM = { is_regular_empire = yes }
+		}
+	}
+	FRACTURED_VASSAL_GREETING_01_MECH = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			NOT = { is_disloyal_to = FROM }
+			FROM = { is_machine_empire = yes }
+		}
+	}
+	FRACTURED_VASSAL_GREETING_01_MECH = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			NOT = { is_disloyal_to = FROM }
+			FROM = { is_hive_empire = yes }
+		}
+	}
+	FRACTURED_VASSAL_GREETING_DISLOYAL_01 = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
+			FROM = { is_regular_empire = yes }
+		}
+	}
+	FRACTURED_VASSAL_GREETING_DISLOYAL_01_MECH = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
+			FROM = { is_machine_empire = yes }
+		}
+	}
+	FRACTURED_VASSAL_GREETING_DISLOYAL_01_HIVE = {
+		weight = {
+			weight = 100001
+		}
+		trigger = {
+			has_authority = auth_fractured
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
+			FROM = { is_hive_empire = yes }
+		}
+	}
+}
+
+action_declare_war = {
+	propose = {
+		FRACTURED_DOW_PROPOSE_01 = {
+			weight = {
+				weight = 100000
+			}
+			trigger = {
+				FROM = { has_authority = auth_fractured	}
+			}
+		}
+	}
+}
+
+action_offer_peace = {
+	consider = {
+		FRACTURED_PEACE_CONSIDER = {
+			weight = {
+				weight = 100000
+			}
+			trigger = {
+				has_authority = auth_fractured
+			}
+		}
+	}
+	propose = {
+		FRACTURED_PEACE_PROPOSE = {
+			weight = {
+				weight = 100000
+			}
+			trigger = {
+				FROM = { has_authority = auth_fractured	}
+			}
+		}
+	}
+	accept = {
+		FRACTURED_PEACE_ACCEPT = {
+			weight = {
+				weight = 100000
+			}
+			trigger = {
+				has_authority = auth_fractured
+			}
+		}
+	}
+	refuse = {
+		FRACTURED_PEACE_REFUSE = {
+			weight = {
+				weight = 100000
+			}
+			trigger = {
+				has_authority = auth_fractured
+			}
+		}
+	}
+}

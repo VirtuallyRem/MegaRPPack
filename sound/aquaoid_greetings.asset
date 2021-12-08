@@ -1,0 +1,49 @@
+category = {
+ name = "Voice"
+ soundeffects = {
+	aquaoid_male_greetings
+	aquaoid_female_greetings
+ }
+ 
+}
+
+sound = 
+{
+	name = "aquaoid_female_greetings_01"
+	file = "audiofiles/aquaoid_female_greetings_01.wav"
+}
+sound = 
+{
+	name = "aquaoid_female_greetings_02"
+	file = "audiofiles/aquaoid_female_greetings_02.wav"
+	volume = 1.0
+}
+sound = 
+{
+	name = "aquaoid_male_greetings_01"
+	file = "audiofiles/aquaoid_male_greetings_01.wav"
+}
+sound = 
+{
+	name = "aquaoid_male_greetings_02"
+	file = "audiofiles/aquaoid_male_greetings_02.wav"
+	volume = 1.0
+}
+
+soundeffect = {
+	name = aquaoid_female_greetings
+	sounds = {
+		sound = aquaoid_female_greetings_01 
+		sound = aquaoid_female_greetings_02
+	}  
+	volume = 4.0
+}
+
+soundeffect = {
+	name = aquaoid_male_greetings
+	sounds = {
+		sound = aquaoid_male_greetings_01 
+		sound = aquaoid_male_greetings_02
+	}  
+	volume = 4.0
+}

@@ -1,0 +1,266 @@
+namespace = hegemony_cw
+
+#Start war
+country_event = {
+	id = hegemony_cw.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_federation = yes
+		is_federation_leader = no
+	}
+
+	immediate = {
+		save_event_target_as = hegemony_rebel_leader
+		federation.federation_leader = { save_event_target_as = hegemony_loyalist_leader }
+
+		declare_war = {
+			target = event_target:hegemony_loyalist_leader
+			#name = NAME_hegemony_civil_war
+			attacker_war_goal = "wg_hegemony_cw_rebels"
+		}
+		
+		random_war = {
+			limit = {
+				using_war_goal = {
+					type = wg_hegemony_cw_rebels
+					owner = root
+				}
+			}
+			save_event_target_as = hegemony_civil_war
+		}
+	
+		federation = {
+			save_event_target_as = target_hegemony
+			every_member = {
+				limit = {
+					NOR = {
+						is_same_value = root
+						is_federation_leader = yes
+						is_subject = yes
+					}
+				}
+				country_event = { id = hegemony_cw.2 } #Ask members to join rebellion
+			}
+		}
+	}
+}
+
+#Choose side
+country_event = {
+	id = hegemony_cw.2
+	title = hegemony_cw.2.name
+	desc = hegemony_cw.2.desc
+	picture = GFX_evt_open_revolt
+	show_sound = event_open_revolt
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hegemony_cw.2.a
+		join_war_on_side = { war = event_target:hegemony_civil_war side = defenders }
+	}
+
+	option = {
+		name = hegemony_cw.2.b
+		join_war_on_side = { war = event_target:hegemony_civil_war side = attackers }
+	}
+	
+	option = {
+		name = hegemony_cw.2.c
+		hidden_effect = {
+			event_target:hegemony_civil_war = {
+				remove_war_participant = root
+			}
+		}
+	}
+}
+
+#Other countries informed - war starts
+country_event = {
+	id = hegemony_cw.4
+	title = hegemony_cw.4.name
+	desc = hegemony_cw.4.desc
+	picture = GFX_evt_small_space_battle
+	show_sound = event_default
+	
+	is_triggered_only = yes
+	
+	option = {
+		exclusive_trigger = {
+			has_federation = yes
+		}
+		name = hegemony_cw.4.fed
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		name = hegemony_cw.4.phobe
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		name = hegemony_cw.4.phile
+	}
+	option = {
+		exclusive_trigger = { is_gestalt = yes }
+		name = hegemony_cw.4.gestalt
+	}
+
+	option = { name = hegemony_cw.4 }
+}
+
+#Rebels won - rebels
+country_event = {
+	id = hegemony_cw.5
+	title = hegemony_cw.5.name
+	desc = {
+		trigger = { is_federation_leader = yes }
+		text = hegemony_cw.5.desc.leader
+	}
+	desc = {
+		trigger = { is_federation_leader = no }
+		text = hegemony_cw.5.desc
+	}
+	desc = hegemony_cw.5.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_celebration
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = hegemony_rebel_leader }
+			remove_country_flag = hegemony_rebel_leader
+		}
+		else_if = {
+			limit = { has_country_flag = hegemony_rebel }
+			remove_country_flag = hegemony_rebel
+		}
+	}
+	
+	option = {
+		trigger = { is_federation_leader = yes }
+		name = hegemony_cw.5.leader
+	}
+
+	option = {
+		trigger = { is_federation_leader = no }
+		name = hegemony_cw.5
+	}
+}
+#Rebels won - loyalists
+country_event = {
+	id = hegemony_cw.8
+	title = hegemony_cw.8.name
+	desc = {
+		trigger = { is_same_value = event_target:old_leader }
+		text = hegemony_cw.8.desc.leader
+	}
+	desc = {
+		trigger = { NOT = { is_same_value = event_target:old_leader } }
+		text = hegemony_cw.8.desc
+	}
+	picture = GFX_evt_surrender
+	show_sound = event_bad_omen
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = hegemony_loyalist_leader }
+			remove_country_flag = hegemony_loyalist_leader
+		}
+		else_if = {
+			limit = { has_country_flag = hegemony_loyalist }
+			remove_country_flag = hegemony_loyalist
+		}
+	}
+	
+	option = {
+		name = hegemony_cw.8
+		
+	}
+}
+
+#Loyalists won - loyalists
+country_event = {
+	id = hegemony_cw.10
+	title = hegemony_cw.10.name
+	desc = {
+		trigger = { is_federation_leader = yes }
+		text = hegemony_cw.10.desc.leader
+	}
+	desc = {
+		trigger = { is_federation_leader = no }
+		text = hegemony_cw.10.desc
+	}
+	desc = hegemony_cw.10.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_celebration
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = hegemony_loyalist_leader }
+			remove_country_flag = hegemony_loyalist_leader
+		}
+		else_if = {
+			limit = { has_country_flag = hegemony_loyalist }
+			remove_country_flag = hegemony_loyalist
+		}
+	}
+	
+	option = {
+		trigger = { is_federation_leader = yes }
+		name = hegemony_cw.10.leader
+	}
+
+	option = {
+		trigger = { is_federation_leader = no }
+		name = hegemony_cw.10
+	}
+}
+#Loyalists won - rebels
+country_event = {
+	id = hegemony_cw.11
+	title = hegemony_cw.11.name
+	desc = {
+		trigger = { is_same_value = event_target:rebel_leader }
+		text = hegemony_cw.11.desc.leader
+	}
+	desc = {
+		trigger = { NOT = { is_same_value = event_target:rebel_leader } }
+		text = hegemony_cw.11.desc
+	}
+	picture = GFX_evt_surrender
+	show_sound = event_bad_omen
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = hegemony_rebel_leader }
+			remove_country_flag = hegemony_rebel_leader
+		}
+		else_if = {
+			limit = { has_country_flag = hegemony_rebel }
+			remove_country_flag = hegemony_rebel
+		}
+	}
+	
+	option = {
+		name = hegemony_cw.11
+		add_modifier = { modifier = humiliated days = 3600 }
+	}
+}

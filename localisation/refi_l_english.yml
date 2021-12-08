@@ -1,0 +1,47 @@
+﻿l_english:
+ tech_synthesis_arrays:0 "Macro Synthesis"
+ tech_synthesis_arrays_desc:0 "Our advances in material synthesis are leading us to develop devices capable of producing Strategic Resources on an industrial scale."
+ 
+ tech_rare_crystals_2:0 "Nucleating Agents"
+ tech_rare_crystals_2_desc:0 "The development of specialized reagents to streamline our synthetic crystallization processes allows for a much larger scale of production." 
+ 
+ tech_rare_crystals_3:0 "Nano-Crystallization"
+ tech_rare_crystals_3_desc:0 "By using nanites to chemically stimulate the growth of self-assembling crystal structures we can synthesize crystals of remarkable purity in larger amounts than ever before." 
+ 
+ tech_exotic_gases_2:0 "Mineral Sublimation"
+ tech_exotic_gases_2_desc:0 "Synthesizing exotic gases out of a wider variety of commonly found minerals is the most economically feasible method to meet the industrial demand for them." 
+ 
+ tech_exotic_gases_3:0 "Hyper Gasification"
+ tech_exotic_gases_3_desc:0 "Using advanced refining techniques we can speed up the creation process of synthetic gases by millions of years compared to their naturally occuring counterparts while remaining physically almost identical."
+ 
+ tech_volatile_motes_2:0 "Particle Stasis Containment"
+ tech_volatile_motes_2_desc:0 "By trapping unstable particles in a stasis labyrinth they become much safer to produce in larger amounts as well as easier to transport to their intended destination." 
+ 
+ tech_volatile_motes_3:0 "Particle Genesis Chambers"
+ tech_volatile_motes_3_desc:0 "The mass production of High-Energy Particles requires the constant ministrations of skilled chemists and advanced containment fields to prevent cataclysmic reactions from occuring." 
+
+ building_synthesis:0 "Ministry of Strategic Resources"
+ building_synthesis_desc:0 "The Ministry of Strategic Resources works tirelessly to organize and streamline the production of strategic resources across the entire planet.\n"  
+ building_synthesis_machine_intelligence:0 "Refinery Coordination Center"
+ building_synthesis_desc_machine_intelligence:0 "A vast facility which centralizes and coordinates the production of strategic resources across the entire planet.\n\n"
+ building_synthesis_hive_mind:0 "Refinery Coordination Center"
+ building_synthesis_desc_hive_mind:0 "A vast facility which centralizes and coordinates the production of strategic resources across the entire planet.\n"
+
+ building_motes2:0 "Particle Refineries"
+ building_motes2_desc:0 "Refineries where unconventional particles are created in large large amounts by specialized chemists."
+ 
+ building_motes3:0 "Quantum Genesis Complexes"
+ building_motes3_desc:0 "Bending the laws of physics the specialists in these complexes can barely contain the forces with which they create a steady stream of high-energy particles."
+
+ building_gas2:0 "Gas Sublimation Facilities"
+ building_gas2_desc:0 "Facilities where synthetic gases are created in large amounts through mineral sublimation by skilled gas refiners."
+
+ building_gas3:0 "Syn-gas Refinery Complexes"
+ building_gas3_desc:0 "Advanced refinery complexes where high-grade synthetic gases are mass-produced by specialists operating cutting-edge refining equipment."
+
+ building_crystal2:0 "Crystallization Centers"
+ building_crystal2_desc:0 "Manufacturing centers where large amounts of high quality synthetic crystals are created using specialized machinery."
+
+ building_crystal3:0 "Nano-Crystallization Complexes"
+ building_crystal3_desc:0 "Advanced production complexes where the purest synthetic crystals are mass-produced by specialists using nanites and vast amounts of raw minerals."
+ 

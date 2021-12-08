@@ -1,0 +1,89 @@
+primitive_culture_shock = {
+	pop_happiness = -2.00
+	planet_jobs_produces_mult = -0.75
+	pop_government_ethic_attraction = -1.0
+}
+
+primitive_all_abducted = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_slave_riots.dds"
+	icon_frame = 3
+	planet_jobs_produces_mult = -0.33
+	planet_stability_add = -20
+}
+
+stranded_found_homeworld = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_produces_mult.dds"
+	country_unity_produces_mult = 0.10
+}
+
+premature_terraforming = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_bleak.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.20
+}
+
+malfunctioning_implants = {
+	pop_growth_speed_reduction = 0.25
+}
+
+post_machine = {
+	planet_building_build_speed_mult = 2.00
+	modify_species_cost_mult = -1.00
+}
+
+prop_authoritarian = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_authoritarian_attraction_mult = 0.50
+}
+prop_libertarian = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_egalitarian_attraction_mult = 0.50
+}
+prop_militarist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_militarist_attraction_mult = 0.50
+}
+prop_pacifist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_pacifist_attraction_mult = 0.50
+}
+prop_materialist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_materialist_attraction_mult = 0.50
+}
+prop_spiritualist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_spiritualist_attraction_mult = 0.50
+}
+prop_xenophile = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_xenophile_attraction_mult = 0.50
+}
+prop_xenophobe = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_xenophobe_attraction_mult = 0.50
+}
+prop_egalitarian = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_pluralist_attraction_mult = 0.50
+}
+prop_elitist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_elitist_attraction_mult = 0.50
+}
+prop_individualist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_capitalism_attraction_mult = 0.50
+}
+prop_collectivist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_socialism_attraction_mult = 0.50
+}
+prop_environmentalist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_green_attraction_mult = 0.50
+}
+prop_industrialist = {
+	icon = "gfx/interface/icons/modifiers/mod_cat_manipulation_small.dds"
+	pop_ethic_industrial_attraction_mult = 0.50
+}

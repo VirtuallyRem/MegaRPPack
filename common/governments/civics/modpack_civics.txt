@@ -1,0 +1,126 @@
+civic_art_connoisseurs = {
+	description = "civic_tooltip_art_connoisseurs_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		always = yes
+	}
+
+	modifier = {
+		job_culture_worker_per_pop = 0.05 # One every 20 pops
+		job_culture_worker_add = 1
+	}
+
+	random_weight = { base = 1 }
+}
+
+civic_constitutional_monarchy = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		authority = { NOT = { value = auth_imperial } }
+	}		
+	modifier = {
+	    envoys_add = 1
+		planet_stability_add = 5	
+	}
+	
+	random_weight = { base = 5 }
+}
+
+civic_iron_curtain = {
+	potential = {
+		ethics = { 
+		NOR = { 
+		value = ethic_gestalt_consciousness 
+                value = ethic_xenophile
+		value = ethic_fanatic_xenophile
+		} 
+		OR = {
+		value = ethic_xenophobe
+		value = ethic_fanatic_xenophobe
+		value = ethic_authoritarian
+		value = ethic_fanatic_authoritarian
+		}
+		}
+	}
+	
+	modifier = {
+		first_contact_defense_add = 2
+		intel_encryption_add = 2
+		pop_government_ethic_attraction = 0.25
+	}
+	
+	random_weight = { base = 5 }
+}
+
+civic_workers_unions = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+            NOR = {
+				value = ethic_fanatic_authoritarian
+				value = ethic_fanatic_capitalism
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_shared_burdens
+				value = civic_slaver_guilds
+				value = civic_indentured_assets
+			}
+		}
+	}
+	modifier = {
+		pop_cat_worker_political_power = 0.5
+		planet_jobs_worker_produces_mult = 0.1
+	}
+	
+	random_weight = { base = 5 }
+}
+
+civic_robot_leader = {
+	description = "civic_robot_leader_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		authority = {
+			value = auth_dictatorial
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		#Robot ruler
+	}
+}
+
+civic_metropolitans = {
+	description = "civic_tooltip_metropolitans_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_green
+				value = ethic_green
+				value = ethic_fanatic_green
+			}
+		}
+	}
+	modifier = {
+			planet_non_artificial_max_districts_add = 1
+			planet_districts_cities_cost_mult = -0.20
+			planet_district_city_build_speed_mult = 0.25
+			
+	}
+
+	random_weight = { base = 5 }
+}

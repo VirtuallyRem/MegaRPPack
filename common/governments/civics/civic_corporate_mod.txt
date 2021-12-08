@@ -1,0 +1,307 @@
+civic_high_society = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		civics = {
+			NOR = {
+			    value = civic_gospel_of_the_masses
+				value = civic_research_consortium
+			}
+		}
+		ethics = {
+			OR = {
+				text = civic_tooltip_elitist
+				value = ethic_elitist
+				value = ethic_fanatic_elitist
+			}
+		}
+	}
+	modifier = {
+		governor_skill_levels = 1
+		planet_jobs_ruler_produces_mult = 0.10
+	}
+	description = "civic_tooltip_high_society_effects"
+}
+
+civic_research_consortium = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		civics = {
+			NOR = {
+			    value = civic_gospel_of_the_masses
+				value = civic_high_society
+			}
+		}
+		ethics = {
+			OR = {
+				value = ethic_fanatic_materialist
+				value = ethic_fanatic_industrial
+			}
+		}
+	}
+	modifier = {
+	}
+	description = "civic_tooltip_research_consortium_effects"
+}
+
+civic_logistical_bureacracy = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_fanatic_egalitarian
+			}
+		}
+		civics = {
+			NOT = {
+			    value = civic_criminal_heritage
+			}
+		}
+	}
+	modifier = {
+	}
+	description = "civic_tooltip_logistical_bureacracy_effects"
+}
+
+civic_private_security = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_no_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+		civics = {
+		    NOT = {
+			    value = civic_criminal_heritage
+			}
+		}
+	}
+	modifier = {
+		planet_stability_add = 5
+		job_enforcer_per_pop = 0.025
+	}
+	description = "civic_tooltip_private_security_effects"
+}
+
+
+civic_philanthropist_organization = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		civics = { NOT = { value = civic_criminal_heritage } }
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe			   
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_indentured_assets
+			}
+		}
+	}
+	modifier = {
+		planet_stability_add = 5
+	}
+	description = "civic_tooltip_philanthropist_organization_effects"
+}
+
+civic_code_of_conduct = {
+    modification = no
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+		civics = { value = civic_criminal_heritage }
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe			   
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_indentured_assets
+			}
+		}
+	}
+
+	random_weight = { base = 5 }
+	modifier = {
+		planet_stability_add = 5
+	}
+	
+	description = "civic_tooltip_code_of_conduct_effects"
+}
+
+civic_collective_ownership = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_pluralist
+				value = ethic_pluralist
+				value = ethic_fanatic_pluralist
+			}
+			NOR = {
+				value = ethic_fanatic_capitalism
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_indentured_assets
+			}
+		}
+	}
+	modifier = {
+		pop_cat_worker_political_power = 2
+		pop_cat_worker_happiness = 0.1
+		planet_jobs_worker_produces_mult = 0.1
+	}
+}
+
+civic_megabank = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+          ethics = {
+				OR = {
+					text = civic_tooltip_capitalism
+					value = ethic_capitalism
+					value = ethic_fanatic_capitalism
+				}
+		  }
+		  civics = {
+			NOT = {
+			    value = civic_criminal_heritage
+			}
+		}
+	}
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+	description = "civic_tooltip_megabank_effects"
+}
+
+civic_geoengineers = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+          ethics = {
+			   OR = {
+					text = civic_tooltip_green
+					value = ethic_green
+					value = ethic_fanatic_green
+			   }
+		  }
+		civics = {
+			NOT = {
+				value = civic_criminal_heritage
+			}
+		}
+	}
+	modifier = {
+		terraforming_cost_mult = -0.20
+	}
+	description = "civic_tooltip_geoengineers_effects"
+}
+
+civic_gene_tailors = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	possible = {
+		always = yes
+	}
+
+	random_weight = { base = 5 }
+	
+	description = "civic_tooltip_gene_tailors_effects"
+}
+
+civic_sports_association = {
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	random_weight = { base = 5 }
+
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_individualist
+				value = ethic_fanatic_individualist
+			}
+		}
+	}
+	modifier = {
+	}
+	description = "civic_tooltip_sports_association_effects"
+}

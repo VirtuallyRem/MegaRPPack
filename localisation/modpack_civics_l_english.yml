@@ -1,0 +1,41 @@
+﻿l_english:
+
+civic_art_connoisseurs:0 "Art Connoisseurs"
+civic_art_connoisseurs_desc:2 "In this society artistic value is paramount and displays of such make up a large part of it's cultural life."
+
+civic_constitutional_monarchy:0 "Constitutional Monarchy"
+civic_constitutional_monarchy_desc:2 "This society has a monarchy, however the monarch has no power and is little more than a popular figurehead. While maintaining no actual power, they are a popular and unifying picture for the people as well as an international mediator."
+
+civic_hedonistic:0 "Hedonistic"
+civic_hedonistic_desc:2 "This Society is filled with rampant hedonism, with people finding themselves lost in pleasure over and over again, such societal abuse has entrenched itself in the very culture."
+civic_hedonistic_effects:3 "£job_entertainer£ §Y$job_entertainer_plural$§! produce an additional §Y2§! £unity£ Unity."
+ 
+civic_iron_curtain:0 "Iron Curtain"
+civic_iron_curtain_desc:2 "This Empire values secrecy above everything and doesn't want others to spy on them"
+ 
+civic_masters_of_engineering:0 "Masters of Engineering"
+civic_masters_of_engineering_desc:2 "This Society masters the art of Engineering, makking great leaps and advanced in scientific fields tied to Engineering."
+ 
+civic_quantum_masters:0 "Quantum Masters"
+civic_quantum_masters_desc:2 "This Society masters the theoretical sciences of the Physical Universe, Quantum Physics and many other theories."
+ 
+civic_socio_biological_masters:0 "Socio-Biological Masters"
+civic_socio_biological_masters_desc:0 "This Society has always been at the forefront in Socio-Biological sciences, understanding how society and biology works and achieving great advances in these fields."
+ 
+civic_metropolitans:0 "Metropolitans"
+civic_metropolitans_desc:2 "This Society gravitates towards giant metropolitan centers, foregoing rural provinces and settlements in favor of mass urbanisation."
+
+civic_consumerist_drive:0 "Consumerist Drive"
+civic_consumerist_drive_desc:2 "The entire economy of this civilization is based on the consumption of products in ever-increasing amounts."
+civic_tooltip_consumerist_drive_effects:3 "\n£job_artisan£ §Y$job_artisan_plural$§! also produce §Y2§! £trade_value£ Trade Value"
+
+civic_workers_unions:0 "Workers Unions"
+civic_workers_unions_desc:2 "The lower classes of this empire have joined forces to safeguard their rights against exploitation."
+
+civic_temple_guard:0 "Temple Guard"
+civic_temple_guard_desc:2 "To protect the religious houses the clergy employes a strong force by themselves."
+civic_tooltip_temple_guard_effects:3 "Each Temple provides 1 £job_soldier£ §Y$job_soldier$§! and on later tiers 2"
+
+civic_robot_leader:0 "AI Leadership"
+civic_robot_leader_desc:2 "The supreme authority of this empire is an highly sophisticated artificial intelligence who oversee all matters of state, freed from the corruption and inefficiency of organic governments."
+civic_robot_leader_effects:3 "Replace your ruler with a powerful, immortal §Yrobotic§! one."

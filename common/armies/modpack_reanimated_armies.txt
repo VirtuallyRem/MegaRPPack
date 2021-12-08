@@ -1,0 +1,98 @@
+# Undead Armies
+undead_defense_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.75
+	damage = 1.50
+	collateral_damage = 0.0
+	has_morale = no
+	morale_damage = 1.75
+	war_exhaustion = 0.0
+	icon = GFX_army_type_undead
+	use_armynames_from = undead_army
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		planet = {
+			has_active_building = building_dread_encampment
+			OR = {
+				num_assigned_jobs = {
+					job = necromancer
+					value >= 1
+				}
+				num_assigned_jobs = {
+					job = necrodrone
+					value >= 1
+				}
+			}
+		}
+		owner = {
+			has_valid_civic = civic_reanimated_armies
+		}
+	}
+
+	spawn_chance = {
+		factor = 100
+	}
+}
+
+# Undead Armies
+undead_army = {
+	damage = 1.00
+	health = 1.00
+	has_morale = no
+	collateral_damage = 1.25
+	morale_damage = 1.75
+	war_exhaustion = 0.50
+	time = 60
+	icon = GFX_army_type_undead
+	pop_limited = no
+	prerequisites = { "tech_assault_armies" }
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 0.75
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_valid_civic = civic_reanimated_armies
+	}
+
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		planet = {
+			has_active_building = building_dread_encampment
+			OR = {
+				num_assigned_jobs = {
+					job = necromancer
+					value >= 1
+				}
+				num_assigned_jobs = {
+					job = necrodrone
+					value >= 1
+				}
+			}
+		}
+		owner = {
+			has_valid_civic = civic_reanimated_armies
+		}
+	}
+}

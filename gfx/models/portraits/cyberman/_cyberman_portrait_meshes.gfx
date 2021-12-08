@@ -1,0 +1,16 @@
+objectTypes = {
+	# Cyberman
+	
+	pdxmesh = {
+		name = "portrait_cyberman_01_mesh"
+		file = "gfx/models/portraits/cyberman/cyberman_01_portrait.mesh"
+		animation = { id = "idle"	type = "cyberman_01_idle_animation" }
+		animation = { id = "idle2"	type = "cyberman_01_idle_2_animation" }
+		animation = { id = "idle3"	type = "cyberman_01_idle_3_animation" }
+		animation = { id = "idle4"	type = "cyberman_01_idle_4_animation" }
+		
+		scale = 1.0
+	}
+	
+	
+}

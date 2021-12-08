@@ -1,0 +1,267 @@
+#resolutions
+
+resolution_denounced = {
+	diplo_weight_mult = -0.25
+}
+
+resolution_ecology_recycling_initiatives = {
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	planet_clear_blocker_time_mult = 0.1
+}
+
+resolution_ecology_natural_sanctuaries = {
+	pop_amenities_usage_mult = -0.05
+	planet_clear_blocker_time_mult = 0.15
+	planet_building_build_speed_mult = -0.05
+}
+
+resolution_ecology_integrated_gardens = {
+	pop_environment_tolerance = 0.05
+	planet_jobs_food_produces_mult = 0.05
+	planet_clear_blocker_time_mult = 0.25
+	planet_building_build_speed_mult = -0.1
+}
+
+resolution_ecology_environmental_control_board = {
+	pop_environment_tolerance = 0.05
+	planet_jobs_food_produces_mult = 0.05
+	planet_clear_blocker_time_mult = 0.5
+	planet_jobs_alloys_produces_mult = -0.1
+	planet_jobs_minerals_produces_mult = -0.2
+	pop_happiness = 0.05
+	terraforming_cost_mult = 0.25
+}
+
+resolution_ecology_paradise_initiative = {
+	pop_environment_tolerance = 0.05
+	pop_growth_speed = 0.05
+	planet_jobs_food_produces_mult = 0.1
+	planet_clear_blocker_time_mult = 1
+	planet_jobs_alloys_produces_mult = -0.2
+	planet_jobs_minerals_produces_mult = -0.3
+	pop_happiness = 0.05
+	terraforming_cost_mult = 0.75
+}
+
+resolution_commerce_buzzword_standardization = {
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.05
+}
+
+resolution_commerce_leveraged_privateering = {
+	trade_value_mult = 0.05
+	local_trade_protection_add = 10
+	country_naval_cap_mult = -0.1
+}
+
+resolution_commerce_underdeveloped_system_utilization = {
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_commerce_underdeveloped_system_utilization_tooltip
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.2
+}
+
+resolution_commerce_holistic_asset_coordination = {
+	trade_value_mult = 0.05
+	local_trade_protection_add = 15
+	country_naval_cap_mult = -0.05
+}
+
+resolution_commerce_profit_maximization_engines = {
+	trade_value_mult = 0.05
+	planet_jobs_produces_mult = 0.1
+	pop_happiness = -0.25
+	pop_cat_ruler_happiness = 0.5
+	leaders_upkeep_mult = 0.5
+}
+
+resolution_industry_regulatory_facilitation = {
+	planet_jobs_worker_produces_mult = 0.025
+	pop_environment_tolerance = -0.02
+}
+
+resolution_industry_collective_waste_management = {
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_alloys_produces_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.1
+	pop_environment_tolerance = -0.03
+}
+
+resolution_industry_building_a_better_tomorrow = {
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_minerals_produces_mult = 0.05
+	planet_building_build_speed_mult = 0.1
+	pop_environment_tolerance = -0.05
+}
+
+resolution_industry_environmental_ordinance_waivers = {
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_minerals_produces_mult = 0.05
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_industry_environmental_ordinance_waivers_tooltip
+	planet_metallurgists_upkeep_mult = -0.1
+	pop_environment_tolerance = -0.1
+}
+
+resolution_industry_project_cornucopia = {
+	planet_metallurgists_upkeep_mult = -0.1
+	pop_environment_tolerance = -0.05
+}
+
+resolution_greatergood_workers_rights = {
+	pop_cat_worker_happiness = 0.05
+	pop_cat_worker_political_power = 0.1
+}
+
+resolution_greatergood_five_year_plans = {
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_greatergood_five_year_plans_tooltip
+	pop_cat_worker_political_power = 0.15
+}
+
+resolution_greatergood_greater_than_ourselves = {
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_greatergood_greater_than_ourselves_tooltip
+	pop_cat_worker_political_power = 0.25
+}
+
+resolution_greatergood_balance_in_the_middle = {
+	empire_size_pops_mult = -0.1
+	pop_housing_usage_mult = -0.1
+	pop_cat_worker_political_power = 0.25
+}
+
+resolution_greatergood_universal_prosperity_mandate = {
+	planet_stability_add = 5
+	country_resource_max_add = -10000
+	pop_cat_worker_political_power = 0.25
+}
+
+resolution_mutualdefense_the_readied_shield = {
+	country_naval_cap_add = 10
+	ships_upkeep_mult = 0.05
+}
+
+resolution_mutualdefense_naval_weight = {
+	country_naval_cap_add = 10
+	ships_upkeep_mult = 0.05
+}
+
+resolution_rulesofwar_guardian_angels = {
+	army_defense_morale_mult = 0.15
+	armies_upkeep_mult = 0.05
+}
+
+resolution_rulesofwar_reverence_for_life = {
+	country_war_exhaustion_mult = -0.05
+}
+
+resolution_rulesofwar_independent_tribunals = {
+	army_collateral_damage_mult = -0.2
+	country_war_exhaustion_mult = -0.05
+	armies_upkeep_mult = 0.1
+}
+
+resolution_rulesofwar_last_resort_doctrine = {
+	country_war_exhaustion_mult = -0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.25
+	pop_ethic_pacifist_attraction_mult = 0.5
+}
+
+resolution_rulesofwar_demobilization_initiative = {
+	edict_length_mult = 0.2
+	country_war_exhaustion_mult = -0.05
+	country_naval_cap_mult = -0.25
+	pop_ethic_pacifist_attraction_mult = 0.5
+}
+
+resolution_galacticstudies_cooperative_research_channels = {
+	station_researchers_produces_mult = 0.1
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_astral_studies_network = {
+	planet_sensor_range_add = 1
+	station_researchers_produces_mult = 0.1
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_advanced_xenostudies = {
+	station_researchers_produces_mult = 0.1
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_ethical_guideline_refactoring = {
+	station_researchers_produces_mult = 0.1
+	planet_researchers_produces_mult = 0.10
+	pop_cat_worker_happiness = -0.15
+	pop_cat_slave_happiness = -0.15
+	planet_researchers_upkeep_mult = 0.25
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_extradimensional_experimentation = {
+	station_researchers_produces_mult = 0.1
+	planet_researchers_upkeep_mult = 0.25
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_divinity_comfort_the_fallen = {
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	planet_jobs_unity_produces_mult = 0.05
+}
+
+resolution_divinity_tithe_on_the_soulless = {
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	planet_jobs_unity_produces_mult = 0.05
+	planet_pop_assemblers_upkeep_mult = 0.25
+	planet_pops_robotics_upkeep_mult = 0.10
+}
+
+resolution_divinity_right_to_work = {
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	planet_jobs_unity_produces_mult = 0.05
+	planet_pop_assembly_mult = -0.25
+}
+
+resolution_divinity_silence_the_soulless = {
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	planet_jobs_unity_produces_mult = 0.05
+	planet_pop_assemblers_upkeep_mult = 0.25
+	planet_pops_robotics_upkeep_mult = 0.10
+}
+
+resolution_divinity_silence_the_soulless_synthetic_empire_effect = {
+	diplo_weight_mult = -0.25
+}
+
+resolution_divinity_a_defined_purpose = {
+	pop_ethic_spiritualist_attraction_mult = 0.10
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	planet_jobs_unity_produces_mult = 0.10
+	biological_pop_happiness = 0.10
+	lithoid_pop_happiness = 0.10
+}
+
+# sanctions
+
+resolution_sanctions_tech = {
+	all_technology_research_speed = -0.05
+	diplo_weight_technology_mult = -0.2
+}
+
+resolution_sanctions_economic = {
+	country_trade_fee = 0.1
+	diplo_weight_economy_mult = -0.2
+}
+
+resolution_sanctions_military = {
+	country_naval_cap_mult = -0.1
+	diplo_weight_naval_mult = -0.2
+}
+
+resolution_sanctions_administrative = {
+	country_admin_cap_mult = -0.1
+	diplomacy_upkeep_mult = 0.25
+}

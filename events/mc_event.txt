@@ -1,0 +1,46 @@
+namespace = mc
+
+country_event = {
+	id = mc.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {a
+		if = { ## Messiah Cult
+			limit = {
+				owner = {
+					has_origin = origin_messiah_cult
+				}
+			}
+			FROMFROM = {
+				leader = { remove_trait = trait_ruler_corvette_focus }
+				leader = { remove_trait = trait_ruler_destroyer_focus }
+				leader = { remove_trait = trait_ruler_cruiser_focus }
+				leader = { remove_trait = trait_ruler_battleship_focus }
+				leader = { remove_trait = trait_ruler_architectural_sense }
+				leader = { remove_trait = trait_ruler_champion_of_the_people }
+				leader = { remove_trait = trait_ruler_charismatic }
+				leader = { remove_trait = trait_ruler_deep_connections }
+				leader = { remove_trait = trait_ruler_eye_for_talent }
+				leader = { remove_trait = trait_ruler_expansionist }
+				leader = { remove_trait = trait_ruler_explorer }
+				leader = { remove_trait = trait_ruler_fertility_preacher }
+				leader = { remove_trait = trait_ruler_from_the_ranks }
+				leader = { remove_trait = trait_ruler_frontier_spirit }
+				leader = { remove_trait = trait_ruler_home_in_the_sky }
+				leader = { remove_trait = trait_ruler_industrialist }
+				leader = { remove_trait = trait_ruler_investor }
+				leader = { remove_trait = trait_ruler_logistic_understanding }
+				leader = { remove_trait = trait_ruler_military_pioneer }
+				leader = { remove_trait = trait_ruler_recruiter }
+				leader = { remove_trait = trait_ruler_space_miner }
+				leader = { remove_trait = trait_ruler_warlike }
+				leader = { remove_trait = trait_ruler_world_shaper }
+				leader = { remove_trait = trait_ruler_fleet_organizer }
+				leader = { remove_trait = trait_ruler_reformer }
+				#leader = { add_trait = trait_god_emperor }
+				leader = { add_trait = leader_trait_governor_chosen  }
+			}	
+		}	
+	}
+}  

@@ -1,0 +1,49 @@
+﻿l_english:
+
+ #Generic
+ modpack_black_hole_initializer_NAME: "Unary Black Hole System"
+ modpack_black_hole_initializer_DESC: "Unary Black Hole System"
+ modpack_pulsar_initializer_NAME: "Unary Pulsar System"
+ modpack_pulsar_initializer_DESC: "Unary Pulsar System"
+ modpack_neutron_star_initializer_NAME: "Unary Neutron Star System"
+ modpack_neutron_star_initializer_DESC: "Unary Neutron Star System"
+
+ #Mthis
+ gan_system_initializer_NAME:0 "Gan System"
+ gan_system_initializer_DESC:0 "Gan System"
+ Malhadra_system_initializer_NAME:0 "Malhadra System"
+ Malhadra_system_initializer_DESC:0 "Malhadra System"
+ septhi_system_initializer_NAME:0 "Septhi System"
+ septhi_system_initializer_DESC:0 "Septhi System"
+ cykesh_system_initializer_NAME:0 "Cykesh System"
+ cykesh_system_initializer_DESC:0 "Cykesh System"
+ latak_system_initializer_NAME:0 "Latak system"
+ latak_system_initializer_DESC:0 "Latak system"
+ Hollow_system_initializer_NAME:0 "Hollowed Lament system"
+ Hollow_system_initializer_DESC:0 "Hollowed Lament system"
+ mok_system_initializer_NAME:0 "Mok System"
+ mok_system_initializer_DESC:0 "Mok System"
+
+ #Taeghen
+ Rakh_system_initializer_NAME:0 "Rakh System"
+ Rakh_system_initializer_DESC:0 "Rakh System"
+
+ #Ryn
+ Riaghladeshhk_palace_system_initializer_NAME:0 "Riaghladeshhk's Palace"
+ Riaghladeshhk_palace_system_initializer_DESC:0 "A black hole system filled with cracked planets and space storms."
+ Tyroporian_forbidden_knowledge_initializer:0 "Forbidden Knowledge"
+ Tyroporian_forbidden_knowledge_initialize_DESC:0 "A black hole system containing the remnants of the Curator Enclave destroyed by the Tyroporians."
+
+ #Other
+ Iu_system_initializer_NAME:0 "Iu System"
+ Iu_system_initializer_DESC:0 "Iu System"
+ essor_system_initializer_NAME:0 "Essor System"
+ essor_system_initializer_DESC:0 "Essor System"
+ ferret_system_initializer_NAME:0 "Ferret System"
+ ferret_system_initializer_DESC:0 "Ferret System"
+ luan_system_initializer_NAME:0 "Luan System"
+ luan_system_initializer_DESC:0 "Luan System" 
+ ssb_rashonel_system_initializer_NAME:0 "Rashonel System"
+ ssb_rashonel_system_initializer_DESC:0 "Rashonel System" 
+ 
+ 

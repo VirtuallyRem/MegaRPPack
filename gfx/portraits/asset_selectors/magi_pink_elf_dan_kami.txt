@@ -1,0 +1,143 @@
+# This is a template which multiple species can use.
+  
+magi_pink_elf_dan_kami = {
+	default = "gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+
+		random = {
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+	}
+
+
+
+
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+	
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+	}
+
+	#leader scope
+	ruler = { #for rulers
+		#default = "gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+		
+		random = {
+			trigger = {
+				owner = { has_militarist_government = yes }
+			}
+				
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+				owner = { has_spiritualist_government = yes }
+			}
+			
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+				owner = {
+					OR = {
+						has_government = gov_stagnant_ascendancy
+						has_primitive_government = yes
+						has_materialist_government = yes
+						has_pacifist_government = yes
+					}
+				}
+			}
+			
+			list = {
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami01v2.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami03.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami04.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_kami7.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami02.dds"
+				"gfx/models/portraits/magi_elf_kami_dan/pink_dan_re_kami06.dds"
+			}
+		}
+	}
+}

@@ -1,0 +1,285 @@
+namespace = mod_change_style
+
+# Ecumenopolis personalization - menu
+country_event = {
+	id = mod_change_style.1
+	title = ecu_style.1.name
+	desc = ecu_style.1.desc
+	picture = GFX_evt_city_planet
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_country_flag = ecu_style_arthro
+		remove_country_flag = ecu_style_avian
+		remove_country_flag = ecu_style_fung
+		remove_country_flag = ecu_style_huma
+		remove_country_flag = ecu_style_lith
+		remove_country_flag = ecu_style_mamm
+		remove_country_flag = ecu_style_moll
+		remove_country_flag = ecu_style_necr
+		remove_country_flag = ecu_style_plant
+		remove_country_flag = ecu_style_rept
+		remove_country_flag = ecu_style_aqua
+		remove_country_flag = ecu_style_fed
+		remove_country_flag = ecu_style_mach
+		remove_country_flag = ecu_style_bio
+	}
+
+	option = {
+		name = ecu_style.1.a
+		custom_tooltip = ecu_style.1.a.tool
+		hidden_effect = {
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				set_planet_entity = {
+					entity = "city_planet_entity"
+					graphical_culture = owner
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ecu_style.1.arthro
+		hidden_effect = {
+			set_country_flag = ecu_style_arthro
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+	
+	option = {
+		name = ecu_style.1.avian
+		hidden_effect = {
+			set_country_flag = ecu_style_avian
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.fung
+		hidden_effect = {
+			set_country_flag = ecu_style_fung
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.huma
+		trigger = {
+			host_has_dlc = "Humanoids Species Pack"
+		}
+		hidden_effect = {
+			set_country_flag = ecu_style_huma
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+	
+	option = {
+		name = ecu_style.1.lith
+		trigger = { has_lithoids = yes }
+		hidden_effect = {
+			set_country_flag = ecu_style_lith
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.mamm
+		hidden_effect = {
+			set_country_flag = ecu_style_mamm
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.moll
+		hidden_effect = {
+			set_country_flag = ecu_style_moll
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.necr
+		trigger = { has_necroids = yes }
+		hidden_effect = {
+			set_country_flag = ecu_style_necr
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.plant
+		trigger = {
+			host_has_dlc = "Plantoid"
+		}
+		hidden_effect = {
+			set_country_flag = ecu_style_plant
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.rept
+		hidden_effect = {
+			set_country_flag = ecu_style_rept
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+	option = {
+		name = ecu_style.1.aqua
+		trigger = { has_aquatics = yes }
+		hidden_effect = {
+			set_country_flag = ecu_style_aqua
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+	option = {
+		name = ecu_style.1.fed
+		hidden_effect = {
+			set_country_flag = ecu_style_fed
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+
+	option = {
+		name = ecu_style.1.mach
+		hidden_effect = {
+			set_country_flag = ecu_style_mach
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+	option = {
+		name = ecu_style.1.bio
+		hidden_effect = {
+			set_country_flag = ecu_style_bio
+			every_owned_planet = {
+				limit = { is_planet_class = pc_city }
+				planet_event = { id = mod_change_style.2 }
+			}
+		}
+	}
+}
+
+# Ecumenopolis personalization - switch
+planet_event = {
+	id = mod_change_style.2
+	hide_window = yes
+    	is_triggered_only = yes
+	
+	trigger = { is_planet_class = pc_city }
+
+	immediate = {
+		owner = {
+			switch = {
+				trigger = has_country_flag
+				ecu_style_arthro = { prev = { set_planet_entity = { entity = "arthropoid_01_city_planet_entity" } } }
+				ecu_style_avian = { prev = { set_planet_entity = { entity = "avian_01_city_planet_entity" } } }
+				ecu_style_fung = { prev = { set_planet_entity = { entity = "fungoid_01_city_planet_entity" } } }
+				ecu_style_huma = { prev = { set_planet_entity = { entity = "humanoid_01_city_planet_entity" } } }
+				ecu_style_lith = { prev = { set_planet_entity = { entity = "lithoid_01_city_planet_entity" } } }
+				ecu_style_mamm = { prev = { set_planet_entity = { entity = "mammalian_01_city_planet_entity" } } }
+				ecu_style_moll = { prev = { set_planet_entity = { entity = "molluscoid_01_city_planet_entity" } } }
+				ecu_style_necr = { prev = { set_planet_entity = { entity = "necroid_01_city_planet_entity" } } }
+				ecu_style_plant = { prev = { set_planet_entity = { entity = "plantoid_01_city_planet_entity" } } }
+				ecu_style_rept = { prev = { set_planet_entity = { entity = "reptilian_01_city_planet_entity" } } }
+				ecu_style_aqua = { prev = { set_planet_entity = { entity = "aquatic_01_city_planet_entity" } } }
+				ecu_style_fed = { prev = { set_planet_entity = { entity = "css_fedbuild_01_city_planet_entity" } } }
+				ecu_style_mach = { prev = { set_planet_entity = { entity = "machine_01_city_planet_entity" } } }
+				ecu_style_bio = { prev = { set_planet_entity = { entity = "biomass_01_city_planet_entity" } } }
+				default = {
+					set_planet_entity = {
+						entity = "city_planet_entity"
+						graphical_culture = owner
+					}
+				}
+			}
+		}
+	}
+}
+
+# Machine world personalization - style menu
+country_event = {
+	id = mod_change_style.5
+	title = mach_planet.1.name
+	desc = mach_planet.1.desc
+	picture = GFX_evt_contingency_planet
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mach_planet.1.a
+		custom_tooltip = mach_planet.1.a.tool
+		hidden_effect = {
+			every_owned_planet = {
+				limit = { is_planet_class = pc_machine }
+				set_planet_entity = { entity = "machine_planet_01_entity" }
+			}
+		}
+	}
+	
+	option = {
+		name = mach_planet.1.b
+		custom_tooltip = mach_planet.1.b.tool
+		hidden_effect = {
+			set_country_flag = mach_planet_fancy
+			every_owned_planet = {
+				limit = { is_planet_class = pc_machine }
+				set_planet_entity = { entity = "machine_01_city_planet_entity" }
+			}
+		}
+	}
+	
+}
+country_event = {
+	id = mod_change_style.10
+	hide_window = yes
+    	is_triggered_only = yes
+
+	trigger = {
+		is_planet_class = pc_machine
+		owner = { has_country_flag = mach_planet_fancy }
+	}
+
+	immediate = { set_planet_entity = { entity = "machine_01_city_planet_entity" } }		
+}

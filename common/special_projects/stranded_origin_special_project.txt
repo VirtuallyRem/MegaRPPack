@@ -1,0 +1,24 @@
+special_project = {
+	key = "STRANDED_HW"
+	cost = 0
+	days_to_research = 90
+	tech_department = society_technology
+	picture = GFX_evt_star_chart
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+	
+	on_success = {
+		from = {
+			save_event_target_as = found_hw
+		}
+		ship_event = { id = stranded.5 }
+	}
+	
+	on_fail = {
+	}
+}

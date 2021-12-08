@@ -1,0 +1,1830 @@
+portraits = {
+	#ARTHROPOID
+	love1 = {	entity = "portrait_arthropoid_11_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_01.dds"
+		}
+	}  
+	love2 = {	entity = "portrait_arthropoid_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_02.dds"
+		}
+	}  
+	love3 = {	entity = "portrait_arthropoid_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_03.dds"
+		}
+	}  
+	love4 = {	entity = "portrait_arthropoid_14_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_04.dds"
+		}
+	}  
+	love5 = {	entity = "portrait_arthropoid_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_05.dds"
+		}
+	}  
+	love6 = {	entity = "portrait_arthropoid_16_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_06.dds"
+		}
+	}  
+	love7 = {	entity = "portrait_arthropoid_17_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_07.dds"
+		}
+	}
+	love8 = {	entity = "portrait_arthropoid_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_08.dds"
+		}
+	}
+	love9 = {	entity = "portrait_arthropoid_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_09.dds"
+		}
+	}
+	love10 = {	entity = "portrait_arthropoid_08_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_10.dds"
+		}
+	}
+	love11 = {	entity = "portrait_arthropoid_09_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_11.dds"
+		}
+	}
+	love12 = {	entity = "portrait_arthropoid_10_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_12.dds"
+		}
+	}
+	love13 = {	entity = "portrait_arthropoid_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_13.dds"
+		}
+	}
+	love14 = {	entity = "portrait_arthropoid_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_14.dds"
+		}
+	}
+	love15 = {	entity = "portrait_arthropoid_05_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_15.dds"
+		}
+	}
+	#AVIAN
+	love16 = {	entity = "portrait_avian_11_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_16.dds"
+		}
+	}
+	love17 = {	entity = "portrait_avian_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_17.dds"
+		}
+	}
+	love18 = {	entity = "portrait_avian_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_18.dds"
+		}
+	}
+	love19 = {	entity = "portrait_avian_14_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_19.dds"
+		}
+	}
+	love20 = {	entity = "portrait_avian_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_20.dds"
+		}
+	}
+	love21 = {	entity = "portrait_avian_17_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_21.dds"
+		}
+	}
+	love22 = {	entity = "portrait_avian_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_22.dds"
+		}
+	}
+	love23 = {	entity = "portrait_avian_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_23.dds"
+		}
+	}
+	love24 = {	entity = "portrait_avian_08_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_24.dds"
+		}
+	}
+	love25 = {	entity = "portrait_avian_09_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_25.dds"
+		}
+	}
+	love26 = {	entity = "portrait_avian_10_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_26.dds"
+		}
+	}
+	love27 = {	entity = "portrait_avian_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_27.dds"
+		}
+	}
+	love28 = {	entity = "portrait_avian_02_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_28.dds"
+		}
+	}
+	love29 = {	entity = "portrait_avian_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_29.dds"
+		}
+	}
+	love30 = {	entity = "portrait_avian_04_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_30.dds"
+		}
+	}
+	love31 = {	entity = "portrait_avian_05_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_31.dds"
+		}
+	}
+	#FUNGOID
+	love32 = {	entity = "portrait_fungoid_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_32.dds"
+		}
+	}
+	love33 = {	entity = "portrait_fungoid_02_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_33.dds"
+		}
+	}
+	love34 = {	entity = "portrait_fungoid_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_34.dds"
+		}
+	}
+	love35 = {	entity = "portrait_fungoid_04_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_35.dds"
+		}
+	}
+	love36 = {	entity = "portrait_fungoid_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_36.dds"
+		}
+	}
+	love37 = {	entity = "portrait_fungoid_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_37.dds"
+		}
+	}
+	
+	love39 = {	entity = "portrait_fungoid_09_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_39.dds"
+		}
+	}
+	love40 = {	entity = "portrait_fungoid_10_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_40.dds"
+		}
+	}
+	love41 = {	entity = "portrait_fungoid_11_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_41.dds"
+		}
+	}
+	love42 = {	entity = "portrait_fungoid_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_42.dds"
+		}
+	}
+	love43 = {	entity = "portrait_fungoid_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_43.dds"
+		}
+	}
+	love44 = {	entity = "portrait_fungoid_14_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_44.dds"
+		}
+	}
+	love45 = {	entity = "portrait_fungoid_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_45.dds"
+		}
+	}
+	love46 = {	entity = "portrait_fungoid_16_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_46.dds"
+		}
+	}
+	love47 = {	entity = "portrait_fungoid_17_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_47.dds"
+		}
+	}
+	love48f = {	entity = "portrait_human_female_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_48f.dds"
+		}
+	}
+	love48m = {	entity = "portrait_human_male_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_48m.dds"
+		}
+	}
+	love49f = {	entity = "humanoid_02_female_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_49f.dds"
+		}
+	}
+	love49m = {	entity = "humanoid_02_male_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_49m.dds"
+		}
+	}
+	love50m = {	entity = "humanoid_03_male_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_50m.dds"
+		}
+	}
+	love50f = {	entity = "humanoid_03_female_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_50f.dds"
+		}
+	}
+	love51m = {	entity = "humanoid_04_male_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_51m.dds"
+		}
+	}
+	love51f = {	entity = "humanoid_04_female_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_51f.dds"
+		}
+	}
+	love52m = {	entity = "humanoid_05_male_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_52m.dds"
+		}
+	}
+	love52f = {	entity = "humanoid_05_female_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_52f.dds"
+		}
+	}
+	#MAMMALIAN
+	love53 = {	entity = "portrait_mammalian_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_53.dds"
+		}
+	}
+	love54 = {	entity = "portrait_mammalian_02_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_54.dds"
+		}
+	}
+	love55 = {	entity = "portrait_mammalian_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_55.dds"
+		}
+	}
+	love56 = {	entity = "portrait_mammalian_04_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_56.dds"
+		}
+	}
+	love57 = {	entity = "portrait_mammalian_05_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_57.dds"
+		}
+	}
+	love58 = {	entity = "portrait_mammalian_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_58.dds"
+		}
+	}
+	love59 = {	entity = "portrait_mammalian_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_59.dds"
+		}
+	}
+	love60 = {	entity = "portrait_mammalian_08_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_60.dds"
+		}
+	}
+	love61 = {	entity = "portrait_mammalian_09_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_61.dds"
+		}
+	}
+	love62 = {	entity = "portrait_mammalian_10_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_62.dds"
+		}
+	}
+	love63 = {	entity = "portrait_mammalian_11_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_63.dds"
+		}
+	}
+	love64 = {	entity = "portrait_mammalian_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_64.dds"
+		}
+	}
+	love65 = {	entity = "portrait_mammalian_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_65.dds"
+		}
+	}
+
+	love67 = {	entity = "portrait_mammalian_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_67.dds"
+		}
+	}
+	love68 = {	entity = "portrait_mammalian_16_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_68.dds"
+		}
+	}
+	love69 = {	entity = "portrait_mammalian_17_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_69.dds"
+		}
+	}
+	#MOLLUSCOID
+	love70 = {	entity = "portrait_molluscoid_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_70.dds"
+		}
+	}
+	love71 = {	entity = "portrait_molluscoid_02_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_71.dds"
+		}
+	}
+	love72 = {	entity = "portrait_molluscoid_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_72.dds"
+		}
+	}
+	love73 = {	entity = "portrait_molluscoid_04_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_73.dds"
+		}
+	}
+	love74 = {	entity = "portrait_molluscoid_05_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_74.dds"
+		}
+	}
+	love75 = {	entity = "portrait_molluscoid_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_75.dds"
+		}
+	}
+	love76 = {	entity = "portrait_molluscoid_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_76.dds"
+		}
+	}
+	love77 = {	entity = "portrait_molluscoid_08_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_77.dds"
+		}
+	}
+	
+	love79 = {	entity = "portrait_molluscoid_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_79.dds"
+		}
+	}
+	love80 = {	entity = "portrait_molluscoid_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_80.dds"
+		}
+	}
+	love81 = {	entity = "portrait_molluscoid_14_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_81.dds"
+		}
+	}
+	love82 = {	entity = "portrait_molluscoid_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_82.dds"
+		}
+	}
+	love83 = {	entity = "portrait_molluscoid_16_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_83.dds"
+		}
+	}
+	
+	#REPTILIAN
+	love86 = {	entity = "portrait_reptilian_01_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_86.dds"
+		}
+	}
+	love87 = {	entity = "portrait_reptilian_02_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_87.dds"
+		}
+	}
+	love88 = {	entity = "portrait_reptilian_03_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_88.dds"
+		}
+	}
+	love89 = {	entity = "portrait_reptilian_04_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_89.dds"
+		}
+	}
+	love90 = {	entity = "portrait_reptilian_05_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_90.dds"
+		}
+	}
+	love91 = {	entity = "portrait_reptilian_06_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_91.dds"
+		}
+	}
+	love92 = {	entity = "portrait_reptilian_07_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_92.dds"
+		}
+	}
+	love93 = {	entity = "portrait_reptilian_08_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_93.dds"
+		}
+	}
+	love94 = {	entity = "portrait_reptilian_09_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_94.dds"
+		}
+	}
+	love95 = {	entity = "portrait_reptilian_10_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_95.dds"
+		}
+	}
+	love96 = {	entity = "portrait_reptilian_11_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_96.dds"
+		}
+	}
+	love97 = {	entity = "portrait_reptilian_12_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_97.dds"
+		}
+	}
+	love98 = {	entity = "portrait_reptilian_13_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_98.dds"
+		}
+	}
+	love99 = {	entity = "portrait_reptilian_14_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_99.dds"
+		}
+	}
+	love100 = {	entity = "portrait_reptilian_15_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_100.dds"
+		}
+	}
+	love101 = {	entity = "portrait_reptilian_16_entity" clothes_selector = "null_clothes_01" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/lovers/love_101.dds"
+		}
+	}	
+}
+
+portrait_groups = {
+	love = {
+		
+		default = love4
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47					
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99
+					love100
+					love101
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47					
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99
+					love100
+					love101
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47					
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99
+					love100
+					love101
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = scientist
+					gender = male
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = scientist
+					gender = female
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = governor
+					gender = male
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = governor
+					gender = female
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101
+				}
+			}			
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48f
+					love49f
+					love50f
+					love51f
+					love52f
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					love1
+					love2
+					love4
+					love5
+					love6
+					love7
+					love8
+					love9
+					love10
+					love11
+					love12
+					love13
+					love14
+					love15
+					love16
+					love17
+					love18
+					love19
+					love20
+					love21
+					love22
+					love23
+					love24
+					love25
+					love26
+					love27
+					love28
+					love29
+					love30
+					love31
+					love32
+					love33
+					love34
+					love35
+					love36
+					love37
+					
+					love39
+					love40
+					love41
+					love42
+					love43
+					love44
+					love45
+					love46
+					love47
+					love48m
+					love49m
+					love50m
+					love51m
+					love52m
+					love53
+					love54
+					love55
+					love56
+					love57
+					love58
+					love59
+					love60
+					love61
+					love62
+					love63
+					love64
+					love65
+					
+					love67
+					love68
+					love69
+					love70
+					love71
+					love72
+					love73
+					love74
+					love75
+					love76
+					love77
+					
+					love79
+					love80
+					love81
+					love82
+					love83
+					
+					
+					love86
+					love87
+					love88
+					love89
+					love90
+					love91
+					love92
+					love93
+					love94
+					love95
+					love96
+					love97
+					love98
+					love99	
+					love100	
+					love101	
+				}
+			}
+		}
+	}
+}

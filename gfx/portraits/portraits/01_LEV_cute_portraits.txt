@@ -1,0 +1,96 @@
+portraits = {
+
+	LEV_cute_arthropoid_01 = {	entity = "LEV_cute_arthropoid_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_fungoid_greetings"
+			character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_01.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_01_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_01_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_01_alt3.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_01_alt4.dds"
+			}
+	}
+
+	LEV_cute_arthropoid_02 = {
+		entity = "LEV_cute_arthropoid_02_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "cute_fungoid_greetings"
+		character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_02.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_02_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_02_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_02_alt3.dds"
+		}
+	}
+
+	LEV_cute_funji_01 = {	entity = "LEV_cute_funji_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture" 
+		greeting_sound = "cute_fungoid_greetings"
+		character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_funji_01.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_funji_01_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_funji_01_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_funji_01_alt3.dds"
+				}
+	}
+	LEV_cute_molluscoid_01 = {	entity = "LEV_cute_molluscoid_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_molluscoid_starfish_greetings"  
+			character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_alt3.dds"
+			}
+	}	
+
+#	LEV_cute_molluscoid_01_ext = {	entity = "LEV_cute_molluscoid_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_molluscoid_starfish_greetings"  
+#			character_textures = {
+#					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_ext.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_ext_alt1.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_ext_alt2.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_molluscoid_01_ext_alt3.dds"
+#			}
+#	}	
+
+	LEV_cute_plantoid_01 = {	entity = "LEV_cute_plantoid_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "plantoid_greetings" 
+			character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_plantoid_01.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_plantoid_01_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_plantoid_01_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_plantoid_01_alt3.dds"				
+			}
+	}
+#	LEV_cute_plantoid_02 = {	entity = "LEV_cute_plantoid_02_entity"	clothes_selector = "no_texture" hair_selector = "no_texture" 
+#		greeting_sound = "cute_fungoid_greetings"
+#		character_textures = {
+#					"gfx/models/portraits/cute_things/LEV_cute_plantoid_02.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_plantoid_02_alt1.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_plantoid_02_alt2.dds"
+#					"gfx/models/portraits/cute_things/LEV_cute_plantoid_02_alt3.dds"
+#				}
+#	}
+	LEV_cute_reptilian_01 = {	entity = "LEV_cute_reptilian_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture" 
+		greeting_sound = "cute_reptilian_greetings"
+		character_textures = {
+			"gfx/models/portraits/cute_things/LEV_cute_reptilian_01.dds"
+			"gfx/models/portraits/cute_things/LEV_cute_reptilian_01_alt1.dds"
+			"gfx/models/portraits/cute_things/LEV_cute_reptilian_01_alt2.dds"
+			"gfx/models/portraits/cute_things/LEV_cute_reptilian_01_alt3.dds"
+		}
+	}	
+
+
+	LEV_cute_arthropoid_03 = {	entity = "LEV_cute_arthropoid_03_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "arthropoid_01_greetings" 
+		character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_03.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_03_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_03_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_03_alt3.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_03_alt4.dds"
+			}
+	}
+	LEV_cute_arthropoid_04 = {	entity = "LEV_cute_arthropoid_04_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "greetings_arthopoid_special" 
+			character_textures = {
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_04.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_04_alt1.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_04_alt2.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_04_alt3.dds"
+					"gfx/models/portraits/cute_things/LEV_cute_arthropoid_04_alt4.dds"
+			}
+	}	
+}

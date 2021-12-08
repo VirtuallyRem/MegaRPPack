@@ -1,0 +1,164 @@
+
+# Septhi System
+septhi_system_initializer = {
+	name = "Ra'Sep"
+	class = "sc_f"
+
+
+	usage = custom_empire
+
+	flags = { empire_home_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Ra'Sep"
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 50
+		has_ring = no
+	}
+
+	planet = {
+		name = "Multar"
+		class = "pc_molten"
+		orbit_distance = 35
+		orbit_angle = 2
+		size = 19
+		has_ring = no
+	}
+	
+	
+		planet = {
+		name = "Kava"
+		class = "pc_molten"
+		orbit_distance = 17
+		orbit_angle = 10
+		size = 15
+		has_ring = no
+	}
+
+		
+	
+	
+	    planet = {
+		name = "Derad"
+		class = "pc_barren_cold"
+		orbit_distance = 20
+		orbit_angle = 70
+		size = 21
+		has_ring = no
+		
+		moon = {
+		name = "Dorad"
+		class = "pc_frozen"
+		orbit_distance = 10
+		orbit_angle = 12
+		size = 10
+		has_ring = no
+	}
+		
+	}
+	
+	planet = {
+		name = "Septhi"
+		class = "pd_oasis"
+		orbit_distance = 12
+		orbit_angle = 90
+		size = 21
+		starting_planet = yes
+		has_ring = no
+			
+		moon = {
+		name = "Sister"
+		class = "pc_barren"
+		orbit_distance = 12
+		orbit_angle = 30
+		size = 6
+		has_ring = no
+	}
+		moon = {
+		name = "Brother"
+		class = "pc_barren_cold"
+		orbit_distance = 4
+		orbit_angle = 50
+		size = 6
+		has_ring = no
+	}
+	
+	}
+	
+		planet = {
+		name = "Murad"
+		class = "pc_gas_giant"
+		orbit_distance = 43
+		orbit_angle = 40
+		size = 29
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Nora"
+		class = "pc_barren_cold"
+		orbit_distance = 10
+		orbit_angle = 52
+		size = 7
+		has_ring = no
+	}
+	
+	planet = {
+			name = "Mora"
+			class = "pc_barren_cold"
+			size = 10
+			orbit_distance = 14
+			orbit_angle = 191
+			has_ring = no
+		}
+	
+	
+		 planet = {
+		name = "Kmina"
+		class = "pc_frozen"
+		orbit_distance = 10
+		orbit_angle = 170
+		size = 11
+		has_ring = no
+	}
+	
+			 planet = {
+		name = "Knira"
+		class = "pc_frozen"
+		orbit_distance = 15
+		orbit_angle = 100
+		size = 12
+		has_ring = no
+	}
+
+	
+	
+
+
+		
+
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 2 }
+        hyperlane_jumps = { min = 1 max = 2 }
+        initializer = "neighbor_t1"
+    }
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 1 }
+        hyperlane_jumps = { min = 1 max = 2 }
+        initializer = "neighbor_t1_first_colony"
+    }
+
+}

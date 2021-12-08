@@ -1,0 +1,40 @@
+namespace = gcfix
+
+# Prevents the galactic community autospawn
+event = {
+	id = gcfix.1
+	hide_window = yes
+		
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { is_multiplayer = yes }
+			set_global_flag = galactic_community_founded
+		}
+	}
+}
+
+# Removes ais from gc
+event = {
+	id = gcfix.2
+	hide_window = yes
+		
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { is_multiplayer = yes }
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+					is_ai = yes
+					is_galactic_emperor = no
+					is_galactic_custodian = no
+					is_part_of_galactic_council = no
+				}
+				remove_from_galactic_community = yes
+			}
+		}
+	}
+}

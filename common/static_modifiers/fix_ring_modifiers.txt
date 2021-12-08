@@ -1,0 +1,9 @@
+the_interloper_emp = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_shattered_planet.dds"
+	icon_frame = 1
+}
+
+the_interloper_pln = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_shattered_planet.dds"
+	icon_frame = 1
+}

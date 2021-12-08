@@ -1,0 +1,36 @@
+#MALE
+	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+	
+@humanscale = 0.8
+
+entity = {
+	name = "portrait_cuelan_male_01_entity"
+	pdxmesh = "portrait_cuelan_male_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"	animation = "idle" looping = no next_state = "idle" chance = 4.0 }
+	state = { name = "idle"	animation = "idle2" looping = no next_state = "idle" chance = 1.0 }
+	state = { name = "idle"	animation = "idle3" looping = no next_state = "idle" chance = 1.0 }
+	state = { name = "idle"	animation = "idle4" looping = no next_state = "idle" chance = 0.5 }
+	scale = 0.9
+}
+	
+
+#FEMALE
+	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+
+
+entity = {
+	name = "portrait_cuelan_female_01_entity"
+	pdxmesh = "portrait_cuelan_female_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0.0 chance = 4.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0.0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0.0 chance = 1.0 looping = no next_state = idle}
+	scale = 0.9
+}

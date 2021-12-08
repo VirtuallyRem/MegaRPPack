@@ -1,0 +1,229 @@
+#################
+# GENERIC NAMES #
+#################
+
+empire_name_parts_list = {
+key = fractured_generic_adj
+parts = {
+		"Fragmented" = 1
+		"Indipendent" = 1
+		"Sovreign" = 1
+		"United" = 1
+		"Allied" = 1
+		"Confederated" = 1
+	}
+}
+
+empire_name_parts_list = {
+    key = fractured_generic_noun
+    parts = {
+        "Nationstates" = 1
+        "Nations" = 1
+        "States" = 1
+        "Regions" = 1
+        "Countries" = 1
+    }
+}
+
+empire_name_parts_list = {
+    key = fractured_realms_noun
+    parts = {
+        "Kingdoms" = 1
+        "Counties" = 1
+        "Fiefdoms" = 1
+        "Feuds" = 1
+        "Duchies" = 1
+		"Earldoms" = 1
+		"Princedoms" = 1
+		"Principalities" = 1
+		"Electorates" = 1
+		"Lordships" = 1
+    }
+}
+
+empire_name_parts_list = {
+	key = fractured_clans_adj
+	parts = {
+		"Fragmented" = 1
+		"Warring" = 1
+		"Rival" = 1
+		"Clashing" = 1
+	}
+}
+
+empire_name_parts_list = {
+    key = fractured_clans_noun
+    parts = {
+        "Clans" = 1
+        "Tribes" = 1
+        "Bands" = 1
+        "Bloodlines" = 1
+		"Clades" = 1
+		"Hordes" = 1
+    }
+}
+
+empire_name_parts_list = {
+	key = fractured_commies_adj
+	parts = {
+		"Indipendent" = 1
+		"United" = 1
+		"Allied" = 1
+		"Anarchist" = 1
+		"Confederated" = 1
+	}
+}
+
+empire_name_parts_list = {
+    key = fractured_commies_noun
+    parts = {
+        "Collectives" = 1
+        "Soviets" = 1
+        "Communes" = 1
+        "Communities" = 1
+    }
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_generic
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_generic_adj> [This.GetSpeciesAdj] <fractured_generic_noun>"
+    noun = "[This.GetSpeciesAdj]"
+    prefix_format = "[This.GetSpeciesAdj] <fractured_generic_noun>"
+    # Fragmented Human Nationstates
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_generic
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_generic_adj> <fractured_generic_noun> of [This.Capital.GetName]"
+    noun = "[This.Capital.GetName]"
+    prefix_format = "[This.Capital.GetName] <fractured_generic_noun>"
+    # Fragmented Nationstates of Earth
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_realms
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_generic_adj> [This.GetSpeciesAdj] <fractured_realms_noun>"
+    noun = "[This.GetSpeciesAdj]"
+    prefix_format = "[This.GetSpeciesAdj] <fractured_realms_noun>"
+    # Fragmented Human Kingdoms
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_realms
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_generic_adj> <fractured_realms_noun> of [This.Capital.GetName]"
+    noun = "[This.Capital.GetName]"
+    prefix_format = "[This.Capital.GetName] <fractured_realms_noun>"
+    # Fragmented Kingdoms of Earth
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_clans
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_clans_adj> [This.GetSpeciesAdj] <fractured_clans_noun>"
+    noun = "[This.GetSpeciesAdj]"
+    prefix_format = "[This.GetSpeciesAdj] <fractured_clans_noun>"
+    # Warring Human Clans
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_clans
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_clans_adj> <fractured_clans_noun> of [This.Capital.GetName]"
+    noun = "[This.Capital.GetName]"
+    prefix_format = "[This.Capital.GetName] <fractured_clans_noun>"
+    # Warring Clans of Earth
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_anarchist_collectives
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_commies_adj> [This.GetSpeciesAdj] <fractured_commies_noun>"
+    noun = "[This.GetSpeciesAdj]"
+    prefix_format = "[This.GetSpeciesAdj] <fractured_commies_noun>"
+    # Anarchist Human Collectives
+}
+
+empire_name_format = {
+    random_weight = {
+        factor = 0
+        modifier = {
+            add = 1
+            has_government = gov_fractured_anarchist_collectives
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+        }
+    }
+    format = "<fractured_commies_adj> <fractured_commies_noun> of [This.Capital.GetName]"
+    noun = "[This.Capital.GetName]"
+    prefix_format = "[This.Capital.GetName] <fractured_commies_noun>"
+    # Anarchist Collectives of Earth
+}

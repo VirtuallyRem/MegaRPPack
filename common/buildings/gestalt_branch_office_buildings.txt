@@ -1,0 +1,1580 @@
+## MACHINE INTELLIGENCE BRANCH OFFICE BUILDINGS ##
+
+building_me_food = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+
+	convert_to = {
+		building_food_conglomerate
+		building_bio_reprocessing_facilities
+		building_me_bio_harvesting
+		building_hive_food_conglomerate
+		building_hive_bio_facilities
+	}
+
+	potential = {
+		has_branch_office = yes
+		owner = { has_civic = civic_machine_servitor }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	
+	planet_modifier = {
+		job_agri_drone_add = 1
+		job_technician_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			food = 15
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_mining = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+
+	convert_to = {
+		building_private_mining_consortium
+		building_wildcat_miners
+		building_me_drone_reclaimation
+		building_hive_mining_consortium
+		building_hive_mining_slaves
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}		
+	}
+	
+	planet_modifier = {
+		job_mining_drone_add = 1
+		job_technician_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			minerals = 15
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_foundry = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_shipyards
+		building_wrecking_yards
+		building_me_drone_foundry_skimmer
+		building_hive_shipyards
+		building_hive_scavenging_yards
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}	
+	}
+	
+	planet_modifier = {
+		job_fabricator_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			alloys = 4
+		}		
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_me_corporate_outpost = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_military_contractors
+		building_pirate_haven
+		building_me_drone_security
+		building_hive_security
+		building_hive_biohacker_haven
+	}
+	
+	convert_to = { building_me_drone_security }
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 12
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	planet_modifier = {
+		job_warrior_drone_add = 1
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier =
+		{
+			factor = 3
+			branch_office_owner = { 
+				used_naval_capacity_percent > 0.8
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+building_me_research = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_research_initiative 
+		building_illicit_research_labs 
+		building_me_disassembly_labs
+		building_hive_research_initiative 
+		building_hive_research_labs 
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	planet_modifier = {
+		job_calculator_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_maintenance_center = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_amusement_megaplex  
+		building_underground_clubs  
+		building_me_energy_siphon
+		building_hive_medical_research 
+		building_hive_symbiosis_den 
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}	
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			energy = 15
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 3
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+	}
+}
+
+building_me_tradegood_factory = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_virtual_entertainment_studios   
+		building_underground_chemists   
+		building_me_knockoff_goods
+		building_hive_sweatshop 
+		building_hive_chemists
+	}
+	
+	convert_to = { building_me_knockoff_goods }
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	planet_modifier = {
+		job_technician_drone_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			consumer_goods = 10
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+## MACHINE INTELLIGENCE CRIMINAL SYNDICATE BUILDINGS ##
+
+building_me_drone_reclaimation = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_mining_consortium
+		building_wildcat_miners
+		building_me_mining
+		building_hive_mining_consortium
+		building_hive_mining_slaves
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}		
+	}
+	
+	planet_modifier = {
+	    job_mining_drone_add = 1
+		planet_crime_add = 25	
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			minerals = 20
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_bio_harvesting = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_food_conglomerate
+		building_bio_reprocessing_facilities
+		building_me_food
+		building_hive_food_conglomerate
+		building_hive_bio_facilities
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}				
+	}
+	
+	planet_modifier = {
+	    job_agri_drone_add = 1
+		planet_crime_add = 25	
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			food = 20
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_knockoff_goods = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_virtual_entertainment_studios   
+		building_underground_chemists   
+		building_me_tradegood_factory
+		building_hive_sweatshop 
+		building_hive_chemists
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+	    job_technician_drone_add = 1
+		planet_crime_add = 25
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			consumer_goods = 15
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_me_drone_foundry_skimmer = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_shipyards
+		building_wrecking_yards
+		building_me_foundry
+		building_hive_shipyards
+		building_hive_scavenging_yards
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+	    job_fabricator_add = 1
+		planet_crime_add = 25
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			alloys = 5
+		}		
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_me_drone_security = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_military_contractors
+		building_pirate_haven
+		building_me_corporate_outpost
+		building_hive_shipyards
+		building_hive_biohacker_haven
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 15
+	}
+	
+	planet_modifier = {
+	    job_warrior_drone_add = 1
+		planet_crime_add = 40
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier =
+		{
+			factor = 3
+			branch_office_owner = { 
+				used_naval_capacity_percent > 0.8
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+building_me_energy_siphon = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_amusement_megaplex  
+		building_underground_clubs  
+		building_me_maintenance_center
+		building_hive_medical_research 
+		building_hive_symbiosis_den
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 40
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}
+		produces = {
+			energy = 20
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 6
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+	}
+}
+
+building_me_hacking_office = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_public_relations_office
+		building_syndicate_outreach_office 
+		building_hive_understanding_complex
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+	    job_calculator_add = 1
+		planet_crime_add = 40
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			unity = 15
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_me_disassembly_labs = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_research_initiative 
+		building_illicit_research_labs 
+		building_me_research
+		building_hive_research_initiative 
+		building_hive_research_labs
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_machine_intelligence }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+	    job_fabricator_add = 1
+		planet_crime_add = 40
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			physics_research = 15
+			engineering_research = 15
+			society_research = 15
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+## HIVE MIND BRANCH OFFICE BUILDINGS ##
+
+building_hive_mining_consortium = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_mining_consortium
+		building_wildcat_miners
+		building_me_mining
+		building_me_drone_reclaimation
+		building_hive_mining_slaves
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+		is_artificial = no
+		NOR = { 
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city 
+		}		
+	}
+	
+	planet_modifier = {
+		job_mining_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			minerals = 15
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_food_conglomerate = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_food_conglomerate
+		building_bio_reprocessing_facilities
+		building_me_food
+		building_me_bio_harvesting
+		building_hive_bio_facilities
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+		is_artificial = no
+		NOR = { 
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city 
+		}	
+	}
+	
+	planet_modifier = {
+		job_agri_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			food = 15
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_sweatshop = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_virtual_entertainment_studios   
+		building_underground_chemists   
+		building_me_tradegood_factory
+		building_me_knockoff_goods
+		building_hive_chemists
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	planet_modifier = {
+		job_technician_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			consumer_goods = 10
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_hive_shipyards = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_shipyards
+		building_wrecking_yards
+		building_me_foundry
+		building_me_drone_foundry_skimmer
+		building_hive_scavenging_yards
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}		
+	}
+	
+	planet_modifier = {
+		job_alloy_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			alloys = 4
+		}		
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_hive_security = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_military_contractors
+		building_pirate_haven
+		building_me_corporate_outpost
+		building_me_drone_security
+		building_hive_biohacker_haven
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 12
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	planet_modifier = {
+		job_warrior_drone_add = 1
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier =
+		{
+			factor = 3
+			branch_office_owner = { 
+				used_naval_capacity_percent > 0.8
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+building_hive_understanding_complex = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_public_relations_office
+		building_syndicate_outreach_office 
+		building_me_hacking_office
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	planet_modifier = {
+		job_synapse_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			unity = 10
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_research_initiative = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_research_initiative 
+		building_illicit_research_labs 
+		building_me_research
+		building_me_disassembly_labs
+		building_hive_research_labs
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}
+	}
+	
+	planet_modifier = {
+		job_brain_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_medical_research = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_amusement_megaplex  
+		building_underground_clubs  
+		building_me_maintenance_center
+		building_me_energy_siphon
+		building_hive_symbiosis_den
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		OR = {
+			owner = { has_commercial_pact = prev.branch_office_owner }
+			branch_office_owner = {	is_criminal_syndicate = no }
+		}	
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			energy = 15
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 3
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+	}
+}
+
+## HIVE MIND CRIMINAL SYNDICATE BUILDINGS ##
+
+building_hive_mining_slaves = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_mining_consortium
+		building_wildcat_miners
+		building_me_mining
+		building_me_drone_reclaimation
+		building_hive_mining_consortium
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+		is_artificial = no
+		NOR = { 
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city 
+		}		
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 25	
+		job_mining_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			minerals = 20
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_bio_facilities = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_food_conglomerate
+		building_bio_reprocessing_facilities
+		building_me_food
+		building_me_bio_harvesting
+		building_hive_food_conglomerate
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+		is_artificial = no
+		NOR = { 
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city 
+		}				
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 25
+        job_agri_drone_add = 1		
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			food = 20
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+building_hive_chemists = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_virtual_entertainment_studios   
+		building_underground_chemists   
+		building_me_tradegood_factory
+		building_me_knockoff_goods
+		building_hive_sweatshop 
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 25
+		job_synapse_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			consumer_goods = 15
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_hive_scavenging_yards = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_shipyards
+		building_wrecking_yards
+		building_me_foundry
+		building_me_drone_foundry_skimmer
+		building_hive_shipyards
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 25
+		job_alloy_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		produces = {
+			alloys = 5
+		}		
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 5
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+	}
+}
+
+building_hive_biohacker_haven = {
+	base_buildtime = 360
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_military_contractors
+		building_pirate_haven
+		building_me_corporate_outpost
+		building_me_drone_security
+		building_hive_security
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	country_modifier = {
+		country_naval_cap_add = 15
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 40
+		job_brain_drone_add = 1
+	}
+	
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 2
+		}		
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier =
+		{
+			factor = 3
+			branch_office_owner = { 
+				used_naval_capacity_percent > 0.8
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+building_hive_symbiosis_den = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_amusement_megaplex  
+		building_underground_clubs  
+		building_me_maintenance_center
+		building_me_energy_siphon
+		building_hive_medical_research 
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 40
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}
+		produces = {
+			energy = 15
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 6
+			branch_office_owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+	}
+}
+
+
+building_hive_research_labs = {
+	base_buildtime = 480
+	base_cap_amount = 1
+	
+	branch_office_building = yes
+	
+	convert_to = {
+		building_private_research_initiative 
+		building_illicit_research_labs 
+		building_me_research
+		building_me_disassembly_labs
+		building_hive_research_initiative 
+	}
+	
+	potential = {
+		has_branch_office = yes
+		owner = { has_authority = auth_hive_mind }
+		AND = {
+			NOT = { owner = { has_commercial_pact = prev.branch_office_owner } }
+			branch_office_owner = {	is_criminal_syndicate = yes }
+		}
+	}
+	
+	planet_modifier = {
+		planet_crime_add = 40
+		job_brain_drone_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 800
+		}	
+		produces = {
+			physics_research = 15
+			engineering_research = 15
+			society_research = 15
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

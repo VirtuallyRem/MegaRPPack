@@ -1,0 +1,11 @@
+# xenosec
+
+portraits = {
+	xenosec1 = {
+		entity = "portrait_xenosec_01_entity" clothes_selector = "xenosec_normal_clothes_01" hair_selector = "no_texture" greeting_sound = "xenosec_01_greetings" 
+		greeting_sound = "xenosec_generic_greeting_01"
+		character_textures = {
+			"gfx/models/portraits/xenosec/xenosec_normal_01.dds"
+		}
+	}
+}

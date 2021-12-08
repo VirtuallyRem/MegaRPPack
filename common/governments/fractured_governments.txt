@@ -1,0 +1,60 @@
+# Fractured Nation
+gov_fractured_generic = {
+	ruler_title = ""
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_fractured
+	}
+
+	weight = {
+		base = 2
+	}
+}
+
+# Fractured realms
+gov_fractured_realms = {
+	ruler_title = ""
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_fractured
+		OR = {
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_aristocratic_elite
+		}
+	}
+
+	weight = {
+		base = 10
+	}
+}
+
+# Fractured Clans
+gov_fractured_clans = {
+	ruler_title = ""
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_fractured
+		OR = {
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+
+	weight = {
+		base = 5
+	}
+}
+
+# Anarchist Collectives
+gov_fractured_anarchist_collectives = {
+	ruler_title = ""
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_fractured
+		has_valid_civic = civic_shared_burdens
+	}
+
+	weight = {
+		base = 100000
+	}
+}

@@ -1,0 +1,7 @@
+# Triggers when the game starts
+
+on_game_start_country = {
+	events = {
+		fix_the_ring.3
+	}
+}

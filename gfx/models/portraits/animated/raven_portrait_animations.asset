@@ -1,0 +1,5 @@
+animation = {
+		name = "raven_portrait_animation"
+		file = "raven_portrait_animation.anim"
+	}
+	

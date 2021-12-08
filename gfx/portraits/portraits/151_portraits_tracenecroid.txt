@@ -1,0 +1,63 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	# Necroid	
+	ghost_01 	= {	entity = "ghost_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_16_death_worshipper"	
+		character_textures = {
+			"gfx/models/portraits/necroid/ghost_01_01.dds"
+			"gfx/models/portraits/necroid/ghost_01_02.dds"
+			"gfx/models/portraits/necroid/ghost_01_03.dds"
+			"gfx/models/portraits/necroid/ghost_01_04.dds"
+			"gfx/models/portraits/necroid/ghost_01_05.dds"
+			"gfx/models/portraits/necroid/ghost_01_06.dds"
+		}
+	}
+
+	cyclops_necroid_1 	= {	entity = "cyclops_necroid_1_entity"	clothes_selector = "humanoid_hp_13_clothes" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_13_palien"	
+		character_textures = {
+			"gfx/models/portraits/necroid/cyclops_necroid_female_1.dds"
+			"gfx/models/portraits/necroid/cyclops_necroid_male_1.dds"
+		}
+	}
+	
+	soma_zombie_1 	= {	entity = "soma_zombie_01_entity"	clothes_selector = "fungoid_clothes_01" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_15_feral_zombie"	
+		character_textures = {
+			"gfx/models/portraits/necroid/somafungoid_01.dds"
+		}
+	}
+	
+	will_o_wisp_1 	= {	entity = "will_o_wisp_1_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_16_death_worshipper"	
+		character_textures = {
+			"gfx/models/portraits/necroid/will_o_wisp_1.dds"
+		}
+	}
+	
+	#skeletons
+	skeleton_01 	= {	entity = "humanoid_04_male_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_16_death_worshipper"	
+		character_textures = {
+			"gfx/models/portraits/necroid/skeleton_01_plain.dds"
+		}
+	}
+	
+	#holograms
+	holo2 = {	entity = "portrait_necroid_04_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_05_hologram"
+		character_textures = {
+			"gfx/models/portraits/necroid/Necroid_hologram_02_portrait_blue.dds"
+		}
+	}
+	
+	holo3 = {	entity = "portrait_necroid_04_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "necroid_portrait_05_hologram"
+		character_textures = {
+			"gfx/models/portraits/necroid/Necroid_hologram_03_portrait_pink.dds"
+		}
+	}
+}

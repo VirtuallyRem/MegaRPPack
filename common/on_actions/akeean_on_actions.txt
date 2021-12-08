@@ -1,0 +1,16 @@
+######################################################
+#                                                     
+#              akeean's Shielded Origin   
+#              Contributors: akeean                 
+######################################################
+
+empire_init_capital_planet = {
+	events = {
+		origin_akeean.1100
+	}
+}
+#on_monthly_pulse_country = {
+#	events = {
+#		origin_akeean.1300 # add digsite on the moon
+#	}
+#}

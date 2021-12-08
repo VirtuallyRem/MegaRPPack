@@ -1,0 +1,30 @@
+######################################################
+#                                                     
+#              akeean's Shielded Origin   
+#              Contributors: akeean                 
+######################################################
+
+d_akeean_moonbase_replicator = {
+	is_for_colonizeable = yes
+	icon = "d_station_cargo"
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_soldier_add = 1
+		job_soldier_per_pop = 0.025 # 1 per 40
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_warrior_drone_add = 1
+		job_warrior_drone_per_pop = 0.025 # 1 per 40
+	}
+}

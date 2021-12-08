@@ -1,0 +1,65 @@
+## Citizens
+pop_faction_name_parts_list = {
+	key = "citizen_names_1"
+	parts = {
+		"Citizen's" = 1
+		"People's National" = 1
+		"Republican" = 1
+		"Libertarian" = 1
+		"Democratic" = 1
+		"Citizen Self-Determinism" = 1
+		"People's Privilege" = 1
+		"True Patriot" = 1
+		"Individual Choice" = 1
+		"Free Thought" = 1
+		"Free Citizen" = 1
+		"Popular Vote" = 1
+		"Democratic Rights" = 1
+		"Friends of Liberty" = 1
+		"Independent Citizen's" = 1
+		"United Patriots" = 1
+		"National Action" = 1
+		"Constitution" = 1
+		"Citizen's First" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "citizen_names_2"
+	parts = {
+		"Coalition" = 1
+		"Council" = 1
+		"Committee" = 1
+		"Center" = 1
+		"Initiative" = 1
+		"Society" = 1
+		"Watch" = 1
+		"Alliance" = 1
+		"Movement" = 1
+		"Organization" = 1
+		"Network" = 1
+		"Forum" = 1
+		"Association" = 1
+		"League" = 1
+		"Party" = 1
+		"Convention" = 1
+		"Vanguard" = 1
+		"Front" = 1
+		"Movement" = 1
+		"Party" = 1
+		"Bloc" = 1
+		"Rally" = 1
+		"Assembly" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "citizen"
+		}
+	}
+	format = "<citizen_names_1> <citizen_names_2>"
+}

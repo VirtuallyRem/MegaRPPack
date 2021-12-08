@@ -1,0 +1,370 @@
+namespace = add_events
+
+# Comply with Galactic Law on Tiyankis
+country_event = {
+	id = add_events.1
+	title = add_events.1.name
+	desc = add_events.1.desc
+	picture = GFX_evt_ancient_tiyanki
+	show_sound = event_vote
+	is_triggered_only = yes
+
+	option = {
+		name = galactic_features.505.A
+		custom_tooltip = add_events.1.a.tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_tiyanki_country_type = yes
+				}
+				set_faction_hostility = {
+					set_hostile = no
+					set_neutral = yes
+					target = root
+				}
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				OR = {
+					is_xenophile = yes
+					is_pacifist = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = add_events.1.b
+		custom_tooltip = galactic_features.505.B.tt
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					is_militarist = yes
+					is_xenophobe = yes
+				}
+			}
+		}
+	}
+}
+
+#Close/open border with everyone
+country_event = {
+	id = add_events.2
+	title = add_events.2.name
+	desc = {
+        	trigger = { has_policy_flag = border_policy_open }
+       		text = add_events.2.desc.open
+	}
+	desc = {
+        	trigger = { has_policy_flag = border_policy_closed }
+       		text = add_events.2.desc.close
+	}
+	picture = GFX_evt_partition
+	show_sound = event_default
+	is_triggered_only = yes
+
+	trigger = {
+		num_communications > 0
+		last_changed_policy = border_policy 
+		any_playable_country = {
+			root = { can_control_access_for = prev }
+		}
+	}
+
+	option = {
+		name = add_events.2.a
+
+		trigger = { has_policy_flag = border_policy_open }
+		hidden_effect = {
+			every_playable_country = {
+				limit = {
+					has_communications = root
+					root = {
+						has_closed_borders = prev
+						can_control_access_for = prev
+					}
+				}
+				root = { 
+					set_closed_borders = {
+						who = prev
+						status = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = add_events.2.b
+
+		trigger = { has_policy_flag = border_policy_closed }
+		hidden_effect = {
+			every_playable_country = {
+				limit = {
+					has_communications = root
+					NOT = {	has_valid_civic = civic_pompous_purists }
+					root = {
+						NOT = {	has_closed_borders = prev }
+						can_control_access_for = prev
+					}
+				}
+				root = { 
+					set_closed_borders = {
+						who = prev
+						status = yes
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = add_events.2.c
+	}
+}
+
+#Environmentalists angry for making planet go boom
+planet_event = {
+	id = add_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		habitable_planet = yes
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+		#from.owner = { is_gestalt = no }
+	}
+
+	immediate = {
+		space_owner = { country_event = { id = add_events.1 days = 1 } }
+		from.owner = {
+			set_timed_country_flag = { flag = destroyed_ecosystem_nuked days = 3600 }
+		}
+	}	
+}
+
+#Ask to skip initial events
+country_event = {
+	id = add_events.5
+	title = add_events.5.name
+	desc = add_events.5.desc
+	picture = GFX_evt_decryption
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		is_country_type = default
+	}
+	
+	option = {
+		name = add_events.5.a
+		hidden_effect = { set_country_flag = starting_event }
+	}
+
+	option = { name = add_events.5.b }	
+}
+
+# Reduce the size of life_seeded guarantees - Ryn
+country_event = {
+	id = add_events.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_life_seeded
+	}
+
+	immediate = {
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { has_star_flag = neighbor_t1_first_colony }
+				max_steps = 3
+				random_system_planet = {
+					limit = {
+						is_colonizable = yes
+						is_colony = no
+						has_planet_flag = prescripted_ideal
+					}
+					set_name = random
+					random_list = {
+						1 = { set_planet_size = 8 }
+						1 = { set_planet_size = 9 }
+						1 = { set_planet_size = 10 }
+					}
+					reroll_planet = yes
+				}
+			}
+			reroll_random = yes
+			closest_system = {
+				limit = { has_star_flag = neighbor_t2_second_colony }
+				max_steps = 6
+				random_system_planet = {
+					limit = {
+						is_colonizable = yes
+						is_colony = no
+						has_planet_flag = prescripted_ideal
+					}
+					set_name = random
+					random_list = {
+						1 = { set_planet_size = 8 }
+						1 = { set_planet_size = 9 }
+						1 = { set_planet_size = 10 }
+					}
+					reroll_planet = yes
+				}
+			}
+		}
+	}
+}
+#Ecu stuff
+planet_event = {
+	id = add_events.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = { is_country_type = default }
+		is_planet_class = pc_city
+	}
+
+	immediate = {
+		planet_event = { id = add_events.8 days = 1 } #One day delay to check for relic stuff
+	}
+}
+planet_event = {
+	id = add_events.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = { is_country_type = default }
+		is_planet_class = pc_city
+	}
+
+	immediate = {
+		planet_event = { id = mod_change_style.2 } #Update style
+		
+		if = {
+			limit = {
+				owner = { has_ascension_perk = ap_arcology_project }
+				years_passed > 1 #Skip initial setups and such
+				NAND = {
+					owner = { has_origin = origin_remnants }
+					is_homeworld = yes
+				}
+				NOT = { has_deposit = d_former_relic_world }
+				is_gestalt = no
+			}
+			owner = { set_timed_country_flag = { flag = destroyed_ecosystem days = 3600 } }
+		}
+	}
+}
+#Happiness modifiers to abducted pops
+pop_event = {
+	id = add_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from.owner = { NOT = { is_country_type = primitive } }
+		is_non_sapient_robot = no
+		OR = {
+			owner = { is_regular_empire = yes }
+			AND = {
+				owner = { has_civic = civic_machine_servitor }
+				is_robot = no
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_citizenship_type = { country = from.owner type = citizenship_slavery }
+						is_enslaved = no
+						is_robot = no
+					} #Regular slavery
+					AND = {
+						has_citizenship_type = { country = from.owner type = citizenship_robot_servitude }
+						is_free_robot = yes
+					} #Robot slavery
+					AND = {
+						has_citizenship_type = { country = from.owner type = citizenship_full_machine }
+						is_robot = no
+					} #Assimilated cyborgs
+				}
+			}
+			if = { limit = { has_modifier = pop_recently_conquered } remove_modifier = pop_recently_conquered }
+			if = { limit = { has_modifier = pop_saved_from_slavery } remove_modifier = pop_saved_from_slavery }
+			if = { limit = { has_modifier = pop_saved_from_purge } remove_modifier = pop_saved_from_purge }
+			add_modifier = {
+				modifier = "pop_saved_from_slavery"
+				days = 1800
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_citizenship_type = { country = from.owner type = citizenship_purge }
+					has_citizenship_type = { country = from.owner type = citizenship_purge_machine }	
+				}
+				NOR = {
+					has_citizenship_type = { country = owner type = citizenship_purge }
+					has_citizenship_type = { country = owner type = citizenship_purge_machine }	
+				}
+			}
+			if = { limit = { has_modifier = pop_recently_conquered } remove_modifier = pop_recently_conquered }
+			if = { limit = { has_modifier = pop_saved_from_slavery } remove_modifier = pop_saved_from_slavery }
+			if = { limit = { has_modifier = pop_saved_from_purge } remove_modifier = pop_saved_from_purge }
+			add_modifier = {
+				modifier = "pop_saved_from_purge"
+				days = 1800
+			}
+		}
+		else_if = {
+				limit = {
+					NOR = {
+						AND = {
+							has_citizenship_type = { country = from.owner type = citizenship_slavery }
+							is_enslaved = yes
+							is_robot = no
+						} #Regular slavery
+						AND = {
+							has_citizenship_type = { country = from.owner type = citizenship_robot_servitude }
+							is_shackled_robot = yes
+						} #Robot slavery
+						AND = {
+							OR = {
+								has_citizenship_type = { country = event_target:former_owner type = citizenship_purge }
+								has_citizenship_type = { country = event_target:former_owner type = citizenship_purge_machine }	
+							}
+							OR = {
+								has_citizenship_type = { country = owner type = citizenship_purge }
+								has_citizenship_type = { country = owner type = citizenship_purge_machine }	
+							}
+						} #From purge to purge
+					}
+				}
+				if = { limit = { has_modifier = pop_recently_conquered } remove_modifier = pop_recently_conquered }
+				if = { limit = { has_modifier = pop_saved_from_slavery } remove_modifier = pop_saved_from_slavery }
+				if = { limit = { has_modifier = pop_saved_from_purge } remove_modifier = pop_saved_from_purge }
+				add_modifier = {
+					modifier = "pop_recently_conquered"
+					days = 3600
+				}
+		}
+	}
+}

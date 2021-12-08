@@ -1,0 +1,37 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Abomination
+	
+	abom1 = {	entity = "portrait_plantoid_12_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lithoid_portrait_1_golem" 
+			character_textures = {
+					"gfx/models/portraits/abomination/alpha.dds"
+					"gfx/models/portraits/abomination/beta.dds"
+					"gfx/models/portraits/abomination/gamma.dds"
+					"gfx/models/portraits/abomination/delta.dds"				
+					"gfx/models/portraits/abomination/epsilon.dds"
+		}
+	}
+	
+	cybereye = {	entity = "portrait_reptilian_synthetic_dawn_01_entity"  clothes_selector = "no_texture"  hair_selector = "no_texture"  greeting_sound = "robot_reptilian_greetings"
+		character_textures = {
+			"gfx/models/portraits/abomination/cyber_eye.dds"
+		}
+	}
+	
+	uncanny = {	entity = "portrait_humanoid_synthetic_dawn_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_humanoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/abomination/uncanny.dds"
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_origin_messiah_cult"
+		texturefile = "gfx/event_pictures/origins/origin_messiah_cult.dds"
+		alwaystransparent = yes
+	}
+}

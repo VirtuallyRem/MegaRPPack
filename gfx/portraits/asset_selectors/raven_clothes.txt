@@ -1,0 +1,149 @@
+# This is a template which multiple species can use. 
+
+raven_male_clothes = {
+	default = "gfx/models/portraits/animated/raven_ruler.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/animated/raven_male.dds"
+			}
+		}
+	# default = "gfx/models/portraits/animated/raven_male.dds"	
+		"gfx/models/portraits/animated/raven_male.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/animated/raven_scientist.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/animated/raven_ruler.dds" 	= { is_pop_category = ruler }
+	}
+	
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/animated/raven_scientist.dds" = { leader_class = scientist }
+		"gfx/models/portraits/animated/raven_general.dds" = { leader_class = general }
+		"gfx/models/portraits/animated/raven_admiral.dds" = { leader_class = admiral }
+		random = {
+			trigger = {
+			leader_class = governor
+			}
+			list = {
+			"gfx/models/portraits/animated/raven_gov_blue.dds"
+			"gfx/models/portraits/animated/raven_gov_green.dds"
+			"gfx/models/portraits/animated/raven_gov_orange.dds"
+	}
+}
+}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+}
+
+raven_female_clothes = {
+	default = "gfx/models/portraits/animated/raven_ruler.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/animated/raven_female.dds"
+			}
+		}
+	# default = "gfx/models/portraits/animated/raven_female.dds"	
+		"gfx/models/portraits/animated/raven_female.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/animated/raven_scientist.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/animated/raven_ruler.dds" 	= { is_pop_category = ruler }
+	}
+	
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/animated/raven_scientist.dds" = { leader_class = scientist }
+		"gfx/models/portraits/animated/raven_general.dds" = { leader_class = general }
+		"gfx/models/portraits/animated/raven_admiral.dds" = { leader_class = admiral }
+		random = {
+			trigger = {
+			leader_class = governor
+			}
+			list = {
+			"gfx/models/portraits/animated/raven_gov_blue.dds"
+			"gfx/models/portraits/animated/raven_gov_green.dds"
+			"gfx/models/portraits/animated/raven_gov_orange.dds"
+		}
+	}
+}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+}
+
+raven_ruler_clothes = {
+
+	default = "gfx/models/portraits/animated/raven_ruler.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/animated/raven_ruler.dds"
+			}
+		}
+	# default = "gfx/models/portraits/animated/raven_ruler.dds"	
+		"gfx/models/portraits/animated/raven_ruler.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/animated/raven_ruler.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/animated/raven_ruler.dds" 	= { is_pop_category = ruler }
+	}
+	
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/animated/raven_ruler.dds" = { leader_class = scientist }
+		"gfx/models/portraits/animated/raven_ruler.dds" = { leader_class = general }
+		"gfx/models/portraits/animated/raven_ruler.dds" = { leader_class = admiral }
+		random = {
+			trigger = {
+			leader_class = governor
+			}
+			list = {
+			"gfx/models/portraits/animated/raven_ruler.dds"
+			"gfx/models/portraits/animated/raven_ruler.dds"
+			"gfx/models/portraits/animated/raven_ruler.dds"
+		}
+	}
+}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/animated/raven_ruler.dds"
+	}
+}

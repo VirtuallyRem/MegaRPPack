@@ -1,0 +1,11 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "raven_portrait_mesh"
+		file = "gfx/models/portraits/animated/raven_portrait.mesh"
+		animation = { id = "idle"	type = "raven_portrait_animation" }
+		
+
+		scale = 1.08
+	}
+}

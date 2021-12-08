@@ -1,0 +1,130 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+#eshape female
+	eshape_female_01 = {
+		entity = "portrait_eshape_female_01_entity" clothes_selector = "eshape_female_clothes_01" hair_selector = "eshape_female_hair_01"
+		character_textures = {
+			"gfx/models/portraits/Etiluos Body Pile/s11.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s21.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s31.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s41.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s51.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s61.dds"		
+		}
+	}
+
+#eshape male
+
+	eshape_male_01 = {
+		entity = "portrait_eshape_male_01_entity" clothes_selector = "eshape_male_clothes_01" hair_selector = "eshape_male_hair_01"
+		character_textures = {
+			"gfx/models/portraits/Etiluos Body Pile/s11.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s21.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s31.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s41.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s51.dds"
+			"gfx/models/portraits/Etiluos Body Pile/s61.dds"		
+		}
+	}
+
+}
+
+portrait_groups = {
+	eshape = {
+		default = eshape_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					eshape_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					eshape_female_01
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					eshape_female_01
+					eshape_male_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					eshape_female_01
+					eshape_male_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					eshape_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					eshape_male_01				
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					eshape_female_01				
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					eshape_male_01
+				}
+			}
+		}
+	}
+}

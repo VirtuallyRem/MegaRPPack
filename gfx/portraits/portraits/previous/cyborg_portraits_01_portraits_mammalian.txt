@@ -1,0 +1,876 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+
+
+portraits = {
+
+	# Mammalian
+	kanti = {	entity = "portrait_mammalian_01_entity" clothes_selector = "mammalian_slender_01_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/kanti_orange_green.dds"
+			"gfx/models/portraits/mammalian/kanti_blue_yellow.dds"
+			"gfx/models/portraits/mammalian/kanti_red_teal.dds"
+			"gfx/models/portraits/mammalian/kanti_green_blue.dds"
+			"gfx/models/portraits/mammalian/kanti_yellow_broken.dds"
+			#"gfx/models/portraits/mammalian/mammalian_slender_01_blue_orange.dds"
+		}	
+	}
+	mekofox_female = {	entity = "portrait_mammalian_03_entity" clothes_selector = "no_texture" hair_selector = "no_texture" 
+		greeting_sound = "robot_human_female_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/mekonomicon_female_iron_green.dds"
+			"gfx/models/portraits/mammalian/mekonomicon_female_rust_yellow.dds"
+			"gfx/models/portraits/mammalian/mekonomicon_female_steel_red.dds"
+			#"gfx/models/portraits/mammalian/mammalian_slender_03_orange.dds"
+		}	
+	}
+	mekofox_male = {	entity = "portrait_mammalian_03_entity" clothes_selector = "mammalian_slender_01_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "robot_human_male_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/mekonomicon_male_iron_black.dds"
+			"gfx/models/portraits/mammalian/mekonomicon_male_rust_yellow.dds"
+			"gfx/models/portraits/mammalian/mekonomicon_male_steel_green.dds"
+			#"gfx/models/portraits/mammalian/mammalian_slender_03_orange.dds"
+		}	
+	}
+	scissor_llama = {	entity = "portrait_mammalian_07_entity"	clothes_selector = "mammalian_normal_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/scissor_llama_red_steel_red.dds"
+			"gfx/models/portraits/mammalian/scissor_llama_brown_gold_green.dds"
+			"gfx/models/portraits/mammalian/scissor_llama_dark_steel_blue.dds"
+			"gfx/models/portraits/mammalian/scissor_llama_blond_rust_yellow.dds"
+			#"gfx/models/portraits/mammalian/mammalian_normal_07_light_brown.dds"
+		}
+	}
+	mecha_gorilla = {	entity = "portrait_mammalian_13_entity"	clothes_selector = "mammalian_massive_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+			character_textures = {
+					"gfx/models/portraits/mammalian/mecha_gorilla_mixed_red.dds"
+					"gfx/models/portraits/mammalian/mecha_gorilla_brass_white.dds"
+					"gfx/models/portraits/mammalian/mecha_gorilla_steel_green.dds"
+					"gfx/models/portraits/mammalian/mecha_gorilla_black_yellow.dds"
+					#"gfx/models/portraits/mammalian/mammalian_massive_13_brown.dds"
+				}
+	
+	}
+	brain_cat = {	entity = "portrait_mammalian_14_entity"	clothes_selector = "mammalian_massive_clothes_01" hair_selector = "no_texture" greeting_sound = "mammalian_01_greetings"
+			character_textures = {
+					#"gfx/models/portraits/mammalian/brain_cat.dds"
+					"gfx/models/portraits/mammalian/brain_cat_iron_yellow_green.dds"
+					"gfx/models/portraits/mammalian/brain_cat_iron_red_blue.dds"
+					"gfx/models/portraits/mammalian/brain_cat_rust_pink_orange.dds"
+					"gfx/models/portraits/mammalian/brain_cat_bright_steel_green.dds"
+					#"gfx/models/portraits/mammalian/brain_cat_iron_orange.dds"
+					#"gfx/models/portraits/mammalian/brain_cat_brass_pink.dds"
+					#"gfx/models/portraits/mammalian/brain_cat_silver_pink.dds"
+					#"gfx/models/portraits/mammalian/brain_cat_gold_green.dds"
+					#"gfx/models/portraits/mammalian/mammalian_massive_14_beige.dds"
+				}
+	}
+}
+
+portrait_groups = {
+	mam1 = {
+		default = mam1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mam1
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					kanti
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam1
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					kanti
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam1
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					kanti
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam1
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					kanti
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam1
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					kanti
+				}
+			}
+		}
+	}
+}
+
+
+portrait_groups = {
+	mam3 = {
+		default = mam3
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						NOT = { 
+							species = {
+								has_trait = trait_cybernetic
+							}
+						} 
+					}
+				}
+				portraits = {
+					mam3
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						species = {
+							has_trait = trait_cybernetic
+						}
+						gender = male 
+					}
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						species = {
+							has_trait = trait_cybernetic
+						}
+						gender = female 
+					}
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam3
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam3
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam3
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam3
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	mekofox {
+		default = mekofox_female
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						gender = male 
+					}
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						gender = female 
+					}
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					mekofox_female
+					mekofox_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					mekofox_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					mekofox_male
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	mam7 = {
+		default = mam7
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam7
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					scissor_llama
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	mam13 = {
+		default = mam13
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mam13
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					mecha_gorilla
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam13
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					mecha_gorilla
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam13
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					mecha_gorilla
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mecha_gorilla
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam13
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mecha_gorilla
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	mam14 = {
+		default = mam14
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mam14
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					brain_cat
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam14
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					brain_cat
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mam14
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					brain_cat
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam14
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					brain_cat
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mam14
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					brain_cat
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,484 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+#Added event to make peace with Tiyankis
+
+resolution_tiyanki_conservation_act = {
+	icon = "GFX_resolution_tiyanki_preservation"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		custom_tooltip = resolution_tiyanki_conservation_act_tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_galactic_community_member = yes
+					any_country = {
+						limit = { is_tiyanki_country_type = yes }
+						is_hostile = prev
+					}
+				}
+				country_event = { id = add_events.1 }
+			}
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_federations_dlc = yes
+		NOT = {
+			is_active_resolution = "resolution_tiyanki_pest_control"
+			has_global_flag = tiyanki_extinct
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_tiyanki_conservation_act"
+				is_active_resolution = "resolution_amoeba_conservation_act"
+			}
+		}
+	}
+
+	active = { # Resolution only in effect while this trigger is met
+		NOT = { has_global_flag = tiyanki_extinct }
+	}
+
+	breach = {
+		has_country_flag = resolution_breached_killed_tiyanki
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+		modifier = {
+			factor = 2
+			is_xenophile = yes
+		}
+
+		modifier = {
+			factor = 1.5
+			is_pacifist = yes
+		}
+
+		modifier = {
+			factor = 0.75
+			is_militarist = yes
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_environmentalist
+				has_valid_civic = civic_hive_empath
+			}
+		}
+
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+	}
+}
+
+#Added support for enslavement ratio policies
+
+resolution_greatergood_balance_in_the_middle = {
+	icon = "GFX_resolution_greater_good"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_greatergood_workers_rights = 1
+		resolution_greatergood_five_year_plans = 1
+		resolution_greatergood_greater_than_ourselves = 1
+		resolution_greatergood_balance_in_the_middle = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_greatergood_balance_in_the_middle_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_greatergood days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+
+					OR = {
+						AND = {
+							NOT = { has_policy_flag = no_enslavement }
+							is_gestalt = no
+						}
+						any_owned_species = {
+							is_sapient = yes
+							has_citizenship_type = { type = citizenship_slavery country = prev }
+						}
+						AND = {
+							is_gestalt = no
+							any_owned_species = {
+								is_sapient = yes
+								OR = {
+									has_living_standard = { type = living_standard_subsistence country = prev }
+									has_living_standard = { type = living_standard_stratified country = prev }
+									has_living_standard = { type = living_standard_normal country = prev }
+									has_living_standard = { type = living_standard_academic_privilege country = prev }
+								}
+							}
+						}
+					}
+				}
+				country_event = { id = federations.10220 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_greatergood days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+	}
+
+	breach = {
+		OR = {
+			AND = {
+				NOT = { has_policy_flag = no_enslavement }
+				is_gestalt = no
+			}
+			any_owned_species = {
+				is_sapient = yes
+				has_citizenship_type = { type = citizenship_slavery country = prev }
+			}
+			AND = {
+				is_gestalt = no
+				any_owned_species = {
+					is_sapient = yes
+					OR = {
+						has_living_standard = { type = living_standard_subsistence country = prev }
+						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_normal country = prev }
+						has_living_standard = { type = living_standard_academic_privilege country = prev }
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.2
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 0.75
+			is_authoritarian = yes
+		}
+
+		modifier = {
+			factor = 0
+			in_breach_of = resolution_greatergood_balance_in_the_middle
+		}
+
+		modifier = {
+			factor = 0.5
+			is_megacorp = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_egalitarian
+		}
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 0.6
+			OR = {
+				is_authoritarian = yes
+				is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				is_slaver = yes
+				any_owned_species = {
+					is_sapient = yes
+					OR = {
+						has_living_standard = { type = living_standard_subsistence country = prev }
+						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_normal country = prev }
+						has_living_standard = { type = living_standard_academic_privilege country = prev }
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_inwards_perfection
+			}
+		}
+
+		modifier = {
+			factor = 0.8
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_police_state
+			}
+		}
+	}
+}
+
+resolution_greatergood_universal_prosperity_mandate = {
+	icon = "GFX_resolution_greater_good"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_greatergood_workers_rights = 1
+		resolution_greatergood_five_year_plans = 1
+		resolution_greatergood_greater_than_ourselves = 1
+		resolution_greatergood_balance_in_the_middle = 1
+		resolution_greatergood_universal_prosperity_mandate = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_greatergood_universal_prosperity_mandate_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_greatergood days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+
+					OR = {
+						AND = {
+							NOT = { has_policy_flag = no_enslavement }
+							is_gestalt = no
+						}
+						any_owned_species = {
+							is_sapient = yes
+							has_citizenship_type = { type = citizenship_slavery country = prev }
+						}
+						AND = {
+							is_gestalt = no
+							any_owned_species = {
+								is_sapient = yes
+								OR = {
+									has_living_standard = { type = living_standard_subsistence country = prev }
+									has_living_standard = { type = living_standard_stratified country = prev }
+									has_living_standard = { type = living_standard_normal country = prev }
+									has_living_standard = { type = living_standard_academic_privilege country = prev }
+									has_living_standard = { type = living_standard_good country = prev }
+									has_living_standard = { type = living_standard_decadent country = prev }
+								}
+							}
+						}
+						AND = {
+							is_gestalt = yes
+							any_owned_species = {
+								is_sapient = yes
+								OR = {
+									has_living_standard = { type = living_standard_ego_assimilation country = prev }
+								}
+							}
+						}
+					}
+				}
+				country_event = { id = federations.10230 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_greatergood days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+	}
+
+	breach = {
+		OR = {
+			AND = {
+				NOT = { has_policy_flag = no_enslavement }
+				is_gestalt = no
+			}
+			AND = {
+				is_gestalt = no
+				any_owned_species = {
+					is_sapient = yes
+					OR = {
+						has_living_standard = { type = living_standard_subsistence country = prev }
+						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_normal country = prev }
+						has_living_standard = { type = living_standard_academic_privilege country = prev }
+						has_living_standard = { type = living_standard_good country = prev }
+						has_living_standard = { type = living_standard_decadent country = prev }
+					}
+				}
+			}
+			any_owned_species = {
+				is_sapient = yes
+				has_citizenship_type = { type = citizenship_slavery country = prev }
+			}
+			AND = {
+				is_gestalt = yes
+				any_owned_species = {
+					is_sapient = yes
+					has_living_standard = { type = living_standard_ego_assimilation country = prev }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+		modifier = {
+			factor = 0
+			is_egalitarian = no
+		}
+
+		modifier = {
+			factor = 0.75
+			is_authoritarian = yes
+		}
+
+		modifier = {
+			factor = 0
+			in_breach_of = resolution_greatergood_universal_prosperity_mandate
+		}
+
+		modifier = {
+			factor = 0.5
+			is_megacorp = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_egalitarian
+		}
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_inwards_perfection
+			}
+		}
+	}
+}

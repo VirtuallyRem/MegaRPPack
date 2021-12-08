@@ -1,0 +1,9 @@
+	animation = {
+		name = "mammalian_labrat_portrait_idle_animation"
+		file = "mammalian_labrat_portrait_idle.anim"
+	}
+
+	animation = {
+		name = "mammalian_labrat_portrait_idle_2_animation"
+		file = "mammalian_labrat_portrait_idle_2.anim"
+	}

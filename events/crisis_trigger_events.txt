@@ -1,0 +1,86 @@
+######################################
+#
+# Crisis Triggering Events
+#
+######################################
+
+namespace = crisis_trigger
+
+event = {
+	id = crisis_trigger.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_crises_allowed = yes
+		end_game_years_passed >= 0
+		NOT = { has_global_flag = galactic_crisis_happened }
+	}
+
+	immediate = {
+		random_country = {
+			limit = { is_country_type = global_event } # global_event country is always around
+
+			random_list = {
+
+				### Prethoryn Scourge (Swarm)
+				10 = {
+
+					country_event = { id = crisis.10 days = 200 random = 800 }
+					set_global_flag = galactic_crisis_happened
+					modifier = {
+						factor = 3
+						allowed_crisis_type = prethoryn
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = contingency
+							allowed_crisis_type = unbidden
+						}
+					}
+				}
+
+				### Unbidden (Extradimensionals)
+				10 = {
+
+					country_event = { id = crisis.1000 days = 200 random = 800 }
+					set_global_flag = galactic_crisis_happened
+					modifier = {
+						factor = 3
+						allowed_crisis_type = unbidden
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = contingency
+							allowed_crisis_type = prethoryn
+						}
+					}
+				}
+
+				### Contingency (AI)
+				10 = {
+
+					country_event = { id = crisis.2005 days = 200 random = 800 }
+					set_global_flag = galactic_crisis_happened
+					modifier = {
+						factor = 3
+						allowed_crisis_type = contingency
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = prethoryn
+							allowed_crisis_type = unbidden
+						}
+					}
+				}
+
+				### Nothing
+				45 = {}
+			}
+		}
+	}
+}

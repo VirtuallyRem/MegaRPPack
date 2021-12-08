@@ -1,0 +1,145 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# vamp
+	vamp_female_01 = {
+	entity = "portrait_mammalian_08_entity"	
+	clothes_selector = "vamp_clothes_01" 	
+	hair_selector = "no_texture"	
+	greeting_sound = "mammalian_01_greetings" 
+	character_textures = { 
+	"gfx/models/portraits/vamp_bodies/vamp_female_01.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_02.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_03.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_04.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_05.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_06.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_07.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_female_08.dds"
+	}}
+	
+	vamp_male_01 = {
+	entity = "portrait_mammalian_08_entity"
+	clothes_selector = "vamp_clothes_01"
+	hair_selector = "no_texture"
+	greeting_sound = "mammalian_01_greetings"
+	character_textures = { 
+	"gfx/models/portraits/vamp_bodies/vamp_male_01.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_02.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_03.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_04.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_05.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_06.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_07.dds"
+	"gfx/models/portraits/vamp_bodies/vamp_male_08.dds"
+	}}
+	
+}
+
+portrait_groups = {
+	vamp = {
+		default = vamp_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					vamp_male_01
+					
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					vamp_female_01
+					
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					vamp_female_01
+					vamp_male_01
+					
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					vamp_female_01
+					vamp_male_01
+					
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					vamp_female_01
+					
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					vamp_male_01
+					
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					vamp_female_01
+	
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					vamp_male_01
+
+					
+				}
+			}
+		}
+	}
+}

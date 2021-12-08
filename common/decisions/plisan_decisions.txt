@@ -1,0 +1,33 @@
+# Baol Organism Lifeseed
+decision_plisan = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_engineering_research
+
+	#enactment_time = 20
+	
+	potential = {
+		is_planet_class = pc_habitat
+		exists = owner
+		owner = { has_relic = r_plisan }
+	}
+	
+	allow = { 
+		NOT = { has_modifier = relic_plisan_expansion }
+		owner = { has_country_flag = relic_plisan_activated }
+	}
+	
+	effect = {
+		hidden_effect = {
+			owner = { remove_country_flag = relic_plisan_activated }
+		}
+		add_modifier = {
+			modifier = relic_plisan_expansion
+			days = -1
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

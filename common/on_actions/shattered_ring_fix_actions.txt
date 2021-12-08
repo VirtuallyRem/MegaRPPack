@@ -1,0 +1,11 @@
+on_game_start = {
+	events = {
+		shattered_ring_fix.0
+	}
+}
+
+empire_init_capital_planet = {
+	events = {
+		shattered_ring_fix.1
+	}
+}

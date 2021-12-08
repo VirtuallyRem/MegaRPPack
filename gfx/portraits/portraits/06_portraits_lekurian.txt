@@ -1,0 +1,332 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+
+	# lekurian
+	mol1 = {	entity = "portrait_lekurian_01_entity" clothes_selector = "lekurian_slender_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_slender_01_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_01_green.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_01_teal.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_01_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_01_purple.dds"
+			}
+	}
+	mol2 = {	entity = "portrait_lekurian_02_entity" clothes_selector = "lekurian_slender_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_slender_02_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_02_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_02_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_02_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_02_white.dds"
+			}
+	}
+	mol3 = {	entity = "portrait_lekurian_03_entity" clothes_selector = "lekurian_slender_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_slender_03_white.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_03_brown.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_03_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_03_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_03_blue.dds"
+			}
+	}
+	mol4 = {	entity = "portrait_lekurian_04_entity" clothes_selector = "lekurian_slender_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_slender_04_blue_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_blue_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_blue_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_blue_yellow.dds"					
+					"gfx/models/portraits/lekurian/lekurian_slender_04_black_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_black_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_black_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_04_black_red.dds"
+			}
+	}
+	mol5 = {	entity = "portrait_lekurian_05_entity" clothes_selector = "lekurian_slender_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_slender_05_green_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_cyan_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_blue_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_black_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_black_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_blue_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_cyan_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_slender_05_green_yellow.dds"
+			}
+	}
+	
+	mol6 = {	entity = "portrait_lekurian_06_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_normal_06_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_06_brown.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_06_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_06_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_06_blue.dds"
+			}
+	}
+	mol7 = {	entity = "portrait_lekurian_07_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_normal_07_blue_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_blue_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_blue_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_black_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_black_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_black_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_black_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_07_black_blue.dds"
+			}
+	}
+	mol8 = {	entity = "portrait_lekurian_08_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_normal_08_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_08_cyan.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_08_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_08_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_normal_08_pink.dds"
+			}
+	}
+	
+	mol11 = {	entity = "portrait_lekurian_11_entity" clothes_selector = "lekurian_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_11_blue_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_blue_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_blue_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_purple_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_purple_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_purple_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_black_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_black_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_11_purple_red.dds"
+			}
+	}
+	mol12 = {	entity = "portrait_lekurian_12_entity" clothes_selector = "lekurian_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_12_cyan.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_cyan_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_cyan_white.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_blue_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_blue_white.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_purple_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_12_purple_white.dds"
+			}
+	}
+	mol13 = {	entity = "portrait_lekurian_13_entity" clothes_selector = "lekurian_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_13_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_pink.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_brown.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_beige.dds"
+					"gfx/models/portraits/lekurian/lekurian_13_white.dds"
+			}
+	}
+	mol14 = {	entity = "portrait_lekurian_14_entity" clothes_selector = "lekurian_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_14_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_14_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_14_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_14_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_14_white.dds"
+			}
+	}
+	mol15 = {	entity = "portrait_lekurian_15_entity" clothes_selector = "lekurian_clothes_01" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_15_orange_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_orange_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_orange_2.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_red_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_red_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_purple_2.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_purple_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_blue_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_15_white_blue.dds"
+			}
+	}
+	
+	mol16 = {	entity = "portrait_lekurian_16_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_16_black.dds"
+					"gfx/models/portraits/lekurian/lekurian_16_teal.dds"
+					"gfx/models/portraits/lekurian/lekurian_16_blue.dds"
+					"gfx/models/portraits/lekurian/lekurian_16_purple.dds"
+					"gfx/models/portraits/lekurian/lekurian_16_red.dds"
+			}
+	}
+	
+	mol17 = {	entity = "portrait_lekurian_17_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_lekurian_starfish_greetings" 
+	#mol17_norm = {	entity = "portrait_lekurian_17_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_17_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_17_orange.dds"
+					"gfx/models/portraits/lekurian/lekurian_17_red.dds"
+					"gfx/models/portraits/lekurian/lekurian_17_albino.dds"
+			}
+	}	
+	
+	mol17_albin = {	entity = "portrait_lekurian_17_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "lekurian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_17_albino.dds"
+			}
+	}
+	
+	mol18 = {	entity = "portrait_lekurian_18_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_lekurian_snail_greetings" 
+			character_textures = {
+					"gfx/models/portraits/lekurian/lekurian_18_yellow.dds"
+					"gfx/models/portraits/lekurian/lekurian_18_light_green.dds"
+					"gfx/models/portraits/lekurian/lekurian_18_light_green.dds"
+					"gfx/models/portraits/lekurian/lekurian_18_dark_green.dds"
+					"gfx/models/portraits/lekurian/lekurian_18_teal.dds"
+					"gfx/models/portraits/lekurian/lekurian_18_cyan.dds"
+			}
+	}	
+}
+
+
+
+
+#	portrait_groups = {
+#		mol17 = {
+#			default = mol17_norm
+#			game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+#			
+#			#	add = {
+#			#		portraits = {
+#			#			mol17_norm
+#			#		}
+#			#	}
+#				
+#				set = {
+#					trigger = {
+#						has_ethic = ethic_xenophobe
+#					}
+#					portraits = {
+#						mol17_albin
+#					}
+#				}
+#
+#				
+#
+#				
+#				#set = {
+#				#	trigger = { ... }
+#				#	portraits = { ... }
+#				#	#using "set =" instead of "add" will first clear any portraits already added
+#				#}
+#			}		
+#			
+#			#species scope
+#			species = { #generic portrait for a species
+#				
+#			#	add = {
+#			#		portraits = {
+#			#			mol17_norm
+#			#		}
+#			#	}
+#			#	
+#			#	set = {
+#			#		trigger = {
+#			#			owner = { has_ethic = ethic_xenophobe }
+#			#		}
+#			#		portraits = {
+#			#			mol17_albin
+#			#		}
+#			#	}
+#
+#			}		
+#			
+#			#pop scope
+#			pop = { #for a specific pop
+#				
+#			#	add = {
+#			#		portraits = {
+#			#			mol17_norm
+#			#		}
+#			#	}
+#				
+#				set = {
+#					trigger = {
+#						has_ethic = ethic_xenophobe 
+#					}
+#					portraits = {
+#						mol17_albin
+#					}
+#				}	
+#				
+#			}
+#			
+#			#leader scope
+#			leader = { #scientists, generals, admirals, governor
+#			
+#			
+#			#	add = {
+#			#		portraits = {
+#			#			mol17_norm
+#			#		}
+#			#	}
+#
+#				set = {
+#					trigger = {
+#						owner = { has_ethic = ethic_xenophobe }
+#					}
+#					portraits = {
+#						mol17_albin
+#					}
+#				}
+#			}
+#
+#
+#
+#				
+#			#leader scope 
+#			ruler = {
+#			
+#			#	add = {
+#			#		portraits = {
+#			#			mol17_norm
+#			#		}
+#			#	}
+#			
+#				set = {
+#					trigger = {
+#						owner = { has_ethic = ethic_xenophobe }
+#					}
+#					portraits = {
+#						mol17_albin
+#					}
+#				}
+#
+#			
+#			}
+#		}
+#	}
+
+
+#	portrait_groups = {
+#		mol17 = {
+#			default = mol17
+#				
+#			
+#			#pop scope
+#			pop = { #for a specific pop
+#				add = {
+#					portraits = {
+#					art18_pop
+#					}
+#				}
+#			}
+#		}
+#	}

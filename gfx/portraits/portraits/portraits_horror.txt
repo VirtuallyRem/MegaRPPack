@@ -1,0 +1,19 @@
+
+### hum_hp_01 replace
+
+portraits = {
+
+	# horror
+	horror_01 = {
+		entity = "humanoid_hor_01_entity"	
+        clothes_selector = "horror_clothes_01"	
+        hair_selector = "no_texture"
+		character_textures = {
+			"gfx/models/portraits/horror/humanoid_horror_01.dds"
+			"gfx/models/portraits/horror/humanoid_horror_02.dds"
+			"gfx/models/portraits/horror/humanoid_horror_03.dds"
+			"gfx/models/portraits/horror/humanoid_horror_04.dds"
+            "gfx/models/portraits/horror/humanoid_horror_05.dds"
+		}
+	}	
+}

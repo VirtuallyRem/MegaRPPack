@@ -1,0 +1,154 @@
+portraits = {
+	# HRS
+	HRS_female_01 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "HRS_female_clothes_01" hair_selector = "HRS_female_hair_01"	greeting_sound = "human_female_greetings_03" 
+character_textures = { "gfx/models/portraits/HRS/HRS_female_body_01.dds"}}
+	HRS_female_02 = {	entity = "portrait_human_female_02_entity"	clothes_selector = "HRS_female_clothes_01" hair_selector = "HRS_female_hair_02"	greeting_sound = "human_female_greetings_04"
+character_textures = { "gfx/models/portraits/HRS/HRS_female_body_02.dds"}}
+	HRS_female_03 = {	entity = "portrait_human_female_03_entity"	clothes_selector = "HRS_female_clothes_01" hair_selector = "HRS_female_hair_03"	greeting_sound = "human_female_greetings_05"
+character_textures = { "gfx/models/portraits/HRS/HRS_female_body_03.dds"}}	
+	HRS_female_04 = {	entity = "portrait_human_female_04_entity"	clothes_selector = "HRS_female_clothes_01" hair_selector = "HRS_female_hair_04"	greeting_sound = "human_female_greetings_01"
+character_textures = { "gfx/models/portraits/HRS/HRS_female_body_04.dds"}}
+	HRS_female_05 = {	entity = "portrait_human_female_05_entity"	clothes_selector = "HRS_female_clothes_01" hair_selector = "HRS_female_hair_05"	greeting_sound = "human_female_greetings_02"
+character_textures = { "gfx/models/portraits/HRS/HRS_female_body_05.dds"}}
+
+	HRS_male_01 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "HRS_male_clothes_01" hair_selector = "HRS_male_hair_01"	greeting_sound = "human_male_greetings_03" 
+character_textures = { "gfx/models/portraits/HRS/HRS_male_body_01.dds"}}	
+	HRS_male_02 = {	entity = "portrait_human_male_02_entity"	clothes_selector = "HRS_male_clothes_01" hair_selector = "HRS_male_hair_02"	greeting_sound = "human_male_greetings_04" 
+character_textures = { "gfx/models/portraits/HRS/HRS_male_body_02.dds"}}
+	HRS_male_03 = {	entity = "portrait_human_male_03_entity"	clothes_selector = "HRS_male_clothes_01" hair_selector = "HRS_male_hair_03"	greeting_sound = "human_male_greetings_05" 
+character_textures = { "gfx/models/portraits/HRS/HRS_male_body_03.dds"}}	
+	HRS_male_04 = {	entity = "portrait_human_male_05_entity"	clothes_selector = "HRS_male_clothes_01" hair_selector = "HRS_male_hair_04"	greeting_sound = "human_male_greetings_01"
+character_textures = { "gfx/models/portraits/HRS/HRS_male_body_04.dds"}}
+	HRS_male_05 = {	entity = "portrait_human_male_05_entity"	clothes_selector = "HRS_male_clothes_01" hair_selector = "HRS_male_hair_05"	greeting_sound = "human_male_greetings_02" 
+character_textures = { "gfx/models/portraits/HRS/HRS_male_body_05.dds"}}
+}	
+
+portrait_groups = {
+	HRS = {
+		default = HRS_female_04
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					HRS_male_01
+					HRS_male_02
+					HRS_male_03
+					HRS_male_04
+					HRS_male_05
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					HRS_female_01
+					HRS_female_02
+					HRS_female_03
+					HRS_female_04
+					HRS_female_05
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					HRS_female_01
+					HRS_female_02
+					HRS_female_03
+					HRS_female_04
+					HRS_female_05
+					HRS_male_01
+					HRS_male_02
+					HRS_male_03
+					HRS_male_04
+					HRS_male_05
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					HRS_female_01
+					HRS_female_02
+					HRS_female_03
+					HRS_female_04
+					HRS_female_05
+					HRS_male_01
+					HRS_male_02
+					HRS_male_03
+					HRS_male_04
+					HRS_male_05
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					HRS_female_01
+					HRS_female_02
+					HRS_female_03
+					HRS_female_04
+					HRS_female_05
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					HRS_male_01
+					HRS_male_02
+					HRS_male_03
+					HRS_male_04
+					HRS_male_05
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					HRS_female_01
+					HRS_female_02
+					HRS_female_03
+					HRS_female_04
+					HRS_female_05
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					HRS_male_01
+					HRS_male_02
+					HRS_male_03
+					HRS_male_04
+					HRS_male_05
+				}
+			}
+		}
+	}		
+		

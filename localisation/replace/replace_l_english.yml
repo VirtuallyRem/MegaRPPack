@@ -1,0 +1,25 @@
+﻿l_english:
+
+
+ suppressed_egalitarian:0 "Libertarianism Suppressed"
+ suppressed_egalitarian_desc:0 "The §HLibertarian§! Ethic is being suppressed by the government."
+ promoted_egalitarian:0 "Libertarianism Promoted"
+ promoted_egalitarian_desc:0 "The §HLibertarian§! Ethic is being promoted by the government."
+
+ COL_LABEL:1 "Authoritarian <-> Libertarian"
+
+ POP_ATTRACTION_EGALITARIAN_POS:0 "§G+ Libertarian Governing Ethics§!"
+ POP_ATTRACTION_EGALITARIAN_NEG:0 "§R- Libertarian Governing Ethics§!"
+ POP_ATTRACTION_EGALITARIAN_DIPLOMACY_POS:0 "§G+ Diplomacy with Libertarian Empires§!"
+ POP_ATTRACTION_EGALITARIAN_DIPLOMACY_NEG:0 "§R- Diplomacy with Libertarian Empires§!"
+
+ ethic_egalitarian:0 "Libertarian"
+ ethic_egalitarian_desc:1 "§LAny society that does not embrace equality between its members - where an individual can rise to any position with enough hard work - is not only deeply unfair, but ultimately counterproductive.§!\n"
+ ethic_fanatic_egalitarian:0 "Fanatic Libertarian"
+ ethic_fanatic_egalitarian_desc:1 "§LBeware always those who would be despots, under the false presumption that their desires and agendas are somehow more imperative than those of their fellows. A society that does not see to the needs and rights of all of its members is not a society - it is a crime.§!\n"
+
+ civic_tooltip_egalitarian:0 "Is some degree of §YLibertarian§!"
+ civic_tooltip_not_egalitarian:0 "Is not §YLibertarian§!"
+ 
+  pft_progressive_desc:1 "Progressive Factions desire non-discrimination within existing social structures and dislike non-representative forms of government.\n\n§LLibertarian Ethos§!"
+

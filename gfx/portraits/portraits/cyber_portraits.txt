@@ -1,0 +1,249 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_cspecies_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	cyborg1_m = { entity = "portrait_cyborg_01_entity"
+		clothes_selector = "no_texture" 
+		hair_selector = "no_texture" 
+		greeting_sound = "event_ai_started" 
+		character_textures = {
+					"gfx/models/portraits/AI/Cyborg_white.dds"
+					"gfx/models/portraits/AI/Cyborg_green.dds"
+					"gfx/models/portraits/AI/Cyborg_black.dds"
+					"gfx/models/portraits/AI/Cyborg_red.dds"
+					"gfx/models/portraits/AI/Cyborg_blue.dds"
+					"gfx/models/portraits/AI/Cyborg_gold.dds"
+			}
+		}
+
+	cyborg1_f = { entity = "portrait_cyborg_01_entity"
+		clothes_selector = "no_texture" 
+		hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+					"gfx/models/portraits/AI/Cyborg_white_f.dds"
+					"gfx/models/portraits/AI/Cyborg_green_f.dds"
+					"gfx/models/portraits/AI/Cyborg_black_f.dds"
+					"gfx/models/portraits/AI/Cyborg_red_f.dds"
+					"gfx/models/portraits/AI/Cyborg_blue_f.dds"
+					"gfx/models/portraits/AI/Cyborg_gold_f.dds"
+			}
+		}
+
+	cyborg2_m = { entity = "portrait_cyborg_02_entity"
+		clothes_selector = "no_texture" 
+		hair_selector = "no_texture" 
+		greeting_sound = "event_ai_started" 
+		character_textures = {
+					"gfx/models/portraits/AI/Cyborg2_white.dds"
+					"gfx/models/portraits/AI/Cyborg2_green.dds"
+					"gfx/models/portraits/AI/Cyborg2_black.dds"
+					"gfx/models/portraits/AI/Cyborg2_red.dds"
+					"gfx/models/portraits/AI/Cyborg2_blue.dds"
+					"gfx/models/portraits/AI/Cyborg2_gold.dds"
+			}
+		}
+
+	cyborg2_f = { entity = "portrait_cyborg_02_entity"
+		clothes_selector = "no_texture" 
+		hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+					"gfx/models/portraits/AI/Cyborg2_white_f.dds"
+					"gfx/models/portraits/AI/Cyborg2_green_f.dds"
+					"gfx/models/portraits/AI/Cyborg2_black_f.dds"
+					"gfx/models/portraits/AI/Cyborg2_red_f.dds"
+					"gfx/models/portraits/AI/Cyborg2_blue_f.dds"
+					"gfx/models/portraits/AI/Cyborg2_gold_f.dds"
+			}
+		}
+
+}
+
+portrait_groups = {
+	Cyborg1 = {
+		default = cyborg1_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					cyborg1_m
+
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					cyborg1_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					cyborg1_m
+					cyborg1_f
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					cyborg1_m
+					cyborg1_f
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cyborg1_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cyborg1_m
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cyborg1_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cyborg1_m
+				}
+			}
+		}
+	}
+
+	Cyborg2 = {
+		default = cyborg2_m
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					cyborg2_m
+
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					cyborg2_f
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					cyborg2_m
+					cyborg2_f
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					cyborg2_m
+					cyborg2_f
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cyborg2_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cyborg2_m
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					cyborg2_f
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					cyborg2_m
+				}
+			}
+		}
+	}
+}

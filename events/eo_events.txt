@@ -1,0 +1,303 @@
+namespace = eo
+
+###Generate Starship Graveyard starships
+planet_event = {
+	id = eo.1
+	title = eo.1.name
+	picture = GFX_evt_big_landing_ship
+	show_sound = event_ship_thrusters
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			save_event_target_as = "me"
+		}
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_Junkyard_Fleet"
+				settings = {
+					spawn_debris = no
+				}				
+				effect = {
+					set_owner = event_target:me
+					random_list = {
+						15 = {
+							generate_eo_starship_graveyard_ships = yes
+							event_target:me = { set_country_flag = oneJunkyardShip }
+						}
+						35 = {
+							while = {
+								count = 2
+								generate_eo_starship_graveyard_ships = yes
+							}
+							event_target:me = { set_country_flag = twoJunkyardShips }
+						}
+						35 = {
+							while = {
+								count = 3
+								generate_eo_starship_graveyard_ships = yes
+							}
+							event_target:me = { set_country_flag = threeJunkyardShips }
+						}
+						15 = {
+							while = {
+								count = 4
+								generate_eo_starship_graveyard_ships = yes
+							}
+							event_target:me = { set_country_flag = fourJunkyardShips }
+						}
+					}
+					set_location = root
+				}
+			}
+		}
+	}
+
+	desc = {
+		text = eo.1.desc.a
+		trigger = {
+			NOT = {
+				event_target:me = { has_country_flag = oneJunkyardShip }
+			}
+		}
+	}
+	desc = {
+		text = eo.1.desc.b
+		trigger = {
+			event_target:me = { has_country_flag = oneJunkyardShip }
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = {
+				event_target:me = { has_country_flag = oneJunkyardShip }
+			}
+			custom_tooltip = eo.1.tooltipA
+			event_target:me = { remove_country_flag = oneJunkyardShip }
+		}
+		else_if = {
+			limit = {
+				event_target:me = { has_country_flag = twoJunkyardShips }
+			}
+			custom_tooltip = eo.1.tooltipB
+			event_target:me = { remove_country_flag = twoJunkyardShips }
+		}
+		else_if = {
+			limit = {
+				event_target:me = { has_country_flag = threeJunkyardShips }
+			}
+			custom_tooltip = eo.1.tooltipC
+			event_target:me = { remove_country_flag = threeJunkyardShips }
+		}
+		else_if = {
+			limit = {
+				event_target:me = { has_country_flag = fourJunkyardShips }
+			}
+			custom_tooltip = eo.1.tooltipD
+			event_target:me = { remove_country_flag = fourJunkyardShips }
+		}
+	}
+}
+
+#####Setup Immortal Messiah
+country_event = {
+	id = eo.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_origin = origin_immortal_messiah
+	}
+	
+	immediate = {
+		add_research_option = tech_psionic_theory
+		add_tech_progress = {
+			tech = tech_psionic_theory
+			progress = 0.25
+		}
+		random_owned_leader = {
+			limit = { leader_class = ruler }
+			add_trait = leader_trait_ruler_chosen
+			random_list = {
+				10 = { set_age = 297 }
+				10 = { set_age = 352 }
+				10 = { set_age = 481 }
+				10 = { set_age = 559 }
+				10 = { set_age = 620 }
+				10 = { set_age = 763 }
+				10 = { set_age = 845 }
+				10 = { set_age = 918 }
+				10 = { set_age = 1024 }
+			}
+			set_skill = 5
+			set_leader_flag = immortal_messiah
+		}
+	}
+}
+
+#####Messiah dies
+country_event = {
+	id = eo.3
+	title = eo.3.name
+	desc = eo.3.desc
+	picture = GFX_evt_civil_action
+	show_sound = event_public_unrest
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_origin = origin_immortal_messiah
+		from = { has_leader_flag = immortal_messiah }
+	}
+
+	option = {
+		name = eo.3.a
+		add_modifier = {
+			modifier = messiah_dead
+			days = -1
+		}
+		add_modifier = {
+			modifier = grieving_messiah
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = eo.4 days = 15 }
+		}
+	}
+}
+
+#####Messiah funeral
+country_event = {
+	id = eo.4
+	title = eo.4.name
+	desc = eo.4.desc
+	picture = GFX_evt_space_funeral
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = eo.4.a
+		add_modifier = {
+			modifier = guidance_from_beyond
+			days = -1
+		}
+	}
+}
+
+#####Decrement long sleep research bonus
+country_event = {
+	id = eo.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		decrement_long_sleep_research_bonus = yes
+	}
+}
+
+#####Decrement long sleep unity bonus
+country_event = {
+	id = eo.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		decrement_long_sleep_unity_bonus = yes
+	}
+}
+
+#####Allow more titanic life armies for Monster Tamers
+country_event = {
+	id = eo.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_origin = origin_monster_tamers
+		check_variable = {
+			which = "titanic_life_soldier_count"
+			value > 0
+		}
+	}
+	
+	immediate = {
+		change_variable = {
+			which = "titanic_life_soldier_count"
+			value = -1
+		}
+	}
+}
+
+#EO fix event
+country_event = {
+	id = eo.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Starship graveyard
+		if = {
+			limit = { has_origin = origin_starship_graveyard }
+			country_event = { id = eo.11 }
+		}
+		# Monster tamers
+		if = {
+			limit = { has_origin = origin_monster_tamers }
+			country_event = { id = eo.12 }
+		}
+		# Biomedical
+		if = {
+			limit = { has_origin = origin_biomedical_renaissance }
+			country_event = { id = eo.13 }
+		}
+	}
+}
+
+country_event = {
+	id = eo.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_planet ={
+			limit = { is_capital = yes }
+			add_deposit = d_irreparable_wreckage
+			while = {
+				count = 5
+				add_deposit = d_starship_graveyard
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eo.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_planet ={
+			add_deposit = d_titan_hunting_grounds
+			add_modifier = { modifier = titanic_life }
+			set_planet_flag = titanic_life_can_build
+			owner = {
+				set_country_flag = titanic_life_soldiers
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eo.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		give_technology = { message = no tech = tech_gene_tailoring }
+	}
+}

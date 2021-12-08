@@ -1,0 +1,225 @@
+﻿l_english:
+
+#NEW ONES
+
+#ECONOMY/ENVIRONMENT
+FREE_ECO_POLICY_POSITIVE:0 "Economic Freedom"
+FREE_ECO_POLICY_NEUTRAL:0 "Tight Regulations"
+FREE_ECO_POLICY_NEGATIVE:0 "Communist Yoke"
+FREE_ECO_POLICY_DESC:0 "Setting the §YEconomic Stance§! policy to §YLaissez-Fair§!, while avoiding to set it to §YCommunist§!, will please the [Root.GetName]."
+
+COMM_ECO_POLICY_POSITIVE:0 "Socialist Economy"
+COMM_ECO_POLICY_NEUTRAL:0 "Compromises with Capitalists"
+COMM_ECO_POLICY_NEGATIVE:0 "Corporate Excesses"
+COMM_ECO_POLICY_DESC:0 "Setting the §YEconomic Stance§! policy to §YCommunist§!, while avoiding to set it to §YLaissez-Fair§!, will please the [Root.GetName]."
+
+SUSTAINABLE_POLICY_POSITIVE:0 "Ecological Symbiosis"
+SUSTAINABLE_POLICY_NEUTRAL:0 "Insufficient Regulations"
+SUSTAINABLE_POLICY_NEGATIVE:0 "Overindustrialization"
+SUSTAINABLE_POLICY_DESC:0 "Setting the §YDevelopment Regulations§! policy to §YSustainability Focus§!, while avoiding to set it to §YProduction Focus§!, will please the [Root.GetName]."
+
+PRODUCTION_POLICY_POSITIVE:0 "Incentives to Growth"
+PRODUCTION_POLICY_NEUTRAL:0 "Limited Profits"
+PRODUCTION_POLICY_NEGATIVE:0 "Green Oppression"
+PRODUCTION_POLICY_DESC:0 "Setting the §YDevelopment Regulations§! policy to §YProduction Focus§!, while avoiding to set it to §YSustainability Focus§!, will please the [Root.GetName]."
+
+#Authoritarian
+TOTALITARIAN_NO_FREE_MOVEMENT:0 "Restricted Movement"
+TOTALITARIAN_FREE_MOVEMENT:0 "No Restricted Movement"
+TOTALITARIAN_NO_FREE_MOVEMENT_DESC:0 "Controlling population movements by enambling forced Resettlement or Migration Controls will please the [Root.GetName]."
+
+TOTALITARIAN_REPRODUCTIVE_CONTROL:0 "Population Controls"
+TOTALITARIAN_NO_REPRODUCTIVE_CONTROL:0 "No Population Controls"
+TOTALITARIAN_REPRODUCTIVE_CONTROL_DESC:0 "Allowing the use of selective Population Controls will please the [Root.GetName]."
+
+TOTALITARIAN_QUARANTINE:0 "Information Quarantine"
+TOTALITARIAN_NO_QUARANTINE:0 "$TOTALITARIAN_QUARANTINE$"
+TOTALITARIAN_QUARANTINE_DESC:0 "Active §YInformation Quarantine§! edict will please the [Root.GetName]."
+
+TOTALITARIAN_AUTH_DEMOCRACY:0 "Authoritarian Democracy"
+TOTALITARIAN_NO_AUTH_DEMOCRACY:0 "Liberal Democracy"
+TOTALITARIAN_AUTH_DEMOCRACY_DESC:0 "Active §Y$civic_police_state$§! or §Y$civic_shadow_council$§! civics will reassure the [Root.GetName] the state is still in good hands."
+
+TOTALITARIAN_PRISON_WORLD:0 "Penal Colony"
+TOTALITARIAN_PRISON_WORLD_DESC:0 "Designating an entire planet to the containment of the worst members of our society will please the [Root.GetName]."
+
+#Libertarian
+
+PROGRESSIVE_FREE_THOUGHT:0 "Encourage Free Thought"
+PROGRESSIVE_NO_FREE_THOUGHT:0 "$PROGRESSIVE_FREE_THOUGHT$"
+PROGRESSIVE_FREE_THOUGHT_DESC:0 "Active §YEncourage Free Thought§! edict will please the [Root.GetName]."
+
+PROGRESSIVE_GOOD_REGIME:0 "Trustworthy Authority"
+PROGRESSIVE_BAD_REGIME:0 "Untrustworthy Authority"
+PROGRESSIVE_GOOD_REGIME_DESC:0 "Active §Y$civic_philosopher_king$§! or §Y$civic_ai_leadership$§! civics will reassure the [Root.GetName] of the good intentions of the regime."
+
+#Industrialist
+
+INDUSTRIAL_MINERALS_LOW:0 "Basic Industry"
+INDUSTRIAL_MINERALS_LOW_DESC:0 "Ensuring a mineral production of at least §Y50§! per month will please the [Root.GetName]."
+
+INDUSTRIAL_MINERALS_MED:0 "Average Industry"
+INDUSTRIAL_MINERALS_MED_DESC:0 "Ensuring a mineral production of at least §Y75§! per month will please the [Root.GetName]."
+
+INDUSTRIAL_MINERALS_HIGH:0 "Large Industry"
+INDUSTRIAL_MINERALS_HIGH_DESC:0 "Ensuring a mineral production of at least §Y100§! per month will please the [Root.GetName]."
+
+INDUSTRIAL_MINERALS_VERY_HIGH:0 "Colossal Industry"
+INDUSTRIAL_MINERALS_VERY_HIGH_DESC:0 "Ensuring a mineral production of at least §Y150§! per month will please the [Root.GetName]."
+
+INDUSTRIAL_OWN_CITY_WORLD:0 "Factory Planet"
+INDUSTRIAL_OWN_CITY_WORLD_DESC:0 "Controlling a §Y$pc_city$§! will please the [Root.GetName]."
+
+INDUSTRIAL_GRANTS:0 "Industrial Grants"
+INDUSTRIAL_GRANTS_DESC:0 "Enacting the §YIndustrial Subsidies§! or §YForge Subsidies§! edicts will please the [Root.GetName]."
+
+INDUSTRIAL_MINING:0 "Mining Guilds"
+INDUSTRIAL_MINING_DESC:0 "Active §Y$civic_mining_guilds$§! civic will please the [Root.GetName]."
+
+INDUSTRIAL_NO_MINERALS:0 "Insufficient Resources"
+INDUSTRIAL_NO_MINERALS_DESC:0 "Failing to keep the §YMineral§! income of the empire in positive will displease the [Root.GetName]."
+
+#Pluralist
+PLURALIST_NO_STRATIFIED_DESC:0 "Letting any denizen of our empire live in a §Y$living_standard_stratified$§! or under §Y$living_standard_academic_privilege$§! will greatly displease the [Root.GetName]."
+
+PLURALIST_NO_STRATIFIED_EXCEPT_XENOS_DESC:0 "Letting any [Root.Owner.GetSpeciesAdj] denizen of our empire live in a §Y$living_standard_stratified$§! or under §Y$living_standard_academic_privilege$§! will greatly displease the [Root.GetName]."
+
+PLURALIST_NO_ENSLAVEMENT:0 "Equal Society"
+PLURALIST_ENSLAVEMENT:0 "Caste System"
+PLURALIST_NO_ENSLAVEMENT_DESC:0 "Failing to outlaw the selective enslavement of individuals, by setting the §YEnslavement Ratio§! to §Y0%§! or outright outlawing slavery, will displease the [Root.GetName]."
+
+#Elitist
+
+ELITIST_FEW_SLAVES:0 "Baseline Slavery"
+ELITIST_NO_SLAVES:0 "No Slaves"
+ELITIST_FEW_SLAVES_DESC:0 "Keeping at least §Y10%§! or our population enslaved throught the §YEnslavement Ratio Policy§! will please the [Root.GetName]."
+
+ELITIST_SOME_SLAVES:0 "Expanded Slavery"
+ELITIST_MORE_SLAVES:0 "More Slaves"
+ELITIST_SOME_SLAVES_DESC:0 "Keeping at least §Y30%§! or our population enslaved throught the §YEnslavement Ratio Policy§! will please the [Root.GetName]."
+
+ELITIST_MANY_SLAVES:0 "Advanced Slavery"
+ELITIST_MANY_SLAVES_DESC:0 "Keeping at least §Y50%§! or our population enslaved throught the §YEnslavement Ratio Policy§! will please the [Root.GetName]."
+
+ELITIST_SERVANTS:0 "Domestic Servants"
+ELITIST_SERVANTS_DESC:0 "Having organic slaves on §YDomestic Servitude§! or §YRobots§! servants equipped with §YDomestic Protocols§! will please the [Root.GetName]."
+
+#Materialist
+
+TECHNOLOGIST_RESEARCH_GRANTS:0 "Research Subsidies"
+TECHNOLOGIST_RESEARCH_GRANTS_DESC:0 "Enacting the §YResearch Subsidies§! edict will please the [Root.GetName]."
+
+TECHNOLOGIST_RESEARCH_SPI_GOV:0 "Fundamentalist Regime"
+TECHNOLOGIST_RESEARCH_SPI_GOV_DESC:0 "Having our governing ethics be §YSpiritualist§! will displease the [Root.GetName]."
+
+TECHNOLOGIST_RESEARCH_DEATH_CULT:0 "Suicide Cult"
+TECHNOLOGIST_RESEARCH_SPI_GOV_DESC:0 "Brainwashing our population to kill themselves in a §Y$civic_death_cult$§! will enrage the [Root.GetName]."
+
+#Ecologists
+
+ECOLOGICAL_TRADE:0 "Ecological Trade"
+NO_ECOLOGICAL_TRADE:0 "Anti-Ecological Trade"
+ECOLOGICAL_TRADE_DESC:0 "Setting the §YTrade Policy§! to §YMarkeplace of Ideas§! will please the [Root.GetName]."
+
+ECOLOGIST_NO_CITY_WORLDS:0 "No City Worlds"
+ECOLOGIST_CITY_WORLDS:0 "Devastated Nature"
+ECOLOGIST_CITY_WORLDS_DESC:0 "Building an §YEcumenopolis§! will enrage the [Root.GetName] for a time."
+
+ECOLOGIST_NO_NUKE_PLANET:0 "Avoid Collateral Damage"
+ECOLOGIST_NUKED_PLANET:0 "Nature Threatened"
+ECOLOGIST_NUKED_PLANET_DESC:0 "Arming a §YColossus§! with a weapon capable of destroying an entire planet will enrage the [Root.GetName]."
+
+ECOLOGIST_PRESERVED_BLOCKER:0 "Ecocentrism"
+ECOLOGIST_PRESERVED_BLOCKER_DESC:0 "Maintaining tile blockers such as §Y$d_dangerous_wildlife_blocker$§!, §Y$d_dense_jungle$§! or §Y$d_toxic_kelp$§!, even if it damages our growth, will please the [Root.GetName]."
+
+ECOLOGIST_NO_CONSUMERISM:0 "Frugality"
+ECOLOGIST_CONSUMERISM:0 "Relentless Consumerism"
+ECOLOGIST_NO_CONSUMERISM_DESC:0 "Letting any denizen of our empire live a §Y$living_standard_decadent$§! will displease the [Root.GetName]."
+
+ECOLOGIST_HABITATS_ONLY:0 "Zero Impact Civilization"
+ECOLOGIST_HABITATS_ONLY_DESC:0 "Settling only §YHabitats§! or §YRing Worlds§! will greatly please the [Root.GetName]."
+
+ECOLOGIST_RECYCLING:0 "Recycling Focus"
+ECOLOGIST_RECYCLING_DESC:0 "Enacting the §Y$recycling_campaign$§! or the §Y$renewable_energy$§! edicts will please the [Root.GetName]."
+
+#Individualist
+
+INDIVIDUALIST_MEGACORP:0 "Corporate Rule"
+INDIVIDUALIST_MEGACORP_DESC:0 "Ensuring corporate interests run the [Root.Owner.GetName] by switching to a §YCorporate§! authority will please the [Root.GetName]."
+
+INDIVIDUALIST_MERCANTILE:0 "Mercantile Stance"
+INDIVIDUALIST_MERCANTILE_DESC:0 "Keeping the §YDiplomatic Stance§! on §YMercantile§! will please the [Root.GetName]."
+
+INDIVIDUALIST_NO_SHARED:0 "Individual Accomplishments Rewarded"
+INDIVIDUALIST_SHARED:0 "Tyranny of the Majority"
+INDIVIDUALIST_NO_SHARED_DESC:0 "Active §Y$civic_shared_burden$§! civic will enrage the [Root.GetName]."
+
+INDIVIDUALIST_COMMERCIAL_PACT:0 "Trade Without Borders"
+INDIVIDUALIST_COMMERCIAL_PACT_DESC:0 "Signing Commercial Pacts with at least §Y3§! other Empires or being in a Federation with at least §Y4§! members will please the [Root.GetName]."
+
+INDIVIDUALIST_STRATIFIED_SOCIETY:0 "Incentives To Success"
+INDIVIDUALIST_STRATIFIED_SOCIETY_DESC:0 "Setting up §Y$living_standard_stratified$§!, §Y$living_standard_academic_privilege$§! or §Y$living_standard_decadent$§! living standards for all free citizens of the empire will please the [Root.GetName]."
+
+INDIVIDUALIST_SOCIAL_WELFARE:0 "Lazyness Rewarded"
+INDIVIDUALIST_SOCIAL_WELFARE_DESC:0 "Letting any denizen of our empire live in under §Y$living_standard_good$§! or §Y$living_standard_utopian$§! will greatly displease the [Root.GetName]."
+
+INDIVIDUALIST_UNEMPLOYMENT:0 "Employment Discouraged"
+INDIVIDUALIST_UNEMPLOYMENT_DESC:0 "Harming the job market by giving out §Y$unemployment_benefits$§! will displease the [Root.GetName]."
+
+INDIVIDUALIST_NO_ENERGY:0 "Economic Depression"
+INDIVIDUALIST_NO_ENERGY_DESC:0 "Failing to keep the §YEnergy§! income of the empire in positive will displease the [Root.GetName]."
+
+INDIVIDUALIST_ENERGY_LOW:0 "Baseline Economy"
+INDIVIDUALIST_ENERGY_LOW_DESC:0 "Ensuring an energy production of at least §Y50§! per month will please the [Root.GetName]."
+
+INDIVIDUALIST_ENERGY_MED:0 "Growing Economy"
+INDIVIDUALIST_ENERGY_MED_DESC:0 "Ensuring an energy production of at least §Y100§! per month will please the [Root.GetName]."
+
+INDIVIDUALIST_ENERGY_HIGH:0 "Powerhouse Economy"
+INDIVIDUALIST_ENERGY_HIGH_DESC:0 "Ensuring an energy production of at least §Y150§! per month will please the [Root.GetName]."
+
+INDIVIDUALIST_ENERGY_VERY_HIGH:0 "Galactic Economy"
+INDIVIDUALIST_ENERGY_VERY_HIGH_DESC:0 "Ensuring an energy production of at least §Y200§! per month will please the [Root.GetName]."
+
+#Collectivist
+
+PERFECT_EQUALITY:0 "Perfect Equality"
+PERFECT_EQUALITY_DESC:0 "Active §Y$civic_shared_burden$§! civic will greatly please the [Root.GetName]."
+
+COLLECTIVIST_WELFARE_DESC:0 "Setting up §Y$living_standard_good$§! or better living standards for all the citizens of the empire will please the [Root.GetName]."
+COLLECTIVIST_WELFARE_NO_XENO_DESC:0 "Setting up §Y$living_standard_good$§! or better living standards for all [Root.Owner.GetSpeciesAdj] citizens of the empire will please the [Root.GetName]."
+
+COLLECTIVIST_NO_STRATIFIED_DESC:0 "Letting any denizen of our empire live in a §Y$living_standard_stratified$§! or §Y$living_standard_subsistence$§! will greatly displease the [Root.GetName]."
+COLLECTIVIST_NO_STRATIFIED_XENO_DESC:0 "Letting any [Root.Owner.GetSpeciesAdj] denizen of our empire live in a §Y$living_standard_stratified$§! will greatly displease the [Root.GetName]."
+
+COLLECTIVIST_NUTRITIONAL:0 "Nutritional Plentitude"
+COLLECTIVIST_NUTRITIONAL_DESC:0 "Enacting the §YNutritional Plentitude§! edict will please the [Root.GetName]."
+
+COLLECTIVIST_NO_TRADE:0 "Capital Accumulation"
+COLLECTIVIST_NO_TRADE_DESC:0 "Active §YWealth Creation§! trade policy will displease the [Root.GetName]."
+
+COLLECTIVIST_NO_BRANCH_OFFICE:0 "Multinationals Exploitation"
+COLLECTIVIST_NO_BRANCH_OFFICE_DESC:0 "Allowing foreign §YMegacorps§! to set up §YBranch Offices§! on our planets will displease the [Root.GetName]"
+
+#Pacifists
+
+PROSPERITY_PEACE_FESTIVAL:0 "Peace Festivals"
+PROSPERITY_PEACE_FESTIVAL_DESC:0 "Enacting the §YPeace Festival§! edict will please the [Root.GetName]."
+
+PROSPERITY_PEACE_ECO:0 "Civilian Economy"
+PROSPERITY_PEACE_ECO_DESC:0 "Keeping the §YEconomic Policy§! on §YCivilian Economy§! will please the [Root.GetName]."
+
+PROSPERITY_WAR_ECO:0 "Military Economy"
+PROSPERITY_WAR_ECO_DESC:0 "Keeping the §YEconomic Policy§! on §YMilitary Economy§! will displease the [Root.GetName]."
+
+PROSPERITY_LIGHT_BOMBING:0 "Sensible Warfare"
+PROSPERITY_HEAVY_BOMBING:0 "War Crimes"
+PROSPERITY_LIGHT_BOMBING_DESC:0 "Keeping the §YOrbital Bombardment Stance§! on anything but §YSelective Bombardment§! will displease the [Root.GetName]."
+
+#Spiritualist
+
+TRADITIONALIST_NO_SYNTH:0 "Spiritual Suicide"
+TRADITIONALIST_NO_SYNTH_DESC:0 "Tricking our people into killing themselves through a '§Y$ap_synthetic_evolution$§!' will anger the [Root.GetName]."
+
+TRADITIONALIST_EDICT:0 "Veneration of Saints"
+TRADITIONALIST_EDICT_DESC:0 "Enacting the §YVeneration of Saints§! edict will please the [Root.GetName]."

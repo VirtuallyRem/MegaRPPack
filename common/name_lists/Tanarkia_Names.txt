@@ -1,0 +1,196 @@
+### Mammalian 4
+### Created by Henrik Thyrwall
+
+MAM4 = {
+	category = "Mammalian"
+	ship_names = {
+
+		generic = {
+			"Kha Thannatis" "Kha Bonntis" "Kha Rabtis" "Kha Muntis" "Kha Surtis" "Kha Bentis" "Kha Juntis" "Kha Buvinis"  "Kha Erantis" "Kha Arannis" "Kha Rhentis" "Kha Vaknis" "Kha Tibaris" "Kha Evendis" "Kha Uribis" "Kha Furanis" "Kha Ridanis" "Kha Seranis" "Kha Deranis" "Kha Dihanis" "Kha Rylanis" "Kha Rubis" "Kha Itnis" "Kha Yranis" "An Vebis" "An Turakis" "An Bevakis" "An Noranis" "An Syrutis" "An Vakiris" "An Cithanis" "An Brokunis" "An Oboris" "An Hirekulis" "An Giranis" "An Gursakis" "An Gavanonis" "An Garallis" "An Ubanis" "An Kharakis" "An Felgiris" "An Stupanis" "An Jiranis" "An Jaburis" "An Jirigalis" "An Ditiris" "An Navidis" "Dar Epiris" "Dar Hitiris" "Dar Lydiris" "Dar Torobanis" "Dar Isklanduris" "Dar Iberinnis" "Dar Tygharis" "Dar Tolvonis" "Dar Kermisaris"  "Dar Sotoris" "Dar Kabolis" "Dar Filiris" "Dar Epesuris" "Dar Evtidanis" "Dar Mysaris" "Dar Majedonis"
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+		fleet_names = {
+		random_names = {
+			"Task Force Boska" "Task Force Utaris" "Task Force Gaddlar" "Task Force Mirasma" "Task Force Yodora" "Task Force Kampas"
+		}
+		sequential_name = "%R% Task Force"
+	}
+		
+	army_names = {
+		defense_army = {
+			sequential_name = "%R% Defensive Column"
+		}
+			
+		assault_army = {
+			sequential_name = "%R% Invader Column"
+		}
+		
+		slave_army = {
+			sequential_name = "%R% Correctional Column"
+		}
+		
+		clone_army = { 
+			sequential_name = "Molded Troops %R%"
+		}
+		
+		robotic_army = {
+			sequential_name = "Robotic Infantry %R%"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Robotic Protectors %R%"
+		}
+		
+		psionic_army = { 
+			sequential_name = "Blessed Light Warriors %R%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "Xenomorph Hive %R%"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%R% Modified Troopers"
+		}
+
+		occupation_army = {
+			sequential_name = "%R% Occupation Column"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%R% Robotic Occupiers"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+             "Nova Roma" "Nova Serica" "Nova Parthia" "Nova Arabia" "Nova Aegyptus" Scandia Hibernia Thule Elysium Illyria Panchaea Neritum Nysa Pedasus Hesperides Hyperborea Ithaca Lyrnessus Telepylos Lyrcea Hades Olympia Aquilo Favonius Auster Eurus Caledonia Scythia Argyre Silpium Thrinacia Tritonis Phlegra Acherusia "Colonia Aurora" "Colonia Augusta" "Colonia Pacifica" "Colonia Traiana" "Colonia Emerita" Eboracum Ascrivium Brigantium Rhegium Spalatum Patavium Antiochia
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				"Sagu," "Thub," "Sene," "Migg," "Bora," "Jagg," "Imat," "Matu," "Sebu," "Enim," "Jaka," "Veti," "Kori," "Ekir," "Satu," "Pock," "Murk," "Velk," "Mirk," "Tabu," "Srak," "Mubi," "Itha," "Utha," "Vurp," "Utra," "Baga," "Bick," "Bock," "Nock," "Letu," "Larb," "Tabo," "Tibb," "Terk," "Jurk," "Jark," "Vinn," "Derk," "Dack," "Debe," "Saka," "Polt," "Nagg," "Korb," "Kald," "Tigg," "Otra," "Udil," "Adel," "Amik," "Brok," "Anak," "Kild," "Trag," "Vaki," "Ukna," "Abil," "Inki," "Idel," "Inck," "Brok," "Milv," "Makn," "Reti," "Rakn," "Roba," "Skeg," "Fald," "Feti," "Fori," "Fura," "Sagg," "Ster," "Noga," "Kreb," "Tagg," "Tigg," "Muri," "Utin," "Ulba," "Siga," "Larg," "Gori," "Gabb," "Gitu," "Gack," "Goll,"
+			}
+			
+			# Always combined with a first name
+			second_names_male = {
+				"Of house Danarkiam" "Of house Tuliopia" "Of house Haliax" "Of house Kveriem" "Of house Relixiam"
+			}
+
+			second_names_female = {
+				"Of house Danarkiam" "Of house Tuliopia" "Of house Haliax" "Of house Kveriem" "Of house Relixiam"
+			}
+			
+			regnal_first_names = {
+				Sagu Thub Sene Migg Bora Jagg Imat
+			}
+			
+			regnal_second_names = {
+				"scion of the Knower"
+			}
+		}
+	}
+}

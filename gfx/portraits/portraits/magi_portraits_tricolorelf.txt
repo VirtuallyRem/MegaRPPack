@@ -1,0 +1,263 @@
+##############################################################
+###	PORTRAITS SETTINGS
+### FOR TRICOLOR ELF
+##############################################################
+
+portraits = {
+
+	# yellow kaishi
+	magi_tricolor_elf_yellow_jo 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "humanoid_05_female_clothes_01"
+		hair_selector = "magi_yellow_elf_jo_kami"
+		greeting_sound = "humanoid_female_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_06.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_07.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_08.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_09.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_10.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_12.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_13.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_14.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_16.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_17.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_18.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_20.dds"
+			"gfx/models/portraits/magi_yellow_elf/JOSHI/Y2_demi_elfen_Y_jo_body_23.dds"
+		}
+	}
+	
+
+	magi_tricolor_elf_yellow_dan 	= {
+		entity = "copy_05_male_01_entity"
+		clothes_selector = "humanoid_05_male_clothes_01"
+		hair_selector = "magi_yellow_elf_dan_kami"
+		greeting_sound = "humanoid_male_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_01.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_02.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_04.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_05.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_06.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_07.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_14.dds"
+			"gfx/models/portraits/magi_yellow_elf/DANSHI/Y2_demi_elfen_Y2_DAN_body_15.dds"
+		}
+	}
+	# yellow owari
+	
+	# pink kaisi
+	magi_tricolor_elf_pink_jo 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "humanoid_05_female_clothes_01"
+		hair_selector = "magi_pink_elf_jo_kami"
+		greeting_sound = "humanoid_female_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_01a.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_02.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_05.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_06.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_07.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_09.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_10.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_11.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_13.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_14.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_15.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_16.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_17a.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_18.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_19.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_20.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_21.dds"
+			"gfx/models/portraits/magi_pink_elf/JOSHI/demi_elfen_PINK_jo_body_22.dds"
+		}
+	}
+	
+
+	magi_tricolor_elf_pink_dan 	= {
+		entity = "copy_05_male_01_entity"
+		clothes_selector = "humanoid_05_male_clothes_01"
+		hair_selector = "magi_pink_elf_dan_kami"
+		greeting_sound = "humanoid_male_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_01.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_02.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_03.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_04.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_05.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_06.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_07.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_08.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_09.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_10.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_11.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_12.dds"
+			"gfx/models/portraits/magi_pink_elf/DANSHI/demi_elfen_PINK_dan_body_13.dds"
+		}
+	}
+	# pink owari
+	
+	# purple hajime
+	magi_tricolor_elf_purple_jo 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "humanoid_05_female_clothes_01"
+		hair_selector = "magi_purple_elf_jo_kami"
+		greeting_sound = "humanoid_female_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_02.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_04.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_06.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_07.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_08.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_09.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_11.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_12.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_14.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_17.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_18.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_19.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_20.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_21.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_22.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_24.dds"
+			"gfx/models/portraits/magi_purple_elf/JOSHI/demi_elfen_P_jo2_body_25.dds"
+		}
+	}
+	
+
+	magi_tricolor_elf_purple_dan 	= {
+		entity = "copy_05_male_01_entity"
+		clothes_selector = "humanoid_05_male_clothes_01"
+		hair_selector = "magi_purple_elf_dan_kami"
+		greeting_sound = "humanoid_male_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_01.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_02.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_03.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_06.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_07.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_13.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_14.dds"
+			"gfx/models/portraits/magi_purple_elf/DANSHI/demi_elfen_P_dan_body_15.dds"
+		}
+	}
+	
+}
+
+portrait_groups = {
+	magi_tricolor_elf = {
+		default = magi_tricolor_elf_yellow_jo
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_dan
+					magi_tricolor_elf_pink_dan
+					magi_tricolor_elf_purple_dan
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_jo
+					magi_tricolor_elf_pink_jo
+					magi_tricolor_elf_purple_jo
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					magi_tricolor_elf_yellow_dan
+					magi_tricolor_elf_pink_dan
+					magi_tricolor_elf_purple_dan
+
+					magi_tricolor_elf_yellow_jo
+					magi_tricolor_elf_pink_jo
+					magi_tricolor_elf_purple_jo
+
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					magi_tricolor_elf_yellow_dan
+					magi_tricolor_elf_pink_dan
+					magi_tricolor_elf_purple_dan
+
+					magi_tricolor_elf_yellow_jo
+					magi_tricolor_elf_pink_jo
+					magi_tricolor_elf_purple_jo
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_jo
+					magi_tricolor_elf_pink_jo
+					magi_tricolor_elf_purple_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_dan
+					magi_tricolor_elf_pink_dan
+					magi_tricolor_elf_purple_dan
+
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_jo
+					magi_tricolor_elf_pink_jo
+					magi_tricolor_elf_purple_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_tricolor_elf_yellow_dan
+					magi_tricolor_elf_pink_dan
+					magi_tricolor_elf_purple_dan
+				}
+			}
+		}
+	}
+}

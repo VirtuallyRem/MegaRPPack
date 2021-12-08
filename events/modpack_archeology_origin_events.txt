@@ -1,0 +1,14 @@
+namespace = archeology
+
+country_event = {
+	id = archeology.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { owner = { has_origin = origin_archeology } }
+
+	immediate = {
+		capital_scope = { add_deposit = d_origin_archeology }	
+		add_research_option = tech_arcane_deciphering
+	}
+}

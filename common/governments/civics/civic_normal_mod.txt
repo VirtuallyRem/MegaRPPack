@@ -1,0 +1,83 @@
+civic_masters_of_engineering = {
+	potential = {
+		#ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		#let gestalt pals play this c:
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_quantum_masters
+				value = civic_socio_biological_masters
+			}
+		}
+	}
+	random_weight = { base = 5 }
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_minerals_produces_mult = 0.10
+	}
+}
+
+civic_quantum_masters = {
+	potential = {
+		#ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_masters_of_engineering
+				value = civic_socio_biological_masters
+			}
+		}
+	}
+	random_weight = { base = 5 }
+
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_energy_produces_mult = 0.10
+	}
+}
+
+civic_socio_biological_masters = {
+	potential = {
+		#ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_masters_of_engineering
+				value = civic_quantum_masters
+			}
+		}
+	}
+	random_weight = { base = 5 }
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_food_produces_mult = 0.10
+	}
+}
+
+civic_temple_guard = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+			NOR = {
+			    value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	
+	description = "civic_tooltip_temple_guard_effects"
+}

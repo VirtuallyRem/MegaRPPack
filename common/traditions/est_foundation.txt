@@ -1,0 +1,184 @@
+tr_est_foundation_adopt = {
+	modifier = {
+		country_admin_cap_add = 20
+		pop_government_ethic_attraction = 0.15
+		empire_size_penalty_mult = 0.50
+	}
+	tradition_swap = {
+		name = tr_est_foundation_adopt_gestalt
+		trigger = { is_gestalt = yes }	
+		modifier = {
+		country_admin_cap_add = 20
+		pop_amenities_usage_mult = -0.10
+		empire_size_penalty_mult = 0.50
+		}
+		weight = { factor = 1 }
+	}
+}
+
+tr_est_foundation_finish = {
+	
+	on_enabled = {
+		capital_scope = {	
+			if = {
+				limit = {
+						OR ={ 
+							is_planet_class = pc_habitat
+							is_planet_class = pc_shattered_ring_habitable
+							is_planet_class = pc_ringworld_habitable
+					}
+				}
+				add_modifier = {
+					modifier = "mod_est_foundation_finisher_art"
+				}		
+			}
+			else = {
+				add_modifier = {
+						modifier = "mod_est_foundation_finisher_norm"
+					}	
+				}	
+				
+		}
+		if = {
+			limit = {
+				Not = { has_global_flag = est_foundation_finished_flag }
+			}
+			set_global_flag = est_foundation_finished_flag
+		}
+	}
+
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+
+tr_est_foundation_1 = {
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	tradition_swap = {
+		name = tr_est_foundation_1_gestalt
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }	
+		modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		}
+		weight = { factor = 1 }
+	}
+
+	ai_weight = { factor = 5000 }
+}
+
+tr_est_foundation_2 = {
+	possible = { has_tradition = tr_est_foundation_1 }
+	
+	on_enabled = {
+		capital_scope = {	
+			if = {
+				limit = {
+					owner = {
+						has_technology = tech_galactic_administration
+					}
+				}
+				add_modifier = {
+					modifier = "mod_est_foundation_2_3"
+				}		
+			}
+			else = {
+				if = {
+					limit = {
+						owner = {
+							has_technology = tech_colonial_centralization
+						}
+					}
+					add_modifier = {
+						modifier = "mod_est_foundation_2_2"
+					}	
+				}	
+				else = {			
+					add_modifier = {
+						modifier = "mod_est_foundation_2_1"
+					}		
+				}
+			}
+		}
+		if = {
+			limit = {
+				Not = { has_global_flag = est_foundation_2_picked_flag }
+			}
+			set_global_flag = est_foundation_2_picked_flag
+		}
+	}
+	tradition_swap = {
+		name = tr_est_foundation_2_gestalt
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }	
+		modifier = {
+		planet_max_buildings_add = 2
+		}
+		weight = { factor = 1 }
+	}
+
+	ai_weight = { factor = 5000 }
+}
+
+tr_est_foundation_3 = {
+	possible = { has_tradition = tr_est_foundation_2 }
+	
+	modifier = {
+		country_base_influence_produces_add = 1
+	}
+	tradition_swap = {
+		name = tr_est_foundation_3_gestalt
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = { is_gestalt = yes }	
+		modifier = {
+		country_base_influence_produces_add = 1
+		}
+		weight = { factor = 1 }
+	}
+
+	ai_weight = { factor = 5000 }
+}
+
+tr_est_foundation_4 = {
+	possible = { has_tradition = tr_est_foundation_1 }
+	
+	modifier = {
+		intel_encryption_add = 1
+		science_ship_survey_speed = 0.20
+	}
+	tradition_swap = {
+		name = tr_est_foundation_4_gestalt
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }	
+		modifier = {
+		intel_encryption_add = 1
+		science_ship_survey_speed = 0.20
+		}
+		weight = { factor = 1 }
+	}
+
+	ai_weight = { factor = 5000 }
+}
+
+tr_est_foundation_5 = {
+	possible = { has_tradition = tr_est_foundation_1 }
+
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.10
+	}
+	tradition_swap = {
+		name = tr_est_foundation_5_gestalt
+		inherit_icon = yes
+		trigger = { is_gestalt = yes }	
+		modifier = {
+        planet_jobs_complex_drone_produces_mult = 0.10
+		}
+		weight = { factor = 1 }
+	}
+
+	ai_weight = { factor = 5000 }
+}

@@ -1,0 +1,94 @@
+d_origin_archeology = {
+	icon = d_ruins_large
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	potential = { always = no }
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			minor_artifacts = 0.08
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_upgraded_capital = yes
+		}
+		modifier = { job_researcher_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_major_upgraded_capital = yes
+		}
+		modifier = { job_researcher_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_fully_upgraded_capital = yes
+		}
+		modifier = { job_researcher_add = 4 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_upgraded_capital = yes
+		}
+		modifier = { job_brain_drone_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_major_upgraded_capital = yes
+		}
+		modifier = { job_brain_drone_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_fully_upgraded_capital = yes
+		}
+		modifier = { job_brain_drone_add = 4 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_upgraded_capital = yes
+		}
+		modifier = { job_calculator_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_major_upgraded_capital = yes
+		}
+		modifier = { job_calculator_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_fully_upgraded_capital = yes
+		}
+		modifier = { job_calculator_add = 4 }
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

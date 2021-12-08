@@ -1,0 +1,25 @@
+origin_messiah_cult = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_messiah_cult.dds"
+	picture = GFX_origin_messiah_cult
+	max_once_global = yes
+	modification = no
+
+	playable = {
+	}
+
+	possible = {
+		civics = {
+			value = civic_imperial_cult
+			NOT = { value = civic_robot_leader }
+		}
+	}
+
+	description = "origin_tooltip_messiah_cult_effects"
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 5
+	}
+ }

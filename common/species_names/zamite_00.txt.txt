@@ -1,0 +1,6 @@
+zamite = {
+	zamite = {
+		name = zamite
+		plural = zamites
+	}
+}

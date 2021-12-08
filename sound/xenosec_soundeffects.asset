@@ -1,0 +1,18 @@
+# xenosec
+
+soundeffect = {
+	name = xenosec_pops_move
+	sounds = {
+		sound = xenosec_pops_move_01
+		sound = xenosec_pops_move_02
+		sound = xenosec_pops_move_03
+		sound = xenosec_pops_move_04
+		sound = xenosec_pops_move_05
+		sound = xenosec_pops_move_06
+		sound = xenosec_pops_move_07
+		sound = xenosec_pops_move_08
+		sound = xenosec_pops_move_09
+		sound = xenosec_pops_move_10
+	}
+	volume = 0.40
+}

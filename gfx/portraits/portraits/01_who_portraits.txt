@@ -1,0 +1,24 @@
+portraits = {
+#	dalek = { texturefile = "gfx/models/portraits/dalek/dalek.dds" }
+#	cyberman = { texturefile = "gfx/models/portraits/cyberman/cyberman.dds"	}
+
+	dalek = {
+		entity = "portrait_dalek_01_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "robot_human_greetings"
+		character_textures = {
+			"gfx/models/portraits/dalek/dalek01.dds"	
+		}
+	}
+
+	cyberman = {
+		entity = "portrait_cyberman_01_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "robot_human_greetings"
+		character_textures = {
+			"gfx/models/portraits/cyberman/cyberman01.dds"
+		}
+	}
+}

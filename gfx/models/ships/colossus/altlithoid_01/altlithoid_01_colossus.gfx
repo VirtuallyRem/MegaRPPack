@@ -1,0 +1,30 @@
+objectTypes = {
+	pdxmesh = {
+		name = "altlithoid_01_colossus_mesh"
+		file = "gfx/models/ships/colossus/altlithoid_01/altlithoid_01_colossus.mesh"
+		
+		animation = { id = "idle"		type = "altlithoid_01_colossus_idle_animation" }
+		animation = { id = "open"		type = "altlithoid_01_colossus_open_animation" }
+		animation = { id = "opening"	type = "altlithoid_01_colossus_opening_animation" }
+		animation = { id = "closing"	type = "altlithoid_01_colossus_closing_animation" }
+
+
+		meshsettings = {
+			name = "coreShape"
+			index = 0
+			texture_diffuse = "altlithoid_01_colossus_diffuse.dds"
+			texture_normal = "altlithoid_01_colossus_normal.dds"
+			texture_specular = "altlithoid_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "arm1Shape"
+			index = 0
+			texture_diffuse = "altlithoid_01_crystals_dark_diffuse.dds"
+			texture_normal = "altlithoid_01_crystals_dark_normal.dds"
+			texture_specular = "altlithoid_01_crystals_dark_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,1377 @@
+ethic_categories = {
+	col = {}
+
+	xen = {}
+
+	mil = {}
+
+	spi = {}
+
+	hive = {}
+}
+
+ethic_fanatic_authoritarian = {
+	cost = 2
+	category = "col"
+	category_value = 0
+
+	use_for_pops = no
+
+	regular_variant = ethic_authoritarian
+
+	country_modifier = {
+		country_base_influence_produces_add = 1
+		planet_jobs_worker_produces_mult = 0.1
+	}
+
+	tags = {
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_ONLY_AUTOCRACY
+	}
+
+	random_weight = {
+		value = 150
+	}
+}
+
+ethic_authoritarian = {
+	cost = 1
+	category = "col"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_authoritarian
+
+	country_modifier = {
+		country_base_influence_produces_add = 0.5
+		planet_jobs_worker_produces_mult = 0.05
+	}
+
+	tags = {
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_NEVER_DEMOCRACY
+	}
+
+	random_weight = {
+		value = 100
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_AUTHORITARIAN_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			has_faction = totalitarian
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = totalitarian }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_authoritarian
+								has_ethic = ethic_authoritarian
+							}
+						}
+					}
+				}
+			}
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_authoritarian }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_authoritarian }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			has_faction = totalitarian
+		}
+		modifier = {
+			factor = 1.5
+			exists = ruler
+			ruler = { leader_of_faction = totalitarian }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+		
+	}
+}
+
+ethic_fanatic_egalitarian = {
+	cost = 2
+	category = "col"
+	category_value = 4
+
+	category_opposite = yes
+
+	regular_variant = ethic_egalitarian
+
+	use_for_pops = no
+
+	tags = {
+		ETHIC_ONLY_DEMOCRACY
+	}
+
+	country_modifier = {
+		pop_factions_influence_produces_mult = 0.5
+		planet_resettlement_unemployed_mult = 2
+	}
+
+	random_weight = {
+		value = 150
+	}
+}
+
+ethic_egalitarian = {
+	cost = 1
+	category = "col"
+	category_value = 3
+
+	fanatic_variant = ethic_fanatic_egalitarian
+
+	category_opposite = yes
+
+	tags = {
+		ETHIC_NEVER_AUTOCRACY
+	}
+
+	country_modifier = {
+		pop_factions_influence_produces_mult = 0.25
+		planet_resettlement_unemployed_mult = 1
+	}
+
+	random_weight = {
+		value = 100
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_EGALITARIAN_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			has_faction = progressive
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = progressive }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_egalitarian
+								has_ethic = ethic_egalitarian
+							}
+						}
+					}
+				}
+			}
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_egalitarian }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_egalitarian }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			has_faction = progressive
+		}
+		modifier = {
+			factor = 1.5
+			exists = ruler
+			ruler = { leader_of_faction = progressive }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_xenophobe = {
+	cost = 2
+	category = "xen"
+	category_value = 0
+
+	use_for_pops = no
+
+	regular_variant = ethic_xenophobe
+
+	tags = {
+		ETHIC_ALLOWS_PURGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_REDUCED_DIPLOMACY
+		ETHIC_NEVER_ALIEN_CITIZENSHIP
+		ETHIC_NEVER_ALIEN_MILITARY_SERVICE
+		ETHIC_NO_REFUGEES
+	}
+
+	country_modifier = {
+		country_starbase_influence_cost_mult = -0.4
+		intel_encryption_add = 2
+	}
+
+	random_weight = {
+		value = 150
+	}
+}
+
+ethic_xenophobe = {
+	cost = 1
+	category = "xen"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_xenophobe
+
+	tags = {
+		ETHIC_ALLOWS_PURGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_REDUCED_DIPLOMACY
+		ETHIC_NEVER_ALIEN_CITIZENSHIP
+		ETHIC_NEVER_ALIEN_MILITARY_SERVICE
+		ETHIC_NO_REFUGEES
+	}
+
+	country_modifier = {
+		country_starbase_influence_cost_mult = -0.2
+		intel_encryption_add = 1
+	}
+
+	random_weight = {
+		value = 100
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_XENOPHOBE_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = {
+				OR = {
+					leader_of_faction = supremacist
+					leader_of_faction = isolationist
+				}
+			}
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_xenophobe
+								has_ethic = ethic_xenophobe
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_faction = supremacist
+				has_faction = isolationist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			exists = ruler
+			ruler = {
+				OR = {
+					leader_of_faction = supremacist
+					leader_of_faction = isolationist
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophobe }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_xenophobe }
+			}
+		}
+	}
+
+	#from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_xenophile = {
+	cost = 2
+	category = "xen"
+	category_value = 4
+
+	category_opposite = yes
+
+	regular_variant = ethic_xenophile
+
+	use_for_pops = no
+
+	tags = {
+		ETHIC_IMPROVED_DIPLOMACY
+		ETHIC_ALWAYS_REFUGEES
+		ETHIC_DISALLOWS_SLAVERY
+		ETHIC_DISALLOWS_DISPLACE
+	}
+
+	country_modifier = {
+		pop_growth_from_immigration = 0.50
+		envoys_add = 2
+	}
+
+	random_weight = {
+		value = 100
+	}
+}
+
+ethic_xenophile = {
+	cost = 1
+	category = "xen"
+	category_value = 3
+
+	category_opposite = yes
+
+	fanatic_variant = ethic_fanatic_xenophile
+
+	tags = {
+		ETHIC_IMPROVED_DIPLOMACY
+		ETHIC_ALWAYS_REFUGEES
+		ETHIC_DISALLOWS_SLAVERY
+		ETHIC_DISALLOWS_DISPLACE
+	}
+
+	country_modifier = {
+		pop_growth_from_immigration = 0.25
+		envoys_add = 1
+	}
+
+	random_weight = {
+		value = 66
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_XENOPHILE_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			has_faction = xenoist
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = xenoist }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_xenophile
+								has_ethic = ethic_xenophile
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			has_faction = xenoist
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			exists = ruler
+			ruler = { leader_of_faction = xenoist }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophile }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_xenophile }
+			}
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_militarist = {
+	cost = 2
+	category = "mil"
+	category_value = 0
+
+	use_for_pops = no
+
+	regular_variant = ethic_militarist
+
+	tags = {
+		ETHIC_ALLOW_NO_RETREAT
+	}
+
+	country_modifier = {
+		country_claim_influence_cost_mult = -0.2
+		ship_fire_rate_mult = 0.20
+	}
+
+	# more common ethic
+	random_weight = {
+		value = 250
+	}
+}
+
+ethic_militarist = {
+	cost = 1
+	category = "mil"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_militarist
+
+	tags = {
+		ETHIC_ALLOW_NO_RETREAT
+	}
+
+	country_modifier = {
+		country_claim_influence_cost_mult = -0.1
+		ship_fire_rate_mult = 0.10
+	}
+
+	# more common ethic
+	random_weight = {
+		value = 150
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_MILITARIST_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+			has_faction = imperialist
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = imperialist }
+		}
+	}
+
+	# from = planet
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_militarist
+								has_ethic = ethic_militarist
+							}
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+			has_faction = imperialist
+		}
+
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			exists = ruler
+			ruler = { leader_of_faction = imperialist }
+		}
+		
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_militarist }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_militarist }
+			}
+		}
+		modifier = {
+			factor = 2 #If the empire is losing planets, militarism should increase
+			any_relation = {
+				any_owned_planet = {
+					is_original_owner = root
+				}
+			}
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_pacifist = {
+	cost = 2
+	category = "mil"
+	category_value = 4
+
+	category_opposite = yes
+
+	regular_variant = ethic_pacifist
+
+	use_for_pops = no
+
+	tags = {
+		ETHIC_DISALLOW_OFFENSIVE_WARS
+		ETHIC_DISALLOW_FULL_BOMBARDMENT
+	}
+
+	country_modifier = {
+		empire_size_pops_mult = -0.30
+		planet_stability_add = 10
+	}
+
+	random_weight = {
+		value = 33 		# rare ethic
+	}
+}
+
+ethic_pacifist = {
+	cost = 1
+	category = "mil"
+	category_value = 3
+
+	category_opposite = yes
+
+	fanatic_variant = ethic_fanatic_pacifist
+
+	country_modifier = {
+		empire_size_pops_mult = -0.15
+		planet_stability_add = 5
+	}
+
+	tags = {
+		ETHIC_DISALLOW_CONQUEST_WARS
+		ETHIC_DISALLOW_FULL_BOMBARDMENT
+	}
+
+	random_weight = {
+		value = 66	# uncommon ethic
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_PACIFIST_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+			has_faction = prosperity
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = prosperity }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_pacifist
+								has_ethic = ethic_pacifist
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+			has_faction = prosperity
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			exists = ruler
+			ruler = { leader_of_faction = prosperity }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_pacifist }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_pacifist }
+			}
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_spiritualist = {
+	cost = 2
+	category = "spi"
+	category_value = 0
+
+	regular_variant = ethic_spiritualist
+
+	use_for_pops = no
+
+	tags = {
+		ETHIC_ALLOWS_TEMPLE
+	}
+
+	country_modifier = {
+		country_unity_produces_mult = 0.20
+		edicts_cost_mult = -0.10
+	}
+
+	random_weight = {
+		value = 150
+	}
+}
+
+ethic_spiritualist = {
+	cost = 1
+	category = "spi"
+	category_value = 1
+
+	fanatic_variant = ethic_fanatic_spiritualist
+
+	tags = {
+		ETHIC_ALLOWS_TEMPLE
+	}
+
+	country_modifier = {
+		country_unity_produces_mult = 0.10
+		edicts_cost_mult = -0.05
+	}
+
+	random_weight = {
+		value = 100
+	}
+
+	pop_attraction_tag = {
+		desc = 	POP_ATTRACTION_SPIRITUALIST_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			has_faction = traditionalist
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = traditionalist }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_spiritualist
+								has_ethic = ethic_spiritualist
+							}
+						}
+					}
+				}
+			}
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_spiritualist }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_spiritualist }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			has_faction = traditionalist
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			exists = ruler
+			ruler = { leader_of_faction = traditionalist }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+	}
+}
+
+ethic_fanatic_materialist = {
+	cost = 2
+	category = "spi"
+	category_value = 4
+
+	regular_variant = ethic_materialist
+
+	category_opposite = yes
+
+	use_for_pops = no
+
+	tags = {
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_DISALLOW_BAN_AI
+	}
+
+	country_modifier = {
+		planet_pops_robotics_upkeep_mult = -0.2
+		planet_structures_upkeep_mult = -0.20
+	}
+
+	random_weight = {
+		value = 150
+	}
+}
+
+ethic_materialist = {
+	cost = 1
+	category = "spi"
+	category_value = 3
+
+	fanatic_variant = ethic_fanatic_materialist
+
+	category_opposite = yes
+
+	tags = {
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_DISALLOW_BAN_AI
+	}
+
+	country_modifier = {
+		planet_pops_robotics_upkeep_mult = -0.1
+		planet_structures_upkeep_mult = -0.10
+	}
+
+	random_weight = {
+		value = 100
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_MATERIALIST_POS
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FACTION_POS
+		trigger = {
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			has_faction = technologist
+		}
+	}
+
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_RULER_FACTION_POS
+		trigger = {
+			exists = ruler
+			ruler = { leader_of_faction = technologist }
+		}
+	}
+
+	country_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				is_country_type = default
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				AND = {
+					is_country_type = primitive
+					capital_scope = {
+						has_observation_outpost = yes
+						observation_outpost = {
+							has_mission = native_indoctrination
+						}
+						observation_outpost_owner = {
+							OR = {
+								has_ethic = ethic_fanatic_materialist
+								has_ethic = ethic_materialist
+							}
+						}
+					}
+				}
+			}
+		}
+		# Effects of indoctrination mission
+		modifier = {
+			factor = 20
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_materialist }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_country_type = primitive
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_mission = native_indoctrination
+				}
+				observation_outpost_owner = { has_ethic = ethic_materialist }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			has_faction = technologist
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			exists = ruler
+			ruler = { leader_of_faction = technologist }
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+
+	# from = planet
+	pop_attraction = {
+		value = 1
+		modifier = {
+			factor = 0
+			has_trait = trait_hive_mind
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_job = priest
+				has_job = high_priest
+			}
+		}
+	}
+}
+
+ethic_gestalt_consciousness = {
+	playable = {
+		OR = {
+			host_has_dlc = "Utopia"
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+	}
+
+	cost = 5
+	category = "hive"
+	category_value = 0
+	use_for_pops = no
+
+	country_modifier = {
+		country_war_exhaustion_mult = -0.2
+		country_base_influence_produces_add = 1
+		intel_encryption_add = 2
+	}
+
+	tags = {
+		ETHIC_GESTALT_CONSCIOUSNESS_NO_TUTORIAL
+		ETHIC_GESTALT_CONSCIOUSNESS_AUTHORITY
+		ETHIC_GESTALT_CONSCIOUSNESS_IMMORTAL_RULER
+		ETHIC_GESTALT_CONSCIOUSNESS_NO_FACTIONS
+		ETHIC_GESTALT_CONSCIOUSNESS_DOMESTIC_POP_SURVIVAL
+		ETHIC_ALLOW_NO_RETREAT
+	}
+
+	random_weight = {
+		value = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = {
+					host_has_dlc = "Utopia"
+					host_has_dlc = "Synthetic Dawn Story Pack"
+				}
+				has_global_flag = game_started # additional traits (trait_hive_mind, trait_machine_unit) are only assigned and verified for empire designs, no effect after game start
+			}
+		}
+		modifier = {
+			factor = 2
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			host_has_dlc = "Utopia"
+			NOT = { has_global_flag = game_started }
+		}
+	}
+}

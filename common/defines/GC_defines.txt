@@ -1,0 +1,15 @@
+NGameplay = {
+
+		JOIN_COMMUNITY_INFLUENCE_COST = 0				# cost to join the community manually after its formation
+		LEAVE_COMMUNITY_MIN_INFLUENCE_COST = 0		# minimum cost to leave the galactic community
+		LEAVE_COMMUNITY_MAX_INFLUENCE_COST = 0		# maximum cost to leave the galactic community
+		LEAVE_COMMUNITY_INFLUENCE_COST_FACTOR = 0		# factor determining actual cost of leaving the community, this is multiplied with empire sprawl
+		LEFT_COMMUNITY_MODIFIER_TIMER = 0			# how many days the left_community_modifier will affect the leaving country
+		
+		RESOLUTION_VOTE_TIMER = 1080					# number of days a resolution will be on the senate floor before being passed/failed
+		RESOLUTION_VOTE_PREMATURE_TIMER = 580			# number of days until the custodian/emperor can prematurely end the senate session
+		SENATE_RECESS_TIMER = 360						# number of days until the next proposed resolution will be put on the floor after the current vote
+		COUNCIL_DIPLOMACY_WEIGHT_MODIFIER = 1.25            # how much a countries diplomatic weight will be increased when voting if on the council
+		CHANGE_VOTE_COOLDOWN = 30						# number of days after voting in a resolution before you can change your vote
+                CATEGORY_VOTE_COOLDOWN = 1080					# time before another resolution in a given category can proposed again
+}

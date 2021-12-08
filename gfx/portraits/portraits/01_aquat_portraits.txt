@@ -1,0 +1,11 @@
+portraits = { 
+aquat = { entity = "portrait_avian_13_entity" clothes_selector = "avian_massive_clothes_01" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/aquat/aquat.dds"
+"gfx/models/portraits/aquat/aquatyellow.dds"
+
+}
+}
+
+}

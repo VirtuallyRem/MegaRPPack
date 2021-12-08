@@ -1,0 +1,38 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_origin_one_small_step"
+		texturefile = "gfx/event_pictures/origins/origin_one_small_step.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_codominant_evolution"
+		texturefile = "gfx/event_pictures/origins/origin_codominant_evolution.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_engineered_race"
+		texturefile = "gfx/event_pictures/origins/origin_engineered_race.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_psionic_heritage"
+		texturefile = "gfx/event_pictures/origins/origin_psionic_heritage.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_host"
+		texturefile = "gfx/event_pictures/origins/origin_host.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_rapid_cybernetification"
+		texturefile = "gfx/event_pictures/origins/origin_rapid_cybernetification.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_synth_start"
+		texturefile = "gfx/event_pictures/origins/origin_synth_start.dds"
+		alwaystransparent = yes
+	}
+}

@@ -1,0 +1,236 @@
+#Miners Strike
+
+miners_strike_compromise {
+                icon = "gfx/interface/icons/trade_icons/trade_cat_minerals.dds"
+                pop_cat_worker_happiness = 0.1
+		planet_jobs_minerals_produces_mult = -0.10
+}
+miners_strike_violent {
+                icon = "gfx/interface/icons/trade_icons/trade_cat_minerals.dds"
+                pop_cat_worker_happiness = -0.1
+		planet_stability_add = -5
+}
+miners_strike_ignored {
+                icon = "gfx/interface/icons/trade_icons/trade_cat_minerals.dds"
+		planet_jobs_minerals_produces_mult = -0.20
+		planet_miners_minerals_produces_add = -2
+}
+###################
+
+#Rumblings of Dissent
+
+#Minor Corruption
+
+#Major Corruption
+
+#So much Corruption, we have more Corruption than we know what to do with
+
+#Financial Corruption
+
+#Military Corruption
+
+#Corruption Spiritual
+
+#Moral Corruption
+
+#Corruption of the Innocent
+
+#Judicial Corruption
+
+#More Corruption than Your Body has Room for
+
+#Treachery
+
+#Dynastic/Factional Treachery
+
+#A Traitor in the Ranks
+
+#Political Renegade
+
+#Military Renegade
+
+#Factional Renegade
+
+#Economic Renegade
+
+#HERESY
+
+#Nobody expects the  Inquisition!
+
+#Religious Dissent
+
+#Scientific Dissent
+
+#Academic Dissent
+
+#Counter-Cultural Movements, man
+
+#Political Opposition
+
+#Political Opposition, In the Opposition
+
+#Fucking Communists
+
+#The Ancaps are here again
+
+#It’s Revolution, Baby
+
+#VIVE LA ROI
+
+#Conspiracies and Plots
+
+#Seditious Gossip
+
+#Actual Goddamn Coups
+
+#Strike Action
+
+#GENERAL STRIKE NOW
+
+#Galt’s Gulch
+
+#Minor Rebellion
+
+#Major Rebellion
+
+#Secession
+
+#Coup
+
+#Marauder Raiding
+
+#Grand Theft
+
+#Shipping Raids
+
+#Sabotage
+
+#Prison Break
+
+#Local Warfare
+
+#Minor Invasion
+
+#Major Invasion
+
+#Psionic Attack
+
+#Assassination!
+
+#Drugs.
+
+#Underground Slave Markets (or Slave Liberation)
+
+#Wave-men
+
+#The Great Oolong War
+
+#Smugglers
+
+#Malicious Compliance
+
+#Oregano
+
+#Anyway, that’s how I lost my medical license.
+
+#THE DOCTOR IS IN
+
+#Real Horrorshow
+
+#Kingpin
+
+#Jack
+
+#WHALE FIGHTS
+
+#Spyplanes
+
+#Hunt for Red October
+
+#Skimming Bureaucrats
+
+#Casino Caravaneers
+
+#Machiavelli had a point
+
+#Twins, Basil
+
+#Star Fog
+
+#Planetary Storms
+
+#Dimensional Portal
+
+#Comet Fall
+
+#Burning Heat
+
+#Lightning Strike
+
+#Storm Surge
+
+#Landslide
+
+#Massive Lightning
+
+#Flooding
+
+#Animal Rampage!
+
+#Sinking
+
+#Acid Rain
+
+#Starslime
+
+#Earthquake
+
+#Leaden Zone
+
+#THEY CAME FROM BELOW
+
+#Volcanic Eruption
+
+#Lavaflow
+
+#Red Starmist
+
+#Screams of the Fallen
+
+#Encroachment of Forests
+
+#Poison Rain
+
+#Contamination
+
+#Industrial Collapse
+
+#Maddened Robots!
+
+#Supergeyser
+
+#Caravaneer Market
+
+#Indulgent Mist
+
+#Extravagant Mist
+
+#Chill Mist
+
+#Poisonous Gases
+
+#A Beggaring
+
+#Glacial Collapse
+
+#PULL THE LEVER
+
+#Under the Weight
+
+#Time after Time
+
+#Solar Flare
+
+#Healing Crystals
+
+#THE SUN! THE SUN! THE SUN! T-

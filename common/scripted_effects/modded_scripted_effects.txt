@@ -1,0 +1,565 @@
+#Resolutions
+
+breach_fix_resolution_greatergood_balance_in_the_middle = {
+	if = {
+		limit = {
+			is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+			in_breach_of = resolution_greatergood_balance_in_the_middle
+			is_gestalt = no
+			NOR = {
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_slaver_guilds
+			}
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = enslavement_ratio
+				option = no_enslavement
+				cooldown = no
+			}
+			every_owned_species = {
+				limit = {
+					is_sapient = yes
+					has_citizenship_type = { type = citizenship_slavery country = prev }
+				}
+				set_citizenship_type = { type = citizenship_limited country = prev }
+			}
+		}
+		custom_tooltip = "federations.10210.freeslaves"
+	}
+	if = {
+		limit = {
+			is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+			in_breach_of = resolution_greatergood_balance_in_the_middle
+			is_gestalt = no
+			NOR = {
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_slaver_guilds
+			}
+		}
+		hidden_effect = {
+			every_owned_species = {
+				limit = {
+					is_sapient = yes
+					OR = {
+						has_living_standard = { type = living_standard_subsistence country = prev }
+						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_normal country = prev }
+						has_living_standard = { type = living_standard_academic_privilege country = prev }
+					}
+				}
+				set_living_standard = { type = living_standard_good country = prev }
+			}
+		}
+		custom_tooltip = "federations.10220.living_standard"
+	}
+}
+
+breach_fix_resolution_greatergood_universal_prosperity_mandate_freeslaves = {
+	if = {
+		limit = {
+			is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			in_breach_of = resolution_greatergood_universal_prosperity_mandate
+			is_gestalt = no
+			NOR = {
+				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_slaver_guilds
+			}
+		}
+		hidden_effect = {
+			set_policy = {
+				policy = enslavement_ratio
+				option = no_enslavement
+				cooldown = no
+			}
+			every_owned_species = {
+				limit = {
+					is_sapient = yes
+					has_citizenship_type = { type = citizenship_slavery country = prev }
+				}
+				set_citizenship_type = { type = citizenship_limited country = prev }
+			}
+		}
+		custom_tooltip = "federations.10210.freeslaves"
+	}
+}
+
+
+#Machine Uprising
+
+fire_warning_sign = {
+	if = {
+		limit = { # trigger from syndaw.401
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			is_multiplayer = no
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_country_flag = synthetic_empire
+				has_policy_flag = ai_full_rights
+				has_country_flag = no_machine_uprising
+				has_policy_flag = robots_outlawed
+				has_ascension_perk = ap_enigmatic_engineering
+			}
+			OR = {
+				has_technology = tech_combat_computers_3
+				has_technology = tech_synthetic_workers
+			}
+		}
+
+		random_list = { # 9 warning sign events + 1 uprising
+			10 = {
+				country_event = {
+					id = syndaw.500
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_500
+						NOT = { has_technology = tech_administrative_ai }
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = syndaw.505
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_built_species = no
+						has_country_flag = triggered_syndaw_505
+						NOT = {
+							any_owned_planet = {
+								is_occupied_flag = no
+								free_housing > 5
+								any_owned_pop = {
+									NOT = {
+										has_trait = trait_mechanical
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = syndaw.510
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_510
+						NOT = { any_owned_ship = { is_ship_size = mining_station } }
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = syndaw.515
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_515
+						NOR = {
+							has_technology = tech_rare_crystals
+							has_technology = tech_volatile_motes
+							has_technology = tech_exotic_gases
+							has_technology = tech_mine_living_metal
+							has_technology = tech_mine_zro
+							has_technology = tech_mine_dark_matter
+							has_technology = tech_terrestrial_sculpting
+						}
+					}
+				}
+			}
+			10 = {
+				random_owned_planet = {
+					limit = {
+						is_occupied_flag = no
+						any_owned_pop = { has_job = researcher }
+					}
+					planet_event = {
+						id = syndaw.520
+						days = 180 random = 720
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_520
+						NOT = {
+							any_owned_planet = {
+								any_owned_pop = { has_job = researcher }
+							}
+						}
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = syndaw.525
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_525
+						NOT = {
+							any_owned_planet = {
+								is_occupied_flag = no
+								any_owned_pop = { has_trait = trait_mechanical }
+							}
+						}
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = syndaw.530
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_530
+						is_at_war = yes
+						NOR = {
+							has_technology = tech_combat_computers_1
+							any_owned_fleet = {
+								is_in_combat = no
+								count_owned_ship = {
+									count > 1
+									limit = {
+										OR = {
+											is_ship_size = corvette
+											is_ship_size = destroyer
+											is_ship_size = cruiser
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			10 = {
+				country_event = { id = syndaw.535 }
+				modifier = {
+					factor = 0
+					has_country_flag = triggered_syndaw_535
+				}
+			}
+			10 = {
+				random_owned_planet = {
+					limit = {
+						is_occupied_flag = no
+						OR = {
+							any_owned_pop = {
+								has_trait = trait_mechanical
+							}
+							owner = {
+								any_owned_army = {
+									exists = planet
+									planet = { is_same_value = root }
+									OR = {
+										army_type = robotic_army
+										army_type = robotic_defense_army
+									}
+								}
+							}
+						}
+					}
+					planet_event = {
+						id = syndaw.540
+						days = 180 random = 720
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_540
+						NOT = {
+							any_owned_planet = {
+								is_occupied_flag = no
+								OR = {
+									any_owned_pop = {
+										has_trait = trait_mechanical
+									}
+									owner = {
+										any_owned_army = {
+											exists = planet
+											planet = { is_same_value = root }
+											OR = {
+												army_type = robotic_army
+												army_type = robotic_defense_army
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			10 = { # does this unit have a soul
+				random_owned_planet = {
+					limit = {
+						is_occupied_flag = no
+						any_owned_pop = {
+							has_trait = trait_mechanical
+						}
+					}
+					planet_event = {
+						id = syndaw.545
+						days = 180 random = 720
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_545
+						NOT = {
+							any_owned_planet = {
+								is_occupied_flag = no
+								any_owned_pop = {
+									has_trait = trait_mechanical
+								}
+							}
+						}
+					}
+				}
+			}
+			1 = { # patch the uprising
+				country_event = {
+					id = syndaw.550
+					days = 180 random = 720
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = triggered_syndaw_550
+						NOR = {
+							has_country_flag = triggered_syndaw_500
+							has_country_flag = triggered_syndaw_505
+							has_country_flag = triggered_syndaw_515
+							has_country_flag = triggered_syndaw_520
+							has_country_flag = triggered_syndaw_525
+							has_country_flag = triggered_syndaw_530
+							has_country_flag = triggered_syndaw_535
+							has_country_flag = triggered_syndaw_540
+							has_country_flag = triggered_syndaw_545
+						}
+					}
+				}
+			}
+			1 = { # machine uprising
+				country_event = {
+					id = syndaw.1000
+					days = 180 random = 720
+				}
+			}
+		}
+	}
+}
+
+#Espionage
+
+operation_random_events_regular_regular = {
+	random_list = {
+		2 = { #Contact Lost
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_contact_lost
+			}
+			country_event = { id = operation.5000 }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			country_event = { id = operation.5005 }
+		}
+		1 = { #Snuffed Out
+			modifier = {
+				factor = 1.25
+				root.target = {
+					OR = {
+						has_valid_civic = civic_fanatic_purifiers
+						has_origin = origin_necrophage
+					}
+				}
+			}
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Drain on Resources
+			modifier = {
+				factor = 0.3
+				has_country_flag = recent_op_drain_resources
+				OR = { #Criminal Assets skew the usual time-out
+					root = { has_espionage_asset_criminal = yes }
+					root.spynetwork = { has_espionage_asset_criminal = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drain_resources
+				NOR = {
+					root = { has_espionage_asset_criminal = yes }
+					root.spynetwork = { has_espionage_asset_criminal = yes }
+				}
+			}
+			country_event = { id = operation.5040 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+	}
+}
+
+operation_random_events_regular_gestalt = {
+	random_list = {
+		1 = { #Contact Lost
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_contact_lost
+			}
+			country_event = { id = operation.5000 }
+		}
+		1 = { #Apprehended by Hunter-Seeker Drones
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			country_event = { id = operation.5010 }
+		}
+		1 = { #Snuffed Out
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+	}
+}
+
+operation_random_events_gestalt_regular = {
+	random_list = {
+		1 = { #Multi-Phasic Force Fields
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_multiphasic_interference
+			}
+			country_event = { id = operation.5015 }
+		}
+		1 = { #Snuffed Out
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+	}
+}
+
+operation_random_events_gestalt_gestalt = {
+	random_list = {
+		1 = { #Apprehended by Hunter-Seeker Drones (regular/hive vs. gestalt)
+			modifier = {
+				factor = 0
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			country_event = { id = operation.5010 }
+		}
+		1 = { #Mistaken for Food (gestalt vs. hive)
+			modifier = {
+				factor = 0
+				root.target = { is_machine_empire = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drones_hunted
+			}
+			country_event = { id = operation.5020 }
+		}
+		1 = { #Toxic Field Work (hive vs. hive)
+			modifier = {
+				factor = 0
+				OR = {
+					is_machine_empire = yes
+					root.target = { is_machine_empire = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_toxic_field
+			}
+			country_event = { id = operation.5025 }
+		}
+		1 = { #Excess Noise (machine vs. machine)
+			modifier = {
+				factor = 0
+				OR = {
+					is_hive_empire = yes
+					root.target = { is_hive_empire = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1 has_country_flag = recent_op_excess_noise
+			}
+			country_event = { id = operation.5030 }
+		}
+		1 = { #Snuffed Out
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+	}
+}

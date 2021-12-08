@@ -1,0 +1,11 @@
+portraits = { 
+vibran = { entity = "portrait_reptilian_16_entity" clothes_selector = "no_texture" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/vibran/vibran.dds"
+"gfx/models/portraits/vibran/vibrangreen.dds"
+
+}
+}
+
+}

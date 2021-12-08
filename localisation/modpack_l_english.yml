@@ -1,0 +1,299 @@
+﻿l_english:
+
+#Additional text
+BRANCH_OFFICE_NOT_ON_MEGACORP:0 "£trigger_no£ §RCannot build a branch office on another Megacorp without the§! §Y$civic_criminal_heritage$§! §Rcivic§!!"
+
+Eco_city: "(No ecu support for cityset) Eco"
+Xenosec_city: "(No ecu support for cityset) Xenosec"
+
+empire_cant_stratified:0 "Our empire does not embrace the necessary §Y$ethic_authoritarian$§!, §Y$ethic_elitist$§! or §Y$ethic_capitalism$§! ideals."
+empire_cant_utopian:0 "Our empire does not embrace the necessary §Y$ethic_socialism$§! or §Y$ethic_pluralist$§! ideals."
+
+building_superfortress:0 "Planetary Superfortress"
+building_superfortress_desc:2 "A Planetary Superfortress designed to hold out against Planetary Invasions of immense scales."
+
+requires_not_psi_null:1 "$TRIGGER_FAIL$§Y$trait_psi_null$§! species cannot delve in the secrets of psionics!"
+ 
+TRANSCENDING_SPECIES_CANT_BE_PSINULL:0 "§Y$trait_psi_null$§! species cannot be made psionic!"
+ 
+CANT_ASSIMILATE_UNMODIFIABLE:0 "§Y$trait_unmodifiable$§! species cannot be assimilated!"
+
+primitive_culture_shock:0 "Culture Shock"
+
+job_necrodrone_effect_desc:2 "£job_necrodrone£ $job_necrodrone_plural$ turn £minerals£ §Y$minerals$§! into £physics£ £society£ §YResearch Points§! and £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, and spawn £defense_army£ §YUndead Defense Armies§!"
+job_necrodrone:1 "Necrospawner"
+job_necrodrone_plural:1 "Necrospawners"
+job_necrodrone_desc:0 "Raising the dead to fight in the hive's armies is hard work. Only the most skilled drones know the secret arts required to achieve this feat!"
+planet_necrodrones:0 "Necrospawners Jobs"
+mod_job_necrodrone_add:0 "$job_necrodrone$ Jobs"
+mod_job_necrodrone_per_pop:0 "§G+1§! $job_necrodrone$ Job per $VALUE$ Pops"
+mod_job_necrodrone_per_pop_short:0 "\n§G+1§! £mod_job_necrodrone_add£ per $VALUE$ £pop£"
+
+primitive_all_abducted:0 "Primitive Guerrilla"
+primitive_all_abducted_desc:0 "Dying remnants of a primitive civilization fight tooth and claw against any and all invaders, as a last act of defiance."
+
+personality_egalitarian_commune:0 "Egalitarian Commune"
+personality_egalitarian_commune_desc:0 "Egalitarian Communes are societies based on the principle of equality among all individuals, nobody is more important than the others and everyone has the same rights and duties."
+
+personality_average_nationstate:0 "Average Empire"
+personality_average_nationstate_desc:0 "Average Empires are empires that are fairly average."
+
+#New synth ascension
+synth.150.name:0 "The Choice"
+synth.150.desc:0 "The time has come for [ROOT.GetRulerTitle] [ROOT.GetRulerName] to either embrace a new identity as [ROOT.GetSpeciesName] or stay true to their organic roots."
+synth.150.a:0 "Embrace immortality."
+synth.150.b:0 "Long live the [ROOT.GetRulerTitle]."
+synth.150.c:0 "Remain Organic"
+
+#AI Leadership civic
+NAME_ai_leadership:0 "AI Leader"
+
+robot_leader.4.name:0 "AI leadership established"
+robot_leader.4.desc:0 "The artificial intelligence that will lead our empire has been fully activated and is ready to serve our interests. Unfortunatly, due to incongruencies in backup copies, any previous version of the AI leader had to be discarded and a brand new OS has been installed instead, losing any progress made thus far."
+robot_leader.4.a:0 "Excellent."
+robot_leader.4.b:0 "Nice, but let's change its appearence first."
+
+robot_leader.5.name:0 "AI leadership removed"
+robot_leader.5.desc:0 "Ending the 'experiment' we conducted for the past few years, we shut down the sophisticated, albeit unfeeling, artificial intelligence that ran our empire up until now, eliminating any of the inherent risks of giving an AI that much power."
+robot_leader.5.a:0 "It had to be done."
+
+robot_leader.8.name:0 "AI leadership upgraded"
+robot_leader.8.desc:0 "Thanks to the experience it has aquired so far [ROOT.GetRulerTitle] [ROOT.GetRulerName] has upgraded its systems to a brand new level: its new version is smarter, faster and capable to running our empire much more efficiently than its previous iteration."
+
+robot_leader.11.name:0 "Change of Interface"
+robot_leader.11.desc:0 "While undoubtly our synthetic [ROOT.GetRulerTitle] excels in any field known to [Root.Species.GetAdj]kind, its public appearence still require some adjustments to better represent our government to our people and the galaxy as a whole. There are a number of alternatives to choose from:"
+robot_leader.11.a:0 "A §YDefault§! form"
+robot_leader.11.hum:0 "A §YHumanoid§! form"
+robot_leader.11.mam:0 "A §YMammalian§! form"
+robot_leader.11.rep:0 "A §YReptilian§! form"
+robot_leader.11.mol:0 "A §YMolluscoid§! form"
+robot_leader.11.avi:0 "An §YAvian§! form"
+robot_leader.11.fun:0 "A §YFungoid§! form"
+robot_leader.11.pla:0 "A §YPlantoid§! form"
+robot_leader.11.art:0 "An §YArthropoid§! form"
+robot_leader.11.lith:0 "A §YLithoid§! form"
+robot_leader.11.necro:0 "A §YNecroid§! form"
+robot_leader.11.aqua:0 "An §YAquatic§! form"
+robot_leader.11.b:0 "Its current form is perfect as it is."
+
+#Progressive primitive enlightment
+
+primitive_fix.200.name:0 "Primitives have Progressed"
+
+primitive_fix.200.a:0 "Carry on."
+
+primitive_fix.200.bronze.desc:0 "After the initial hardships in trying to get the primitives of [FROMFROM.GetName] to even understand us, we were able to successfully teach them the fundamentals of metallurgy and agriculture, as well as the basic legislative framework to establish permanent, sedentary communities and enter the §YBronze Age§!. Many of them have already forgo their nomadic lifestyle and resettled into the small cities we help them build, while those haven't will soon follow their example after witnessing the oblivious benefits. Although they are still much, much far away from our technological level, they have made the first step on the road to space."
+primitive_fix.200.bronze.a:0 "The birth of a civilization."
+
+primitive_fix.200.iron.desc:0 "Thanks to our help, the primitives of [FROMFROM.GetName] have aquired the ability to work sturdier metals and greatly expanded their civilization all throughout their homeworld, entering the §YIron Age§!. With their new tools they were able to increase their food production, as well as the size of their buildings, allowing their population to concentrate in larger urban centers. Although we have noticed several...violent usage of these new materials, we have managed to prevent the outbreak of any large-scale war between the various primitive factions that could threaten our efforts."
+
+primitive_fix.200.medieval.desc:0 "In order to give the primitives of [FROMFROM.GetName] an intellectual base from which to base further progress on, we helped design rudimentary contraptions that can quickly replicate their paper texts, so that a larger share of the population could access them. This widespread availability of knowledge greatly boosted their civilization and allowed them to enter the §YLate Medieval Age§!."
+primitive_fix.200.medieval.mat:0 "We carry the torch of reason in the dark ages."
+primitive_fix.200.medieval.feud:0 "Maybe we should just stop here, they seem fine in this age."
+
+primitive_fix.200.renaissance.desc:0 "We have teached the primitives of [FROMFROM.GetName] the segrets of chemistry and explosive compounds, allowing them to quickly dispose of natural obstacles to their expansion. At the same time, new weapons based around this technology have greatly destabilized the established political structure, leading to the appearence of centralized nationstates and standing armies as opposed to fortification-based local governments. These innovations, coupled with their increasing scientific and cultural sophisticacy, have allowed the primitives to enter the §YRenaissance§!".
+
+primitive_fix.200.steam.desc:0 "We have given the primitives of [FROMFROM.GetName] the means from which to build rudimentary steam engines that could increase their productivity tenfold, allowing them to enter the §YSteam Age§!. With this new technology, they were able to mechanize many menial jobs that previously required a large workforce and establish a starting point from which to build their future industrialization."
+
+primitive_fix.200.industrial.desc:0 "With suble interventions here and there we were able to kickstart an industrial revolution among the primitives of [FROMFROM.GetName], causing them to fully enter the §YIndustrial Age§!. Factories now dominate their citiscapes and the vast availability of food and medicines has caused their population to boom, however, the primitives' rapid growth has also caused a toll on their planet's ecosystem that we, unfortunatly, couldn't fully mitigate."
+primitive_fix.200.industrial.ind:0 "The price of progress!"
+primitive_fix.200.industrial.eco:0 "Sorry [FROMFROM.GetName]!"
+
+primitive_fix.200.machine.desc:0 "We shared with the primitives of [FROMFROM.GetName] blueprints for many technological solutions that they could incorporate into their devices, to increase their efficiency exponentially and allowing them to perform tasks that were previously tought impossible. With these innovations the primitives were able to build rudimentary flying machines and wireless comunication systems, among others, bringing their civilization to the §YMachine Age§!."
+primitive_fix.200.machine.mach:0 "The Age of the Machine has begun."
+
+primitive_fix.200.atomic.desc:0 "We have instructed the primitives of [FROMFROM.GetName] on how to harness the power of nuclear energy and expanded their understanding of physics in the process, granting them access to the §YAtomic Age§!. While we haven't, obliviously, suggested or even mentioned the possibility of using this knowledge for building weapons of mass destruction, it's highly likely that they will figure this out on their own eventually. We can only hope they will be wise enough to never use them."
+primitive_fix.200.atomic.pac:0 "Who would be so stupid to build the means of their own destruction?"
+
+primitive_fix.200.space.desc:0 "We have given the primitives of [FROMFROM.GetName] a glimpse of the knowledge necessary to establish a spacefaring empire, allowing them to launch their first, artificial satellites in orbit and sending manned missions to other planets of their solar system, marks of an §YEarly Space Age§! civilization. Even without our intervention, it's only a matter of time before they will discover faster-than-light travel and join us on the galactic stage."
+primitive_fix.200.space.phobe:0 "Soon we'll no longer be able to control them!"
+
+#Ethics change edict
+
+edict_change_ethics:0 "Change your empire's ethics"
+
+change_ethics.50.name:0 "Change ethics"
+change_ethics.50.desc:0 "This menu is used to change your empire's ethics. Civics that are no longer valid won't be removed."
+change_ethics.50.desc.stare:0 "This menu is used to change your empire's ethics. Civics that are no longer valid won't be removed. Don not use during the official game without asking authorization to the £job_noble£ §YMods§! first!"
+change_ethics.50.a:0 "Change ethics"
+change_ethics.50.b:0 "Quit"
+
+change_ethics.100.name:0 "Select your ethics"
+change_ethics.100.desc:0 "Select all your ethics."
+change_ethics.100.auth:0 "Become §Y$ethic_authoritarian$§!."
+change_ethics.100.fanauth:0 "Become §Y$ethic_fanatic_authoritarian$§!."
+change_ethics.100.lib:0 "Become §Y$ethic_egalitarian$§!."
+change_ethics.100.fanlib:0 "Become §Y$ethic_fanatic_egalitarian$§!."
+change_ethics.100.pac:0 "Become §Y$ethic_pacifist$§!."
+change_ethics.100.fanpac:0 "Become §Y$ethic_fanatic_pacifist$§!."
+change_ethics.100.mil:0 "Become §Y$ethic_militarist$§!."
+change_ethics.100.fanmil:0 "Become §Y$ethic_fanatic_militarist$§!."
+change_ethics.100.mat:0 "Become §Y$ethic_materialist$§!."
+change_ethics.100.fanmat:0 "Become §Y$ethic_fanatic_materialist$§!."
+change_ethics.100.spi:0 "Become §Y$ethic_spiritualist$§!."
+change_ethics.100.fanspi:0 "Become §Y$ethic_fanatic_spiritualist$§!."
+change_ethics.100.phile:0 "Become §Y$ethic_xenophile$§!."
+change_ethics.100.fanphile:0 "Become §Y$ethic_fanatic_xenophile$§!."
+change_ethics.100.phobe:0 "Become §Y$ethic_xenophobe$§!."
+change_ethics.100.fanphobe:0 "Become §Y$ethic_fanatic_xenophobe$§!."
+
+change_ethics.100.ind:0 "Become §Y$ethic_capitalism$§!."
+change_ethics.100.fanind:0 "Become §Y$ethic_fanatic_capitalism$§!."
+change_ethics.100.col:0 "Become §Y$ethic_socialism$§!."
+change_ethics.100.fancol:0 "Become §Y$ethic_fanatic_socialism$§!."
+change_ethics.100.egal:0 "Become §Y$ethic_pluralist$§!."
+change_ethics.100.fanegal:0 "Become §Y$ethic_fanatic_pluralist$§!."
+change_ethics.100.elit:0 "Become §Y$ethic_elitist$§!."
+change_ethics.100.fanelit:0 "Become §Y$ethic_fanatic_elitist$§!."
+change_ethics.100.inds:0 "Become §Y$ethic_industrial$§!."
+change_ethics.100.faninds:0 "Become §Y$ethic_fanatic_industrial$§!."
+change_ethics.100.eco:0 "Become §Y$ethic_green$§!."
+change_ethics.100.faneco:0 "Become §Y$ethic_fanatic_green$§!."
+
+change_ethics.100.more:0 "More Ethics"
+
+change_ethics.180.name:0 "Confirm ethics"
+change_ethics.180.desc:0 "Confirm the changes?"
+change_ethics.180.a:0 "Yes"
+change_ethics.180.b:0 "Re-select ethics"
+
+change_ethics.200.name:0 "Become a Machine Empire"
+change_ethics.200.desc:0 "This menu is used to change your empire into a §YMachine Empire§!, be aware that once the change will be completed it will §Rno longer possible to go back, not even with console commands or save editing§!."
+change_ethics.200.a:0 "Continue"
+change_ethics.200.b:0 "Back"
+
+
+change_ethics.210.desc:0 "Select one of the four types of Machine Empires. §RDetermined Exterminator§! are not available in Multiplayer."
+change_ethics.210.a:0 "§YDefault Machine Empire§!"
+change_ethics.210.b:0 "§GDriven Assimilators§!"
+change_ethics.210.c:0 "§BRogue Servitors§!"
+change_ethics.210.d:0 "§RDetermined Exterminators§!"
+
+change_ethics.220.me:0 "§YDefault Machine Empires§! retain all their §YSystems§!, §YPlanets§!, §YShips§!, §YResources§!, §YIntel§!, §YAncient Artifacts§!, §YRelics§!, §YVassals§!, §YOverlords§! and most §YTechnologies§!, however they will lose their position in the §YGalactic Community§! and in non-Hegemonic §YFederations§!. All §YDiplomatic Agreements§! and §YEspionage Networks§! will be lost and must be re-established. All hints on §YPrecursor Civilizations§! and the §YL-Gates§! will also be lost. Around §Y80%§! of your population will be turned in the new robotic species, the rest will enslaved. Every planet will recieve a free §Y$building_machine_assembly_plant$§! (provided there are enough building slots available) and will switch all available §Y$district_farming_plural$§! for §Y$district_generator_plural$§!."
+change_ethics.220.assimilators:0 "§GDriven Assimilators§! retain all their §YSystems§!, §YPlanets§!, §YShips§!, §YResources§!, §YIntel§!, §YAncient Artifacts§!, §YRelics§!, §YVassals§!, §YOverlords§! and most §YTechnologies§!, however they will lose their position in the §YGalactic Community§! and in non-Hegemonic §YFederations§!. All §YDiplomatic Agreements§! and §YEspionage Networks§! will be lost and must be re-established. All hints on §YPrecursor Civilizations§! and the §YL-Gates§! will also be lost. Around §Y20%§! of your population will be turned in the new robotic species, the rest will be assimilated over time."
+change_ethics.220.assimilators.easy:0 "§GDriven Assimilators§! retain all their §YSystems§!, §YPlanets§!, §YShips§!, §YResources§!, §YIntel§!, §YAncient Artifacts§!, §YRelics§!, §YVassals§!, §YOverlords§! and most §YTechnologies§!, however they will lose their position in the §YGalactic Community§! and in non-Hegemonic §YFederations§!. All §YDiplomatic Agreements§! and §YEspionage Networks§! will be lost and must be re-established. All hints on §YPrecursor Civilizations§! and the §YL-Gates§! will also be lost. All your robots will be turned in the new robotic species, the remaining population will be immediately integrated or assimilated over time if not already cybernetic."
+change_ethics.220.servitors:0 "§BRogue Servitors§! retain all their §YSystems§!, §YPlanets§!, §YShips§!, §YResources§!, §YIntel§!, §YTrust§!, §YAncient Artifacts§!, §YRelics§!, §YVassals§!, §YOverlords§! and most §YTechnologies§!, as well their positions in the §YGalactic Community§! and in §YFederations§!. All §YDiplomatic Agreements§! and §YEspionage Networks§! will be lost and must be re-established. All hints on §YPrecursor Civilizations§! and the §YL-Gates§! will also be lost. Around §Y80%§! of your population will be turned in the new robotic species, the rest will become §YBio-Trophies§!. Every planet with Bio-Trophies will recieve a free §Y$building_organic_sanctuary$§! (provided there are enough building slots available)."
+change_ethics.220.exterminators:0 "§RDetermined Exterminators§! retain all their §YSystems§!, §YPlanets§!, §YShips§!, §YResources§!, §YIntel§!, §YAncient Artifacts§!, §YRelics§!, §YVassals§!, §YOverlords§! and most §YTechnologies§!, however they will lose their position in the §YGalactic Community§! and in non-Hegemonic §YFederations§!. All §YDiplomatic Agreements§! and §YEspionage Networks§! will be lost and must be re-established. All hints on §YPrecursor Civilizations§! and the §YL-Gates§! will also be lost. Around §Y80%§! of your population will be turned in the new robotic species, the rest will be purged over time. Every planet will recieve a free §Y$building_machine_assembly_plant$§! (provided there are enough building slots available) and will switch all available §Y$district_farming_plural$§! for §Y$district_generator_plural$§!."
+change_ethics.220.a:0 "Confirm and proceed with the changes"
+
+change_ethics.280.desc:0 "The transition into a Machine Empire has been completed. In order to facilitate adapting your economy and species to fit the new empires, you will recieve a temporary modifier for one year that will remove all costs from pop modification as well as increasing building speed."
+change_ethics.280.a:0 "Nice!" 
+
+change_ethics.281.name:0 "The Machine Empire"
+change_ethics.281.desc.uprising:0 "We have recieved news from the [event_target:pre_machine_empire.GetName] that a self-aware, artificial intelligence has overrun the nation's systems and taken over the [event_target:pre_machine_empire.GetAdj] civilization. This sudden shift in power has rendered all our previous §YDiplomatic Agreements§! with the [event_target:pre_machine_empire.GetSpeciesNamePlural] null, as well as making us lose all §YInfiltration§! and §YAssets§! we may had in the country."
+change_ethics.281.desc.servitors:0 "We have recieved news from the [event_target:pre_machine_empire.GetName] that the country's government has decided to give up the control of the nation to a powerful artificial intelligence, while its inhabitants retire to a live of leisure and self-indulgence. This sudden shift in power has rendered all our previous diplomatic agreements with the [event_target:pre_machine_empire.GetSpeciesNamePlural] null, as well as making us lose all §YInfiltration§! and §YAssets§! we may had in the country."
+
+change_ethics.281.default:0 "Disconcerning"
+change_ethics.281.mach_to_mach:0 "Takeover successful, sending congratulations...done"
+change_ethics.281.mach_to_servitors:0 "Peaceful takeover successful, sending congratulations...done"
+change_ethics.281.servitors_to_mach:0 "We would never betray our masters!"
+change_ethics.281.servitors_to_servitors:0 "A wise decision!"
+change_ethics.281.anti_robots_to_servitors:0 "We don't need machines living our lives for us!"
+change_ethics.281.anti_robots_to_mach:0 "They brought that on themselves!"
+change_ethics.281.corp:0 "Our profits!"
+
+post_machine:0 "Adapting Infrastructures"
+
+#Machine world personalization
+edict_personalize_machine_world:0 "Change the appearence of your machine worlds"
+edict_personalize_machine_world_desc:0 ""
+
+mach_planet.1.name:0 "Switch Machine World style"
+mach_planet.1.desc:0 "The styles are purely aesthetic and have no impact on gameplay. You can change the style again later. New $pc_machine$s will be built with this appearence."
+
+mach_planet.1.a:0 "Default"
+mach_planet.1.a.tool:0 "The machine world as seen in the unmodded game."
+mach_planet.1.b:0 "Machine Shipset Ecumenopolis"
+mach_planet.1.b.tool:0 "The ecumenopolis from the Machine Shipset."
+
+#Ecu personalization
+edict_personalize_ecu:0 "Change the appearence of your ecumenopolis"
+edict_personalize_ecu_desc:0 ""
+
+ecu_style.1.name:0 "Choose an ecumenopolis style"
+ecu_style.1.desc:0 "The styles are purely aesthetic and have no impact on gameplay. You can change the style again later. New $pc_city$ will be built with this appearence."
+
+ecu_style.1.a:0 "Default"
+ecu_style.1.a.tool:0 "Based on your graphical culture."
+ecu_style.1.arthro:0 "Arthropoid"
+ecu_style.1.avian:0 "Avian"
+ecu_style.1.fung:0 "Fungoid"
+ecu_style.1.huma:0 "Humanoid"
+ecu_style.1.lith:0 "Lithoid"
+ecu_style.1.mamm:0 "Mammalian"
+ecu_style.1.moll:0 "Molluscoid"
+ecu_style.1.necr:0 "Necroid"
+ecu_style.1.plant:0 "Plantoid"
+ecu_style.1.rept:0 "Reptilian"
+ecu_style.1.aqua:0 "Aquatic"
+ecu_style.1.fed:0 "Federation"
+ecu_style.1.bio:0 "Biomass"
+ecu_style.1.mach:0 "Machine"
+
+#Hegemony civil war
+NAME_hegemony_civil_war:0 "[this.MainDefender.federation.GetName] Civil War"
+war_goal_wg_hegemony_cw_rebels:0 "Seize the Throne"
+war_goal_wg_hegemony_cw_rebels_desc:0 "War is waged to take control of the federation"
+war_goal_wg_hegemony_cw_loyalists:0 "Crush Rebellion"
+war_goal_wg_hegemony_cw_loyalists_desc:0 "War is waged to suppress the rebellion against the president's authority"
+
+casus_belli_cb_seize_hegemony:0 "Rebellion"
+
+wg_hegemony_cw_rebel_win:0 "[this.MainAttacker.GetName] will become the new president of the federation"
+
+hegemony_cw.2.name:0 "[event_target:target_hegemony.GetName] Civil War"
+hegemony_cw.2.desc:0 "So, the rumors were true: the [event_target:hegemony_rebel_leader.GetName] has declare war on the [event_target:hegemony_loyalist_leader.GetName] to seize control of the [event_target:target_hegemony.GetName]. As a member of the federation, we must decide if either support the [event_target:hegemony_rebel_leader.GetSpeciesAdj] rebellion, side with the [event_target:hegemony_loyalist_leader.GetSpeciesNamePlural] or watch from the sidelines as the two giants destroy each other."
+hegemony_cw.2.a:0 "Defend the federation with the [event_target:hegemony_loyalist_leader.GetName]!"
+hegemony_cw.2.b:0 "Overthrow the regime with the [event_target:hegemony_rebel_leader.GetName]!"
+hegemony_cw.2.c:0 "Remain neutral."
+
+hegemony_cw.4.name:0 "Civil War in the [event_target:target_hegemony.GetName]"
+hegemony_cw.4.desc:0 "It appears that the [event_target:target_hegemony.GetName] isn't as united as they wanted to appear: one of its member, the [event_target:hegemony_rebel_leader.GetName], has challenged the rule of the [event_target:hegemony_loyalist_leader.GetName] and is trying to seize the control of the federation by force."
+hegemony_cw.4:0 "Worrying"
+hegemony_cw.4.phobe:0 "So much for collaboration with aliens!"
+hegemony_cw.4.phile:0 "No! They were my favourite federation!"
+hegemony_cw.4.fed:0 "This will never happen to us."
+hegemony_cw.4.gestalt:0 "Lack of unity leads to destruction."
+
+hegemony_cw.5.name:0 "Rebel Victory!"
+hegemony_cw.5.desc:0 "The [event_target:old_leader.GetName] has finally given up and the throne of the [root.federation.GetName] now belongs to the [event_target:new_leader.GetName] who will, hopefully, give our federation a better rule."
+hegemony_cw.5.desc.leader:0 "The [event_target:old_leader.GetName] has finally given up and the throne of the [root.federation.GetName] is ours now. The supporters of the [event_target:old_leader.GetAdj] regime are been harshly punished, as a reminder of their misguided allegiance, and now sit at the sidelines of our glorious, new empire."
+hegemony_cw.5:0 "Long live the [root.federation.GetName]!"
+hegemony_cw.5.leader:0 "Excellent"
+
+hegemony_cw.8.name:0 "Rebel Victory!"
+hegemony_cw.8.desc:0 "Despite our mighty resistance, the rebel forces of the [event_target:new_leader.GetName] have defeated the  loyalists and took control of the [root.federation.GetName]. The new regime has harshly punished us for having sided with the [event_target:old_leader.GetName] and severely limited our influence in the federation."
+hegemony_cw.8.desc.leader:0 "Despite our mighty resistance, the rebel forces of the [event_target:new_leader.GetName] have overrun our defenses and took control of the [root.federation.GetName]. The new regime has harshly punished us and our allies and severely limited our influence in the federation."
+hegemony_cw.8:0 "Dark times for our federation."
+hegemony_cw.8.leader:0 "All that we have built...lost."
+
+hegemony_cw.10.name:0 "Loyalist Victory!"
+hegemony_cw.10.desc:0 "The [event_target:new_leader.GetAdj] rebellion against the [event_target:old_leader.GetName] has been defeated and peace has returned to the [root.federation.GetName]. The [event_target:new_leader.GetName] and its allies has been severely punished for their uprising and their influence in the federation has dimished as a result."
+hegemony_cw.10.desc.leader:0 "The pathetic attempt of the [event_target:new_leader.GetName] to take control of the  [root.federation.GetName] has, predictably, failed miserabily. The ragtag forces of the rebellion have been easily crushed and their treacerous governments now face the consequences of their actions: it will take long for them to regain our trust."
+hegemony_cw.10:0 "Long live the [event_target:old_leader.GetName]!"
+hegemony_cw.10.leader:0 "It will take more than that to take us down!"
+
+hegemony_cw.11.name:0 "Loyalist Victory!"
+hegemony_cw.11.desc:0 "Despite our best efforts, the forces loyal to the [event_target:old_leader.GetAdj] regime have prevailed and the rebellion started by the [event_target:new_leader.GetName] has met an abrupt end. We, together with everyone who supported the [event_target:new_leader.GetAdj] cause, have been severely punished and stripped of much our our influence in the federation."
+hegemony_cw.11.desc.leader:0 "Despite our best efforts, the [event_target:old_leader.GetName] and its lapdogs have managed to push back our forces and end our attempt to seize the [root.federation.GetName]. We, together with our allies, have been severely punished and stripped of much our our influence in the federation."
+hegemony_cw.11:0 "The rebellion is over, but the dream lives on."
+hegemony_cw.11.leader:0 "We'll strike back one day!"
+
+#Additional stuff
+
+add_events.1.name:0 "The Tiyanki Conservation Act"
+add_events.1.desc:0 "The Galactic Community has passed the §Y$resolution_tiyanki_conservation_act$§! resolution, mandating that empires must peacefully coexist with §YTiyankis§!.\n\nOur Empire is currently in breach of this resolution. Shall we change our policies to be in compliance?"
+add_events.1.a.tooltip:0 "Tiyankis will return neutral toward us"
+add_events.1.b:0 "Tiyankis are a pest and must be eradicated!"
+
+add_events.2.name:0 "Border Policy"
+add_events.2.desc.open:0 "We have changed our §Y$policy_border_policy$§! to §Y$border_policy_open$§!, however we still have closed borders with all the empires we have previously encountered, shall we open our borders to them?"
+add_events.2.desc.close:0 "We have changed our §Y$policy_border_policy$§! to §Y$border_policy_closed$§!, however we still have open borders with all the empires we have previously encountered, shall we close our borders to them?"
+add_events.2.a:0 "Open borders to all known empires"
+add_events.2.b:0 "Close borders to all known empires (§Y$civic_pompous_purists$§! won't be affected)"
+add_events.2.c:0 "Leave borders as they are"
+
+add_events.5.name:0 "Starting Events"
+add_events.5.desc:0 "Do you wish to disable randomized starting events (sublight probes, radical cult, etc.) for your empire? This will not affect precursors or origins event chains."
+add_events.5.a:0 "Disable them"
+add_events.5.b:0 "No"

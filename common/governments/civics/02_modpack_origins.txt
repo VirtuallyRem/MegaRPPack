@@ -1,0 +1,145 @@
+origin_codominant_evolution = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_codominant_evolution.dds"
+	picture = GFX_origin_codominant_evolution
+
+	playable = { host_has_dlc = "Utopia" }
+
+	possible = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_devouring_swarm
+			}
+		}
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	description = origin_tooltip_codominant_evolution_effects
+
+	has_secondary_species = {	# see game_start.11
+		title = origin_codominant_evolution_second_species
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		planet_immigration_pull_mult = 0.25
+		envoys_add = 1
+	}
+}
+
+origin_one_small_step = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_one_small_step.dds"
+	picture = GFX_origin_one_small_step
+
+	playable = {
+		always = yes
+	}
+	
+	possible = {
+	}
+
+	description = "origin_tooltip_one_small_step_effects"
+
+	random_weight = {
+		base = 5
+	}
+	
+	modifier = {
+		terraform_speed_mult = 0.25
+		terraforming_cost_mult = -0.25
+	}
+}
+
+origin_rapid_cybernetification = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_rapid_cybernetification
+
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+
+	possible = {
+	    ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	
+	description = "origin_tooltip_rapid_cybernetification_effects"
+	
+	flags = { flesh_weakened }
+
+	traits = {
+		trait = trait_cybernetic
+	}
+
+	random_weight = {
+		base = 5
+	}
+}
+
+origin_stranded = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_lost_colony.dds"
+	picture = GFX_origin_lost_colony
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+	    ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+
+	modifier = {
+		colony_start_num_pops_add = 2
+	}
+	
+	description = "origin_tooltip_stranded_effects"
+
+	flags = { custom_start_screen }
+	
+	random_weight = {
+		base = 5
+	}
+}
+
+origin_archeology = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_subterranean.dds"
+	picture = GFX_origin_unwashed_masses
+
+	playable = {
+		has_ancrel = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	modifier = {
+		ship_archeaological_site_clues_add = 2
+		ship_archaeological_site_excavation_speed_mult = 0.50
+	}
+	
+	description = "origin_tooltip_archeology_effects"
+
+	random_weight = {
+		base = 5
+	}
+}

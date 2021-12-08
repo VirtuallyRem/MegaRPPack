@@ -1,0 +1,12 @@
+portraits = {
+
+# Usheti
+
+	canoptek_02 = {
+		entity = "portrait_avian_synthetic_dawn_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "canoptek_greetings"
+		character_textures = {
+			"gfx/models/portraits/egyptians/canoptek_02.dds"
+		}
+	}
+
+}	

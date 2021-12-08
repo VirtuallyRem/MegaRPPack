@@ -1,0 +1,25 @@
+﻿l_english:
+
+ # Vassals pay military capacity tribute to their overlord
+ 
+ vassalfleettax.s0:0 "A Free Military (no naval capacity tax)"
+ vassalfleettax.s1:0 "Vassal Fleet Tax - 40 naval capacity are diverted to our Overlord"
+ vassalfleettax.o0:0 "A Standard Military (no naval capacity bonus)"
+ vassalfleettax.o1:0 "Overlord x1 Bonus: +40 naval capacity, -2% ship upkeep"
+ vassalfleettax.o2:0 "Overlord x2 Bonus: -4% ship upkeep"
+ vassalfleettax.o3:0 "Overlord x3 Bonus: -6% ship upkeep"
+ vassalfleettax.o4:0 "Overlord x4 Bonus: -8% ship upkeep"
+ vassalfleettax.o5:0 "Overlord x5 Bonus: +200 naval capacity, -10% ship upkeep (max bonus)" 
+ vassalfleettax_subject:0 "Naval Capacity Vassal Tax"
+ vassalfleettax_subject_desc:0 "As a vassal, we are transferring Naval Capacity to our Overlord for continued protection."
+ vassalfleettax_landlord:0 "Vassal Naval Support"
+ vassalfleettax_landlord_desc:0 "Naval capacity received from our vassal.\n(Up to 5 vassals.)"
+ vassalfleettax_overlord:0 "Vassal Overlord Fleet Support"
+ vassalfleettax_overlord_desc:0 "Naval capacity transferred from our 2 vassals.\n(Up to 5 vassals.)"
+ vassalfleettax_megalord:0 "Vassal Megalord Fleet Support"
+ vassalfleettax_megalord_desc:0 "Naval capacity transferred from our 3 vassals.\n(Up to 5 vassals.)"
+ vassalfleettax_ultralord:0 "Vassal Ultralord Fleet Support"
+ vassalfleettax_ultralord_desc:0 "Naval capacity transferred from our 4 vassals.\n(Up to 5 vassals.)"
+ vassalfleettax_hyperlord:0 "Vassal Hyperlord Fleet Support"
+ vassalfleettax_hyperlord_desc:0 "Naval capacity transferred from our plethora of vassals.\n\nMAX BONUS - Adopting additional vassals will yeild no further gain." 
+ 

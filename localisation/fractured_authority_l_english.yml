@@ -1,0 +1,35 @@
+﻿l_english:
+
+ auth_fractured: "Fractured"
+ auth_fractured_desc: "Fractured nations have no centralized governing body."
+
+ gov_fractured_generic: "Fractured Nation"
+ gov_fractured_generic_desc: "This society has no centralized governing body or head of state."
+ gov_fractured_clans: "Fractured Clans"
+ gov_fractured_clans_desc: "This society is composed of many brutal clans at constant powerstruggles with eachother with no universally recognized head clan or ruler."
+ gov_fractured_realms: "Independent Realms"
+ gov_fractured_realms_desc: "This society is a collection of independent realms each with its own ruler and government. With no higher authority constant struggle for power is part of the culture since each realm has its own agenda and goals."
+ gov_fractured_anarchist_collectives: "Anarchist Collectives"
+ gov_fractured_anarchist_collectives_desc: "NEEDS DESCRIPTION, GIVE ME SUGGESTIONS"
+
+ leader_trait_fractured: "Fractured Nation"
+ leader_trait_fractured_desc: "This nation does not have a ruler."
+
+ fractured_faction_influence_malus:0 "Fractured Influence Malus"
+ fractured_faction_influence_malus_desc:0 "Offsets your influence production so its not too high early. Malu removed after 10 years"
+ 
+ FRACTURED_GENERIC_GREETING_01:0 "*Incoherent infighting noises*"
+ FRACTURED_GENERIC_GREETING_02:0 "(A large number of diplomats attempt to speak with us the same time, in different languages, resulting in an incomprensible noise.)"
+ FRACTURED_GENERIC_GREETING_03:0 "(Overlapping communications from different political entities prevents meaningful interaction with the [Root.GetName].)"
+ FRACTURED_WAR_GREETING_01:0 "(The lines are cluttered with military communications, they appear to be attempts at coordinating the numerous [Root.GetAdj] nations in the war against us.)"
+ FRACTURED_VASSAL_GREETING_01:0 "This is the [From.GetAdj] governor for the [Root.GetAdj] states speaking, the situation is under control, nothing out of the ordinary to report."
+ FRACTURED_VASSAL_GREETING_01_MECH:0 "[From.GetAdj] Command and Control Node reporting nominal status from the [Root.GetName], deviance levels minimal, compliance levels sufficient."
+ FRACTURED_VASSAL_GREETING_01_HIVE:0 "This is the [From.GetSpeciesAdj] Administration Node in charge of the [Root.GetName], apart from the extreme level of divisions among the [Root.GetSpeciesName], I have nothing unusual to report."
+ FRACTURED_VASSAL_GREETING_DISLOYAL_01:0 "This is the [From.GetAdj] governor for the [Root.GetAdj] states speaking, we are experiencing severe complications in trying to get the [Root.GetSpeciesNamePlural] to collaborate with us, a military intervention may be needed."
+ FRACTURED_VASSAL_GREETING_DISLOYAL_01_MECH:0 "Warning: [From.GetAdj] Command and Control Node reporting critical deviance levels in the [Root.GetName], initiating punitive measures."
+ FRACTURED_VASSAL_GREETING_DISLOYAL_01_HIVE:0 "This is the [From.GetSpeciesAdj] Administration Node in charge of the [Root.GetName], it appears the [Root.GetSpeciesName] have finally found a common cause that unites them all, unfortunatly for us, this cause is the opposition to our rule."
+ FRACTURED_DOW_PROPOSE_01:0 "(In a rare moment of unity, the squabbling [Root.GetAdj] nationstates have decided to join forces and declare war on us.)"
+ FRACTURED_PEACE_CONSIDER:0 "(We have sent the peace offer, let's hope that at least the majority of the [Root.GetSpeciesAdj] can agree on this.)"
+ FRACTURED_PEACE_PROPOSE:0 "(We have recieved at least a dozen different peace offers from the [Root.GetAdj] states, it appears there's general consensus on interrupting this war among them.)"
+ FRACTURED_PEACE_ACCEPT:0 "(Demilitarization of the borders seems to indicate that the [Root.GetAdj] nationstates have accepted our peace offer, or at least most of them did.)"
+ FRACTURED_PEACE_REFUSE:0 "(Attempts at making peace with the [Root.GetName] have proven impossible, it seems the general consensus among them is for the war to continue.)"

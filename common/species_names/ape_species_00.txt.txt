@@ -1,0 +1,72 @@
+APE = {
+	vanara= {
+		name = Vanara
+		plural = Vanara
+		home_planet = "Dandaka"
+		home_system = "Brahma"
+		name_list = "MAM1"
+	}
+	baba = {
+		name = Baba
+		plural = Babi
+		home_planet = "Hamadryas"
+		home_system = "Duat"
+		name_list = "MAM1"
+	}
+	wukong = {
+		name = Wukong
+		plural = Wukong
+		home_planet = "Huaguo"
+		home_system = "Aolai"
+		name_list = "MAM1"
+	}
+	hibagon = {
+		name = Hibagon
+		plural = Hibagon
+		home_planet = "Hiba"
+		home_system = "Hibabango"
+		name_list = "MAM1"
+	}
+	satyrus = {
+		name = Satyrus
+		plural = Satyre
+		home_planet = "Callitrix"
+		home_system = "Linna"
+		name_list = "MAM1"
+	}
+	hanuman = {
+		name = Hanuman
+		plural = Hanuman
+		home_planet = "Hampi"
+		home_system = "Rama"
+		name_list = "MAM1"
+	}
+	jueyuan = {
+		name = Jueyuan
+		plural = Jueyuan
+		home_planet = "Shu"
+		home_system = "Yijianzhi"
+		name_list = "MAM1"
+	}
+	kuronbo = {
+		name = Kuronbo
+		plural = Kuronbo
+		home_planet = "Senjo"
+		home_system = "Gifu"
+		name_list = "MAM1"
+	}
+	satori = {
+		name = Satori
+		plural = Satori
+		home_planet = "Hida"
+		home_system = "Mino"
+		name_list = "MAM1"
+	}
+	kakuen = {
+		name = Kakuen
+		plural = Kakuen
+		home_planet = "Senjo"
+		home_system = "Gifu"
+		name_list = "MAM1"
+	}
+}

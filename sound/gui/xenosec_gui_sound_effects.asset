@@ -1,0 +1,20 @@
+# xenosec
+
+soundeffect = {
+	name = xenosec_01_greetings
+	sounds = {
+		sound = xenosec_greetings_01
+		sound = xenosec_greetings_02
+		sound = xenosec_greetings_03
+		sound = xenosec_greetings_04
+		sound = xenosec_greetings_05
+	}  
+	volume = 0.40
+}
+soundeffect = {
+	name = xenosec_generic_greeting
+	sounds = {
+		sound = xenosec_generic_greeting_01
+	}  
+	volume = 0.40
+}

@@ -1,0 +1,225 @@
+##########################################################################
+# Decisions
+##########################################################################
+decision_remove_the_interloper = {
+	sound = event_construction_03
+	icon = decision_shattered_planet
+	resources = {
+		category = decisions
+		cost = {
+			influence = 75
+			energy = 10000
+			alloys = 500
+		}
+	}
+
+	potential = {
+		has_planet_flag = the_interloper
+		NOT = {
+			has_modifier = "the_interloper_pln"
+		}
+	}
+
+	allow = {
+		space_owner = {
+			OR = {
+				has_technology = tech_mining_1
+				has_technology = tech_mega_engineering
+			}
+		}
+	}
+
+	effect = {
+		if = { 
+			limit  = { 
+				space_owner = {
+					NOT = {
+						has_technology = tech_mining_1
+						has_technology = tech_mining_2
+						has_technology = tech_mining_3
+						has_technology = tech_mega_engineering
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_none
+			hidden_effect = {
+			}
+		}
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					NOT = {
+						has_technology = tech_mining_2
+						has_technology = tech_mining_3
+						has_technology = tech_mega_engineering
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_one
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 7200
+					}
+					add_modifier = { modifier = the_interloper_emp days = 7200 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mega_engineering
+					NOT = {
+						has_technology = tech_mining_1
+						has_technology = tech_mining_2
+						has_technology = tech_mining_3
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_two
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 6300
+					}
+					add_modifier = { modifier = the_interloper_emp days = 6300 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					has_technology = tech_mining_2
+					NOT = {
+						has_technology = tech_mining_3
+						has_technology = tech_mega_engineering
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_three
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 5400
+					}
+					add_modifier = { modifier = the_interloper_emp days = 5400 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					has_technology = tech_mega_engineering
+					NOT = {
+						has_technology = tech_mining_2
+						has_technology = tech_mining_3
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_four
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 4500
+					}
+					add_modifier = { modifier = the_interloper_emp days = 4500 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					has_technology = tech_mining_2
+					has_technology = tech_mining_3
+					NOT = {
+						has_technology = tech_mega_engineering
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_five
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 3600
+					}
+					add_modifier = { modifier = the_interloper_emp days = 3600 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					has_technology = tech_mining_2
+					has_technology = tech_mega_engineering
+					NOT = {
+						has_technology = tech_mining_3
+					}
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_six
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 2700
+					}
+					add_modifier = { modifier = the_interloper_emp days = 2700 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+
+		if = { 
+			limit  = { 
+				space_owner = {
+					has_technology = tech_mining_1
+					has_technology = tech_mining_2
+					has_technology = tech_mining_3
+					has_technology = tech_mega_engineering
+				}
+			}
+			custom_tooltip = decision_remove_the_interloper_tooltip_seven
+			hidden_effect = {
+				space_owner = {
+					country_event = { 
+						id = fix_the_ring.1
+						days = 1800
+					}
+					add_modifier = { modifier = the_interloper_emp days = 1800 }
+				}
+				add_modifier = { modifier = the_interloper_pln }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = -1
+	}
+}
+#7200 20 	1/23m 	5000	one		##
+#6300 17.5	m/123	5000	two		##
+#5400 15	12/3m 	7500	three	##
+#4500 12.5	1m/23	7500	four 	##
+#3600 10	123/m	10000	five	##
+#2700 7.5	12m/3	10000	six		##
+#1800 5		123m	15000	seven	##

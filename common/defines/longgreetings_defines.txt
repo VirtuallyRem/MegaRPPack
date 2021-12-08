@@ -1,0 +1,3 @@
+	NInterface = {
+		DIPLO_SCREEN_TEXT_HIDE_COOLDOWN = 30.0	# How many seconds the alien message text in the deplomacy view will be shown
+	}

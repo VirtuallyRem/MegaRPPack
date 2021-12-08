@@ -1,0 +1,107 @@
+feudal_federation_passive = {
+	members_modifier = {
+		description = feudal_federation_passive_effect
+	}
+	on_activate = {
+		set_diplomacy_action_setting = {
+			action = action_ask_to_leave_federation
+			settings = {
+				acceptance_type = leader
+			}
+		}
+	}
+	on_deactivate = {
+		set_diplomacy_action_setting = {
+			action = action_ask_to_leave_federation 
+			settings = {
+				acceptance_type = default
+			}
+		}
+	}
+}
+
+feudal_diplo_weight_steal_1 = {
+	federation_modifier = {
+		description = feudal_diplo_weight_steal_1_effect
+		federation_leader_diplo_weight_from_members_mult = 0.10
+	}
+}
+
+feudal_diplo_weight_steal_2 = {
+	federation_modifier = {
+		description = feudal_diplo_weight_steal_1_effect
+		federation_leader_diplo_weight_from_members_mult = 0.10
+	}
+}
+
+feudal_diplo_weight_steal_3 = {
+	federation_modifier = {
+		description = feudal_diplo_weight_steal_1_effect
+		federation_leader_diplo_weight_from_members_mult = 0.10
+	}
+}
+
+feudal_tax_1 = {
+	
+	leader_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+}
+
+feudal_tax_2 = {
+	
+	leader_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+}
+
+feudal_tax_3 = {
+	
+	leader_modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+}
+
+feudal_levy_1 = {
+	
+	members_modifier = {
+		country_naval_cap_mult = 0.10
+	}	
+
+	leader_modifier = {
+		country_naval_cap_mult = -0.20
+	}
+}
+
+feudal_levy_2 = {
+	
+	members_modifier = {
+		country_naval_cap_mult = 0.10
+	}	
+
+	leader_modifier = {
+		country_naval_cap_mult = -0.20
+	}
+}
+
+feudal_levy_3 = {
+	
+	members_modifier = {
+		country_naval_cap_mult = 0.10
+	}	
+
+	leader_modifier = {
+		country_naval_cap_mult = -0.20
+	}
+}
+
+feudal_levy_4 = {
+	
+	members_modifier = {
+		country_naval_cap_mult = 0.10
+	}	
+
+	leader_modifier = {
+		country_naval_cap_mult = -0.20
+	}
+}

@@ -1,0 +1,77 @@
+on_game_start = {
+	events = {
+		#gcfix.1 Prevent GC from being founded
+	}
+}
+
+empire_init_capital_planet = {
+	events = {
+		stranded.1 #Stranded origin
+	}
+}
+
+on_press_begin = {
+	events = {
+		archeology.1 #From the Past origin
+		prosp_uni.1
+	}
+}
+
+on_game_start_country = {
+	events = {
+		robot_leader.1 #AI Leadership
+		rapid_cyber.1 #Rapid cybernetification
+		add_events.5 #Asks if disable starting events
+		add_events.6 #Reduce the size of life_seeded guarantees
+	}
+}
+
+on_post_government_changed = {
+    events = {
+	robot_leader.2 #AI Leadership check
+    }
+}
+
+on_leader_death = {
+    events = {
+	robot_leader.2 #AI Leadership check
+    }
+}
+
+on_yearly_pulse = {
+	events = {
+		gcfix.2 #Kick AIs out of the GC every year
+		rubberbanding.10 #Calculate and apply rubberbanding modifier to all empire
+	}
+}
+
+on_planet_attackers_win = {
+	events = {
+		primitive_fix.100 #Halve conquered primitives and apply the malus
+	}
+}
+
+on_terraforming_complete = {
+	events = {
+		mod_change_style.10 #Apply custom machine world appearence
+	}
+}
+
+on_policy_changed = {
+	events = {
+		add_events.2 #Asks if reset all borders to default
+	}
+}
+
+on_pop_abducted = {
+	events = {
+		primitive_fix.201 #Apply the malus to abducted primitives
+		add_events.10 #Modifiers for abducted pops
+	}
+}
+
+on_planet_class_changed = {
+	events = {
+		add_events.7 #Smart check for environmentalists ecu rage and ecu personalization
+	}
+}

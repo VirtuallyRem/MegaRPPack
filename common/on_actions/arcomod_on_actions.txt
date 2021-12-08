@@ -1,0 +1,12 @@
+#exodus mod on_actions to fire relevant events
+empire_init_capital_planet = {
+	events = {
+		arcomod.1
+	}
+}
+
+on_press_begin = {
+	events = {
+		arcomod.2 #pd fix
+	}
+}

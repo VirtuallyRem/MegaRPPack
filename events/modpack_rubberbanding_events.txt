@@ -1,0 +1,71 @@
+namespace = rubberbanding
+
+
+#get average techscore
+event = {
+	id = rubberbanding.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		years_passed > 10
+	}
+
+	immediate = {
+		event_target:global_event_country = {
+			set_variable = { which = avg_tech value = 0 }
+			set_variable = { which = num_empires value = 0 }
+			
+			every_playable_country = {
+				limit = {
+					is_country_type = default
+					NOT = { has_origin = origin_enlightened }
+				}
+				event_target:global_event_country = { 
+					change_variable = { which = num_empires value = 1 } 
+					change_variable = { which = avg_tech value = prev.trigger:num_researched_techs }
+				}
+			}
+			divide_variable = { which = avg_tech value = num_empires }
+		}
+
+		every_playable_country = {
+			
+			remove_modifier = rubberbanding_modifier
+			
+			set_variable = { which = avg_tech value = event_target:global_event_country.avg_tech }
+			set_variable = { which = rubberbanding_multiplier value = 1 }
+
+			if = {
+				#BEHIND
+				limit = {
+					check_variable = { which = avg_tech value > trigger:num_researched_techs }
+				}
+				set_variable = { which = rubberbanding_multiplier value = avg_tech }
+				divide_variable = { which = rubberbanding_multiplier value = trigger:num_researched_techs }
+				subtract_variable = { which = rubberbanding_multiplier value = 1 }
+			}
+			else = {
+				#AHEAD
+				set_variable = { which = rubberbanding_multiplier value = 0 }
+				subtract_variable = { which = rubberbanding_multiplier value = trigger:num_researched_techs }
+				divide_variable = { which = rubberbanding_multiplier value = avg_tech }
+				change_variable = { which = rubberbanding_multiplier value = 1}
+			}
+			
+			export_modifier_to_variable = {
+				modifier = all_technology_research_speed
+				variable = rubberbanding_multiplier_multiplier
+			}
+			change_variable = { which = rubberbanding_multiplier_multiplier value = 1}
+			multiply_variable = { which = rubberbanding_multiplier value = rubberbanding_multiplier_multiplier}
+
+			
+			add_modifier = {
+				modifier = rubberbanding_modifier
+				years = 1
+				multiplier = rubberbanding_multiplier
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "portrait_labrat_mesh"
+		file = "gfx/models/portraits/mammalian/mammalian_labrat_portrait.mesh"
+		animation = { id = "idle"	type = "mammalian_labrat_portrait_idle_animation" }
+		animation = { id = "idle2"	type = "mammalian_labrat_portrait_idle_2_animation" }
+		scale = 1.0
+	}
+}

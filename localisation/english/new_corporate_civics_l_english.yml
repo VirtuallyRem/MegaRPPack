@@ -1,0 +1,81 @@
+﻿l_english:
+
+ civic_high_society:0 "High Society"
+ civic_high_society_desc:2 "This MegaCorporation is run like some sort of Neo-Aristocracy, with fancy titles being sold between exclusive highborne bloodlines. Membership into their fine and fancy parties is exclusive! Remember your Photo-Polimer Scale Jacket!"
+ civic_tooltip_high_society_effects:3 "\n£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!.\nCan build §Y$building_high_society_club$§! on Branch Offices, which provides §Y2§! £job_clerk£ §Y$job_clerk$§! Jobs and §Y1§! £job_noble£ §Y$job_noble$§! Job for the planet."
+ building_high_society_club:0 "High Society Clubs"
+ building_high_society_club_desc:2 "Where the Elite of the Elite gather for fine parties and ceremonies. Anyone who is anything BIG is bound to be here!"
+ 
+ civic_research_consortium:0 "Research Consortium"
+ civic_research_consortium_desc:2 "This MegaCorporation specializes in research and development of the latest technological innovations, with many higher ups of the company having some kind of scientific background."
+ civic_tooltip_research_consortium_effects:3 "\n£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!.\nCan build §Y$building_innovation_center$§! on Branch Offices, which provides §Y2§! £job_clerk£ §Y$job_clerk$§! Jobs and §Y1§! £job_head_researcher£ §Y$job_head_researcher$§! Job for the planet."
+ building_innovation_center:0 "Innovation Centers"
+ building_innovation_center_desc:2 "Futuristic think-tanks where the most brilliant minds of the generation are gathered to work under the gentle, yet secretive, wing of the megacorp."
+ 
+ civic_private_security:0 "Private Security"
+ civic_private_security_desc:2 "This MegaCorporation employs a large and domineering Private Security Force for peacekeeping and protecting its assets, both internally and at its Branch Offices."
+ civic_tooltip_private_security_effects:3 "£job_enforcer£ §Y$job_enforcer$§! produce §Y4§! £trade_value£ Trade Value.\nYou can build §YPrivate Security Bases§! on Branch Offices which provides §Y1§! £job_enforcer£ §Y$job_enforcer$§! jobs and §Y2§! £job_clerk£ §Y$job_clerk_plural$§!."
+ building_private_security_bases:0 "Private Security Bases"
+ building_private_security_bases_desc:2 "The Private Security Forces operate from theses bases across the planet to protect corporate assets."
+ 
+ civic_logistical_bureacracy:0 "Logisticical Bureacracy"
+ civic_logistical_bureacracy_desc:2 "This MegaCorporation wields a large and overencompassing Bureacratic Engine that ensures a smooth and highly functional Logistics Service, everything arrives and runs on time, corruption will not be tolerated!"
+ civic_tooltip_logistical_bureacracy_effects:3 "£job_bureaucrat£ §Y$job_bureaucrat_plural$§! produce §Y2§! £trade_value£ Trade Value and §Y1§! £stability£ Stability.\nYou can construct §YLogistical Bases§! on Branch Offices that increases £trade_valuey£ trade value by 10% and provides §Y1§! £job_bureaucrat£ §Y$job_bureaucrat$§! and §Y2§! £job_clerk£ §Y$job_clerk_plural$§! to the planet."
+ building_corporate_logistics_base:0 "Corporate Logistics Base"
+ building_corporate_logistics_base_desc:2 "This massive complex serves as a base of operations for a MegaCorporations Logistical Bureacratic Engine. Warehouses, offices, housing complexes and even a private spaceport for transport to Corporate Space is present here!"
+ 
+ civic_gene_tailors:0 "Gene Tailors"
+ civic_gene_tailors_desc:2 "This MegaCorporation offers only the finest in Genetic Tailoring! Changing and modifying the genetic code of its customers to their best desires...Or whatever serves the Corporation best."
+ civic_tooltip_gene_tailors_effects:3 "Can build §YPrivate Geneclinics§! on Branch Offices which provide §Y2§! £job_clerk£ §Y$job_clerk$§! Jobs and §Y1§! £job_healthcare£ §Y$job_healthcare$§! Job to the planet."
+ building_private_geneclinics:0 "Private Geneclinics"
+ building_private_geneclinics_desc:2 "These private genetic modification facilities provide only the best in customer satisfactory genetic-tailoring." 
+ 
+ civic_philanthropist_organization:0 "Philanthropist Organization"
+ civic_philanthropist_organization_desc:2 "This charitable organization leads various events and drives promoting social well-being and awareness of issues to gather donations."
+ civic_tooltip_philanthropist_organization_effects:3 "You can construct §Y$building_philanthropist_charity$§! on §YBranch Offices§!, which provide §Y1§! £job_preacher£ §Y$job_preacher$§! every §Y20§! £pop£ Pops for the Planet Owner."
+ building_philanthropist_charity:0"Philanthropist Charity Center"
+ building_philanthropist_charity_desc:2 "A Large privately funded Charity Center where promotion of various Charities take place. Many of these are privately funded by wealthy individuals to help those at the bottom in society both planetside and beyond."
+
+ civic_terror_organization:0 "Terror Organization"
+ civic_terror_organization_desc:2 "This Organization uses Military force through insurgency, funded by its corporate structure to achieve its goals and aims."
+ civic_tooltip_terror_organization_effects:3 "Army Damage Increased by 20% Upkeep reduced by 20%. You can construct 'Insurgenc Operations' on Branch offices which each increase army experiecne by 50 per in rotation. Each Insurgency Operations provides +50 crime and Insurgent jobs which reduce ammeneties on the planet."
+ building_insurgent_base:0 "Insurgency Operations"
+ building_insurgent_base_desc:2 "A Remote and Secret base of Operations for Local planetary Insurgents funded by Corporate means offworld, providing a constant nuisance to the local Planetary Government and being a Terror factor for the local population."
+ job_insurgent:0 "Insurgent"
+ job_insurgent_plural:0 "Insurgents"
+ job_insurgent_desc:0 "Insurgents, waging a war of terror on the local Planetary Government for whatever cause they may believe in. Empowered to do so by an offworld supplier."
+ 
+ civic_collective_ownership:0 "People's Cooperative"
+ civic_collective_ownership_desc:2 "This MegaCorporation is collectively owned as a cooperative. That is to say everyone owns stakes in the entity as a whole."
+
+ civic_megabank:0 "MegaBank"
+ civic_megabank_desc:2 "This MegaCorporation operates a Large Banking Service, eager to spread its tendrils out into the Galactic Society as a whole."
+ civic_tooltip_megabank_effects:3 "You can construct §Y$building_megabanks$§! on §YBranch offices§! which increase your resource storage by §Y5000§! and provide §Y4§! £job_clerk£ §Y$job_clerk$§! Jobs and §Y1§! £job_administrator£ §Y$job_administrator$§! Job to the planet."
+ building_megabanks:0 "MegaBanks"
+ building_megabanks_desc:2 "A gigantic Banking complex which handles storage affairs as well as business conduction by a MegaBank MegaCorporation."
+ 
+ civic_code_of_conduct:0 "Code of Conduct"
+ civic_code_of_conduct_desc:2 "This Crime Syndicate Operates with a strict and some might say Noble Code of Conduct, providing fairly valueable charity to the impoverished in the areas which their Syndicate Operates. Both to increase Public Opinion of their presence and get a new avenue of recruits."
+ civic_tooltip_code_of_conduct_effects:3 "You can construct §Y$building_syndicate_charity$§! on §YBranch Offices§!, which provide §Y1§! £job_preacher£ §Y$job_preacher$§! every §Y20§! £crime£ Crime for the Planet Owner."
+ building_syndicate_charity:0 "Syndicate Controlled Sector"
+ building_syndicate_charity_desc:2 "The Syndicate Operates openly to the Public, providing charity for the impoverished on the planet. They are generally the first to arrive with food and disaster relief, even ahead of the local planetary Government. This has allowed them to gain control of a section of the planet where not even enforcers dare enter."
+ 
+ civic_clandestine_informants:0 "Clandestine Informants"
+ civic_clandestine_informants_desc:2 "This Syndicate Operates a highly sophisticated Network for Informants allowing it unrivaled knowledge of anyone it operates within."
+ civic_tooltip_clandestine_informants_effects:3 "This Civic only allows you to construct a unique Branch Office building which has a single function: To increase your Empires Visibility by increasing Sensor Range by +1 per Syndicate Informants in operations."
+ building_syndicate_informants:0 "Syndicate Informants"
+ building_syndicate_informants_desc:2 "A Large Network of Informants working with the present Syndicate is providing them an unprecedented ammount of information about the Local Empires operations and doings."
+ 
+ civic_geoengineers:0 "Geoengineering Tycoon"
+ civic_geoengineers_desc:2 "This megacorp have made its fortune by fixing environmental issues caused by others, eventually mastering the fields of climate engineering and terraformation."
+ civic_tooltip_geoengineers_effects:3 "You can construct §Y$building_climate_control$§! on Branch Offices, which increases §YHabitability§! by §Y10%§! and provides the planet with §Y1§! £job_merchant£ §Y$job_merchant$§!."
+ building_climate_control:0 "Climate Control Complex"
+ building_climate_control_desc:2 "Monolitic facilities that alter the planet's atmosphere to make it more livable for the nearby population, at a price."
+ 
+ civic_tooltip_gospel_of_the_masses_effects:1 "\n£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!.\n£pop£ §YSpiritualist Pops§! give additional £trade_value£ §Y$TRADE_VALUE$§! on all Planets and Branch Offices\nCan build £building£ §Y$building_temple_of_prosperity$§! $BRANCH_OFFICE_BUILDING$\n"
+ 
+ civic_sports_association:0 "Sports Association"
+ civic_sports_association_desc:2 "This Megacorporation makes the bulk of their money by commercializing sport on every level, from the competitors to the people watchhing it."
+ civic_tooltip_sports_association_effects:3 "\n£job_entertainer£ §Y$job_entertainer_plural$§! also produce §Y2§! £trade_value£ Trade Value"
+ building_corporate_stadium:0 "Corporate Stadium"
+ building_corporate_stadium_desc:2 "This gargantuan venue for sports houses state of the art equipment and is filled to the brink of collapse with advertisements, luring spectators into the net of the company."

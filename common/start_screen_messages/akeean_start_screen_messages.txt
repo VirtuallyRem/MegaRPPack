@@ -1,0 +1,37 @@
+######################################################
+#                                                     
+#              akeean's Shielded Origin   
+#              Contributors: akeean                 
+######################################################
+
+# Shielded
+part = {
+	location = 0
+	localization = "START_SCREEN_AKEEAN"
+	
+	trigger = {
+		has_origin = origin_akeean
+		is_gestalt = no
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_AKEEAN_HIVE"
+	
+	trigger = {
+		has_origin = origin_akeean
+		is_hive_empire = yes
+	}
+}
+
+
+part = {
+	location = 0
+	localization = "START_SCREEN_AKEEAN_MACHINE"
+	
+	trigger = {
+		has_origin = origin_akeean
+		is_machine_empire = yes
+	}
+}

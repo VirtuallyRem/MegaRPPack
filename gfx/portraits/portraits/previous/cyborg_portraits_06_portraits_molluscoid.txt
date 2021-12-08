@@ -1,0 +1,300 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+############################
+portraits = {
+	molluscoid_octoborg = {	entity = "portrait_molluscoid_15_entity" clothes_selector = "molluscoid_massive_clothes_01" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+			character_textures = {
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_orange_black.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_orange_2.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_red_black.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_purple_2.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_purple_black.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_blue_black.dds"
+					# "gfx/models/portraits/molluscoid/molluscoid_massive_15_white_blue.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_octoborg_blue.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_octoborg_green.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_octoborg_orange.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_octoborg_red.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_octoborg_white.dds"
+					#"gfx/models/portraits/molluscoid/molluscoid_massive_15_orange_black.dds"
+			}
+	}
+	
+	starborg = {	entity = "portrait_molluscoid_17_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "cute_molluscoid_starfish_greetings" 
+			character_textures = {
+					"gfx/models/portraits/molluscoid/starborg_yellow_primary.dds"
+					"gfx/models/portraits/molluscoid/starborg_teal_traffic.dds"
+					"gfx/models/portraits/molluscoid/starborg_orange_calm.dds"
+					"gfx/models/portraits/molluscoid/starborg_red_dark.dds"
+					#"gfx/models/portraits/molluscoid/molluscoid_17_yellow.dds"
+			}
+	}
+}
+
+portrait_groups = {
+	mol15 = {
+		default = mol15
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mol15
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					molluscoid_octoborg
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mol15
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					molluscoid_octoborg
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mol15
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					molluscoid_octoborg
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mol15
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					molluscoid_octoborg
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mol15
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					molluscoid_octoborg
+				}
+			}
+		}
+	}
+}
+
+portrait_groups = {
+	mol17 = {
+		default = mol17
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					species = { NOT = { has_trait = trait_cybernetic } }
+				}
+				portraits = {
+					mol17
+				}
+			}
+			add = {
+				trigger = {
+					species = { has_trait = trait_cybernetic } 
+				}
+				portraits = {
+					starborg
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mol17
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic 
+				}
+				portraits = {
+					starborg
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { has_trait = trait_cybernetic }
+				}
+				portraits = {
+					mol17
+				}
+			}
+			add = {
+				trigger = {
+					has_trait = trait_cybernetic
+				}
+				portraits = {
+					starborg
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mol17
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					starborg
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					NOR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					mol17
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						has_trait = leader_trait_admiral_cyborg
+						has_trait = leader_trait_general_cyborg
+						has_trait = leader_trait_governor_cyborg
+						has_trait = leader_trait_ruler_cyborg
+						has_trait = leader_trait_scientist_cyborg
+					}
+				}
+				portraits = {
+					starborg
+				}
+			}
+		}
+	}
+}

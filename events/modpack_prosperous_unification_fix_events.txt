@@ -1,0 +1,24 @@
+namespace = prosp_uni
+
+country_event = {
+	id = prosp_uni.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { owner = { has_origin = origin_default } }
+
+	immediate = {
+		capital_scope = {
+			if = {
+				limit = { has_modifier = "prosp_uni_mod" }
+				remove_modifier = "prosp_uni_mod"
+				add_modifier = { modifier = "prosp_uni_mod" days = -1 }
+			}
+			else_if = {
+				limit = { has_modifier = "prosp_uni_mod_gestalt " }
+				remove_modifier = "prosp_uni_mod_gestalt "
+				add_modifier = { modifier = "prosp_uni_mod_gestalt " days = -1 }
+			}			
+		}
+	}
+}

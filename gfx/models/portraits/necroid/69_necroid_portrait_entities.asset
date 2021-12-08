@@ -1,0 +1,71 @@
+entity = {
+	name = "portrait_necroid_female_01_entity"
+	pdxmesh = "portrait_necroid_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle1"    animation_blend_time = 0 chance = 5.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	scale = 1.45
+}
+
+entity = {
+	name = "ghost_01_entity"
+	pdxmesh = "humanoid_03_female_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	
+	scale = 0.85
+}
+
+entity = {
+	name = "cyclops_necroid_1_entity"
+	pdxmesh = "humanoid_hp_13_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "soma_zombie_01_entity"
+	pdxmesh = "portrait_fungoid_04_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle5"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	scale = 1.1
+}
+
+entity = {
+	name = "will_o_wisp_1_entity"
+	pdxmesh = "portrait_molluscoid_synthetic_dawn_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"      animation_blend_time = 0 chance = 3.0 looping = no next_state = idle 
+		start_event = { node = "head_effect" particle = "will_o_wisp_head_effect" keep_particle = yes }
+	}
+	state = { name = "idle"       animation = "idle2"     animation_blend_time = 0 chance = 1.0 looping = no next_state = idle 
+		start_event = { node = "head_effect" particle = "will_o_wisp_head_effect" keep_particle = yes }
+	}
+	state = { name = "idle"       animation = "idle3"     animation_blend_time = 0 chance = 0.7 looping = no next_state = idle 
+		start_event = { node = "head_effect" particle = "will_o_wisp_head_effect" keep_particle = yes }
+	}
+	state = { name = "idle"       animation = "idle4"     animation_blend_time = 0 chance = 0.7 looping = no next_state = idle 
+		start_event = { node = "head_effect" particle = "will_o_wisp_head_effect" keep_particle = yes }
+	}
+
+	scale = 0.7
+}

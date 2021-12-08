@@ -1,0 +1,5 @@
+﻿l_english:
+
+wg_plunder_double:0 "§Y[Root.GetName]§! steals §G50%§! of the resources from the stockpiles of §Y[From.GetName]§!"
+wg_plunder_normal:0 "§Y[Root.GetName]§! steals §G25%§! of the resources from the stockpiles of §Y[From.GetName]§!"
+wg_plunder_half:0 "§Y[Root.GetName]§! steals §G12.5%§! of the resources from the stockpiles of §Y[From.GetName]§!"

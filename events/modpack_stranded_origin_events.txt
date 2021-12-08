@@ -1,0 +1,542 @@
+namespace = stranded
+
+planet_event = {
+	id = stranded.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { owner = { has_origin = origin_stranded } }
+
+	immediate = {
+		while = {
+			count = 10
+			random_owned_pop = {
+				limit = { is_same_species = root.owner.species }
+				kill_pop = yes
+			}
+		}
+		
+		remove_district = district_city
+		remove_district = district_generator
+		remove_district = district_mining
+		remove_district = district_farming
+		
+		remove_building = building_commercial_zone
+
+		set_planet_flag = colony_event
+		
+		owner = { country_event = { id = stranded.2 days = 1 } }
+	}
+}
+
+#Fix
+country_event = {
+	id = stranded.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+#Someone already setup
+		if = {
+			limit = {
+				any_country = {
+					has_origin = origin_stranded
+					is_same_species = root.species
+					NOT = { is_same_empire = root }
+					has_country_flag = stranded_initalized
+				}
+			}
+			random_country = {
+				limit = {
+					has_origin = origin_stranded
+					is_same_species = root.species
+					NOT = { is_same_empire = root }
+					has_country_flag = stranded_initalized
+				}
+				
+				save_event_target_as = original_stranded
+			}
+			random_system = {
+				limit = { any_system_planet = { has_planet_flag = stranded_homeworld@event_target:original_stranded } }
+				random_system_planet = {
+					limit = { has_planet_flag = stranded_homeworld@event_target:original_stranded }
+					save_event_target_as = stranded_homeworld
+				}
+			}
+		}
+#Ancestors living
+		else_if = {
+			limit = {
+				any_country = {
+					any_owned_species = { is_same_species = root.species }
+					NOT = { is_same_empire = root }
+					is_country_type = default
+					NOT = { has_origin = origin_stranded }
+					OR = {
+						NOT = { has_origin = origin_plan_con }
+						NOT = { is_same_species = root.species }
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					any_owned_species = { is_same_species = root.species }
+					NOT = { is_same_empire = root }
+					is_country_type = default
+					NOT = { has_origin = origin_stranded }
+					OR = {
+						NOT = { has_origin = origin_plan_con }
+						NOT = { is_same_species = root.species }
+					}
+				}
+				
+				capital_scope = {
+					set_planet_flag = stranded_homeworld@root
+					save_event_target_as = stranded_homeworld
+				}
+			}
+		}
+#Ancestors dead
+		else = {
+			random_system = {
+				limit = {
+					has_owner = no
+					NOR = {
+						has_star_flag = hostile_system
+						has_star_flag = tiyanki_home_system
+					}
+					OR = {
+						NOT = { is_star_class = sc_black_hole }
+						root.species = { has_trait = trait_pc_rogue_preference }
+					}
+					any_system_planet = {
+						OR = {
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+						}
+					}
+					distance = {
+						root.capital_scope.solar_system
+						use_bypasses = no
+						min_jumps = 25
+						max_jumps = 35
+					}
+				}
+				random_system_planet = {
+					limit = {
+						OR = {
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+						}
+					}
+					change_pc = pc_nuked
+					set_planet_size = 16
+					prevent_anomaly = yes				
+
+					clear_deposits = yes
+					reroll_deposits = yes
+					reroll_blockers = yes
+
+					set_planet_flag = stranded_homeworld@root
+					save_event_target_as = stranded_homeworld
+				}
+			}
+		}
+		
+		set_country_flag = stranded_initalized
+		species = { set_species_homeworld = event_target:stranded_homeworld }
+	
+		country_event = { id = stranded.4 days = 29 }
+	}
+}
+
+#Enamble project
+country_event = {
+	id = stranded.4
+	title = stranded.4.name
+	desc = stranded.4.desc
+	picture = GFX_evt_city_ruins
+	show_sound = event_default
+	location = event_target:stranded_homeworld
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stranded.4.a
+		event_target:stranded_homeworld = {
+			enable_special_project = {
+				name = "STRANDED_HW"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#Find the homeworld
+ship_event = {
+	id = stranded.5
+	title = stranded.5.name
+
+#####Descriptions
+#Ecu
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_city } }
+		text = stranded.5.desc.ecu
+	}
+#Relic
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_relic } }
+		text = stranded.5.desc.relic
+	}
+#Machine
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_machine } }
+		text = stranded.5.desc.machine
+	}
+#Hive
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_hive } }
+		text = stranded.5.desc.hive
+	}
+#Broken
+	desc = {
+		trigger = {
+			event_target:found_hw = { 
+				OR = {
+					is_planet_class = pc_shattered
+					is_planet_class = pc_broken
+				}
+			}
+		}
+		text = stranded.5.desc.broken
+	}
+#Nanite
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_gray_goo } }
+		text = stranded.5.desc.goo
+	}
+#Shrouded
+	desc = {
+		trigger = {
+			event_target:found_hw = { 
+				OR = {
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+				}
+			}
+		}
+		text = stranded.5.desc.shroud
+	}
+#Tomb
+	desc = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_nuked } }
+		text = stranded.5.desc.nuked
+	}
+#Normal, unowned
+	desc = {
+		trigger = {
+			has_owner = no
+			event_target:found_hw = { 
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+					is_planet_class = pc_nuked
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+					is_planet_class = pc_gray_goo
+				}
+			}
+		}
+		text = stranded.5.desc.default.unowned
+	}
+#Normal, owned
+	desc = {
+		trigger = {
+			has_owner = yes
+			event_target:found_hw = { 
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+					is_planet_class = pc_nuked
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+					is_planet_class = pc_gray_goo
+				}
+			}
+		}
+		text = stranded.5.desc.default.owned
+	}
+
+#####Pictures
+#Ecu
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_city } }
+		picture = GFX_evt_city_planet
+    }
+#Relic
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_relic } }
+        picture = GFX_evt_relic_world
+    }
+#Machine
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_machine } }
+        picture = GFX_evt_contingency_planet
+    }
+#Hive
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_hive } }
+        picture = GFX_evt_aggressive_flora
+    }
+#Tomb world
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_nuked } }
+        picture = GFX_evt_city_ruins
+    }
+#Broken :(
+	picture = {
+		trigger = {
+			event_target:found_hw = { 
+				OR = {
+					is_planet_class = pc_shattered
+					is_planet_class = pc_broken
+				}
+			}
+		}
+       	picture = GFX_evt_shattered_planet
+    }
+#Nanite
+	picture = {
+		trigger = { event_target:found_hw = { is_planet_class = pc_gray_goo } }
+        picture = GFX_evt_gray_goo
+    }
+#Shrouded
+	picture = {
+		trigger = {
+			event_target:found_hw = { 
+				OR = {
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+				}
+			}
+		}
+       	picture = GFX_evt_shrouded_planet
+    }
+#Normal world, no owner
+	picture = {
+		trigger = {
+			has_owner = no
+			event_target:found_hw = { 
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+					is_planet_class = pc_nuked
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+					is_planet_class = pc_gray_goo
+				}
+			}
+		}
+        picture = GFX_evt_overgrown_city
+    }
+#Normal world, owned
+	picture = {
+		trigger = {
+			has_owner = yes
+			event_target:found_hw = { 
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+					is_planet_class = pc_nuked
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+					is_planet_class = pc_gray_goo
+				}
+			}
+		}
+        picture = GFX_evt_inhabited_solar_system
+    }
+
+	show_sound = event_mystic_reveal
+	location = event_target:found_hw
+	
+	is_triggered_only = yes
+
+	option = {
+		name = stranded.5.memo
+		exclusive_trigger = {
+			owner = { has_valid_civic = civic_memorialist }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+
+	option = {
+		name = stranded.5.eco
+		exclusive_trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_green
+					has_ethic = ethic_fanatic_green
+				}
+			}
+			event_target:found_hw = {
+				OR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_machine
+					is_planet_class = pc_nuked
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+
+	option = {
+		name = stranded.5.shroudpsi
+		exclusive_trigger = {
+			owner_species = {
+                		OR = {
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+				}
+            		}
+			owner = {
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			event_target:found_hw = {
+				OR = {
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+
+	option = {
+		name = stranded.5.shroudmat
+		exclusive_trigger = {
+			owner_species = {
+                		NOR = {
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+				}
+            		}
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			event_target:found_hw = {
+				OR = {
+					is_planet_class = pc_shrouded
+					is_planet_class = pc_pdshroud
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+
+	option = {
+		name = stranded.5.synth
+		exclusive_trigger = {
+			owner = { is_mechanical_empire = yes }
+			event_target:found_hw = { is_planet_class = pc_machine }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+
+	option = {
+		name = stranded.5.sad
+		exclusive_trigger = {
+			event_target:found_hw = {
+				OR = {
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
+					is_planet_class = pc_gray_goo
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+	option = {
+		name = stranded.5.default
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+				min = 240
+				max = 8000
+			}
+			add_modifier = { modifier = stranded_found_homeworld days = -1 } 
+		}
+	}
+}

@@ -1,0 +1,92 @@
+##############################################################
+###	PORTRAIT GROUPS SETTINGS
+###
+###	This file configures when to display the female or male
+### humanoid_cyber_cyclope portraits.
+##############################################################
+
+portrait_groups = {
+	humanoid_cyber_cyclope = {
+		default = humanoid_cyber_cyclope_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					humanoid_cyber_cyclope_female
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					humanoid_cyber_cyclope_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					humanoid_cyber_cyclope_male
+				}
+			}
+		}
+	}
+}

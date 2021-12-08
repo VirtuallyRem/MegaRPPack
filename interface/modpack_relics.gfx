@@ -1,0 +1,104 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_plisan"
+		texturefile = "gfx/interface/icons/relics/r_plisan_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_plisan_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds" 
+			animationrotation = 220.0		
+			animationlooping = yes			
+			animationtime = 4				
+			animationdelay = 1.5			
+			animationblendmode = "add"      
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}
+
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_rakh_relic"
+		texturefile = "gfx/interface/icons/relics/r_rakh_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_rakh_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds" 
+			animationrotation = 140.0		
+			animationlooping = yes			
+			animationtime = 4				
+			animationdelay = 1.5			
+			animationblendmode = "add"      
+			animationtype = "scrolling"      
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}
+
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_akahia"
+		texturefile = "gfx/interface/icons/relics/r_akahia_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_akahia_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 11
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}
+
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_kynodaran_relic"
+		texturefile = "gfx/interface/icons/relics/r_kynodaran_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_kynodaran_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 11
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}
+
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_tsagoth_relic"
+		texturefile = "gfx/interface/icons/relics/r_tsagoth_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_tsagoth_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 11
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

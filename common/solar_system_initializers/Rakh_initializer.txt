@@ -1,0 +1,158 @@
+
+# Rakh Home System
+Rakh_system_initializer = {
+	name = "Rakhis"
+	class = "sc_k"
+
+
+	usage = custom_empire
+
+	flags = { empire_home_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Rakhis"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 37
+		has_ring = no
+	}
+
+	planet = {
+		name = "Carsis"
+		class = "pc_barren_cold"
+		orbit_distance = 64
+		orbit_angle = 111
+		size = 12
+		has_ring = no
+	}
+
+	planet = {
+		name = "Othrak"
+		class = "pc_barren_cold"
+		orbit_distance = 36
+		orbit_angle = 301
+		size = 23
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Tol Khal"
+		class = "pc_arctic"
+		size = 20
+		orbit_distance = 45
+		orbit_angle = 250
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "Iskiran"
+			class = "pc_barren_cold"
+			size = 7
+			orbit_distance = 9
+			orbit_angle = 22
+			has_ring = no
+		}	
+	}
+
+	planet = {
+		name = "Cryos"
+		class = "pc_frozen"
+		size = 17
+		orbit_distance = 89
+		orbit_angle = 96
+		has_ring = no
+	
+		moon = {
+			name = "Velorop"
+			class = "pc_barren_cold"
+			orbit_distance = 7.8
+			orbit_angle = -36
+			size = 4
+			has_ring = no
+		}
+	}
+			
+	planet = {
+		name = "Gorothan"
+		class = "pc_gas_giant"
+		orbit_distance = 100
+		orbit_angle = -123
+		size = 40
+		has_ring = no
+		entity = "gas_giant_03_entity"
+
+		moon = {
+			name = "Krator"
+			class = "pc_frozen"
+			size = 11
+			orbit_distance = 13.4
+			orbit_angle = 81
+			has_ring = no
+		}
+
+		moon = {
+			name = "Merissa"
+			class = "pc_barren_cold"
+			size = 7
+			orbit_distance = 8
+			orbit_angle = 105
+			has_ring = no
+		}
+
+		moon = {
+			name = "Atros"
+			class = "pc_frozen"
+			size = 9
+			orbit_distance = 6
+			orbit_angle = 36.5
+			has_ring = no
+		}
+
+		moon = {
+			name = "Orkos"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 7
+			orbit_angle = 61
+			has_ring = no
+		}
+	}
+			
+	planet = {
+		name = "Ultum"
+		class = "pc_gas_giant"
+		size = 50
+		orbit_distance = 164.6
+		orbit_angle = 142
+		has_ring = yes
+		entity = gas_giant_04_entity
+	}
+		
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1_first_colony"
+	}
+}

@@ -1,0 +1,1287 @@
+namespace = mod_ops
+
+#COUNTER ESPIONAGE
+espionage_operation_event = {
+	id = mod_ops.100
+	title = mod_ops.100.name
+	desc = {
+        	trigger = {
+            		target.owner = { is_gestalt = no }
+        	}
+       		text = mod_ops.100.desc
+	}
+	desc = {
+        	trigger = {
+            		target.owner = { is_gestalt = yes }
+        	}
+       		text = mod_ops.100.desc.gestalt
+	}
+	picture = GFX_evt_spymaster
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {}
+	option = { name = mod_ops.ok }
+}
+espionage_operation_event = {
+	id = mod_ops.101
+	title = mod_ops.101.name
+	desc = mod_ops.101.desc
+	picture = GFX_evt_smear_campaign
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {}
+	option = { name = mod_ops.ok }
+	
+}
+espionage_operation_event = {
+	id = mod_ops.102
+	title = mod_ops.102.name
+	desc = mod_ops.102.desc
+	picture = GFX_evt_dark_alley
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+
+	immediate = {}
+
+	option = { name = mod_ops.ok }
+}
+espionage_operation_event = {
+	id = mod_ops.104
+	title = mod_ops.104.name
+	desc = {
+        	trigger = { has_espionage_asset_subterfuge = no }
+       		text = mod_ops.104.desc
+	}
+	desc = {
+        	trigger = { has_espionage_asset_subterfuge = yes }
+       		text = mod_ops.104.desc.max_reward
+	}
+	picture = GFX_evt_decryption
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+
+	immediate = {}
+	
+	option = {
+		trigger = { has_espionage_asset_subterfuge = no }
+		name = mod_ops.104.a
+	}
+
+	option = {
+		trigger = { has_espionage_asset_subterfuge = yes }
+		name = mod_ops.104.b
+	}
+
+	option = {
+		icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+		trigger = { has_espionage_asset_subterfuge = yes }
+		name = mod_ops.c
+		set_espionage_flag = increased_reward
+		destroy_espionage_asset_subterfuge = yes
+	}
+
+	after = {
+		hidden_effect = {
+			target = {
+				if = {
+					limit = {
+						any_spynetwork = {
+							is_spynetwork_level > 0
+							target = { is_same_value = root.owner }
+						}
+					}
+					country_event = { id = mod_ops.105 }
+				}
+			}
+		}
+        	spynetwork = { add_spy_network_level = -10 }
+        	destroy_espionage_operation = this
+	}
+}
+
+country_event = {
+	id = mod_ops.105
+	title = mod_ops.105.name
+	desc = mod_ops.105.desc
+	picture = GFX_evt_worrying_signal
+	show_sound = event_criminal_activity
+	is_triggered_only = yes
+
+	immediate = {
+		random_spynetwork = {
+			limit = {
+				is_spynetwork_level > 0
+				target = { is_same_value = from.owner }
+			}
+			if = {
+				limit = { from = { has_operation_flag = increased_reward } }
+				add_spy_network_level = -20
+			}
+			else = { add_spy_network_level = -10 }
+		}
+	}
+	
+	option = {
+		name = mod_ops.oh_no
+		custom_tooltip = mod_ops.105.tooltip
+	}
+}
+
+#STEAL RELIC
+espionage_operation_event = {
+	id = mod_ops.400
+	title = mod_ops.400.name
+	desc = {
+        trigger = { target = { num_owned_relics > 1 } }
+        text = mod_ops.400.desc.choice
+    }
+	desc = {
+        trigger = { target = { num_owned_relics < 2 } }
+        text = mod_ops.400.desc
+    }
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {}
+	
+	option = {
+		trigger = {
+			target = { has_relic = r_dragon_trophy }
+		}
+		name = r_dragon_trophy
+		set_espionage_operation_flag = steal_r_dragon_trophy 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_khans_throne }
+		}
+		name = r_khans_throne
+		set_espionage_operation_flag = steal_r_khans_throne 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_worm_scales }
+		}
+		name = r_worm_scales 
+		set_espionage_operation_flag = steal_r_worm_scales 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_rubricator }
+		}
+		name = r_rubricator 
+		set_espionage_operation_flag = steal_r_rubricator 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_galaxy }
+		}
+		name = r_galaxy 
+		set_espionage_operation_flag = steal_r_galaxy 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_omnicodex }
+		}
+		name = r_omnicodex 
+		set_espionage_operation_flag = steal_r_omnicodex 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_surveyor }
+		}
+		name = r_surveyor 
+		set_espionage_operation_flag = steal_r_surveyor 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_galatron }
+		}
+		name = r_galatron 
+		set_espionage_operation_flag = steal_r_galatron 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_ancient_sword }
+		}
+		name = r_ancient_sword 
+		set_espionage_operation_flag = steal_r_ancient_sword 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_severed_head }
+		}
+		name = r_severed_head 
+		set_espionage_operation_flag = steal_r_severed_head 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_prethoryn_queen }
+		}
+		name = r_prethoryn_queen 
+		set_espionage_operation_flag = steal_r_prethoryn_queen 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_unbidden_warlock }
+		}
+		name = r_unbidden_warlock 
+		set_espionage_operation_flag = steal_r_unbidden_warlock 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_contingency_core }
+		}
+		name = r_contingency_core 
+		set_espionage_operation_flag = steal_r_contingency_core 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_zro_crystal }
+		}
+		name = r_zro_crystal 
+		set_espionage_operation_flag = steal_r_zro_crystal 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_the_last_baol }
+		}
+		name = r_the_last_baol 
+		set_espionage_operation_flag = steal_r_the_last_baol 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_the_defragmentor }
+		}
+		name = r_the_defragmentor 
+		set_espionage_operation_flag = steal_r_the_defragmentor 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_reality_perforator }
+		}
+		name = r_reality_perforator 
+		set_espionage_operation_flag = steal_r_reality_perforator 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_pox_sample }
+		}
+		name = r_pox_sample 
+		set_espionage_operation_flag = steal_r_pox_sample 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_cryo_core }
+		}
+		name = r_cryo_core 
+		set_espionage_operation_flag = steal_r_cryo_core 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_war_forge }
+		}
+		name = r_war_forge 
+		set_espionage_operation_flag = steal_r_war_forge 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_akahia }
+		}
+		name = r_akahia 
+		set_espionage_operation_flag = steal_r_akahia 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_kynodaran }
+		}
+		name = r_kynodaran 
+		set_espionage_operation_flag = steal_r_kynodaran 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_plisan }
+		}
+		name = r_plisan
+		set_espionage_operation_flag = steal_r_plisan
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_rakh }
+		}
+		name = r_rakh 
+		set_espionage_operation_flag = steal_r_rakh 
+	}
+	option = {
+		trigger = {
+			target = { has_relic = r_tsagoth }
+		}
+		name = r_tsagoth 
+		set_espionage_operation_flag = steal_r_tsagoth 
+	}
+}
+espionage_operation_event = {
+	id = mod_ops.401
+	title = mod_ops.401.name
+	desc = mod_ops.401.desc
+	picture = GFX_evt_outpost
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {}
+	option = { name = mod_ops.ok }
+}
+espionage_operation_event = {
+	id = mod_ops.402
+	title = mod_ops.402.name
+	desc = mod_ops.402.desc
+	picture = GFX_evt_gunrunning
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {}
+	option = { name = mod_ops.ok }
+}
+espionage_operation_event = {
+	id = mod_ops.404
+	title = mod_ops.404.name
+	desc = mod_ops.404.desc
+	picture = GFX_evt_operative_chase
+	show_sound = event_default
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {
+		target = { save_event_target_as = victim }
+	}
+	option = {
+		name = mod_ops.good_job
+		hidden_effect = {
+			owner = { country_event = { id = mod_ops.405 } }
+			target = { country_event = { id = mod_ops.408 } }
+		}
+	}
+	after = {
+		spynetwork = { add_spy_network_level = -25 }
+		destroy_espionage_operation = this
+	}
+}
+#Stolen notify spy
+country_event = {
+	id = mod_ops.405
+	title = mod_ops.405.name
+	desc = mod_ops.405.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+
+	immediate = {
+		from = { 
+			switch = {
+				trigger = has_espionage_operation_flag
+				steal_r_dragon_trophy = { root = { steal_relic = { target = from.target relic = r_dragon_trophy } } }
+				steal_r_khans_throne = { root = { steal_relic = { target = from.target relic = r_khans_throne } } }
+				steal_r_worm_scales = { root = { steal_relic = { target = from.target relic = r_worm_scales } } }
+				steal_r_rubricator = { root = { steal_relic = { target = from.target relic = r_rubricator } } }
+				steal_r_galaxy = { root = { steal_relic = { target = from.target relic = r_galaxy } } }
+				steal_r_omnicodex = { root = { steal_relic = { target = from.target relic = r_omnicodex } } }
+				steal_r_surveyor = { root = { steal_relic = { target = from.target relic = r_surveyor } } }
+				steal_r_galatron = { root = { steal_relic = { target = from.target relic = r_galatron } } }
+				steal_r_severed_head = { root = { steal_relic = { target = from.target relic = r_severed_head } } }
+				steal_r_prethoryn_queen = { root = { steal_relic = { target = from.target relic = r_prethoryn_queen } } }
+				steal_r_unbidden_warlock = { root = { steal_relic = { target = from.target relic = r_unbidden_warlock } } }
+				steal_r_contingency_core = { root = { steal_relic = { target = from.target relic = r_contingency_core } } }
+				steal_r_zro_crystal = { root = { steal_relic = { target = from.target relic = r_zro_crystal } } }
+				steal_r_the_last_baol = { root = { steal_relic = { target = from.target relic = r_the_last_baol } } }
+				steal_r_the_defragmentor = { root = { steal_relic = { target = from.target relic = r_the_defragmentor } } }
+				steal_r_reality_perforator = { root = { steal_relic = { target = from.target relic = r_reality_perforator } } }
+				steal_r_pox_sample = { root = { steal_relic = { target = from.target relic = r_pox_sample } } }
+				steal_r_cryo_core = { root = { steal_relic = { target = from.target relic = r_cryo_core } } }
+				steal_r_war_forge = { root = { steal_relic = { target = from.target relic = r_war_forge } } }
+				steal_r_akahia = { root = { steal_relic = { target = from.target relic = r_akahia } } }
+				steal_r_kynodaran = { root = { steal_relic = { target = from.target relic = r_kynodaran } } }
+				steal_r_plisan = { root = { steal_relic = { target = from.target relic = r_plisan } } }
+				steal_r_rakh = { root = { steal_relic = { target = from.target relic = r_rakh } } }
+				steal_r_tsagoth = { root = { steal_relic = { target = from.target relic = r_tsagoth } } }
+			}
+		}
+	}
+	option = {
+		exclusive_trigger = { is_last_received_relic = r_akahia }
+		name = mod_ops.405.akahia
+		custom_tooltip = stole_relic
+	}
+	option = {
+		exclusive_trigger = { is_last_received_relic = r_rakh }
+		name = mod_ops.405.rakh
+		custom_tooltip = stole_relic
+	}
+	option = {
+		exclusive_trigger = { is_last_received_relic = r_tsagoth }
+		name = mod_ops.405.tsagoth
+		custom_tooltip = stole_relic
+	}
+	option = {
+		exclusive_trigger = { has_civic = civic_criminal_heritage }
+		name = mod_ops.405.crime
+		custom_tooltip = stole_relic
+	}
+	option = {
+		name = mod_ops.amazing
+		custom_tooltip = stole_relic
+	}
+}
+#Stolen notify target
+country_event = {
+	id = mod_ops.408
+	title = mod_ops.408.name
+	desc = mod_ops.408.desc
+	picture = GFX_evt_operative_chase
+	show_sound = event_faceoff_in_space
+	is_triggered_only = yes
+
+	immediate = {}
+	option = {
+		exclusive_trigger = { has_civic = civic_police_state }
+		name = mod_ops.cop
+	}
+	option = {
+		name = mod_ops.oh_no
+	}
+}
+
+#test event - give relic
+country_event = {
+	id = mod_ops.410
+	hide_window = yes
+	is_triggered_only = yes
+
+	espionage_operation = yes
+	immediate = {
+		add_relic = r_plisan
+		add_relic = r_rakh
+		add_relic = r_tsagoth
+	}
+}
+
+#SEED PROPAGANDA
+espionage_operation_event = {
+    id = mod_ops.1000
+    title = mod_ops.1000.name
+	desc = {
+		trigger = {
+			NAND = {
+				OR = {
+					owner = { is_authoritarian = no }
+					AND = {
+						owner = { is_authoritarian = yes }
+						target = { is_authoritarian = yes }
+					}
+				}
+				OR = {
+					owner = { is_egalitarian = no }
+					AND = {
+						owner = { is_egalitarian = yes }
+						target = { is_egalitarian = yes }
+					}
+				}
+				OR = {
+					owner = { is_militarist = no }
+					AND = {
+						owner = { is_militarist = yes }
+						target = { is_militarist = yes }
+					}
+				}
+				OR = {
+					owner = { is_pacifist = no }
+					AND = {
+						owner = { is_pacifist = yes }
+						target = { is_pacifist = yes }
+					}
+				}
+				OR = {
+					owner = { is_materialist = no }
+					AND = {
+						owner = { is_materialist = yes }
+						target = { is_materialist = yes }
+					}
+				}
+				OR = {
+					owner = { is_spiritualist = no }
+					AND = {
+						owner = { is_spiritualist = yes }
+						target = { is_spiritualist = yes }
+					}
+				}
+				OR = {
+					owner = { is_xenophile = no }
+					AND = {
+						owner = { is_xenophile = yes }
+						target = { is_xenophile = yes }
+					}
+				}
+				OR = {
+					owner = { is_xenophobe = no }
+					AND = {
+						owner = { is_xenophobe = yes }
+						target = { is_xenophobe = yes }
+					}
+				}
+				OR = {
+					owner = { is_pluralist = no }
+					AND = {
+						owner = { is_pluralist = yes }
+						target = { is_pluralist = yes }
+					}
+				}
+				OR = {
+					owner = { is_elitist = no }
+					AND = {
+						owner = { is_elitist = yes }
+						target = { is_elitist = yes }
+					}
+				}
+				OR = {
+					owner = { is_capitalism = no }
+					AND = {
+						owner = { is_capitalism = yes }
+						target = { is_capitalism = yes }
+					}
+				}
+				OR = {
+					owner = { is_socialism = no }
+					AND = {
+						owner = { is_socialism = yes }
+						target = { is_socialism = yes }
+					}
+				}
+				OR = {
+					owner = { is_green = no }
+					AND = {
+						owner = { is_green = yes }
+						target = { is_green = yes }
+					}
+				}
+				OR = {
+					owner = { is_industrial = no }
+					AND = {
+						owner = { is_industrial = yes }
+						target = { is_industrial = yes }
+					}
+				}
+			}
+		}
+		text = mod_ops.1000.desc
+	}
+	desc = {
+		trigger = {
+			OR = {
+				owner = { is_authoritarian = no }
+				AND = {
+					owner = { is_authoritarian = yes }
+					target = { is_authoritarian = yes }
+				}
+			}
+			OR = {
+				owner = { is_egalitarian = no }
+				AND = {
+					owner = { is_egalitarian = yes }
+					target = { is_egalitarian = yes }
+				}
+			}
+			OR = {
+				owner = { is_militarist = no }
+				AND = {
+					owner = { is_militarist = yes }
+					target = { is_militarist = yes }
+				}
+			}
+			OR = {
+				owner = { is_pacifist = no }
+				AND = {
+					owner = { is_pacifist = yes }
+					target = { is_pacifist = yes }
+				}
+			}
+			OR = {
+				owner = { is_materialist = no }
+				AND = {
+					owner = { is_materialist = yes }
+					target = { is_materialist = yes }
+				}
+			}
+			OR = {
+				owner = { is_spiritualist = no }
+				AND = {
+					owner = { is_spiritualist = yes }
+					target = { is_spiritualist = yes }
+				}
+			}
+			OR = {
+				owner = { is_xenophile = no }
+				AND = {
+					owner = { is_xenophile = yes }
+					target = { is_xenophile = yes }
+				}
+			}
+			OR = {
+				owner = { is_xenophobe = no }
+				AND = {
+					owner = { is_xenophobe = yes }
+					target = { is_xenophobe = yes }
+				}
+			}
+			OR = {
+				owner = { is_pluralist = no }
+				AND = {
+					owner = { is_pluralist = yes }
+					target = { is_pluralist = yes }
+				}
+			}
+			OR = {
+				owner = { is_elitist = no }
+				AND = {
+					owner = { is_elitist = yes }
+					target = { is_elitist = yes }
+				}
+			}
+			OR = {
+				owner = { is_capitalism = no }
+				AND = {
+					owner = { is_capitalism = yes }
+					target = { is_capitalism = yes }
+				}
+			}
+			OR = {
+				owner = { is_socialism = no }
+				AND = {
+					owner = { is_socialism = yes }
+					target = { is_socialism = yes }
+				}
+			}
+			OR = {
+				owner = { is_green = no }
+				AND = {
+					owner = { is_green = yes }
+					target = { is_green = yes }
+				}
+			}
+			OR = {
+				owner = { is_industrial = no }
+				AND = {
+					owner = { is_industrial = yes }
+					target = { is_industrial = yes }
+				}
+			}
+		}
+		text = mod_ops.1000.desc.fail
+	}
+    picture = GFX_evt_spy_network
+    show_sound = event_default
+    is_triggered_only = yes
+
+    espionage_operation = yes	
+
+    immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+    option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+			target = { is_authoritarian = no }
+		}
+		name = mod_ops.1000.auth
+		set_espionage_operation_flag = prop_auth
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			target = { is_egalitarian = no }
+		}
+		name = mod_ops.1000.lib
+		set_espionage_operation_flag = prop_lib
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			target = { is_militarist = no }
+		}
+		name = mod_ops.1000.mil
+		set_espionage_operation_flag = prop_mil
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			target = { is_pacifist = no }
+		}
+		name = mod_ops.1000.pac
+		set_espionage_operation_flag = prop_pac
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			target = { is_materialist = no }
+		}
+		name = mod_ops.1000.mat
+		set_espionage_operation_flag = prop_mat
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+			target = { is_spiritualist = no }
+		}
+		name = mod_ops.1000.spi
+		set_espionage_operation_flag = prop_spi
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			target = { is_xenophile = no }
+		}
+		name = mod_ops.1000.phile
+		set_espionage_operation_flag = prop_phile
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			target = { is_xenophobe = no }
+		}
+		name = mod_ops.1000.phobe
+		set_espionage_operation_flag = prop_phobe
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_pluralist
+					has_ethic = ethic_fanatic_pluralist
+				}
+			}
+			target = { is_pluralist = no }
+		}
+		name = mod_ops.1000.egal
+		set_espionage_operation_flag = prop_egal
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_elitist
+					has_ethic = ethic_fanatic_elitist
+				}
+			}
+			target = { is_elitist = no }
+		}
+		name = mod_ops.1000.elit
+		set_espionage_operation_flag = prop_elit
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
+			target = { is_capitalism = no }
+		}
+		name = mod_ops.1000.ind
+		set_espionage_operation_flag = prop_ind
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_socialism
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+			target = { is_socialism = no }
+		}
+		name = mod_ops.1000.col
+		set_espionage_operation_flag = prop_col
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_green
+					has_ethic = ethic_fanatic_green
+				}
+			}
+			target = { is_green = no }
+		}
+		name = mod_ops.1000.eco
+		set_espionage_operation_flag = prop_eco
+	}
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_industrial
+					has_ethic = ethic_fanatic_industrial
+				}
+			}
+			target = { is_industrial = no }
+		}
+		name = mod_ops.1000.idr
+		set_espionage_operation_flag = prop_idr
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				owner = { is_authoritarian = no }
+				AND = {
+					owner = { is_authoritarian = yes }
+					target = { is_authoritarian = yes }
+				}
+			}
+			OR = {
+				owner = { is_egalitarian = no }
+				AND = {
+					owner = { is_egalitarian = yes }
+					target = { is_egalitarian = yes }
+				}
+			}
+			OR = {
+				owner = { is_militarist = no }
+				AND = {
+					owner = { is_militarist = yes }
+					target = { is_militarist = yes }
+				}
+			}
+			OR = {
+				owner = { is_pacifist = no }
+				AND = {
+					owner = { is_pacifist = yes }
+					target = { is_pacifist = yes }
+				}
+			}
+			OR = {
+				owner = { is_materialist = no }
+				AND = {
+					owner = { is_materialist = yes }
+					target = { is_materialist = yes }
+				}
+			}
+			OR = {
+				owner = { is_spiritualist = no }
+				AND = {
+					owner = { is_spiritualist = yes }
+					target = { is_spiritualist = yes }
+				}
+			}
+			OR = {
+				owner = { is_xenophile = no }
+				AND = {
+					owner = { is_xenophile = yes }
+					target = { is_xenophile = yes }
+				}
+			}
+			OR = {
+				owner = { is_xenophobe = no }
+				AND = {
+					owner = { is_xenophobe = yes }
+					target = { is_xenophobe = yes }
+				}
+			}
+			OR = {
+				owner = { is_pluralist = no }
+				AND = {
+					owner = { is_pluralist = yes }
+					target = { is_pluralist = yes }
+				}
+			}
+			OR = {
+				owner = { is_elitist = no }
+				AND = {
+					owner = { is_elitist = yes }
+					target = { is_elitist = yes }
+				}
+			}
+			OR = {
+				owner = { is_capitalism = no }
+				AND = {
+					owner = { is_capitalism = yes }
+					target = { is_capitalism = yes }
+				}
+			}
+			OR = {
+				owner = { is_socialism = no }
+				AND = {
+					owner = { is_socialism = yes }
+					target = { is_socialism = yes }
+				}
+			}
+			OR = {
+				owner = { is_green = no }
+				AND = {
+					owner = { is_green = yes }
+					target = { is_green = yes }
+				}
+			}
+			OR = {
+				owner = { is_industrial = no }
+				AND = {
+					owner = { is_industrial = yes }
+					target = { is_industrial = yes }
+				}
+			}
+		}
+		name = mod_ops.1000.fail
+		destroy_espionage_operation = this
+	}
+	
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+    id = mod_ops.1001
+    title = mod_ops.1001.name
+	desc = mod_ops.1001.desc
+	picture = GFX_evt_alien_propaganda
+    show_sound = event_default
+    is_triggered_only = yes
+
+    espionage_operation = yes	
+
+    immediate = {
+	}
+	
+	option = { name = mod_ops.ok }
+}
+
+espionage_operation_event = {
+    id = mod_ops.1002
+    title = mod_ops.1002.name
+	desc = mod_ops.1002.desc
+	picture = GFX_evt_alien_propaganda
+    show_sound = event_default
+    is_triggered_only = yes
+
+    espionage_operation = yes	
+
+    immediate = {
+		target = { country_event = { id = mod_ops.1004 } }
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		name = mod_ops.good_job
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		name = mod_ops.1002.phile
+	}
+	
+	after = {
+        spynetwork = {
+            add_spy_network_level = -10
+        }
+        destroy_espionage_operation = this
+    }
+}
+
+country_event = {
+    id = mod_ops.1004
+    title = mod_ops.1004.name
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_auth } }
+		text = mod_ops.1004.desc.auth
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_lib } }
+		text = mod_ops.1004.desc.lib
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_mil } }
+		text = mod_ops.1004.desc.mil
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_pac } }
+		text = mod_ops.1004.desc.pac
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_mat } }
+		text = mod_ops.1004.desc.mat
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_spi } }
+		text = mod_ops.1004.desc.spi
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_phile } }
+		text = mod_ops.1004.desc.phile
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_phobe } }
+		text = mod_ops.1004.desc.phobe
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_egal } }
+		text = mod_ops.1004.desc.egal
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_elit } }
+		text = mod_ops.1004.desc.elit
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_ind } }
+		text = mod_ops.1004.desc.ind
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_col } }
+		text = mod_ops.1004.desc.col
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_eco } }
+		text = mod_ops.1004.desc.eco
+	}
+	desc = {
+		trigger = { from = { has_espionage_operation_flag = prop_idr } }
+		text = mod_ops.1004.desc.idr
+	}
+	picture = GFX_evt_alien_propaganda
+    show_sound = event_planetary_riot
+    is_triggered_only = yes
+
+    immediate = {
+		from = { 
+			switch = {
+				trigger = has_espionage_operation_flag
+				prop_auth = { root = { add_modifier = { modifier = prop_authoritarian days = 1800 } } }
+				prop_lib = { root = { add_modifier = { modifier = prop_libertarian days = 1800 } } }
+				prop_mil = { root = { add_modifier = { modifier = prop_militarist days = 1800 } } }
+				prop_pac = { root = { add_modifier = { modifier = prop_pacifist days = 1800 } } }
+				prop_mat = { root = { add_modifier = { modifier = prop_materialist days = 1800 } } }
+				prop_spi = { root = { add_modifier = { modifier = prop_spiritualist days = 1800 } } }
+				prop_phile = { root = { add_modifier = { modifier = prop_xenophile days = 1800 } } }
+				prop_phobe = { root = { add_modifier = { modifier = prop_xenophobe days = 1800 } } }
+				prop_egal = { root = { add_modifier = { modifier = prop_egalitarian days = 1800 } } }
+				prop_elit = { root = { add_modifier = { modifier = prop_elitist days = 1800 } } }
+				prop_ind = { root = { add_modifier = { modifier = prop_individualist days = 1800 } } }
+				prop_col = { root = { add_modifier = { modifier = prop_collectivist days = 1800 } } }
+				prop_eco = { root = { add_modifier = { modifier = prop_environmentalist days = 1800 } } }
+				prop_idr = { root = { add_modifier = { modifier = prop_industrialist days = 1800 } } }
+			}
+		}
+	}
+	
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				}
+			from = { has_espionage_operation_flag = prop_lib }
+		}
+		name = mod_ops.1004.auth
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			from = { has_espionage_operation_flag = prop_auth }
+		}
+		name = mod_ops.1004.lib
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+			from = { has_espionage_operation_flag = prop_pac }
+		}
+		name = mod_ops.1004.mil
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+			from = { has_espionage_operation_flag = prop_mil }
+		}
+		name = mod_ops.1004.pac
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			from = { has_espionage_operation_flag = prop_spi }
+		}
+		name = mod_ops.1004.mat
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			from = { has_espionage_operation_flag = prop_mat }
+		}
+		name = mod_ops.1004.spi
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			from = { has_espionage_operation_flag = prop_phobe }
+		}
+		name = mod_ops.1004.phile
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			from = { has_espionage_operation_flag = prop_phile }
+		}
+		name = mod_ops.1004.phobe
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_pluralist
+				has_ethic = ethic_fanatic_pluralist
+			}
+			from = { has_espionage_operation_flag = prop_elit }
+		}
+		name = mod_ops.1004.egal
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_elitist
+				has_ethic = ethic_fanatic_elitist
+			}
+			from = { has_espionage_operation_flag = prop_egal }
+		}
+		name = mod_ops.1004.elit
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+			}
+			from = { has_espionage_operation_flag = prop_col }
+		}
+		name = mod_ops.1004.ind
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_socialism
+				has_ethic = ethic_fanatic_socialism
+			}
+			from = { has_espionage_operation_flag = prop_ind }
+		}
+		name = mod_ops.1004.col
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_green
+				has_ethic = ethic_fanatic_green
+			}
+			from = { has_espionage_operation_flag = prop_idr }
+		}
+		name = mod_ops.1004.eco
+	}
+	option = {
+		exclusive_trigger = {
+			OR = {
+				has_ethic = ethic_industrial
+				has_ethic = ethic_fanatic_industrial
+			}
+			from = { has_espionage_operation_flag = prop_eco }
+		}
+		name = mod_ops.1004.idr
+	}
+	option = {
+		name = mod_ops.1004
+	}
+}

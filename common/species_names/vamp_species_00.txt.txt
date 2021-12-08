@@ -1,0 +1,8 @@
+vamp = {
+	vamp = {
+		name = Sephtast
+		plural = Sephtast
+		home_planet = "Sephtis"
+		home_system = "Eye of Torment"
+	}
+}

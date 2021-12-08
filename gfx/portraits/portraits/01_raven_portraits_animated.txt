@@ -1,0 +1,120 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	raven_male = {	entity = "raven_portrait_entity"	clothes_selector = "raven_male_clothes" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/animated/raven_portrait.dds"
+				}
+	}
+	
+	raven_female = {	entity = "raven_portrait_entity"	clothes_selector = "raven_female_clothes" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/animated/raven_portrait.dds"
+				}
+	}
+	
+	raven_ruler = {	entity = "raven_portrait_entity"	clothes_selector = "raven_ruler_clothes" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/animated/raven_portrait.dds"
+				}
+	}
+}
+
+
+portrait_groups = {
+
+	raven_group_animated = {
+		default = raven_ruler
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					raven_ruler
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					raven_ruler
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					raven_ruler
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					raven_male
+					raven_female
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					raven_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					raven_male
+				}
+			}
+		}
+		
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					raven_ruler
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					raven_ruler
+				}
+			}
+		}
+	}
+}

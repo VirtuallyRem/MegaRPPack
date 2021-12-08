@@ -1,0 +1,116 @@
+# This is a template which multiple species can use. 
+  
+space_greek_elves_female_01_hair = {
+	default = "gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+
+		random = {
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"				
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_05.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+			}
+		}	
+	}
+	
+	
+	
+	
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+	
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"				
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_05.dds"
+				"gfx/models/portraits/romans/greek_female_helmet.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+			}
+		}		
+		
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"				
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_05.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+			}
+		}	
+		
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"				
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_05.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+			}
+		}		
+		
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+			}
+		}
+	}
+  
+	#leader scope 
+	ruler = { #for rulers
+	    #default = "gfx/models/portraits/romans/human_female_hair_black_style_01_lavr.dds"
+		
+		random = {
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+
+			}
+		}
+
+        random = {
+			trigger = {
+				owner = { has_militarist_government = yes }
+			}
+				
+			list = {
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_06.dds"
+				"gfx/models/portraits/romans/dunmer_05_female_hair_blonde_style_04.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_01.dds"
+				"gfx/models/portraits/human/human_female_hair_brown_style_03.dds"								
+				"gfx/models/portraits/human/human_female_hair_brown_style_04.dds"
+				"gfx/models/portraits/romans/corinf_helmet_female.dds"
+			}
+		}		
+	}
+}

@@ -1,0 +1,136 @@
+namespace = marscolony
+
+#One Small Step - Make a colony!
+country_event = {
+	id = marscolony.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_one_small_step
+		}
+	}
+	
+	immediate = {
+		give_technology = { message = no tech = tech_terrestrial_sculpting }
+	
+			capital_scope = {
+				while = {
+					count = 10
+					random_owned_pop = {
+						limit = { is_same_species = root.species }
+						kill_pop = yes
+					}
+				}
+
+				remove_district = district_generator
+				remove_district = district_mining
+			
+				if = {
+					limit = { root = { is_machine_empire = yes } }
+					remove_district = district_generator
+				}
+				else_if = {
+					limit = { root = { is_hive_empire = yes } }
+					remove_district = district_farming
+				}
+				else = {
+					remove_district = district_city
+				}
+				
+				if = {
+					limit = { root = { country_uses_food = yes } }
+					remove_district = district_farming
+				}
+
+				if = {
+					limit = { root = { has_civic = civic_anglers } }
+					remove_district = district_industrial
+					add_district = district_farming
+				}
+
+				every_owned_pop = { clear_pop_category = yes }
+			}
+
+			random_system_within_border = {
+				random_system_planet = {
+					limit = {
+						OR = {
+							has_modifier = modifier_marscolony_candidate
+							AND = {
+								is_capital = no
+								is_star = no
+								is_asteroid = no
+								is_moon = no
+								NOT = { is_planet_class = pc_gas_giant}
+							}
+						}
+					}
+					
+					change_pc = root
+
+					set_planet_size = 15
+					set_planet_flag = colony_event
+					prevent_anomaly = yes
+
+					clear_deposits = yes
+
+					reroll_deposits = yes
+					reroll_blockers = yes
+					
+					create_colony = { #The planet is ready - make a colony!
+						owner = root
+						species = owner_main_species
+						ethos = owner
+					}
+				
+					if = {
+						limit = { root = { country_uses_food = yes } }
+						add_district = district_farming
+						#Servitors can survive with one farming district
+					}
+
+					add_district = district_generator
+					add_district = district_mining
+					
+					if = {
+						limit = { root = { is_machine_empire = yes } }
+						add_building = building_deployment_post
+						add_building = building_maintenance_depot 
+						add_district = district_generator						
+					}
+					else_if = {
+						limit = { root = { is_hive_empire = yes } }
+						add_building = building_hive_capital
+						add_building = building_hive_warren
+						add_district = district_farming
+					}
+					else = {
+						add_building = building_capital
+						add_district = district_city
+						if = {
+							limit = {
+								root = {
+									country_uses_food = yes
+									is_gestalt = no
+								}
+							}
+							add_district = district_farming
+						}
+					}
+
+					while = {
+						count = 9
+						create_pop = {
+							species = root.species
+						}
+					}
+					
+					remove_modifier = "modifier_marscolony_candidate"
+					add_modifier = { modifier = premature_terraforming days = -1 }
+				}
+			}
+	}	
+}

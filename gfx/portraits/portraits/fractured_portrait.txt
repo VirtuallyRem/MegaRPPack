@@ -1,0 +1,18 @@
+portraits = {
+	fractured_leader_portrait = {
+		texturefile = "gfx/models/portraits/blank_leader.dds"
+	}
+} 
+
+portrait_groups = {
+	fractured_leader_portrait = {
+		default = fractured_leader_portrait 
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					fractured_leader_portrait 
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+auth_fractured = {
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	country_modifier = {
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+}

@@ -1,0 +1,180 @@
+##################
+# Robotic Traits #
+##################
+
+#Handicap#
+
+trait_additrait_defective_scanners = {
+	cost = -1
+
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = { "trait_robot_power_drills" }
+	
+	modifier = {
+		planet_jobs_minerals_produces_mult = -0.15
+	}
+}
+
+trait_additrait_weedkillers = {
+	cost = -1
+
+	allowed_archetypes = { ROBOT }
+	opposites = { "trait_robot_harvesters" }
+
+	modifier = {
+		planet_jobs_food_produces_mult = -0.15
+	}
+}
+
+trait_additrait_energy_leaks = {
+	cost = -1
+
+	allowed_archetypes = { ROBOT MACHINE }
+	
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_droid_workers
+			}
+		}
+	}
+	
+	opposites = { "trait_robot_superconductive" }
+
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.15
+	}
+}
+
+trait_additrait_rusty_antiquities = {
+	cost = -1
+
+	allowed_archetypes = { ROBOT }
+	
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_droid_workers
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+	
+	opposites = { "trait_robot_propaganda_machines" }
+
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.05
+	}
+}
+
+trait_additrait_insufficient_memory = {
+	cost = -2
+
+	allowed_archetypes = { ROBOT MACHINE }
+	
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_synthetic_leaders
+			}
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+	
+	opposites = { "trait_robot_enhanced_memory" }
+
+	modifier = {
+		leader_skill_levels = -2
+	}
+}
+
+trait_additrait_slow_processors = {
+	cost = -1
+	
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_synthetic_workers
+			}
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+
+	opposites = { "trait_robot_logic_engines" "trait_additrait_multithreading" "trait_additrait_erratic_processors" } 
+	
+	modifier = {
+		species_leader_exp_gain = -0.06
+		planet_jobs_engineering_research_produces_mult = -0.04
+		planet_jobs_physics_research_produces_mult = -0.04
+		planet_jobs_society_research_produces_mult = -0.04
+	}
+}
+
+trait_additrait_erratic_processors = {
+	cost = -2
+
+	opposites = { "trait_robot_logic_engines" "trait_additrait_multithreading" "trait_additrait_slow_processors" }
+	
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_synthetic_workers
+			}
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+	
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		species_leader_exp_gain = -0.12
+		planet_jobs_engineering_research_produces_mult = -0.08
+		planet_jobs_physics_research_produces_mult = -0.08
+		planet_jobs_society_research_produces_mult = -0.08
+	}
+}
+
+###########################################################################################################################################################
+#Neutral
+
+
+
+
+
+###########################################################################################################################################################
+#Avantages#
+
+trait_additrait_multithreading = {
+	cost = 1
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_synthetic_workers
+			}
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+
+	opposites = { "trait_robot_logic_engines" "trait_additrait_slow_processors" "trait_additrait_erratic_processors" }
+
+	modifier = {
+		species_leader_exp_gain = 0.06
+		planet_jobs_engineering_research_produces_mult = 0.04
+		planet_jobs_physics_research_produces_mult = 0.04
+		planet_jobs_society_research_produces_mult = 0.04
+	}
+}

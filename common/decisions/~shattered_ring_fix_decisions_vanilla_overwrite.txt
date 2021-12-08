@@ -1,0 +1,118 @@
+decision_shattered_ring_project = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 10000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_shattered_ring_habitable
+		exists = owner
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+		owner = { has_technology = tech_starbase_5 }
+		owner = { has_technology = tech_zero_point_power }
+	}
+
+	effect = {
+		# Make ringworld
+
+		##  		Changed by shattered ring fix start 			##
+
+		owner = { save_event_target_as = initializing_country }
+
+		##  		Changed by shattered ring fix end 			##
+
+		custom_tooltip = decision_shattered_ring_project_effects
+		hidden_effect = {
+			clear_deposits = yes
+			change_pc = pc_ringworld_habitable
+			
+			# Remove Scrap Processing Buildings
+			if = {
+				limit = { has_building = building_mineral_purification_plant }
+				remove_building = building_mineral_purification_plant
+			}
+
+			if = {
+				limit = { has_building = building_mineral_purification_hub }
+				remove_building = building_mineral_purification_hub
+			}
+
+			# This removes the extra districts when fixing the ring world.
+			if = {
+				limit = {
+					owner = { is_regular_empire = yes }
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_city
+					VARIABLE = num_housing_districts
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_commercial
+					VARIABLE = num_commercial_districts
+				}
+			}
+
+			if = {
+				limit = {
+					owner = { is_hive_empire = yes }
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_hive
+					VARIABLE = num_housing_districts
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_generator
+					VARIABLE = num_generator_districts
+				}
+			}
+
+			if = {
+				limit = {
+					owner = { is_machine_empire = yes }
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_nexus
+					VARIABLE = num_housing_districts
+				}
+				shattered_ring_world_conversion_effect = {
+					DISTRICT = district_rw_generator
+					VARIABLE = num_generator_districts
+				}
+			}
+
+			# All empire types get farming and industrial districts
+			shattered_ring_world_conversion_effect = {
+				DISTRICT = district_rw_farming
+				VARIABLE = num_farming_districts
+			}
+			shattered_ring_world_conversion_effect = {
+				DISTRICT = district_rw_industrial
+				VARIABLE = num_industrial_districts
+			}
+			# Finally, bring it in line with ringworld sizes
+			set_planet_size = 10
+		}
+
+		##  		Changed by shattered ring fix start 			##
+		
+		set_planet_entity = {
+			entity = ringworld_habitable_entity_01_entity
+			graphical_culture = event_target:initializing_country
+		}
+
+		##  		Changed by shattered ring fix end 			##
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

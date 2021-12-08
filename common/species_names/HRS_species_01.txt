@@ -1,0 +1,118 @@
+# Generated species derive their names from here
+
+### HRS
+
+HRS = {
+
+	khellzen = {
+		name = Khell'Zen
+		plural = Khell'Zen
+		home_planet = Khellzakka
+		home_system = Khell
+		name_list = "HUM1"
+	}
+	
+	sutharian = {
+		name = Sutharian
+		plural = Sutharians
+		home_planet = Sutharia
+		home_system = Suth-Kasa
+		name_list = "HUM2"
+	}
+	
+	velutarian = {
+		name = Velutarian
+		plural = Velutarians
+		home_planet = "Velutaria Prime"
+		home_system = Velutaria
+		name_list = "MAM1"
+	}
+	
+	zelvan = {
+		name = Zelvan
+		plural = Zelvans
+		home_planet = Zelvikanna
+		home_system = Zelvnak
+		name_list = "MAM1"
+	}
+	
+	quenti = {
+		name = Quenti
+		plural = Quenti
+		home_planet = Bhiranna
+		home_system = Hib'nuzha
+		name_list = "MAM2"
+	}
+	
+	rihinar = {
+		name = Rihi'Nar
+		plural = Rihi'Nari
+		home_planet = Rihi
+		home_system = Niri
+		name_list = "MAM2"
+	}
+	
+	prossnakan = {
+		name = Prossnakan
+		plural = Prossnakans
+		home_planet = Pross
+		home_system = Prossnak
+		name_list = "MAM3"
+	}
+	
+	mitron = {
+		name = Mitron
+		plural = Mitrons
+		home_planet = Mitra
+		home_system = Mituhar
+		name_list = "MAM3"
+	}
+	
+	cevelli = {
+		name = Cevelli
+		plural = Cevelli
+		home_planet = Cevasia
+		home_system = Imakka
+		name_list = "MAM4"
+	}
+	
+	panuri = {
+		name = Panuri
+		plural = Panuri
+		home_planet = "Panasu Prime"
+		home_system = Panasu
+		name_list = "MAM4"
+	}
+	
+	ylkhahan = {
+		name = Yl'Khahan
+		plural = Yl'Khahans
+		home_planet = Kha'Zann
+		home_system = Kesada
+		name_list = "HUM1"
+	}
+	
+	giranshu = {
+		name = Giranshu
+		plural = Giranshu
+		home_planet = Girridar
+		home_system = Jagirsha
+		name_list = "HUM1"
+	}
+	
+	bebaki = {
+		name = Bebaki
+		plural = Bebaki
+		home_planet = Bebak
+		home_system = Babakka
+		name_list = "HUM2"
+	}
+	
+	alvanian = {
+		name = Alvanian
+		plural = Alvanians
+		home_planet = "Old Alvania"
+		home_system = Alvus
+		name_list = "HUM2"
+	}
+}

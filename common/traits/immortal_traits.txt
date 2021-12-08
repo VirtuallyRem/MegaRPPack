@@ -1,0 +1,32 @@
+trait_immortal = {
+	cost = 4
+	sorting_priority = 20
+	potential_crossbreeding_chance = 0
+	initial = no
+	randomized = no
+	modification = yes
+	advanced_trait = yes
+	immortal_leaders = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" "trait_additrait_ephemeral" "trait_additrait_immune" "trait_venerable" "trait_naturally_immortal"}
+
+	modifier = {
+	}
+}
+
+trait_naturally_immortal = {
+	cost = 6
+	sorting_priority = 20
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	modification = no
+	advanced_trait = no
+	immortal_leaders = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" "trait_additrait_ephemeral" "trait_additrait_immune" "trait_venerable" "trait_immortal" "trait_rapid_breeders"  "trait_rapid_breeders_lithoid" }
+
+	modifier = {
+	leader_skill_levels = 2
+	}
+}

@@ -1,0 +1,282 @@
+#Root = target country
+#This = country
+is_valid_rival = {
+	always = yes
+}
+
+# This = country
+can_use_galactic_market = {
+	is_country_type = default
+	NOR = {
+		has_civic = civic_fanatic_purifiers
+		has_civic = civic_hive_devouring_swarm
+		has_civic = civic_machine_terminator
+		has_policy_flag = no_galactic_market_allowed
+	}
+}
+
+# Root = species
+# This = country
+can_modify_species = {
+	OR = {
+		NOT = { has_trait = trait_self_modified }
+		is_same_species = root
+	}
+	NOT = { has_trait = trait_unmodifiable }
+}
+
+#Root = country
+#This = pop
+can_colonize_with_pop = {
+	has_colonization_control = {
+		value = no
+		country =root
+	}
+	OR = {
+		NOT = { has_trait = trait_self_modified }
+		is_same_species = root
+	}
+
+	NOT = { has_modifier = primitive_culture_shock }
+
+	if = {
+		limit = {
+			is_sapient = no
+		}
+		custom_tooltip = {
+			always = no
+		}
+	}
+	else = {
+		always = yes
+	}
+}
+
+# Check if full sensor range in entire galaxy
+# root: country
+has_full_sensor_range = {
+	always = no
+}
+
+# Root = country attempting to target system for movement
+# This = system being targeted
+can_enter_system_by_jump = {
+	custom_tooltip = {
+		success_text = "debug: can jump"
+		fail_text = cannot_jump_to_system
+
+		# Sealed system
+		OR = {
+			NOT = { has_star_flag = sealed_system }
+			AND = {
+				root = { has_country_flag = entered_sealed_system }
+				has_star_flag = sealed_system
+			}
+		}
+
+		# L-Cluster
+		NOT = { has_star_flag = lcluster }
+
+		# Jump Drive Blocker Starbase building
+		NOT = { starbase = { has_starbase_building = jump_drive_blocker } }
+	}
+}
+
+# This = country
+can_support_branch_offices = {
+	is_country_type = default
+	NOR = {
+		has_valid_civic = civic_criminal_heritage
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_terminator
+	}
+}
+
+# This = planet
+# Root = country
+can_build_branch_office_on_planet = {
+	custom_tooltip = {
+		fail_text = requires_recipient_not_fanatic_purifiers
+		exists = owner
+		owner = {
+			OR = {
+				is_same_species = root
+				NOT = {	has_civic = civic_fanatic_purifiers }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP
+		exists = owner
+		owner = {
+			OR = {
+				root = { is_criminal_syndicate = yes }
+				NOR  = {
+					has_authority = auth_corporate
+					has_civic = civic_galactic_sovereign_megacorp
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_COMMERCIAL_PACT
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = yes }
+			owner = { has_commercial_pact = root }
+			owner = { is_in_federation_with = root }
+
+			# allow branch offices in subsidiaries and vice versa
+			root = {
+				is_subject = yes
+				is_subject_type = subsidiary
+				overlord = { is_same_value = prevprev.owner }
+			}
+			owner = {
+				is_subject = yes
+				is_subject_type = subsidiary
+				overlord = { is_same_value = root }
+			}
+			AND = {
+				root = { has_civic = civic_galactic_sovereign_megacorp }
+				owner = { is_galactic_community_member = yes }
+			}
+			AND = {
+				root = { has_modifier = imperial_charter }
+				owner = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_HAS_TRUCE
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			owner = {
+				NOR = {
+					has_truce = root
+					is_at_war_with = root
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			AND = {
+				root = { is_criminal_syndicate = yes }
+				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
+			}
+		}
+	}
+}
+
+# ROOT = country
+# THIS = pop
+can_be_sold_on_slave_market = {
+	ROOT = {
+		OR = {
+			is_ai = no
+			is_multiplayer = no
+		}
+	}
+	exists = owner
+	OR = {
+		is_enslaved = yes
+		is_non_sapient_robot = yes
+		is_shackled_robot = yes
+	}
+	OR ={
+		ROOT = { is_ai = no }
+		has_citizenship_rights = no
+		AND = {
+			is_unemployed = yes
+			planet = {
+				num_unemployed > 3
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = organic_slave_trade_banned_flag
+		}
+		is_organic_species = no
+	}
+	if = {
+		limit = {
+			has_global_flag = sentient_slave_trade_banned_flag
+		}
+		is_sapient = no
+	}
+	NOR = {
+		# Since they can't reproduce, they die out too fast for anyone to want to buy them.
+		has_trait = trait_clone_soldier_infertile
+		has_trait = trait_clone_soldier_infertile_full_potential
+	}
+}
+
+# This = country
+can_be_part_of_galactic_community = {
+	OR = {
+		is_ai = no
+		is_multiplayer = no
+	}
+	custom_tooltip = {
+		fail_text = "community_default_failtext"
+		is_country_type = default
+	}
+	custom_tooltip = {
+		fail_text = "community_homicidal_failtext"
+		NOR = {
+			has_civic = civic_fanatic_purifiers
+			has_civic = civic_hive_devouring_swarm
+			has_civic = civic_machine_terminator
+		}
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		has_been_declared_crisis = no
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		#fail_text = "community_overlord_declared_crisis_failtext"
+		OR = {
+			NOT = { exists = overlord }
+			overlord = { has_been_declared_crisis = no }
+		}
+	}
+}
+
+# This = country
+can_be_part_of_galactic_empire = {
+	OR = {
+		is_ai = no
+		is_multiplayer = no
+	}
+	custom_tooltip = {
+		fail_text = "community_default_failtext"
+		is_country_type = default
+	}
+	custom_tooltip = {
+		fail_text = "community_homicidal_failtext"
+		NOR = {
+			has_civic = civic_fanatic_purifiers
+			has_civic = civic_hive_devouring_swarm
+			has_civic = civic_machine_terminator
+		}
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		has_been_declared_crisis = no
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		#fail_text = "community_overlord_declared_crisis_failtext"
+		OR = {
+			NOT = { exists = overlord }
+			overlord = { has_been_declared_crisis = no }
+		}
+	}
+}

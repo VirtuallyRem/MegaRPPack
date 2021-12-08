@@ -1,0 +1,42 @@
+portraits = {
+deverian = {
+		entity = "portrait_robot_no_blink_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_human_greetings"
+		character_textures = {
+			"gfx/models/portraits/deverian/devarian_body_01.dds"
+			"gfx/models/portraits/deverian/devarian_body_02.dds"
+			"gfx/models/portraits/deverian/devarian_body_03.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	deverian_03 = {
+		default = deverian
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					deverian
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			set = {
+				portraits = {
+					deverian
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					deverian
+				}
+			}
+		}
+				
+	}
+}

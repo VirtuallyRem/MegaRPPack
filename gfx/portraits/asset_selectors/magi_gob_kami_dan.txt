@@ -1,0 +1,191 @@
+# This is a template which multiple species can use.
+
+magi_gob_kami_dan = {
+	default = "gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+
+		random = {
+			list = {
+
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+	}
+	
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+	
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+	}
+
+	#leader scope
+	ruler = { #for rulers
+		
+		random = {
+			trigger = {
+				owner = { has_militarist_government = yes }
+			}
+				
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBCROWN.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+				owner = { has_spiritualist_government = yes }
+			}
+			
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBCROWN.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+				owner = {
+					OR = {
+						has_government = gov_stagnant_ascendancy
+						has_primitive_government = yes
+						has_materialist_government = yes
+						has_pacifist_government = yes
+					}
+				}
+			}
+
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBCROWN.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_HAGE.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBKINOKO.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGANTAI.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_1.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBGAMI_DAN_new_5.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBSILKHAT.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBVIKING.dds"
+				"gfx/models/portraits/magi_gobchin/GOBGAMI/GOBDOKURO.dds"
+			}
+		}
+	}
+}

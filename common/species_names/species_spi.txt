@@ -1,0 +1,44 @@
+Spinosauridae = {
+	Spinosaurus = {
+		name = "Spinosaurus"
+		plural = "Spinosaurus"
+		home_planet = "Membra Carnium"
+		home_system = "Entity-06"
+		name_list = "REP1"
+	}
+	Irritator = {
+		name = "Irritator"
+		plural = "Irritator"
+		home_planet = "Veridis"
+		home_system = "Entity-05"
+		name_list = "REP1"
+	}
+	Baryonyx = {
+		name = "Baryonyx"
+		plural = "Baryonyx"
+		home_planet = "Scales"
+		home_system = "Entity-04"
+		name_list = "REP1"
+	}
+	Oxalaia  = {
+		name = "Oxalaia"
+		plural = "Oxalaia"
+		home_planet = "Spine"
+		home_system = "Entity-03"
+		name_list = "REP1"
+	}
+	Suchomimus  = {
+		name = "Suchomimus"
+		plural = "Suchomimus"
+		home_planet = "Veridis"
+		home_system = "Entity-02"
+		name_list = "REP1"
+	}
+	Ostrafrikasaurus = {
+		name = "Ostrafrikasaurus"
+		plural = "Ostrafrikasaurus"
+		home_planet = "Veridis"
+		home_system = "Entity-01"
+		name_list = "REP1"
+	}
+}

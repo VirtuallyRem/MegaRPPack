@@ -1,0 +1,26 @@
+
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		rsrchcap.100
+		rsrchcap.1
+		rsrchcap.2
+		rsrchcap.3
+		rsrchcap.4
+		rsrchcap.5
+		rsrchcap.6
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		rsrchcap.11
+		rsrchcap.10
+		rsrchcap.2
+		rsrchcap.3
+		rsrchcap.4
+		rsrchcap.5
+		rsrchcap.6
+	}
+}

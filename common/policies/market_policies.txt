@@ -1,0 +1,30 @@
+galactic_market = {
+	potential = {
+		is_galactic_community_member = yes
+		has_country_flag = has_market_access
+	}
+
+	option = {
+		name = "no_galactic_market_allowed"
+
+		policy_flags = {
+			no_galactic_market_allowed
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "galactic_market_allowed"
+
+		policy_flags = {
+			galactic_market_allowed
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+}

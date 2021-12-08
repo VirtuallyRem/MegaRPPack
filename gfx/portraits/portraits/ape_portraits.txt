@@ -1,0 +1,147 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	ape_f1 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_female_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_female_body_01.dds"
+			}}
+	ape_f2 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_female_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_female_body_02.dds"
+			}}
+	ape_f3 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_female_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_female_body_03.dds"
+			}}
+	ape_m1 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_male_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_male_body_01.dds"
+	}}	
+	ape_m2 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_male_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_male_body_02.dds"
+	}}	
+	ape_m3 = { entity = "humanoid_05_male_01_entity" clothes_selector = "humanoid_05_male_clothes_01" 	hair_selector = "no_texture" 	greeting_sound = "mammalian_01_greetings"
+		character_textures = {  
+			"gfx/models/portraits/ape/ape_male_body_03.dds"
+	}}		
+}
+
+portrait_groups = {
+	ape = {
+		default = ape_f1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					ape_m1
+					ape_m2
+					ape_m3
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					ape_f1
+					ape_f2
+					ape_f3
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					ape_f1
+					ape_f2
+					ape_f3
+					ape_m1
+					ape_m2
+					ape_m3
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					ape_f1
+					ape_f2
+					ape_f3
+					ape_m1
+					ape_m2
+					ape_m3
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					ape_f1
+					ape_f2
+					ape_f3
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					ape_m1
+					ape_m2
+					ape_m3
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					ape_f1
+					ape_f2
+					ape_f3
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					ape_m1
+					ape_m2
+					ape_m3
+				}
+			}
+		}
+	}
+}

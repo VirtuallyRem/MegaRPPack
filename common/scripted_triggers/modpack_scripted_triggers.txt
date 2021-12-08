@@ -1,0 +1,87 @@
+is_pluralist = {
+	OR = {
+		has_ethic = ethic_pluralist
+		has_ethic = ethic_fanatic_pluralist
+	}
+}
+is_elitist = {
+	OR = {
+		has_ethic = ethic_elitist
+		has_ethic = ethic_fanatic_elitist
+	}
+}
+is_capitalism = {
+	OR = {
+		has_ethic = ethic_capitalism
+		has_ethic = ethic_fanatic_capitalism
+	}
+}
+is_socialism = {
+	OR = {
+		has_ethic = ethic_socialism
+		has_ethic = ethic_fanatic_socialism
+	}
+}
+is_green = {
+	OR = {
+		has_ethic = ethic_green
+		has_ethic = ethic_fanatic_green
+	}
+}
+is_industrial = {
+	OR = {
+		has_ethic = ethic_industrial
+		has_ethic = ethic_fanatic_industrial
+	}
+}
+
+is_technocracy = {
+	OR = {
+		has_valid_civic = civic_technocracy
+		has_valid_civic = civic_research_consortium
+	}
+}
+
+is_priesthood = {
+	OR = {
+		has_valid_civic = civic_exalted_priesthood
+		has_valid_civic = civic_gospel_of_the_masses
+	}
+}
+
+is_police_state = {
+	OR = {
+		has_valid_civic = civic_police_state
+		has_valid_civic = civic_private_security
+	}
+}
+
+is_bureaucracy = {
+	OR = {
+		has_valid_civic = civic_byzantine_bureaucracy
+		has_valid_civic = civic_logistical_bureacracy
+	}
+}
+
+is_aristocrat = {
+	OR = {
+		has_valid_civic = civic_aristocratic_elite
+		has_valid_civic = civic_high_society
+	}
+}
+
+is_corp = {
+	OR = {
+		has_authority = auth_corporate
+		has_valid_civic = civic_galactic_sovereign_megacorp
+	}
+}
+
+has_custom_capital = {
+	OR = {
+		is_technocracy = yes
+		is_priesthood = yes
+		is_aristocrat = yes
+		has_civic = civic_merchant_guilds
+	}
+}

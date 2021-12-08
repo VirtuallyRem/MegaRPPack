@@ -1,0 +1,353 @@
+namespace = primitive_fix
+
+# Halve primitive after conquest
+country_event = {
+	id = primitive_fix.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { is_country_type = primitive }
+		is_country_type = default
+	}
+
+	immediate = {
+		FROMFROM = {
+			set_variable = {
+				which = primitives_on_planet
+				value = 0
+			}
+		
+			every_owned_pop = {
+				limit = { NOT = { species = { is_same_species = planet.owner } } }
+				from = {
+					change_variable = {
+						which = primitives_on_planet
+						value = 1
+					}
+				}
+				if = {
+					limit = { planet.owner = { is_gestalt = no } }
+					add_modifier = {
+						modifier = "primitive_culture_shock"
+						years = 10
+					}
+				}
+			}
+
+			multiply_variable = {
+				which = primitives_on_planet
+				value = 0.50
+			}
+
+			while = {
+				limit = {
+					check_variable = {
+						which = primitives_on_planet
+						value > 0
+					}
+				}
+				random_owned_pop = {
+					limit = { NOT = { species = { is_same_species = planet.owner } } }
+					kill_pop = yes
+				}
+				change_variable = {
+					which = primitives_on_planet
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+#Progressive enlightment (ancient)
+country_event = {
+	id = primitive_fix.200
+    	title = primitive_fix.200.name
+	
+	picture = GFX_evt_medieval_alien_civilization
+	
+	show_sound = event_primitive_civilization
+	
+   	desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = bronze_age } }
+        }
+        text = "primitive_fix.200.bronze.desc"
+    }
+	desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = iron_age } }
+        }
+        text = "primitive_fix.200.iron.desc"
+    }
+		desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = late_medieval_age } }
+        }
+        text = "primitive_fix.200.medieval.desc"
+    }
+	desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = renaissance_age } }
+        }
+        text = "primitive_fix.200.renaissance.desc"
+    }
+		desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = steam_age } }
+        }
+        text = "primitive_fix.200.steam.desc"
+    }
+		
+    location = FROMFROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = {
+			observation_outpost = { add_mission_progress = -1.0 }
+
+			owner = { save_event_target_as = primitive_country }
+			
+			event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag
+					stone_age = { set_primitive_age_effect = { primitive_age = bronze_age }	}
+					bronze_age = { set_primitive_age_effect = { primitive_age = iron_age } }
+					iron_age = { set_primitive_age_effect = { primitive_age = late_medieval_age } }
+					late_medieval_age = { set_primitive_age_effect = { primitive_age = renaissance_age } }
+					renaissance_age = { set_primitive_age_effect = { primitive_age = steam_age } }
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = primitive_fix.200.a
+		trigger = {
+			NOR = {
+				FROMFROM = { owner = { has_country_flag = bronze_age } }
+				AND = {
+					FROMFROM = { owner = { has_country_flag = late_medieval_age } }
+					OR = {
+						has_civic = civic_technocracy
+						has_civic = civic_feudal_realm
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.bronze.a
+		trigger = {
+			 FROMFROM = { owner = { has_country_flag = bronze_age } }
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.medieval.feud
+		trigger = {
+			 FROMFROM = { owner = { has_country_flag = late_medieval_age } }
+			 has_civic = civic_feudal_realm
+			 NOT = { has_civic = civic_technocracy }
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.medieval.mat
+		trigger = {
+			 FROMFROM = { owner = { has_country_flag = late_medieval_age } }
+			 has_civic = civic_technocracy
+		}
+	}
+}
+
+#Progressive enlightment (industrial)
+country_event = {
+	id = primitive_fix.250
+    title = primitive_fix.200.name
+	
+	picture = GFX_evt_metropolis
+	
+	show_sound = event_cityscape
+	
+	desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = industrial_age } }
+        }
+        text = "primitive_fix.200.industrial.desc"
+    }
+		desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = machine_age } }
+        }
+        text = "primitive_fix.200.machine.desc"
+    }
+	desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = atomic_age } }
+        }
+        text = "primitive_fix.200.atomic.desc"
+    }
+		desc = {
+        trigger = {
+            FROMFROM = { owner = { has_country_flag = early_space_age } }
+        }
+        text = "primitive_fix.200.space.desc"
+    }
+	
+    location = FROMFROM
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = {
+			observation_outpost = { add_mission_progress = -1.0 }
+
+			owner = { save_event_target_as = primitive_country }
+			
+			event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag
+					steam_age = { set_primitive_age_effect = { primitive_age = industrial_age } }
+					industrial_age = { set_primitive_age_effect = { primitive_age = machine_age } }
+					machine_age = { set_primitive_age_effect = { primitive_age = atomic_age } }
+					atomic_age = { set_primitive_age_effect = { primitive_age = early_space_age } }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.a
+		trigger = {
+			NOR = {
+				AND = {
+					FROMFROM = { owner = { has_country_flag = industrial_age } }
+					OR = {
+						has_ethic = ethic_industrial
+						has_ethic = ethic_fanatic_industrial
+						has_ethic = ethic_green
+						has_ethic = ethic_fanatic_green
+					}
+				}
+				AND = {
+					FROMFROM = { owner = { has_country_flag = machine_age } }
+					has_authority = auth_machine_intelligence
+				}
+				AND = {
+					FROMFROM = { owner = { has_country_flag = atomic_age } }
+					is_pacifist = yes
+				}
+				AND = {
+					FROMFROM = { owner = { has_country_flag = early_space_age } }
+					is_xenophobe = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.industrial.ind
+		trigger = {
+			FROMFROM = { owner = { has_country_flag = industrial_age } }
+			OR = {
+				has_ethic = ethic_industrial
+				has_ethic = ethic_fanatic_industrial
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.industrial.eco
+		trigger = {
+			FROMFROM = { owner = { has_country_flag = industrial_age } }
+			OR = {
+				has_ethic = ethic_green
+				has_ethic = ethic_fanatic_green
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.machine.mach
+		trigger = {
+			FROMFROM = { owner = { has_country_flag = machine_age } }
+			has_authority = auth_machine_intelligence
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.atomic.pac
+		trigger = {
+			FROMFROM = { owner = { has_country_flag = atomic_age } }
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	option = {
+		name = primitive_fix.200.space.phobe
+		trigger = {
+			FROMFROM = { owner = { has_country_flag = early_space_age } }
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+# Apply malus to abducted pops
+pop_event = {
+	id = primitive_fix.201
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			from.owner = { is_country_type = primitive }
+			AND = {
+				from = { is_colony = no }
+				exists = from.space_owner
+				from.space_owner = { is_same_value = owner }
+			}
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = "primitive_culture_shock"
+			years = 10
+		}
+		clear_pop_category = yes
+		pop_event = { id = primitive_fix.202 days = 1 }
+		if = {
+			limit = { from = { is_colony = no } }
+			from = {
+				add_modifier = {
+					modifier = "primitive_all_abducted"
+					years = 10
+				}
+			}
+		}
+	}
+}
+# Game crashes if done before :(
+pop_event = {
+	id = primitive_fix.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {}
+			50 = { kill_pop = yes }
+		}
+	}
+}

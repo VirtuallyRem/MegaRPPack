@@ -1,0 +1,61 @@
+trait_mod_symbiote = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+	icon = "gfx/interface/icons/traits/trait_organic_symbiote.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_pops_organics_food_upkeep_mult = 0.1
+		planet_pops_organics_minerals_upkeep_mult = 0.1
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+
+trait_unmodifiable = {
+	cost = 0
+	
+	randomized = no
+	modification = no				 
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+	}
+}
+
+trait_psi_null = {
+	cost = 0
+	potential_crossbreeding_chance = 1.0	
+
+	randomized = no
+	modification = no	
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+	}
+	opposites = { "trait_hive_mind" "trait_latent_psionic" "trait_psionic" }
+}
+
+trait_robot_leader_1 = {
+    	leader_trait = { ruler }
+	leader_class = { ruler }
+
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	
+	icon = "gfx/interface/icons/traits/trait_robotic_1.dds"
+	
+	self_modifier = {
+		species_leader_exp_gain = 1
+		leader_skill_levels = 5
+	}
+	
+	immortal_leaders = yes	
+	hide_age = yes
+}

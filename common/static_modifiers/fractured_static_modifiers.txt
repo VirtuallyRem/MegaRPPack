@@ -1,0 +1,11 @@
+fractured_faction_influence_malus = {
+    country_base_influence_produces_add = -1
+}
+
+fractured_faction_resources = {
+    hide_from_country_list = yes
+    pop_factions_energy_produces_mult = 1
+    pop_factions_minerals_produces_mult = 1
+    pop_factions_food_produces_mult = 1
+    pop_factions_unity_produces_mult = 1
+}

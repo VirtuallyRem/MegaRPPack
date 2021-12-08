@@ -1,0 +1,10 @@
+portraits = { 
+snorter = { entity = "portrait_plantoid_04_entity" clothes_selector = "no_texture" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/snorter/snorter.dds"
+
+}
+}
+
+}

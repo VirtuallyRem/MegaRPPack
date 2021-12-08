@@ -1,0 +1,19 @@
+leader_trait_fractured = {
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_champion_of_the_people.dds"
+	self_modifier = {
+		species_leader_exp_gain = -10
+		leader_skill_levels = -10
+	}
+	modifier = {
+		country_unity_produces_mult = -0.03 
+		edict_length_mult = -0.05
+	}
+	immortal_leaders = yes	
+	hide_age = yes
+}

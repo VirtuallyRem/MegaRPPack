@@ -1,0 +1,5 @@
+on_remove_community_member = {
+	events = {
+		senate.01
+	}
+}

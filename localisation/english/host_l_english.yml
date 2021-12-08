@@ -1,0 +1,6 @@
+﻿l_english:
+
+ # host origin
+ origin_host:0 "Brain Slug Hosts"
+ origin_host_desc:0 "§MThis origin requires the 'Distant Stars' DLC.§!\n\nFor as long as they can remember, this species has been enjoying the presence of a helpful slug that attaches itself to the brain stem of its host as a neural symbiote."
+ origin_tooltip_host:0 "Gain the §Y$trait_brainslug$§! trait, granting:\n  £engineering£ Engineering Research from £pops£ Jobs: §G+10%§!\n  £physics£ Physics Research from £pops£ Jobs: §G+10%§!\n  £society£ Society Research from £pops£ Jobs: §G+10%§!\n  £unity£ Unity from £pops£ Jobs: §G+10%§!\n  Pop Growth Speed: §R-25%§!"

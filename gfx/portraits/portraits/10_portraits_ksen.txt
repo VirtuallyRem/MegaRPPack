@@ -1,0 +1,10 @@
+# Ksenon
+
+portraits = {
+	ksen1 = {
+		entity = "portrait_ksen_01_entity" clothes_selector = "ksen_normal_clothes_01" hair_selector = "no_texture"	greeting_sound = "ksen_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/ksen/ksen_normal_01.dds"
+		}
+	}
+}

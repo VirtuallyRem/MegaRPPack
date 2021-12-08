@@ -1,0 +1,30 @@
+﻿l_english:
+
+trait_unmodifiable:0 "Unmodifiable"
+trait_unmodifiable_desc:0 "§LThis Species is Physiologically Hardwired, extreme sudden changes might result in Neurological Breakdown. (WARNING This Species cannot be Genetically Modified. WARNING If you go Psionic or Cybernetic Ascension you will be unable to Assimilate Pops of your own race!)§!"
+
+trait_psi_null:0 "Psi-Null"
+trait_psi_null_desc:0 "§LThis Species is a Psionic Blank/Null, giving them exceptional resistance to Psionic Abilities. However, they themselves cannot grasp, sense, or feel anything Psionic themselves.§!"
+ 
+trait_incompatible:0 "Incompatible"
+trait_incompatible_desc:0 "§LThis specie's unusual genetics make them virtually impossible to crossbreed with member of other species, no matter the technology behind it.§!"
+
+trait_immortal:0 "Immortal"
+trait_immortal_desc:0 "§LThis specie has been rendered functionally immortal through advanced genetic engineering.§!"
+
+trait_naturally_immortal:0 "Naturally Immortal"
+trait_naturally_immortal_desc:0 "§LThis specie does not experience aging as others do, instead they undergo periodical rejuvination that allow them to carry on with their lives undefinetly.§!"
+
+trait_mod_symbiote:0 "Symbiote"
+trait_mod_symbiote_desc:0 "§LYour species' bodies are hosts to a symbiotic organism. They require extra nourishment, but in return they give your species many benefits.§!\n"
+
+#Ruler traits
+trait_robot_leader_1:0 "AI Leader"
+trait_robot_leader_1_desc:0 "The ruler of this empire is an artificial intelligence tasked with handling matters of state."
+trait_robot_leader_2:0 "Advanced AI Leadership"
+trait_robot_leader_2_desc:0 "The ruler of this empire is an advanced artificial intelligence tasked with handling matters of state."
+trait_robot_leader_3:0 "Self-aware AI Leadership"
+trait_robot_leader_3_desc:0 "The ruler of this empire is a borderline sapient artificial intelligence tasked with handling matters of state."
+
+
+

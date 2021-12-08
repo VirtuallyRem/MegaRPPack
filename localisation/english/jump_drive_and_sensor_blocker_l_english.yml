@@ -1,0 +1,8 @@
+﻿l_english:
+
+ sm_jump_drive_blocker:0 "Jump Drive Blocker"
+ sm_jump_drive_blocker_desc:0 "The Jump Drive Blocker creates ruptures in Subspace, making it virtually impossible for ships to enter this System with a Jump Drive.\n"
+
+ sm_sensor_blocker:0 "Sensor Blocker"
+ sm_sensor_blocker_desc:0 "This Sensor Blocker mimics the scrambling effect that can naturally be found in Nebulas and makes it impossible for foreign empires to see what transpires in this system.\n"
+ 

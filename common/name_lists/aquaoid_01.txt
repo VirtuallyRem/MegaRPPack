@@ -1,0 +1,180 @@
+﻿### United Nations of Earth
+### Created by Henrik Thyrwall
+
+aquaoid_01 = {
+	randomized = no
+	alias = "Aquaoid"
+
+	ship_names = {
+		generic = { Abyss Albedo Apogean Bathyal Bathymetry Benthic Benothos Cenozoic Seeps Copepods Diurnal Tide Foraminifier Mysid Nekton Otolith Pelagic Phoic Perigean Photophore Phylum Phyto Salp Tropho Sea Ocean Riptide River Basen Gulf Bay Lake Strait Sand Shell Clay Trench Typhoon Tsunami
+		
+		}
+	}
+
+	fleet_names = {
+		sequential_name = "%O% Starwave"
+	}
+	
+	army_names = {
+	
+		defense_army = {
+			sequential_name = "%O% Planetary Guard"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Marines"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Indentured Rifles"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Division"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Hunter-Killer Group"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Ground Defense Matrix"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Psi Commando"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Bio-Warfare Division"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Special Forces"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Occupation Force"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Mechanized Garrison"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Cytaria" "Astis" "Eudotaria" "Peridesmus" "Ankirina" "Astrum" "Antium" "Synetaria" "Lepoda" "Pericula" "Cyphy" "Panpoda" "Chiceae" "Pandella" "Tadella" "Perifera" "Bratium" "Naviceae" "Ancus" "Eudoina" "Navitium" "Leina" "Diacus" "Damonas" "Anphy" "Taphy" "Cynium" "Eudofera" "Bradella" "Braceae" "Diamonas" "Cylops" "Brafera" "Taina" "Syneina" "Eudoina" "Asphy" "Phiceae" "Rotia" "Mycula" "Rocula" "Synedinium" "Peridella" "Ankidesmus" "Dianium" "Peritaria" "Rotrum" "Diatia" "Letrum" "Leina" "Mymonas" "Tarina" "Symonas" "Cyina" "Pantis" "Eudoceae" "Phifera" "Aslops" "Diadinium" "Naviphy" "Eudonium" "Pancula" "Peridesmus" "Ankicus" "Peritis" "Peripoda" "Ankirina" "Naviina" "Ledella" "Ankiphy" "Asfera" "Naviphy" "Synedella" "Sycula" "Phitium" "Cydella" "Phitis" "Chitium" "Synepoda" "Phinium" "Periceae" "Mypoda" "Navitrum" "Periphy" "Sytium" "Periphy" "Sytrum" "Panrina" "Sytrum" "Syneina" "Syina" "Ankinium" "Cyceae" "Syceae" "Bradella" "Mydella" "Datia" "Leina" "Eudonium" "Diatrum" "Lelops" "Bramonas" "Pandinium" "Tacula" "Peridinium" "Panfera" "Romonas" "Pantropo" "Panfera" "Sydesmus" "Synetaria" "Ankicera" "Peridella" "Darina" "Rodesmus" "Diamonas" "Dianium" "Corina" "Cytropo" "Diaceae" "Tatia" "Sydesmus" "Cydesmus" "Symonas" "Sytropo" "Eudocula" "Ascera" "Diacula" "Panphy" "Diacera" 
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 100
+		full_names = {
+		"Actinaphyceae" "Clobella" "Lenstridium" "Ankibella" "Cephanium" "Pandosoma" "Chlorobaena" "Actinataria" "Pandodium" "Merisbella" "Desmicula" "Fragibellaria" "Troponium" "Cerabellaria" "Chlamydcula" "Diasterium" "Cyanophyceae" "Desmirina" "Pediabaena" "Synstrum" "Merislaria" "Diadra" "Philopoedia" "Gomomonas" "Actinabella" "Actinaphonema" "Navirina" "Ankitium" "Ankinium" "Clodra" "Cyanophyceae" "Philostridium" "Gomphyceae" "Cephaomonas" "Fragipoedia" "Actinasoma" "Tropotaria" "Syntaria" "Cyanophonema" "Philotella" "Clopoedia" "Ankipoedia" "Rotitium" "Tropocystis" "Fragibaena" "Rotistrum" "Philocystis" "Pandocystis" "Cymbaena" "Merisstridium" "Ceraphyceae" "Chlamydpoedia" "Clonium" "Chlorerella" "Fragirella" "Cymomonas" "Eudodra" "Desmifera" "Philopoedia" "Cyanostrum" "Peridicystis" "Cephacula" "Desmibella" "Rotisterium" "Pandodium" "Cymrina" "Lenbaena" "Chloretium" "Synbaena" "Ankifera" "Eudophyceae" "Desmibella" "Actinafera" "Cymphyceae" "Cyanocystis" "Lenpoedia" "Lenrina" "Actinafera" "Navirina" "Pandobella" "Eudocula" "Chlorosoma" "Philotaria" "Chloretella" "Navinium" "Cyanostridium" "Perididra" "Pediarella" "Merisomonas" "Synstrum" "Ankicula" "Navibellaria" "Clocystis" "Synnium" "Pediatium" "Actinarina" "Ceraphyceae" "Diastrum" "Clodorus" "Ankisterium" 
+		}
+
+		first_names = {
+		
+		}
+
+		first_names_male = {
+		
+		}
+
+		first_names_female = {
+		
+		}
+
+		second_names = {
+		
+		}
+
+		regnal_first_names = {
+		
+		}
+
+		regnal_first_names_male = {
+		
+		}
+
+		regnal_first_names_female = {
+		
+		}
+
+		regnal_second_names = {
+		
+		}
+
+		}
+	}
+}

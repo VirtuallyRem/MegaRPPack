@@ -1,0 +1,202 @@
+portraits = {
+# automatons
+	automatons_female_01 = {	
+	      entity = "portrait_human_female_01_entity"	clothes_selector = "automatons_female_clothes_01" hair_selector = "automatons_female_hair_01"	greeting_sound = "automaton_female_greetings"
+		    character_textures = {
+			"gfx/models/portraits/automatons/human_female_automaton_body_01.dds"
+		    }
+		}	
+	automatons_female_02 = {	
+	      entity = "portrait_human_female_01_entity"	clothes_selector = "automatons_female_clothes_01" hair_selector = "automatons_female_hair_01"	greeting_sound = "automaton_female_greetings"
+		    character_textures = {
+			"gfx/models/portraits/automatons/human_female_automaton_body_02.dds"
+		    }
+		}
+    automatons_female_03 = {	
+	      entity = "portrait_human_female_01_entity"	clothes_selector = "automatons_female_clothes_01" hair_selector = "automatons_female_hair_01"	greeting_sound = "automaton_female_greetings"
+		    character_textures = {
+			"gfx/models/portraits/automatons/human_female_automaton_body_03.dds"
+		    }
+		}
+    automatons_female_04 = {	
+	      entity = "portrait_human_female_01_entity"	clothes_selector = "automatons_female_clothes_01" hair_selector = "automatons_female_hair_01"	greeting_sound = "automaton_female_greetings"
+		    character_textures = {
+			"gfx/models/portraits/automatons/human_female_automaton_body_04.dds"
+		    }
+		}			
+	automatons_male_01 = {	
+	      entity = "portrait_human_male_01_entity"	clothes_selector = "automatons_male_clothes_01" hair_selector = "automatons_male_hair_01"	greeting_sound = "automaton_male_greetings"
+            character_textures = {
+			"gfx/models/portraits/automatons/human_male_automaton_body_01.dds"
+		    }	
+		}	
+	automatons_male_02 = {	
+	      entity = "portrait_human_male_01_entity"	clothes_selector = "automatons_male_clothes_01" hair_selector = "automatons_male_hair_01"	greeting_sound = "automaton_male_greetings"
+            character_textures = {
+			"gfx/models/portraits/automatons/human_male_automaton_body_02.dds"
+		    }
+		}
+    automatons_male_03 = {	
+	      entity = "portrait_human_male_01_entity"	clothes_selector = "automatons_male_clothes_01" hair_selector = "automatons_male_hair_01"	greeting_sound = "automaton_male_greetings"
+            character_textures = {
+			"gfx/models/portraits/automatons/human_male_automaton_body_03.dds"
+		    }
+		}
+    automatons_male_04 = {	
+	      entity = "portrait_human_male_01_entity"	clothes_selector = "automatons_male_clothes_01" hair_selector = "automatons_male_hair_01"	greeting_sound = "automaton_male_greetings"
+            character_textures = {
+			"gfx/models/portraits/automatons/human_male_automaton_body_04.dds"
+		    }
+		}		
+}
+
+portrait_groups = {
+    automatons = {
+		default = automatons_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04
+					
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04										 
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+					 
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04										 
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04 
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+					 
+				}
+			}
+		}
+		
+        leader = generals
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+					 
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04
+					 
+				}
+			}
+		
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					automatons_female_01
+					automatons_female_02
+					automatons_female_03
+					automatons_female_04
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					automatons_male_01
+					automatons_male_02
+					automatons_male_03
+					automatons_male_04
+					 
+				}
+			}
+		}
+	}
+
+}

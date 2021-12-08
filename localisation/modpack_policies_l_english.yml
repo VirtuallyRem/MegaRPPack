@@ -1,0 +1,108 @@
+﻿l_english:
+
+policy_economy_type:0 "Economic Stance"
+policy_economy_type_desc:0 "We must decide the outline of the economic model our nations should utilize for the time being."
+
+free_eco_name:0 "Laissez-Fair"
+regulated_eco_name:0 "Regulated"
+distributist_eco_name:0 "Distributist"
+statecap_eco_name:0 "State Capitalist"
+communist_eco_name:0 "Communist"
+
+free_eco:0 "Laissez-Fair"
+regulated_eco:0 "Regulated"
+distributist_eco:0 "Distributist"
+statecap_eco:0 "State Capitalist"
+communist_eco:0 "Communist"
+
+free_eco_desc:0 "According to 'Laissez-Fair' principles the state should meddle as little as possible in the market and the activity of private commercial enterprises.\n\n§E£job_clerk£ §Y$job_clerk_plural$§! produce twice as much £trade_value£ §YTrade Value§! but half £amenities£ §YAmenities§!§!\n"
+regulated_eco_desc:0 "A balanced model to contain the excesses of unrestrained capitalism while at the same time limiting constrictions on economical liberties.\n\n"
+distributist_eco_desc:0 "A distributist economy priorities small business and ownership of the means of production over large, hierarchical organizations, being them states or corporations.\n\n"
+statecap_eco_desc:0 "An economic model in which the government owns a large share of the market and develops it as a large-scale, for-profit enterprise.\n\n§E£job_bureaucrat£ §Y$job_bureaucrat_plural$§! also produce §Y2§! £trade_value£ Trade Value§!\n"
+communist_eco_desc:0 "A fully communist economy where resources are equally redistributed among the population, private property may or may not be outlawed.\n\n§E£job_clerk£ §Y$job_clerk_plural$§! produce §Y1§! £minerals£ Minerals and £food£ Food (§Y2§! £minerals£ Minerals for §YLithoid§! Empires and §Y1§! £minerals£ Minerals and £energy£ Energy for §YSynthetic§! Empires) but no £trade_value£ §YTrade Value§!§!\n"
+
+policy_environment_stance:0 "Development Regulations"
+policy_environment_stance_desc:0 "We must decide our stance toward the progress of your empire and long-term consequences of our growth."
+
+env_production:0 "Production Focus"
+env_balanced:0 "Balanced Focus"
+env_sustainable:0 "Sustainability Focus"
+
+env_production_name:0 "Production Focus"
+env_balanced_name:0 "Balanced Focus"
+env_sustainable_name:0 "Sustainability Focus"
+
+env_production_desc:0 "Maximizing output with disregard for long-term consequences to the environment and society to ensure quick returns.\n\n"
+env_balanced_desc:0 "A stable balance between the interests of the industrial complex and concerns for the well-being of future generations.\n\n"
+env_sustainable_desc:0 "Heavy regulations are put in place to ensure the growth of our civilization do not harm the ecosystems that host us nor ourselves.\n\n"
+
+policy_galactic_market:0 "Market Scope"
+no_galactic_market_allowed:0 "Internal Market"
+galactic_market_allowed:0 "Galactic Market"
+
+policy_galactic_market_desc:0 "Now that a true Galactic Market has been established, we must decide if to take part in this commercial endeavour or limit ourself to our local economic zone."
+no_galactic_market_allowed_desc:0 "The pressure from the Galactic Market will crush our businesses and open up our society to an unsustainable cultural influence from foreign nations, we cannot allow it."
+galactic_market_allowed_desc:0 "Opening our economy to the greater galaxy will increase commercial opportunities tenfold and allow us to access exotic resources not found in our space, for the future of our empire, we must not fall to policies of mercantilism or isolationism."
+
+FREE_ECO_POLICY_POSITIVE:0 "Economic Freedom"
+FREE_ECO_POLICY_NEUTRAL:0 "Tight Regulations"
+FREE_ECO_POLICY_NEGATIVE:0 "Communist Yoke"
+FREE_ECO_POLICY_DESC:0 "Setting the §YEconomic Stance§! policy to §YLaissez-Fair§!, while avoiding to set it to §YCommunist§!, will please the Individualist Faction."
+
+COMM_ECO_POLICY_POSITIVE:0 "Socialist Economy"
+COMM_ECO_POLICY_NEUTRAL:0 "Compromises with Capitalists"
+COMM_ECO_POLICY_NEGATIVE:0 "Corporate Excesses"
+COMM_ECO_POLICY_DESC:0 "Setting the §YEconomic Stance§! policy to §YCommunist§!, while avoiding to set it to §YLaissez-Fair§!, will please the Collectivist Faction."
+
+SUSTAINABLE_POLICY_POSITIVE:0 "Ecological Symbiosis"
+SUSTAINABLE_POLICY_NEUTRAL:0 "Insufficient Regulations"
+SUSTAINABLE_POLICY_NEGATIVE:0 "Overindustrialization"
+SUSTAINABLE_POLICY_DESC:0 "Setting the §YDevelopment Regulations§! policy to §YSustainability Focus§!, while avoiding to set it to §YProduction Focus§!, will please the Environmentalist Faction."
+
+PRODUCTION_POLICY_POSITIVE:0 "Incentives to Growth"
+PRODUCTION_POLICY_NEUTRAL:0 "Limited Profits"
+PRODUCTION_POLICY_NEGATIVE:0 "Green Oppression"
+PRODUCTION_POLICY_DESC:0 "Setting the §YDevelopment Regulations§! policy to §YProduction Focus§!, while avoiding to set it to §YSustainability Focus§!, will please the Industrialist Faction."
+
+policy_enslavement_ratio:0 "Enslavement Rate"
+policy_enslavement_ratio_desc:0 "Allows to set the rate of pops §YEnslavement§! for §YAuthoritarians§! and §YElitists§!."
+
+ratio_no_enslavement:0 "0% Enslaved"
+ratio_no_enslavement_name:0 "0% Enslaved"
+ratio_no_enslavement_desc:0 ""
+
+ratio_enslavement_0:0 "10% Enslaved"
+ratio_enslavement_0_name:0 "10% Enslaved"
+ratio_enslavement_0_desc:0 ""
+
+ratio_enslavement_1:0 "20% Enslaved"
+ratio_enslavement_1_name:0 "20% Enslaved"
+ratio_enslavement_1_desc:0 ""
+
+ratio_enslavement_2:0 "30% Enslaved"
+ratio_enslavement_2_name:0 "30% Enslaved"
+ratio_enslavement_2_desc:0 ""
+
+ratio_enslavement_3:0 "40% Enslaved"
+ratio_enslavement_3_name:0 "40% Enslaved"
+ratio_enslavement_3_desc:0 ""
+
+ratio_enslavement_4:0 "50% Enslaved"
+ratio_enslavement_4_name:0 "50% Enslaved"
+ratio_enslavement_4_desc:0 ""
+
+ratio_enslavement_5:0 "60% Enslaved"
+ratio_enslavement_5_name:0 "60% Enslaved"
+ratio_enslavement_5_desc:0 ""
+
+ratio_enslavement_7:0 "70% Enslaved"
+ratio_enslavement_7_name:0 "70% Enslaved"
+ratio_enslavement_7_desc:0 ""
+
+ratio_enslavement_8:0 "80% Enslaved"
+ratio_enslavement_8_name:0 "80% Enslaved"
+ratio_enslavement_8_desc:0 ""
+
+ratio_enslavement_full:0 "90% Enslaved"
+ratio_enslavement_full_name:0 "90% Enslaved"
+ratio_enslavement_full_desc:0 "Are you out of your mind?!"

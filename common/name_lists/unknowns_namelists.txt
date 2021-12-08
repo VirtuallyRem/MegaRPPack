@@ -1,0 +1,409 @@
+﻿# All of unknowns namelists
+
+unknowns_dwarves = {	# source: https://dwarrowscholar.wordpress.com/general-documents/male-dwarf-outer-names/
+
+	#selectable = yes
+
+	ship_names = {
+		generic = {
+			Anmorli Arabosi Arardrorin Baig Baik Bamlon Basrak Bemir Berdarlun Berrarlug Bik Bilo Bimu Bini Birbur Bode Boin Bomlom Brabo Braimu Brain Brainu Brak Bramben Brerven Brosuk Brufek Brul Brumren Bufrek Bun Bunrur Burir Busam Daid Dalotulim Damok Datum Deb Deto Dhukarlun Doim Dolvem Dondan Donduk Dorlig Dotir Dour Draeg Drael Drait Dresin Dribor Drig Drika Drilbum Drofrom Droife Drolvok Dronduk Drondun Drout Duk Dukrean Durful Durun Dut Dwami Dwamli Dweber Dwefik Dwegi Dwelo Dwilen Dwirlim Dwomli Dworlig Dwud Dwuf Dwug Elrnuc Fet Fibu Firud Flaec Flafe Flaili Flalu Flamin Flefur Flimli Flin Flit Flofur Floib Floigu Flon Flonan Flunran Fobon Foin Fok Fokdrumin Forvun Frait Frel Frelrin Freran Frofa Frorvuk Frubo Frufi Frulrir Frun Fugi Furvun Gaec Gaim Gate Gerbok Gibu Girur Glait Glarhaic Glili Glog Glolbim Glolu Glug Glurim Gombik Gorerlug Gorlon Got Graile Grakgred Gremler Grervak Greto Grifo Grig Grik Grilrok Grirvir Grommet Groorraeth Grosdrarlug Grouznal Grub Gurluk Houbic Houth Hunmor Kaib Kalmem Kandorlum Kanu Kati Kebim Ked Kefa Kemlom Khaik Khait Khedread Khetdrac Khirlik Khob Khoga Khul Kimen Kirbak Kisin Kod Kofam Kofrad Koig Koin Kom Komam Kraf Krelvum Krete Krisir Krot Krumlum Krundon Krurvuk Kut Kutham Larlug Lasen Leck Lobim Loick Losrin Lot Lubuk Lul Lunrik Mad Mal Meg Menrek Merlin Mervak Mhafon Mhafruk Mhilvir Mholvok Mhurom Mino Mirlum Misron Mit Mof Moghouck Molrum Morlim Mug Mumer Naloic Narmatin Negi Nenak Nete Nibek Nifi Nim Nirlum Nodi Nogu Nok Noranmeack Norastac Nudmeam Nulir Numir Nuranmosi Nut Ratir Ream Reas Reimraec Rorli Ruggom Sakot Sineth Skataen Skazzaer Skomralin Skorsirlum Snastoli Taiko Tak Tarbir Tege Teluk Thad Thaer Thaiko Thaki Thamnuc Tharorlig Thead Thebok Thefrur Therbam Thibim Thidolin Thifrer Thigron Thilguid Thimem Thinrak Thinrur Thisrom Thite Thoiti Thoki Thonror Thraik Thrain Thralgolir Thramrer Thrargami Thrath Thremlem Thrimli Throfur Throlvok Throm Thron Thronem Thrun Thrut Thumlun Thurvam Thusak Tibe Toig Toin Toke Toreghumir Tub Tuben Turbur Tuzzaeck Urmem Wamri Wessaek Wezzic Woic Wonlim Wuli Wut
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		#orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		#wormhole_station = { }
+		#terraform_station = { }
+		#observation_station = { }
+		#outpost_station = {	}
+	
+		military_station_small = {}
+	
+		military_station_medium = {}
+	
+		military_station_large = {}	
+	}
+	
+	fleet_names = {
+		random_names = {
+			#"The Farlun Host" "The Ginmim Host" "The Flir Host" "The Waeth Host" "The Dusteam Host" "The Dwumri Host" "The Thrakholim Host" "The Strolgraed Host" "The Glaed Host" 
+		}
+		sequential_name = "%O% Host"
+	}
+
+	###ARMIES
+	army_names = {
+	
+		defense_army = {
+			sequential_name = "%O% Defensive Army"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Offensive Army"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Slave Army"
+		}
+		
+		clone_army = {
+			sequential_name = "%O% Clone Army"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Mechanical Army"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Mechanical Army"
+		}
+		
+		psionic_army = {
+			sequential_name = "%O% Battlemage Army"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Xeno Army"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Genetic Army"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Occupying Army"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Mechanical Army"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				Kheled-zaram Menegroth Nimphelos Bar-en-Nibin-Noeg Bar-en-Danwedh Azanulbizar Nulukkizdîn Orocarni Abal Akar Alin Amin Araddund Ararbun Arathum Arbundun Arrad Athol Atun Azabar Aznan Badusharbh Bali Banain Banan Barazir Barukthar Barukthol Bifund Bilnula Bizinbuz Bunala Bundumunz Bunula Bunulbuz Dinain Dinan Dinarv Disanz Duli Frinain Furi Gamil Gatharbad Gathazah Gila Gili Gimli Gunala Gunargath Gundinar Kada Kadu Kharbhazar Khari Khathizdab Khizdinar Khizdinarg Khundusharb Kibuzinb Kilmin Kinbilnulb Kurdu Mili Muli Nainain Nainarv Nala Naledzar Naledzinb Nalukkhol Narakzar Nargabad Nargabar Nargabuz Nargathar Narukthar Narvi Nula Nulbaragz Nuledzar Nulukkhar Orin Rinain Sanzir Sanzur Sharakinb Sharbhizdush Shathundab Shaziraz Sheli Telchal Thali Thatur Thimil Thimin Threri Thrimin Thrinain Throri Thrumah Tumunzah Tumunzar Tumunzir Tumunzund Ugmal Ukak Ukkhilgam Ukkhinbar Umrag Umud Umundush Unzar Unzarbund Urin Urundun Uzum Zaddumunz Zaddushath Zahundin Zarakinb Zaramunz Zigil Zinbuzar Zirakzar Ziri Zuri Mazarbul
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+
+		default = {
+			# A complete name
+			
+			# Always combined with a second name
+			first_names_male = {
+				Aín Áithrasir Albin Alekin Alf Alfar Alfin Althin Althar Álvur Ámundur Anar Andar Andin Anthrasir Aritur Arnaldur Arngrímur Arvinur Ásmundur Aurin Ávaldur Balar Baldur Balin Balthrasir Baraldur Barinur Barudin Bávurin Benrin Bergur Bifur Bildr Bilin Bilthrasir Bjartur Bofin Bróin Bróri Brunar Brunin Burin Burinur Dagur Dáin Dár Dávur Dolgin Dorar Dorin Draupin Dróin Drúinur Dufin Durar Durinar Dwalin Edvin Egin Eikar Eikin Eirin Erlendur Filin Finnar Fjalin Fláim Flóvin Fráin Frár Frarin Frithin Frostin Fróthi Fundin Ganin Geiri Geirur Ginnar Ginnin Gormundur Gormur Gráim Grímur Grómi Gundur Gutti Hallmundur Hallur Hallin Hannar Hannin Haraldur Harikur Haugin Heimurin Helgi Hendrikur heptin Herbrandur Herfríthur Hermundur Hethin Hlein Hlóin Hóraldur Horin Horthrasir Hugin Ingálvur Ingimundur Ísleivur Íthmundur Jarin Jarmundur Jaspur Jórmundur Jórundur Kálvur Kilar Kilin Kolmundur Kyrrin Levi Litin Lofin Lonar Lonin Lothin Lýthur Magni Mjothin Motin Naglur Nalin Nár Narin Narvi Nithar Nithin Njálur Norar Nori Norin Nyar Nyrar Nyrin Oddmundur Ógmundur Oínur Ólin Onar Onin Onundur Órin Órvur Óthin Pátrin Rani Ravnur Regar Regin Reinaldur Ríkin Róaldur Rói Róin Róku Rólin Rómundur Rúni Rúnin Sáimundur Sámur Sandur Skafar Skafi Skirin Skúvur Sólmundur Sórin Sórkvi Steinmundur Steinur Stígur Súni Suthin Sveinur Svín Svjar Teitur Thekkin Thorar Thornur Thráim Thrárin Tóki Tórarin Torgestur Tormundur Torolvur Tórur Tróndur Týrur Úlvur Valdi Vestar Vestin Vesmundur Vilar Vilin Vindalf Virfir Yngvi
+			}
+
+			first_names_female = {
+				Ábria Agda Aí Aís Alda Aldís Alrún Anís Arís Árna Arndís Arnóra Arnvór Ása Ásdís Áshild Ásla Áslíg Ásta Ásvór Bára Bera Bergní Bina Birna Bís Borgní Bórka Brynja Dagní Dagrún Dagunn Dái Dania Danvór Dís Durís Edda Eilin Eina Eir Enna Erla Esta Estur Fanní Fía Fís Fjóla Flykra Fólva Frái Fróia Frótha Geira Gís Gudní Gudvór Gunn Gunna Gunnvá Gylta Halda Havdís Hera Hervór Hildur Hjordís Ida Ina Ingrún Ingvá Irena Íth Íthunn Íthur Janna Jansí Jensa Jódís Jóhild Jónvár Jórunn Jústa Kaia Kára Kárunn Lí Lín Lís Lívói Marí Marna Masa Merrí Mina Mira Myrna Nái Naina Nís Nísi Nomi Oda Oddrún Óidís Óivór Ragna Rakul Rannvá Revna Kikka Ró Róa Rótha Rún Rúna Saldís Salní Sanna Sigga Signa Signí Sigrun Siv Sól Sóldís Sólrun Sólvá Súna Sunnvá Sví Tíra Tordís Tórunn Tóva Turith Una Valdís Vár Vinní Vís Vón Yngva Yrsa
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				""
+			}
+
+			regnal_first_names_male = {
+				Aín Áithrasir Albin Alekin Alf Alfar Alfin Althin Althar Álvur Ámundur Anar Andar Andin Anthrasir Aritur Arnaldur Arngrímur Arvinur Ásmundur Aurin Ávaldur Balar Baldur Balin Balthrasir Baraldur Barinur Barudin Bávurin Benrin Bergur Bifur Bildr Bilin Bilthrasir Bjartur Bofin Bróin Bróri Brunar Brunin Burin Burinur Dagur Dáin Dár Dávur Dolgin Dorar Dorin Draupin Dróin Drúinur Dufin Durar Durinar Dwalin Edvin Egin Eikar Eikin Eirin Erlendur Filin Finnar Fjalin Fláim Flóvin Fráin Frár Frarin Frithin Frostin Fróthi Fundin Ganin Geiri Geirur Ginnar Ginnin Gormundur Gormur Gráim Grímur Grómi Gundur Gutti Hallmundur Hallur Hallin Hannar Hannin Haraldur Harikur Haugin Heimurin Helgi Hendrikur heptin Herbrandur Herfríthur Hermundur Hethin Hlein Hlóin Hóraldur Horin Horthrasir Hugin Ingálvur Ingimundur Ísleivur Íthmundur Jarin Jarmundur Jaspur Jórmundur Jórundur Kálvur Kilar Kilin Kolmundur Kyrrin Levi Litin Lofin Lonar Lonin Lothin Lýthur Magni Mjothin Motin Naglur Nalin Nár Narin Narvi Nithar Nithin Njálur Norar Nori Norin Nyar Nyrar Nyrin Oddmundur Ógmundur Oínur Ólin Onar Onin Onundur Órin Órvur Óthin Pátrin Rani Ravnur Regar Regin Reinaldur Ríkin Róaldur Rói Róin Róku Rólin Rómundur Rúni Rúnin Sáimundur Sámur Sandur Skafar Skafi Skirin Skúvur Sólmundur Sórin Sórkvi Steinmundur Steinur Stígur Súni Suthin Sveinur Svín Svjar Teitur Thekkin Thorar Thornur Thráim Thrárin Tóki Tórarin Torgestur Tormundur Torolvur Tórur Tróndur Týrur Úlvur Valdi Vestar Vestin Vesmundur Vilar Vilin Vindalf Virfir Yngvi
+			}
+			regnal_first_names_female = {
+				Ábria Agda Aí Aís Alda Aldís Alrún Anís Arís Árna Arndís Arnóra Arnvór Ása Ásdís Áshild Ásla Áslíg Ásta Ásvór Bára Bera Bergní Bina Birna Bís Borgní Bórka Brynja Dagní Dagrún Dagunn Dái Dania Danvór Dís Durís Edda Eilin Eina Eir Enna Erla Esta Estur Fanní Fía Fís Fjóla Flykra Fólva Frái Fróia Frótha Geira Gís Gudní Gudvór Gunn Gunna Gunnvá Gylta Halda Havdís Hera Hervór Hildur Hjordís Ida Ina Ingrún Ingvá Irena Íth Íthunn Íthur Janna Jansí Jensa Jódís Jóhild Jónvár Jórunn Jústa Kaia Kára Kárunn Lí Lín Lís Lívói Marí Marna Masa Merrí Mina Mira Myrna Nái Naina Nís Nísi Nomi Oda Oddrún Óidís Óivór Ragna Rakul Rannvá Revna Kikka Ró Róa Rótha Rún Rúna Saldís Salní Sanna Sigga Signa Signí Sigrun Siv Sól Sóldís Sólrun Sólvá Súna Sunnvá Sví Tíra Tordís Tórunn Tóva Turith Una Valdís Vár Vinní Vís Vón Yngva Yrsa
+			}
+			
+			regnal_second_names = {
+				Lightforge Silverhelm Ironguard Dragonbeard Runeshaper Snowblade 
+			}
+		}
+	}
+}
+
+unknowns_birds = {
+	category = "Avian"
+	ship_names = {
+
+		generic = {
+			Aar'mee Aathim Aawan Abah Abawf Abitpasa Abu Adeb Adnah Afrirraq Ah'ah Ah'bu Ah'jya Ah'rayya Ahah Ahiyah Akr'bu Aktebolu Al-Artatoorah Al-Basabaroh Al-Bayna Al-Diwalujah Al-Ghawit Al-Haliyah Al-Haqib Al-Jadah Al-Kiyji Al-Manukhah Al-Marga Al-Miwadmi Al-Mriefita Al-Rahiyyan Al-Raliyah Am'ud Amarera An'aj Ar Ar'an Ar-Ballah Ar-Bayala Ar-Darbammanet Ar-Ghahta Ar-Haliha Ar-Kewah Ar-Rala Ar-Tawasta Ar-Zakhit As-Sabja As-Samalah As-Sinsoura As-Sunomah Baha Baqubair Bara Bari Bay'ad Bay'mee Bee'fee Daha Dawatoorah Dhaba Dhasab Dhaytan Dihi Diwadin Doyadh Dumammam El-Ah El-An El-Ar El-Ha El-Jaddaydi El-Jiddammi El-Khabui El-Khashbui El-Mahai El-Mukai El-Qalai El-Qalii El-Quwai El-Ri El-Saiqali El-Seebaii El-Tee El-Ufuri El-Ul Er-Atrahi Er-Bu Er-Ma Er-Mahai Er-Mochai Er-Muscati Er-Ni Er-Sa Er-Surai Er-Suwai Fa'zi Fallubja Fufir Fuji Habai Hadna Hagri Hama Hamammanet Hamee Hammabet Harhinah Hennarita Hennayamayn Hermolia Hiy'ma Houdy Hudara Idiyah Ir'an Ismaiqas Jabariyah Jairi Jarardeh Jihij Jilayn Jubi Jubu Jy'ah Kadhimiya Kalli Kayadere Khabi Khafji Khaha Khanaqubah Khasha Khaybi Khayri Kirkurah Kiy'ma Layyila Ma'ne Ma'riya Maghaniyah Maha Mahahi Makiy Mama Mani Mansa Mansouragha Maraltah Marihan Maritra Medah Mee'mee Mee'on Meelaa Menounzala Milabam Mojaf Mudha Muka Mursasler Muzarayat Nabadh Nabarrani Naeemee Naha Natab Nawazeraa Ni'an Nibish Qadeisumah Qalliyoum Quneirita Raima Ranaa Rasha Rebi Ri'ma Riyaha Sa'dadah Sa'sa Sabay Saful Sahalkhad Sala Salaa Salee Sali Salmaykish Sayunaa Seebi Sharji Shayata Shihimiya Shubraqous Shumra Shurish Shy'arsh Soha Sughada Sula Sura Taa'al Taa'ni Tabouhaban Talirraq Thadith Thaha Thy'sha Tikrirma Tima Tiri Umm Uqafji Usayz Wadidayea Wadikkah Walaa Yadnah Yahmah Yariwkhah Zaydibs Zaymee Zubamia Zubatba
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+			V'Taka K'Mirom "M'Iskar Ro" S'Porak S'Kothan J'Kal Yeerel Yaaskan L'Dorak Bwiik Kraanak J'Vorok M'Sarok S'Tirani V'Irimak S'Tarok M'Isoram "D'Panok Ro" "V'Bami Ro" Yaruuk Bwaaki Koruuk K'Tanek S'Kiro D'Daduro J'Kilar S'Rarako V'Korun "V'Turi Ro" 
+		}		
+	}
+
+	fleet_names = {
+		random_names = {
+			"Gilded Star Flock" "Revered Star Flock" "Honored Star Flock" "Soaring Star Flock" "Y'Sarka Star Flock" "U'Ruusu Star Flock" "S'Sarona Star Flock" "T'Tsona Star Flock" "Y'Trana Star Flock" "S'Itanis Star Flock" "Y'Ysonni Star Flock"
+		}
+		sequential_name = "%O% Star Flock"
+	}
+	
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "%O% Security Wing"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Spaceborne"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Spaceborne"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Spaceborne"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Security Wing"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Spaceborne"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Servile Army"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Wing"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Dread Wing"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Machine Column"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Machine Sentinels"
+		}
+		
+		psionic_army = { 
+			sequential_name = "Telepathic Order %R%"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Xeno Herd"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Death Commando"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Occupation Wing"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Occupation Machines"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+		
+	planet_names = {
+
+		generic = {
+			names = {
+				Abah Abu Adehidah Aganieh Al Al-Bariliyah Al-Fabala Al-Fallulujah Al-Fawrah Al-Jacca Al-Jadr Al-Jarralayn Al-Kanaseir Al-Kibil Al-Mahasab Al-Miha Al-Mirout Al-Mukablah Al-Najar Al-Qa'inaqin Al-Qamsista Al-Qusabea Al-Quysan Al-Rufar Al-Sananiyye Al-Sanasab Ar-Bakah Ar-Dibar Ar-Hadiyji Ar-Marabarya Ar-Qashtun Arbijah Arbisit Artammam Ash Assaffag Babyya Baha Balamer Bara Binnilakh Burairma Byana Cumiya Dahullah Damaraw Damiesuf Dharasan Dhutoorah Dikinnoud El-Alalia El-Ghaqas El-Kanarm El-Madiyah El-Thouniyah Er-Afabil Er-Hamikhoura Er-Jatra Er-Nasijah Gharji Habakhwah Hammi Haraqih Hareqqah Harmazah Hashfuf Hashtul Hudaq Jabasumah Jaratina Jubarout Khabala Khabu Khasur Khaytan Lagayji Lahat Maha Mana Mansourut Manzakh Mhayamayn Misab Mneerran Mosufar Najra Nawarera Qatiddah Qatif Qudsarimah Rirhinah Riyaragha Rustah Saden Saful Sala Seeba Seebai Seebi Shafara Shaghada Shahar Shara Shihwit Shubrarnis Sibbabk Soha Sumegash Sura Suri Sutan Ta'iran Taha Tanutgat Thadiqraa Uqadina Wahel Washarun Wazisrakh Yakajj Yarut Zaiffag Zilayn Ziwkhah
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				Kreemak B'Raaki Reetril Yeedik L'Krami Eerkal Y'Sarkee Y'Heetak Lagraak Skraak T'Anaark Reebik P'Kida D'Kheera K'Reel T'Rootik Skeerid P'Dykna Haatrek Y'Ridaak Y'Heeka Kurukaa Sikirooka Y'Hree B'Nookar Skreeki T'Marik D'Sariik K'Nuurak S'Kuurik L'Matreek Raakur Sakeeri Yuruuk T'Kiiri T'Maku B'Rhii B'Kuura L'Kiri P'Kakuur P'Konori R'Tariik Koorivi R'Tanoka R'Tanik Haakanu Haabik Kaabik Eerabik Saakubik
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				Kreemak B'Raaki Reetril Yeedik L'Krami Eerkal Y'Sarkee Y'Heetak Lagraak Skraak
+			}
+			
+			regnal_second_names = {
+				Koriik
+			}
+		}
+	}
+}

@@ -1,0 +1,945 @@
+HUM = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"human"
+		"humanoid_02"
+		"humanoid_03"
+		"humanoid_04"
+		"humanoid_05"
+	}
+	custom_portraits = {
+		randomized = { host_has_dlc = "Humanoids Species Pack" }
+		playable = { local_has_dlc = "Humanoids Species Pack" }
+		portraits = {
+			"humanoid_hp_01"
+			"humanoid_hp_02"
+			"humanoid_hp_06"
+			"humanoid_hp_07"
+			"humanoid_hp_08"
+			"humanoid_hp_09"
+			"humanoid_hp_10"
+			"humanoid_hp_11"
+			"humanoid_hp_12"
+			"humanoid_hp_13"
+			
+			"humanoid_cyber_cyclope"
+			"robohobbit"
+		}
+	}
+
+	custom_portraits = {
+		portraits = {
+			"as9"
+			"lurker"
+			"humanhive"
+			"zamite"
+			"xevil"
+			"xirmian"
+			"magi_tricolor_elf"
+			"magi_dryas"
+
+			"Zroni"
+			"horror_01"
+
+			"aquaoid"
+
+			"Cyborg1"
+			"Cyborg2"
+			"selix_02"
+			"uncanny"
+		}
+	}
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"human"
+	}
+
+	graphical_culture = humanoid_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+ROBOT = {
+	archetype = ROBOT
+
+	playable = { has_global_flag = game_started }
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		portraits = {
+			"sd_hum_robot"
+			"sd_mam_robot"
+			"sd_rep_robot"
+			"sd_avi_robot"
+			"sd_art_robot"
+			"sd_mol_robot"
+			"sd_fun_robot"
+			"sd_pla_robot"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { has_lithoids = yes }
+		playable = { has_lithoids = yes }
+		portraits = {
+			"lith_machine"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { has_necroids = yes }
+		playable = { has_necroids = yes }
+		portraits = {
+			"nec_machine"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { has_aquatics = yes }
+		playable = { has_aquatics = yes }
+		portraits = {
+			"aqu_machine"
+		}
+	}
+
+	custom_portraits = { # use custom_portraits instead of portraits so we can put them after the custom_portraits above
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"default_robot"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"amp_robot_plant_group"
+			"amp_robot_avian_group"
+			"amp_robot_arthro_group"
+			"amp_robot_repti_group"
+			"amp_robot_mammal_group"
+			"amp_robot_fungus_group"
+			"amp_robot_lithoid_group"
+			"amp_robot_molluscoid_group"
+			"amp_robot_humanoid_group"
+
+			"narilin_02"
+			"deverian_03"
+			"ukn_drone"
+			"dalek"
+			"cyberman"
+			"ksen1"
+			"automatons"
+			"talos_automaton"
+			
+			"Cyborg1"
+			"Cyborg2"
+			"uncanny"
+
+			"humansynth_machine"
+			"mammaliansynth_machine"
+			"reptiliansynth_machine"
+			"aviansynth_machine"
+			"arthropoidsynth_machine"
+			"molluscoidsynth"
+			"fungoidsynth"
+			"plantoidsynth"
+			"anthroid"
+			"humroid"
+			"humaicon"
+			"holofrixigram"
+			"zeriphensynth_machine"
+			"syntherminator_machine"
+			"synthetic_robot_01"
+			"synthetic_robot_02"
+			"synthetic_robot_03"
+			"synthetic_robot_06"
+			"synthetic_robot_08"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "robot_pops_move"
+
+	resources = {}
+}
+
+MACHINE = {
+	archetype = MACHINE
+
+	playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+	randomized = {
+		host_has_dlc = "Synthetic Dawn Story Pack"
+		# The create_species effect can't properly take the possible trigger below into account.
+		# Work around this by disabling this class for species randomization after game start.
+		NOT = { has_global_flag = game_started }
+	}
+	possible = { authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } } }
+	possible_secondary = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
+
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			# The create_species effect can't properly take the possible trigger below into account.
+			# Work around this by disabling this class for species randomization after game start.
+			NOT = { has_global_flag = game_started }
+		}
+		playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		portraits = {
+			"sd_hum_robot"
+			"sd_mam_robot"
+			"sd_rep_robot"
+			"sd_avi_robot"
+			"sd_art_robot"
+			"sd_mol_robot"
+			"sd_fun_robot"
+			"sd_pla_robot"
+		}
+	}
+
+	custom_portraits = {
+		randomized = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_lithoids = yes
+			}
+		}
+		playable = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_lithoids = yes
+			}
+		}
+		portraits = {
+			"lith_machine"
+		}
+	}
+
+	custom_portraits = {
+		randomized = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_necroids = yes
+			}
+		}
+		playable = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_necroids = yes
+			}
+		}
+		portraits = {
+			"nec_machine"
+		}
+	}
+
+	custom_portraits = {
+		randomized = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_aquatics = yes
+			}
+		}
+		playable = {
+			AND = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				has_aquatics = yes
+			}
+		}
+		portraits = {
+			"aqu_machine"
+		}
+	}
+
+	custom_portraits = { # use custom_portraits instead of portraits so we can put them after the custom_portraits above
+		randomized = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		portraits = {
+			"default_robot"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"amp_robot_plant_group"
+			"amp_robot_avian_group"
+			"amp_robot_arthro_group"
+			"amp_robot_repti_group"
+			"amp_robot_mammal_group"
+			"amp_robot_fungus_group"
+			"amp_robot_lithoid_group"
+			"amp_robot_molluscoid_group"
+			"amp_robot_humanoid_group"
+
+			"narilin_02"
+			"deverian_03"
+			"ukn_drone"
+			"dalek"
+			"cyberman"
+			"ksen1"
+			"automatons"
+			"talos_automaton"
+
+			"Cyborg1"
+			"Cyborg2"
+			"uncanny"
+
+			"humansynth_machine"
+			"mammaliansynth_machine"
+			"reptiliansynth_machine"
+			"aviansynth_machine"
+			"arthropoidsynth_machine"
+			"molluscoidsynth"
+			"fungoidsynth"
+			"plantoidsynth"
+			"anthroid"
+			"humroid"
+			"humaicon"
+			"holofrixigram"
+			"zeriphensynth_machine"
+			"syntherminator_machine"
+			"synthetic_robot_01"
+			"synthetic_robot_02"
+			"synthetic_robot_03"
+			"synthetic_robot_06"
+			"synthetic_robot_08"
+		}
+	}
+
+	graphical_culture = mammalian_01
+	move_pop_sound_effect = "robot_pops_move"
+
+	resources = {}
+}
+
+MAM = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"mam5"
+		"mam13"
+		"mam10"
+		"mam14"
+		"mam4"
+		"mam9"
+		"mam11"
+		"mam6"
+		"mam3"
+		"mam12"
+		"mam7"
+		"mam15"
+		"mam2"
+		"mam8"
+		"mam1"
+		"mam16"
+		"mam_rat"
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = {
+			OR = {
+				host_has_dlc = "Creatures of the Void Portrait Pack"
+				host_has_dlc = "Anniversary Portraits"
+			}
+		}
+		playable = {
+			OR = {
+				local_has_dlc = "Creatures of the Void Portrait Pack"
+				local_has_dlc = "Anniversary Portraits"
+			}
+		}
+		portraits = {
+			"mam17"
+		}
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+        "mam_rat"
+    }
+	
+	custom_portraits = {
+		portraits = {
+			"as8"
+			"Cuelan"
+			"lgs_unicorn_01"
+			"labrat01"
+			"hyenafolk"
+			"ape"
+
+			"sharkanian"
+
+			"mekofox"
+			"scissor_llama"	
+			"brain_cat"
+		}
+	}
+
+	graphical_culture = mammalian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+
+	resources = {}
+}
+
+REP = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"rep2"
+		"rep10"
+		"rep14"
+		"rep3"
+		"rep7"
+		"rep12"
+		"rep9"
+		"rep11"
+		"rep6"
+		"rep13"
+		"rep1"
+		"rep8"
+		"rep4"
+		"rep15"
+		"rep5"
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = { host_has_dlc = "Leviathans Story Pack" }
+		playable = { local_has_dlc = "Leviathans Story Pack" }
+		portraits = {
+			"rep16"
+		}
+	}
+	custom_portraits = {
+		randomized = { host_has_dlc = "Anniversary Portraits" }
+		playable = { local_has_dlc = "Anniversary Portraits" }
+		portraits = {
+			"rep17"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as17"
+			"hydra"
+			"aquat"
+			"vibran"
+			"spinosaurus_all"
+			"spinosaurus_all_clothed"
+			"raptor_01"
+			"raptor_02"
+			"raptor_01_clothed"
+			"raptor_02_clothed"
+			"saurischian"
+			"serpentoid"
+			"amp1"
+			"dragonbot"
+		}
+	}
+
+	graphical_culture = reptilian_01
+	move_pop_sound_effect = "reptilian_pops_move"
+
+	resources = {}
+}
+
+AVI = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"avi1"
+		"avi8"
+		"avi13"
+		"avi10"
+		"avi15"
+		"avi4"
+		"avi7"
+		"avi5"
+		"avi9"
+		"avi6"
+		"avi11"
+		"avi3"
+		"avi14"
+		"avi2"
+		"avi12"
+	}
+	custom_portraits = {#add additional portraits when customizing species
+		playable = { logged_in_to_pdx_account = yes }
+		portraits = {
+			"avi16"
+		}
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = {
+			OR = {
+				host_has_dlc = "Creatures of the Void Portrait Pack"
+				host_has_dlc = "Anniversary Portraits"
+			}
+		}
+		playable = {
+			OR = {
+				local_has_dlc = "Creatures of the Void Portrait Pack"
+				local_has_dlc = "Anniversary Portraits"
+			}
+		}
+		portraits = {
+			"avi17"
+		}
+	}
+	custom_portraits = {
+		randomized = { host_has_dlc = "Anniversary Portraits" }
+		playable = { local_has_dlc = "Anniversary Portraits" }
+		portraits = {
+			"avi18"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as3"
+			"raven_group_animated"
+			"romaneagles"
+
+			"robochicken"
+			"lizard_bird"
+			"canoptek_02"
+		}
+	}
+
+	graphical_culture = avian_01
+	move_pop_sound_effect = "avian_pops_move"
+
+	resources = {}
+}
+
+ART = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"art14"
+		"art7"
+		"art12"
+		"art6"
+		"art1"
+		"art13"
+		"art8"
+		"art3"
+		"art5"
+		"art9"
+		"art10"
+		"art11"
+		"art15"
+		"art19"
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = { host_has_dlc = "Leviathans Story Pack" }
+		playable = { local_has_dlc = "Leviathans Story Pack" }
+		portraits = {
+			"art18"
+		}
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = { host_has_dlc = "Arachnoid Portrait Pack" }
+		playable = { local_has_dlc = "Arachnoid Portrait Pack" }
+		portraits = {
+			"art16"
+		}
+	}
+	custom_portraits = {
+		randomized = { host_has_dlc = "Anniversary Portraits" }
+		playable = { local_has_dlc = "Anniversary Portraits" }
+		portraits = {
+			"art20"
+		}
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = {
+			OR = {
+				host_has_dlc = "Creatures of the Void Portrait Pack"
+				host_has_dlc = "Anniversary Portraits"
+			}
+		}
+		playable = {
+			OR = {
+				local_has_dlc = "Creatures of the Void Portrait Pack"
+				local_has_dlc = "Anniversary Portraits"
+			}
+		}
+		portraits = {
+			"art17"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as1"
+			"as2"
+			"as11"
+			"as12"
+			"as16"
+			"ant"
+			"bee"
+			"mantis"
+			"cockroach"
+			"clacker"
+			"arachna"
+			"creature"
+			"horrorworm"
+
+			"LEV_cute_arthropoid_01"
+
+			"LEV_cute_arthropoid_02"
+
+			"LEV_cute_arthropoid_03"
+
+			"LEV_cute_arthropoid_04"
+
+
+			"natfanconstruct"
+			}
+		}
+
+	graphical_culture = arthropoid_01
+	move_pop_sound_effect = "arthopoid_pops_move"
+
+	resources = {}
+}
+
+MOL = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"mol3"		# Rendered but not saved
+		"mol7"
+		"mol13"
+		"mol2"
+		"mol14"
+		"mol4"
+		"mol8"
+		"mol1"
+		"mol11"
+		"mol12"
+		"mol5"
+		"mol6"
+		"mol15"
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = {
+			OR = {
+				host_has_dlc = "Creatures of the Void Portrait Pack"
+				host_has_dlc = "Anniversary Portraits"
+			}
+		}
+		playable = {
+			OR = {
+				local_has_dlc = "Creatures of the Void Portrait Pack"
+				local_has_dlc = "Anniversary Portraits"
+			}
+		}
+		portraits = {
+			"mol16"
+			}
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = { host_has_dlc = "Leviathans Story Pack" }
+		playable = { local_has_dlc = "Leviathans Story Pack" }
+		portraits = {
+			"mol17"
+			"mol18"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as4"
+			"as6"
+			"as7"
+			"as10"
+			"as13"
+			"as14"
+			"glower"
+			"lekurian"
+			"octeelan"
+			"LEV_cute_molluscoid_01"
+
+			"molluscoid_octoborg"
+			"starborg"
+		}
+	}
+
+	graphical_culture = molluscoid_01
+	move_pop_sound_effect = "molluscoid_pops_move"
+}
+
+FUN = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	gender = no
+
+	portraits = {
+		"fun2"
+		"fun4"
+		"fun3"
+		"fun13"
+		"fun12"
+		"fun6"
+		"fun15"
+		"fun7"
+		"fun1"
+		"fun9"
+		"fun11"
+		"fun8"
+		"fun14"
+		"fun10"
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = {
+			OR = {
+				host_has_dlc = "Creatures of the Void Portrait Pack"
+				host_has_dlc = "Anniversary Portraits"
+			}
+		}
+		playable = {
+			OR = {
+				local_has_dlc = "Creatures of the Void Portrait Pack"
+				local_has_dlc = "Anniversary Portraits"
+			}
+		}
+		portraits = {
+			"fun16"
+		}
+	}
+
+	custom_portraits = {#add additional portraits when customizing species
+		randomized = { host_has_dlc = "Leviathans Story Pack" }
+		playable = { local_has_dlc = "Leviathans Story Pack" }
+		portraits = {
+			"fun17"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as5"
+			"as15"
+			"LEV_cute_funji_01"
+		}
+	}
+	
+	graphical_culture = fungoid_01
+	move_pop_sound_effect = "fungoid_pops_move"
+
+	resources = {}
+}
+
+PLANT = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+	#playable = {
+	#	OR = {
+	#		host_has_dlc = "Plantoids Species Pack"
+	#		local_has_dlc = "Ancient Relics Story Pack"
+	#	}
+	#}
+
+	gender = no
+
+	custom_portraits = {
+		randomized = { host_has_dlc = "Plantoids Species Pack" }
+		playable = { host_has_dlc = "Plantoids Species Pack" }
+		portraits = {
+			"pla2"
+			"pla6"
+			"pla1"
+			"pla11"
+			"pla3"
+			"pla13"
+			"pla7"
+			"pla15"
+			"pla10"
+			"pla5"
+			"pla9"
+			"pla14"
+			"pla4"
+			"pla8"
+			"pla12"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { host_has_dlc = "Ancient Relics Story Pack" }
+		playable = { local_has_dlc = "Ancient Relics Story Pack"	}
+		portraits = {
+			"pla16_baol"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"as18"
+			"LEV_cute_plantoid_01"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { host_has_dlc = "Plantoids Species Pack" }
+		playable = { host_has_dlc = "Plantoids Species Pack" }
+		portraits = {
+			"snorter"
+			"saladautomaton"
+			"shredder_bot"
+		}
+	}
+	
+	graphical_culture = plantoid_01
+
+	resources = {}
+}
+
+LITHOID = {
+	archetype = LITHOID
+
+	playable = { has_lithoids = yes }
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	randomized = { has_lithoids = yes }
+
+	gender = no
+
+	custom_portraits = {
+		randomized = { has_lithoids = yes }
+		playable = { has_lithoids = yes }
+		portraits = {
+			"lith1"
+			"lith2"
+			"lith3"
+			"lith4"
+			"lith5"
+			"lith6"
+			"lith7"
+			"lith8"
+			"lith9"
+			"lith10"
+			"lith11"
+			"lith12"
+			"lith13"
+			"lith14"
+			"lith15"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"lith16"
+			"lith17"
+			"lith19"
+			"lithbaol"
+			"silicoid_b_01"
+			"silicoid_02"
+			"silicoid_03"
+			"eshape"
+		}
+	}	
+
+	graphical_culture = lithoid_01
+	move_pop_sound_effect = "reptilian_pops_move"
+
+	resources = {}
+
+	trait = "trait_lithoid"
+}
+
+NECROID = {
+	archetype = BIOLOGICAL
+
+	#playable = { has_necroids = yes }
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	randomized = { has_necroids = yes }
+
+	gender = yes
+
+	custom_portraits = {
+		randomized = { has_necroids = yes }
+		playable = { has_necroids = yes }
+		portraits = {
+			"nec1"
+			"nec2"
+			"nec3"
+			"nec4"
+			"nec5"
+			"nec6"
+			"nec7"
+			"nec8"
+			"nec9"
+			"nec10"
+			"nec11"
+			"nec12"
+			"nec13"
+			"nec14"
+			"nec15"
+		}
+	}
+	
+	custom_portraits = {
+		portraits = {
+			"zem"
+			"vamp"
+			"ghost_01"
+			"holofrixit"
+			"abom1"
+		}
+	}
+
+	custom_portraits = {
+		randomized = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		portraits = {
+			"cybereye"
+		}
+	}
+	
+	graphical_culture = necroid_01
+	move_pop_sound_effect = "molluscoid_pops_move"
+
+	resources = {}
+}

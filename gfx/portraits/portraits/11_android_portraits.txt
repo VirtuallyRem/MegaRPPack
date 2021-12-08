@@ -1,0 +1,102 @@
+portraits = {
+android_female_01 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "android_female_clothes_01" hair_selector = "android_female_hair_01"	greeting_sound = "human_female_greetings_03"
+		character_textures = { 
+			"gfx/models/portraits/android/android_female_body_01.dds"
+		}
+	}
+android_male_01 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "android_male_clothes_01" hair_selector = "android_male_hair_01"	greeting_sound = "human_male_greetings_03" 
+		character_textures = { 
+			"gfx/models/portraits/android/android_male_body_01.dds"
+		}
+	}	
+}
+
+portrait_groups = {
+	android_01 = {
+		default = android_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					android_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					android_female_01
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					android_female_portraits
+                                        android_male_portraits
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					android_female_01
+					android_male_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+				android_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+				android_male_01
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+				android_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					android_male_01
+				}
+			}
+		}
+	}
+}

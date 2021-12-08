@@ -1,0 +1,166 @@
+portraits = {
+	spinosaurus_01_clothed = {	entity =  "Spinosauridae_med_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_01.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_01_alt1.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_01_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_01_alt3.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_01_alt4.dds"
+		}
+	}
+	spinosaurus_02_clothed = {	entity = "Spinosauridae_large_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_02.dds"
+		}
+	}
+	spinosaurus_03_clothed = {	entity = "Spinosauridae_large_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_03.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_03_alt1.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_03_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_03_alt3.dds"
+		}
+	}
+	spinosaurus_04_clothed = {	entity = "Spinosauridae_small_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_04.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_04_alt1.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_04_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_04_alt3.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_04_alt4.dds"
+		}
+	}
+	spinosaurus_05_clothed = {	entity = "Spinosauridae_titanic_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_05.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_05_alt1.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_05_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_05_alt3.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler_alt1.dds"
+		}
+	}
+	spinosaurus_06_clothed = {	entity = "Spinosauridae_titanic_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_06.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_06_alt1.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_06_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_06_alt3.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler_alt2.dds"
+		}
+	}
+	
+	spinosaurus_ruler_F_clothed= {	entity = "Spinosauridae_royal_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler_alt2.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler_alt1.dds"
+		}
+	}
+	spinosaurus_ruler_m_clothed= {	entity = "Spinosauridae_royal_entity"	clothes_selector = "reptilian_massive_clothes_13"  hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler.dds"
+			"gfx/models/portraits/Spinosauridae/sauropsida_spinosaurus_ruler_alt1.dds"
+		}
+	}
+}
+
+
+portrait_groups = {
+	spinosaurus_all_clothed = {
+		default = spinosaurus_ruler_F_clothed
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {spinosaurus_ruler_m_clothed
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {	
+					spinosaurus_ruler_F_clothed
+				
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					spinosaurus_ruler_m_clothed
+					spinosaurus_ruler_F_clothed
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+				spinosaurus_01_clothed
+				spinosaurus_04_clothed
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					
+				spinosaurus_01_clothed
+				spinosaurus_02_clothed
+				spinosaurus_05_clothed
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					
+				spinosaurus_01_clothed
+				spinosaurus_02_clothed
+				spinosaurus_05_clothed
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+				spinosaurus_ruler_f_clothed
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					spinosaurus_ruler_m_clothed
+				}
+			}
+		}
+	}
+}

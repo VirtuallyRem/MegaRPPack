@@ -1,0 +1,195 @@
+namespace = raiding
+
+@raiding_gain_min = 100
+@raiding_gain_low = 200
+@raiding_gain_med = 500
+@raiding_gain_max = 1000
+
+planet_event = {
+	id = raiding.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_orbital_bombardment = yes
+		has_orbital_bombardment_stance = raiding
+		OR = {
+			AND = {
+				planet_devastation >= 25
+				NOT = { has_planet_flag = raided_one }
+			}
+			AND = {
+				planet_devastation >= 50
+				NOT = { has_planet_flag = raided_two }
+			}
+			AND = {
+				planet_devastation >= 75
+				NOT = { has_planet_flag = raided_three }
+			}
+			AND = {
+				planet_devastation >= 100
+				NOT = { has_planet_flag = raided_four }
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_planet_flag = raided_one } }
+			set_planet_flag = raided_one
+		}
+		if = {
+			limit = { NOT = { has_planet_flag = raided_two } }
+			set_planet_flag = raided_two
+		}
+		if = {
+			limit = { NOT = { has_planet_flag = raided_three } }
+			set_planet_flag = raided_three
+		}
+		else = {
+			set_planet_flag = raided_four
+		}
+		if = {
+			limit = {
+				OR = {
+					has_building = building_system_capital
+					has_building = building_machine_system_capital
+					has_building = building_ancient_control_center
+					has_building = building_ancient_palace
+					AND = {
+						has_building = building_hive_major_capital
+						num_pops >= 80
+					}
+					AND = {
+						has_building = building_hab_major_capital
+						num_pops >= 80
+					}
+					AND = {
+						has_building = building_resort_major_capital
+						num_pops >= 80
+					}
+					AND = {
+						has_building = building_slave_major_capital
+						num_pops >= 80
+					}
+				}
+			}
+			root.From = { 
+				add_resource = {
+					food = @raiding_gain_max 
+					minerals = @raiding_gain_max
+					energy = @raiding_gain_max
+					alloys = @raiding_gain_max
+					consumer_goods = @raiding_gain_max
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_building = building_major_capital 
+					has_building = building_machine_major_capital
+					has_building = building_hive_major_capital
+					AND = {
+						has_building = building_hab_major_capital
+						num_pops >= 40
+					}
+					AND = {
+						has_building = building_resort_major_capital
+						num_pops >= 40
+					}
+					AND = {
+						has_building = building_slave_major_capital
+						num_pops >= 40
+					}
+				}
+			}
+			root.From = { 
+				add_resource = {
+					food = @raiding_gain_med
+					minerals = @raiding_gain_med
+					energy = @raiding_gain_med
+					alloys = @raiding_gain_med
+					consumer_goods = @raiding_gain_med
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_building = building_capital 
+					has_building = building_machine_capital
+					AND = {
+						has_building = building_hive_capital
+						num_pops >= 10
+					}
+					has_building = building_hab_major_capital
+					has_building = building_resort_major_capital
+					has_building = building_slave_major_capital
+				}
+			}
+			root.From = {
+				add_resource = {
+					food = @raiding_gain_low 
+					minerals = @raiding_gain_low 
+					energy = @raiding_gain_low 
+					alloys = @raiding_gain_low 
+					consumer_goods = @raiding_gain_low 
+				}
+			}
+		}
+		else = {
+			root.From = {
+				add_resource = {
+					food = @raiding_gain_min
+					minerals = @raiding_gain_min
+					energy = @raiding_gain_min
+					alloys = @raiding_gain_min
+					consumer_goods = @raiding_gain_min
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = raiding.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			any_owned_planet = {
+				planet_devastation < 16
+				OR = {
+					has_planet_flag = raided_one
+					has_planet_flag = raided_two
+					has_planet_flag = raided_three
+					has_planet_flag = raided_four
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			every_owned_planet = {
+				limit = {
+					planet_devastation < 16
+					OR = {
+						has_planet_flag = raided_one
+						has_planet_flag = raided_two
+						has_planet_flag = raided_three
+						has_planet_flag = raided_four
+					}
+				}
+				remove_planet_flag = raided_one
+				remove_planet_flag = raided_two
+				remove_planet_flag = raided_three
+				remove_planet_flag = raided_four
+			}
+		}
+	}
+	
+}

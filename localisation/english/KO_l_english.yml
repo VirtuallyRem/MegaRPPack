@@ -1,0 +1,129 @@
+﻿l_english:
+ ###Origins/Descriptions###
+ origin_shroud_touched:0 "Mysterious Bond"
+ origin_shroud_touched_desc:0 "The citizens of this civilization always had mysterious telekenisis like powers and has been dabbling in psionics since the birth of their species."
+ origin_shroud_touched_desc2:0 " - Start the game with the §HPsionic Theory§! technology unlocked\n- Start with a £sr_zro£ §HZro§! deposit on your capital\n- Your ruler starts with the §MPsychic§! trait\n §YMight require Utopia to work properly.§!"
+ 
+ origin_planetary_ascendants:0 "Planetary Ascendants"
+ origin_planetary_ascendants_desc:0 "The governments of this world joined together into one ultimate civilization almost in an instant in their recent history. This event would later be dubbed their ascension as soon after, they discovered FTL travel and began to travel the stars."
+ origin_planetary_ascendants_desc2:0 "Start the game with the §HAscension Theory§! and §HPlanetary Unification§! technologies unlocked.\n §YRequires Utopia to work properly.§!"
+ 
+ origin_codominant_evolution:0 "Codominant Evolution"
+ origin_codominant_evolution_desc:0 "A second species evolved along side the primary species of this civilization. Their intelligence rivals that of our finest scholars and their people have formed an integeral part of our society."
+ origin_codominant_evolution_desc2:0 "Start the game with §H14§! £pop£ Pops being of another, dominant species."
+ origin_codominant_evolution_second_species:0 "Codominant Species"
+ 
+ origin_plan_con:0 "Planetary Conquest"
+ origin_plan_con_desc:0 "Decades ago, the different species of this world were plagued by seemingly neverending wars. The dominant species of this planet came victorious when they were united under the rule of its most powerful nation. Now, with their people unified as one and what remains of their predecessors now bowing before them, they now look toward the stars, now seeking to claim them as their own."
+ origin_plan_con_desc2:0 " - Start the game with §H6§! £pop£ Pops being of another species.\n- Gain access to a §Hspecial monument§! and a §Hspecial starbase building§!.\n- Start the game with §H3 extra corvettes§!."
+ origin_slaaaaves:0 "Defeated Species"
+ 
+ origin_hive_am:0 "Hive Amalgamation"
+ origin_hive_am_desc:0 "Through time the hive mind of this empire created an almost symbiotic bond with its planet. This bond eventually began to absorb the entire planet into one ultimate hive amalgamation."
+ origin_hive_am_desc2:1 "- Start with a size £planetsize£ §Y20 Hive World§! as your homeworld.\n- Start with the ability to assimilate other species into our hive mind.\n-Start with a unique §YPlanetary Decision§! that slowly converts planets into §YHive Worlds§!.\n §YRequires Utopia to work properly.§!"
+ 
+ origin_ws:0 "World Shapers"
+ origin_ws_desc:0 "The citizens of this empire always dreamt of terraforming and colonizing a particular planet within their solar system. Before the discovery of the hyperlane network, they not only made this dream a reality, but also successfully perfected their craft."
+ origin_ws_desc2:0 "- Start with the §HTerrestrial Sculpting§! and §HClimate Theory§! technologies unlocked.\n- Start with another §Hideal, terraformed planet§! colonized within your borders."
+
+origin_cao:0 "Extermination Coalition"
+origin_cao_desc:0 "After this machine empire's creators ventured off into space and colonized their immediate neighboring planets, their machines quickly rebelled, ending in the complete termination of their race. Now, unified as one, the three colonies have joined together in a federation, a coalition to exterminate all organic life in the universe."
+origin_cao_desc2:0 "- Start as the leader of a §HResearch Cooperative§! with two additional members.\n- Members will occupy any Guaranteed Habitable Worlds slots near your home system.\n- All members are immortal machines, determined to eliminate all organic life in the galaxy.\n- Start with the §HUniversal Compatibility§! tradition unlocked.\n §YRequires the Synthetic Dawn Story Pack and Federations to work properly.§!"
+
+origin_secpar:0 "Secluded Paradise"
+origin_secpar_desc:1 "This empire's home system is seperated from the rest of the galaxy in a beautiful paradise, linked only by a wormhole."
+origin_secpar_desc2:2 "- Start with a §YGaia World§! as your homeworld.\n- Your homeworld's moon is also a §YGaia World§!. \n- Habitability preference is set to §YGaia World Preference§!, making other types of planets undesirable. \n- Your homesystem is isolated from the rest of the galaxy, connected only by a §YWormhole§!. \n- Start with the §YWormhole Stabilization§! technology unlocked."
+
+ ###Buldings/Starbase Modules###
+ building_fragment_of_armageddon:0 "Remnant of Armageddon"
+ building_fragment_of_armageddon_desc:0 "A large monument, housing soldiers and peace keepers while acting as a rememberance piece of our bloody history."
+
+ sm_asss:0 "Assembly Yard Addition"
+ sm_asss_desc:0 "A small assembly yard, manned by a line of workers."
+ 
+ ###Planet Modifiers###
+ #WORLD SHAPERS#
+ ws_colony_mod:0 "Colonial Pride"
+ ws_colony_mod_desc:0 "The pride of the colonials on this planet hold well as they go forth and begin to build their future."
+ 
+ ws_also_colony_mod:0 "Planetary Shaping"
+ ws_also_colony_mod_desc:0 "This planet has been crafted perfectly to suit the needs of our people." 
+
+ #HIVE AMALGAMATION#
+ KO_hive1:0 "Hive Seeded"
+ KO_hive1_desc:0 "Our hive has seeded this world and the first steps towards total conversion is in place."
+
+ KO_hive2:0 "Hive Seedling"
+ KO_hive2_desc:0 "The first real effects of the hive are now in place, much of the planet's biomass has been consumed to help the planet grow."
+
+ KO_hive3:0 "Hive Sapling"
+ KO_hive3_desc:0 "Almost the entirety of this planet has been converted into biomass to help our hive grow. Soon the world will be classed as one giant, living organism, inhospitable to those who are not members of our hive."
+
+ KO_hive4:0 "Hive World"
+ KO_hive4_desc:0 "This entire planet has been converted into one, living organism. Any living creatures that are not members of the hive are attacked by the very terrain itself."
+
+ KO_hive_broke1:0 "Seed Severed"
+ KO_hive_broke1_desc:0 "The previous owners of this planet were working their way towards converting it into a hive world. This growth was swiftly stopped after an empire conquered it. Though it has been stopped, the planet's environment is slowly working it's way towards recovery."
+
+ KO_hive_broke2:0 "Seedling Severed"
+ KO_hive_broke2_desc:0 "The previous owners of this planet were working their way towards converting it into a hive world. Though this growth has now been stopped, much of the planet has already been converted into biomass and will take some time to recover."
+
+ KO_hive_broke3:0 "Sapling Severed"
+ KO_hive_broke3_desc:0 "The previoud owners of this planet were working their way towards converting it into a hive world. This growth has been stopped, but almost the entire planet has been converted into biomass. It could take several years for this world to even show a glimpse of recovery."
+
+ ###Decisions###
+ #Hive Amalgamation#
+ KO_hive_proj1:0 "Hive Seed"
+ KO_hive_proj1_desc:0 "Our drones will begin scouring this planet of its natural resources and begin its slow conversion into a hive world."
+
+ KO_hive_proj2:0 "Hive Seedling"
+ KO_hive_proj2_desc:0 "Portions of this planet have already been scoured by our drones. We will continue our efforts of conversion and devour convert more of this planet into biomass to fuel our hive."
+
+ KO_hive_proj3:0 "Hive Sappling"
+ KO_hive_proj3_desc:0 "Though most of this world has been devoured by our hive, still there is yet life that can fuel the hive. We must continue our efforts."
+
+ KO_hive_proj4:0 "Hive Maturity"
+ KO_hive_proj4_desc:0 "Finalize our creation. Much of this world has been devoured by our hive. We must awaken our amalgamation."
+ 
+ ###Initializers###
+ ws_start:0 "World Shapers"
+ ws_start_NAME:0 "World Shapers"
+ ws_start_DESC:0 "A unary star with another, ideal planet colonized."
+ 
+ sol_ws:0 "World Shapers (Sol)"
+ sol_ws_NAME:0 "World Shapers (Sol)"
+ sol_ws_DESC:0 "The Sol system with Mars terraformed into an ideal planet and colonized."
+
+ sec_par_init:0 "Secluded Paradise"
+ sec_par_init_NAME:0 "Secluded Paradise"
+ sec_par_init_DESC:0 "A star system that is secluded from the rest of the galaxy, connected only by a wormhole. The empire's planet and moon are both gaia worlds."
+ 
+ ###Start Screens (More coming soon)###
+ #World Shapers#
+ START_SCREEN_WS:0 "From the beginning of our people's existence to the discovery of the hyperlane network, the denizens of [GetHomeWorldName] have always looked to the stars, wondering if we could colonize another planet within our solar system. Before our people ventured the void, we first began work on perfecting our craft and, through time, successfully terraformed another planet in our solar system and brought forth the first [GetSpeciesName] colony. With colonists bravely flocking to the new colony and the discovery of the hyperlane network, our people are finally ready to traverse the stars and mold the galaxy to our will."
+
+###EVENTS###
+###Shroud Touched Events (finally getting to it!)###
+psyko.1:0 "Surreal Visions"
+psyko.1.desc:0 "After continued exposure to the zro which has been made widespread amongst our empire, we've recieved reports of civilians tapping further into their telekenetic abilities. Likewise, the same civilians have begun to experience visions similar to those of our strongest telepaths."
+psykowow:0 "Fascinating."
+psyko.a.tooltip:0 "§H3§! £pop£ Pops have gained the §MLatent Psionic§! trait."
+
+#EVENT COMING SOON, I'M LEARNING EVENT MODDING!
+psyko.2:0 "Shroud's Chosen"
+psyko.2.desc:0 "Long has our nation looked up to our great leader, [kokoboi.GetRulerName]. Long have they watched over our people through the toughest of hardships to the golden ages of our civilization. As [kokoboi.GetRulerName] reigned, so too did their powers in psionics grow. Since our transcendence, [kokoboi.GetRulerName]s power has grown immeasurable and it has become clear that the shroud has destined them to rule our nation eternally."
+psykohail:0 "To their will, may they reign eternal!"
+psyko.b.tooltip:0 "[kokoboi.GetRulerName] has been revealed as a §MChosen One§!!"
+
+###HIVE AMALGAMATION EVENTS###
+KOhive1.name:0 "Hive Seeded"
+KOhive1.desc:0 "Our hive has begun the first steps of converting §Y[Root.Planet.GetName]§! into one living organism. Already, hundreds of drones have been scouring the planet of its biomass. This process will take sometime, and the next step has been added to the planetary decisions."
+
+KOhive2.name:0 "Hive Seedling"
+KOhive2.desc:0 "Our drones have successfully scoured most of the vegetation and wildlife on §Y[Root.Planet.GetName]§!. The consumption of biomass has already made parts of the planet hostile to those who are not members of the hive. Our drones are ready for the next step."
+
+KOhive3.name:0 "Hive Sapling"
+KOhive3.desc:0 "Our drones have successfully devoured almost the entirety of §Y[Root.Planet.GetName]'s§! biomass. Soon the planet will be completely inhospitable to those who aren't members of our hive."
+
+KOhive4.name:0 "Hive Maturity"
+KOhive4.desc:0 "We've done it. §Y[Root.Planet.GetName]§! has been converted into one, massive living organism. Those who aren't members of our species who tread upon it's soil will be attacked by the very planet itself. The other denizens of the galaxy would consider this to be unnatural and an affront to nature. We however... we would call it efficient."

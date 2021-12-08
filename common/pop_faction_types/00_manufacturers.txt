@@ -1,0 +1,584 @@
+##############################
+# Industrialist Manufacturers Faction
+##############################
+
+manufacturers = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_industrial
+	
+	unique = yes
+	support_multiplier = 1
+	
+	resources = {
+		category = pop_factions
+		produces = {
+			trigger = { 
+                exists = owner
+                owner = { has_authority = auth_fractured }
+            }
+			minerals = 1
+		}
+		produces = {
+			influence = 2
+		}
+	}
+
+	is_potential = {	
+		OR = {
+			AND = {
+				years_passed > 10	
+				has_encountered_other_species = yes
+			}
+			has_authority = auth_fractured
+		}
+		NOT = { has_authority = auth_hive_mind }	
+		NOT = { has_country_flag = suppress_vanilla_factions }	
+		count_owned_pop = {	
+			count >= 5	
+			limit = {	
+				has_ethic = ethic_industrial
+			}	
+		}	
+	}	
+	parameters = {	
+		empire = {	
+			type = country	
+			valid_objects = {	
+				is_same_value = root	
+			}	
+		}	
+	}	
+	can_join_pre_triggers = {	
+		is_enslaved = no	
+		is_being_purged = no	
+	}	
+	can_join_faction = {	
+		is_shackled_robot = no	
+		NOT = { has_trait = trait_nerve_stapled }	
+		OR = {	
+			has_ethic = ethic_industrial
+			has_ethic = ethic_fanatic_industrial
+		}	
+	}
+	
+	attraction = {
+		base = 100
+		
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+	}
+	
+	leader = {
+		base = 100
+		
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}		
+	
+	demand = {
+		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
+		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
+		desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = robots_outlawed
+					has_policy_flag = ai_outlawed
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "TECHNOLOGIST_NO_SYNTH_ENVY"
+		unfulfilled_title = "TECHNOLOGIST_SYNTH_ENVY"
+		desc = "TECHNOLOGIST_NO_SYNTH_ENVY_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -15
+	
+		potential = {	
+			years_passed >= 50 #otherwise, just a penalty for meeting Mechanists early	
+			exists = owner	
+			owner = {	
+				is_mechanical_empire = no
+				any_relation = {	
+					has_communications = root.owner	
+					root.owner = {	
+						has_intel_level = {	
+							who = prev	
+							category = economy	
+							level >= 1	
+						}	
+					}	
+					is_gestalt = no	
+					any_owned_species = {	
+						has_trait = trait_mechanical	
+					}	
+				}	
+			}	
+		}	
+		trigger = {	
+			owner = {	
+				any_owned_species = {	
+					has_trait = trait_mechanical	
+				}	
+			}	
+		}
+	}
+
+	demand = {
+		title = "INDUSTRIAL_NO_MINERALS"
+		unfulfilled_title = "INDUSTRIAL_NO_MINERALS"
+		desc = "INDUSTRIAL_NO_MINERALS_DESC"
+
+		unfulfilled_effect = -15
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 0
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_MINERALS_LOW"
+		unfulfilled_title = "INDUSTRIAL_MINERALS_LOW"
+		desc = "INDUSTRIAL_MINERALS_LOW_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 75
+				}
+				has_monthly_income = {
+					resource = minerals
+					value >= 0
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 50
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_MINERALS_MED"
+		unfulfilled_title = "INDUSTRIAL_MINERALS_MED"
+		desc = "INDUSTRIAL_MINERALS_MED_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 100
+				}
+				has_monthly_income = {
+					resource = minerals
+					value >= 50
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 75
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_MINERALS_HIGH"
+		unfulfilled_title = "INDUSTRIAL_MINERALS_HIGH"
+		desc = "INDUSTRIAL_MINERALS_HIGH_DESC"
+
+		fulfilled_effect = 15
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 150
+				}
+				has_monthly_income = {
+					resource = minerals
+					value >= 75
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 100
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_MINERALS_VERY_HIGH"
+		unfulfilled_title = "INDUSTRIAL_MINERALS_VERY_HIGH"
+		desc = "INDUSTRIAL_MINERALS_VERY_HIGH_DESC"
+
+		fulfilled_effect = 20
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 100
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 150
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "OWN_RICH_WORLD"
+		unfulfilled_title = "NO_OWN_RICH_WORLD"
+		desc = "OWN_RICH_WORLD_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					OR = {
+						has_planet_modifier = "pm_mineral_rich"
+						has_planet_modifier = "pm_ultra_rich"
+						has_planet_modifier = "pm_chthonian_planet"
+				    }
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_OWN_CITY_WORLD"
+		unfulfilled_title = "INDUSTRIAL_OWN_CITY_WORLD"
+		desc = "INDUSTRIAL_OWN_CITY_WORLD_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_surveyed_class = pc_city
+			}
+			NOT = {
+				has_origin = origin_jph_arcology
+			}
+		}
+
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					is_planet_class = pc_city
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDUSTRIAL_GRANTS"
+		unfulfilled_title = "INDUSTRIAL_GRANTS"
+		desc = "INDUSTRIAL_GRANTS_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_global_production_strategy
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_edict = industrial_subsidies
+					has_edict = forge_subsidies
+				}
+			}
+		}
+	}
+	
+	on_create = {
+		pop_faction_event = { id = factions.1 }
+	}
+
+	on_destroy = {
+		if = {
+			limit = {
+				has_modifier = promoted_industrial
+			}
+			remove_modifier = promoted_industrial
+		}
+		if = {
+			limit = {
+				has_modifier = suppressed_industrial
+			}
+			remove_modifier = suppressed_industrial
+		}
+	}
+
+	actions = {
+		embrace_faction = {
+			title = "EMBRACE_FACTION"
+			description = "EMBRACE_FACTION_DESC"
+
+			cost = {
+				influence = 500
+			}
+
+			potential = {
+				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { is_subject_type = dominion }
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_FACTION_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_faction_timer }
+					}
+				}
+				support > 0.20
+				parameter:empire = {
+					NOT = { has_ethic = "ethic_fanatic_industrial" }
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				parameter:empire = {
+					shift_ethic = ethic_industrial
+					hidden_effect = {
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					support < 0.50
+					owner = {
+						has_ethic = ethic_industrial
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						owner = {
+							exists = ruler
+							ruler = {
+								leader_of_faction = manufacturers
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}
+					}
+				}
+			}
+		}
+		promote_faction = {
+			title = "PROMOTE_FACTION"
+			description = "PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_industrial
+						has_modifier = promoted_industrial
+					}
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					add_modifier = { modifier = promoted_industrial days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_promote_faction = {
+			title = "CANCEL_PROMOTE_FACTION"
+			description = "CANCEL_PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = promoted_industrial
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					remove_modifier = promoted_industrial
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		suppress_faction = {
+			title = "SUPPRESS_FACTION"
+			description = "SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_industrial
+						has_modifier = promoted_industrial
+					}
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = suppressed_faction days = -1 }
+				parameter:empire = {
+					add_modifier = { modifier = suppressed_industrial days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_suppress_faction = {
+			title = "CANCEL_SUPPRESS_FACTION"
+			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = suppressed_industrial
+				}
+			}
+
+			effect = {
+				remove_modifier = suppressed_faction
+				parameter:empire = {
+					remove_modifier = suppressed_industrial
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+	}
+}

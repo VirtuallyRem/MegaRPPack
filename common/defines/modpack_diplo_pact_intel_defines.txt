@@ -1,0 +1,11 @@
+NGameplay = {
+	INTEL_FROM_COMMUNICATIONS			= 0.0		# Minimum Intel, after establishing communications
+	INTEL_FROM_NON_AGGRESSION_PACT			= 0.0		# Minimum Intel, if there's a non aggression pact
+	INTEL_FROM_GALACTIC_COMMUNITY			= 20.0		# Minimum Intel, if both empires are part of the Galactic Community
+	INTEL_FROM_COMMERCIAL_PACT			= 30.0		# Minimum Intel, if there's a commercial pact
+	INTEL_FROM_MIGRATION_PACT			= 40.0		# Minimum Intel, if there's a migration treaty
+	INTEL_FROM_GUARANTEE				= 0.0		# Minimum Intel, if one country is guaranteeing the other country
+	INTEL_FROM_DEFENSIVE_PACT			= 30.0		# Minimum Intel, if there's a defensive pact
+	INTEL_FROM_FEDERATION_ASSOCIATION		= 40.0		# Minimum Intel, if the country has federation association status
+	INTEL_FROM_RESEARCH_AGREEMENT			= 50.0		# Minimum Intel, if there's a research agreement
+}

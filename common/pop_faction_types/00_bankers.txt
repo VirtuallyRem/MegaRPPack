@@ -1,0 +1,682 @@
+##############################
+# Individualists Bankers Faction
+##############################
+
+bankers = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_capitalism
+	
+	unique = yes
+	support_multiplier = 1
+	
+	resources = {
+		category = pop_factions
+		produces = {
+			trigger = { 
+                exists = owner
+                owner = { has_authority = auth_fractured }
+            }
+			energy = 1
+		}
+		produces = {
+			influence = 2
+		}
+	}
+
+	is_potential = {
+		OR = {
+			AND = {
+				years_passed > 10	
+				has_encountered_other_species = yes
+			}
+			has_authority = auth_fractured
+		}	
+		NOT = { has_authority = auth_hive_mind }	
+		NOT = { has_country_flag = suppress_vanilla_factions }	
+		count_owned_pop = {	
+			count >= 5	
+			limit = {	
+				has_ethic = ethic_capitalism
+			}	
+		}	
+	}	
+	parameters = {	
+		empire = {	
+			type = country	
+			valid_objects = {	
+				is_same_value = root	
+			}	
+		}	
+	}	
+	can_join_pre_triggers = {	
+		is_enslaved = no	
+		is_being_purged = no	
+	}	
+	can_join_faction = {	
+		is_shackled_robot = no	
+		NOT = { has_trait = trait_nerve_stapled }	
+		OR = {	
+			has_ethic = ethic_capitalism
+			has_ethic = ethic_fanatic_capitalism
+		}	
+	}
+	
+	attraction = {
+		base = 100
+		
+		modifier = {
+			factor = 1.25
+			exists = from
+			from = {
+				exists = leader
+				leader = { leader_class = ruler }
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			exists = from
+			from = {
+				NOT = { exists = leader }
+			}
+		}
+	}
+	
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+	
+	demand = {
+		title = "INDIVIDUALIST_MEGACORP"
+		unfulfilled_title = "INDIVIDUALIST_MEGACORP"
+		desc = "INDIVIDUALIST_MEGACORP_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			NOT = { owner = { has_valid_civic = civic_shared_burdens } }
+			host_has_dlc = "Megacorp"
+		}
+
+		trigger = {
+			owner = {
+				has_authority = auth_corporate
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_NO_SHARED"
+		unfulfilled_title = "INDIVIDUALIST_SHARED"
+		desc = "INDIVIDUALIST_SHARED_DESC"
+
+		unfulfilled_effect = -30
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_shared_burdens
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_valid_civic = civic_shared_burdens }
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_STRATIFIED_SOCIETY"
+		unfulfilled_title = "INDIVIDUALIST_STRATIFIED_SOCIETY"
+		desc = "INDIVIDUALIST_STRATIFIED_SOCIETY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+			owner = {
+				NOR = {
+					has_valid_civic = civic_shared_burdens
+					any_owned_species = {
+						OR = {
+							has_living_standard = { type = living_standard_good country = prev }
+							has_living_standard = { type = living_standard_utopian country = prev }
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_species = {
+						is_sapient = yes
+						OR = {
+							has_citizenship_type = { type = citizenship_full country = prev }
+							has_citizenship_type = { type = citizenship_limited country = prev }
+						}
+						NOR = {
+							has_living_standard = { type = living_standard_stratified country = prev }
+							has_living_standard = { type = living_standard_academic_privilege country = prev }
+							has_living_standard = { type = living_standard_decadent country = prev }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_SOCIAL_WELFARE"
+		unfulfilled_title = "INDIVIDUALIST_SOCIAL_WELFARE"
+		desc = "INDIVIDUALIST_SOCIAL_WELFARE_DESC"
+
+		fulfilled_effect = 0
+		unfulfilled_effect = -20
+
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_shared_burdens }
+				any_owned_species = {
+					OR = {
+						has_living_standard = { type = living_standard_good country = prev }
+						has_living_standard = { type = living_standard_utopian country = prev }
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_species = {
+						OR = {
+							has_living_standard = { type = living_standard_good country = prev }
+							has_living_standard = { type = living_standard_utopian country = prev }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_UNEMPLOYMENT"
+		unfulfilled_title = "INDIVIDUALIST_UNEMPLOYMENT"
+		desc = "INDIVIDUALIST_UNEMPLOYMENT_DESC"
+		
+		unfulfilled_effect = -10
+		
+		potential = {
+			exists = owner
+			owner = {
+				any_owned_planet = {
+					has_modifier = unemployment_benefits
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				NOR = {
+					any_owned_planet = {
+						has_modifier = unemployment_benefits
+					}
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_NO_ENERGY"
+		unfulfilled_title = "INDIVIDUALIST_NO_ENERGY"
+		desc = "INDIVIDUALIST_NO_ENERGY_DESC"
+
+		unfulfilled_effect = -15
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value >= 0
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDIVIDUALIST_ENERGY_LOW"
+		unfulfilled_title = "INDIVIDUALIST_ENERGY_LOW"
+		desc = "INDIVIDUALIST_ENERGY_LOW_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 100
+				}
+				has_monthly_income = {
+					resource = energy
+					value >= 0
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value >= 50
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDIVIDUALIST_ENERGY_MED"
+		unfulfilled_title = "INDIVIDUALIST_ENERGY_MED"
+		desc = "INDIVIDUALIST_ENERGY_MED_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 150
+				}
+				has_monthly_income = {
+					resource = energy
+					value >= 50
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value >= 100
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDIVIDUALIST_ENERGY_HIGH"
+		unfulfilled_title = "INDIVIDUALIST_ENERGY_HIGH"
+		desc = "INDIVIDUALIST_ENERGY_HIGH_DESC"
+
+		fulfilled_effect = 15
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 200
+				}
+				has_monthly_income = {
+					resource = energy
+					value >= 100
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value >= 150
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "INDIVIDUALIST_ENERGY_VERY_HIGH"
+		unfulfilled_title = "INDIVIDUALIST_ENERGY_VERY_HIGH"
+		desc = "INDIVIDUALIST_ENERGY_VERY_HIGH_DESC"
+
+		fulfilled_effect = 20
+
+		potential = {
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value >= 150
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value >= 200
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_MERCANTILE"
+		unfulfilled_title = "INDIVIDUALIST_MERCANTILE"
+		desc = "INDIVIDUALIST_MERCANTILE_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_corporate
+					has_civic = civic_merchant_guilds
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = diplo_stance_mercantile
+			}
+		}
+	}
+		
+	demand = {
+		title = "TRADE_ECONOMY"
+		unfulfilled_title = "NO_TRADE_ECONOMY"
+		desc = "TRADE_ECONOMY_DESC"
+		
+		fulfilled_effect = 10
+		unfulfilled_effect = -5
+		
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_mercantile_adaptive_economic_policies }
+		}
+		
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = trade_conversion_consumer_goods
+					has_policy_flag = trade_conversion_unity
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "INDIVIDUALIST_COMMERCIAL_PACT"
+		unfulfilled_title = "INDIVIDUALIST_COMMERCIAL_PACT"
+		desc = "INDIVIDUALIST_COMMERCIAL_PACT_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = 0
+
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 2
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					AND = {
+						has_federation = yes
+						federation = {
+							count_member = {
+								count > 3
+							}
+						}
+					}
+					count_country = {
+						count > 2
+						limit = {
+							exists = this
+							root.owner = { has_commercial_pact = prev }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_create = {
+		pop_faction_event = { id = factions.1 }
+	}
+
+	on_destroy = {
+		if = {
+			limit = {
+				has_modifier = promoted_capitalism
+			}
+			remove_modifier = promoted_capitalism
+		}
+		if = {
+			limit = {
+				has_modifier = suppressed_capitalism
+			}
+			remove_modifier = suppressed_capitalism
+		}
+	}
+
+	actions = {
+		embrace_faction = {
+			title = "EMBRACE_FACTION"
+			description = "EMBRACE_FACTION_DESC"
+
+			cost = {
+				influence = 500
+			}
+
+			potential = {
+				exists = owner
+				owner = {
+					OR = {
+						is_subject = no
+						NOT = { is_subject_type = dominion }
+					}
+				}
+			}
+
+			valid = {
+				custom_tooltip = {
+					fail_text = EMBRACE_FACTION_COOLDOWN
+					parameter:empire = {
+						NOT = { has_modifier = embraced_faction_timer }
+					}
+				}
+				support > 0.20
+				parameter:empire = {
+					NOT = { has_ethic = "ethic_fanatic_capitalism" }
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = embraced_faction days = 3600 }
+				parameter:empire = {
+					shift_ethic = ethic_capitalism
+					hidden_effect = {
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						every_pop_faction = {
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = TargetFaction
+					parameter:empire = {
+						every_relation = {
+							limit = {
+								is_ai = no
+								is_country_type = default
+								has_communications = prev
+								has_intel_level = {
+									who = prev
+									category = government
+									level >= 1
+								}
+							}
+							country_event = { id = factions.2000 }
+						}
+					}
+				}
+			}
+
+			ai_weight = {
+				base = 1
+				modifier = {
+					factor = 0
+					support < 0.50
+					owner = {
+						has_ethic = ethic_capitalism
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = { has_valid_civic = civic_fanatic_purifiers }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						owner = {
+							exists = ruler
+							ruler = {
+								leader_of_faction = bankers
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}
+					}
+				}
+			}
+		}
+		promote_faction = {
+			title = "PROMOTE_FACTION"
+			description = "PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_capitalism
+						has_modifier = promoted_capitalism
+					}
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					add_modifier = { modifier = promoted_capitalism days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_promote_faction = {
+			title = "CANCEL_PROMOTE_FACTION"
+			description = "CANCEL_PROMOTE_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = promoted_capitalism
+				}
+			}
+
+			effect = {
+				parameter:empire = {
+					remove_modifier = promoted_capitalism
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		suppress_faction = {
+			title = "SUPPRESS_FACTION"
+			description = "SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					NOR = {
+						has_modifier = suppressed_capitalism
+						has_modifier = promoted_capitalism
+					}
+				}
+			}
+
+			effect = {
+				add_modifier = { modifier = suppressed_faction days = -1 }
+				parameter:empire = {
+					add_modifier = { modifier = suppressed_capitalism days = -1 }
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_suppress_faction = {
+			title = "CANCEL_SUPPRESS_FACTION"
+			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				parameter:empire = {
+					has_modifier = suppressed_capitalism
+				}
+			}
+
+			effect = {
+				remove_modifier = suppressed_faction
+				parameter:empire = {
+					remove_modifier = suppressed_capitalism
+				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+	}
+}

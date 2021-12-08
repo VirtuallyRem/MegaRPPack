@@ -1,0 +1,14 @@
+# Ksenon
+
+objectTypes = {
+
+	pdxmesh = {
+		name = "portrait_Ksen_01_mesh"
+		file = "gfx/models/portraits/ksen/ksen_01_portrait.mesh"
+		animation = { id = "idle"	type = "ksen_01_happy_animation" }
+		animation = { id = "idle2"	type = "ksen_01_happy_2_animation" }
+		animation = { id = "sad"	type = "ksen_01_sad_animation" }
+		animation = { id = "sad2"	type = "ksen_01_sad_2_animation" }
+		scale = 1.0
+	}	
+}

@@ -1,0 +1,34 @@
+# xenosec
+
+xenosec_normal_clothes_01 = {
+	default = "gfx/models/portraits/xenosec/xenosec_normal_outfit_ruler_01.dds"
+	
+	game_setup = {
+		default = "gfx/models/portraits/xenosec/xenosec_normal_outfit_ruler_01.dds"
+	}
+	
+	# species scope
+	species = {
+		default = "gfx/models/portraits/xenosec/xenosec_normal_outfit_ruler_01.dds"
+	}
+	
+	# pop scope
+	pop = {
+		default = "gfx/models/portraits/xenosec/xenosec_normal_outfit_pop_01.dds"
+	}
+	
+	# leader scope 
+	# scientists, generals, admirals, governor
+	leader = { 
+		"gfx/models/portraits/xenosec/xenosec_normal_outfit_scientist_01.dds" = { leader_class = scientist }
+		"gfx/models/portraits/xenosec/xenosec_normal_outfit_general_01.dds" = { leader_class = general }
+		"gfx/models/portraits/xenosec/xenosec_normal_outfit_admiral_01.dds" = { leader_class = admiral }
+		"gfx/models/portraits/xenosec/xenosec_normal_outfit_governor_01.dds" = { leader_class = governor }
+	}
+	
+	# ruler scope 
+	ruler = {
+		default = "gfx/models/portraits/xenosec/xenosec_normal_outfit_ruler_01.dds"
+		
+	}
+}

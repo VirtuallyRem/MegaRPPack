@@ -1,0 +1,141 @@
+animation = {
+	name = "altlithoid_01_corvette_frame_idle_animation"
+	file = "altlithoid_01_corvette_frame_idle.anim"
+}
+
+animation = {
+	name = "altlithoid_01_corvette_frame_death_animation"
+	file = "altlithoid_01_corvette_frame_death.anim"
+}
+
+animation = {
+	name = "altlithoid_01_corvette_frame_death2_animation"
+	file = "altlithoid_01_corvette_frame_death2.anim"
+}
+
+animation = {
+	name = "altlithoid_01_corvette_frame_death3_animation"
+	file = "altlithoid_01_corvette_frame_death3.anim"
+}
+
+animation = {
+	name = "altlithoid_01_corvette_frame_moving_animation"
+	file = "altlithoid_01_corvette_frame_moving.anim"
+}
+
+animation = {
+	name = "altlithoid_01_destroyer_frame_death_animation"
+	file = "altlithoid_01_destroyer_frame_death.anim"
+}
+
+animation = {
+	name = "altlithoid_01_destroyer_frame_death2_animation"
+	file = "altlithoid_01_destroyer_frame_death2.anim"
+}
+
+animation = {
+	name = "altlithoid_01_destroyer_frame_death3_animation"
+	file = "altlithoid_01_destroyer_frame_death3.anim"
+}
+
+animation = {
+	name = "altlithoid_01_destroyer_frame_idle_animation"
+	file = "altlithoid_01_destroyer_frame_idle.anim"
+}
+
+animation = {
+	name = "altlithoid_01_destroyer_frame_moving_animation"
+	file = "altlithoid_01_destroyer_frame_moving.anim"
+}
+
+animation = {
+	name = "altlithoid_01_cruiser_frame_death_animation"
+	file = "altlithoid_01_cruiser_frame_death.anim"
+}
+animation = {
+	name = "altlithoid_01_cruiser_frame_death2_animation"
+	file = "altlithoid_01_cruiser_frame_death2.anim"
+}
+animation = {
+	name = "altlithoid_01_cruiser_frame_death3_animation"
+	file = "altlithoid_01_cruiser_frame_death3.anim"
+}
+animation = {
+	name = "altlithoid_01_cruiser_frame_dead_animation"
+	file = "altlithoid_01_cruiser_frame_dead.anim"
+}
+
+animation = {
+	name = "altlithoid_01_cruiser_frame_idle_animation"
+	file = "altlithoid_01_cruiser_frame_idle.anim"
+}
+
+animation = {
+	name = "altlithoid_01_battleship_frame_death_animation"
+	file = "altlithoid_01_battleship_frame_death.anim"
+}
+
+animation = {
+	name = "altlithoid_01_battleship_frame_death2_animation"
+	file = "altlithoid_01_battleship_frame_death2.anim"
+}
+animation = {
+	name = "altlithoid_01_battleship_frame_death3_animation"
+	file = "altlithoid_01_battleship_frame_death3.anim"
+}
+
+animation = {
+	name = "altlithoid_01_battleship_frame_idle_animation"
+	file = "altlithoid_01_battleship_frame_idle.anim"
+}
+
+
+
+animation = {
+	name = "altlithoid_01_construction_idle_animation"
+	file = "altlithoid_01_construction_idle.anim"
+}
+
+animation = {
+	name = "altlithoid_01_construction_working_start_animation"
+	file = "altlithoid_01_construction_working_start.anim"
+}
+
+animation = {
+	name = "altlithoid_01_construction_working_looping_animation"
+	file = "altlithoid_01_construction_working.anim"
+}
+
+animation = {
+	name = "altlithoid_01_terraforming_station_idle_animation"
+	file = "altlithoid_01_terraforming_station_idle.anim"
+}
+
+animation = {
+	name = "altlithoid_01_terraforming_station_death_animation"
+	file = "altlithoid_01_terraforming_station_death.anim"
+}
+
+animation = {
+	name = "altlithoid_01_orbital_station_rotate_animation"
+	file = "altlithoid_01_orbital_station_rotate.anim"
+}
+
+animation = {
+	name = "altlithoid_01_orbital_station_death_animation"
+	file = "altlithoid_01_orbital_station_death.anim"
+}
+
+animation = {
+	name = "altlithoid_01_upgraded_orbital_habitat_rotate_animation"
+	file = "altlithoid_01_habitat_level_3_rotate.anim"
+}
+
+animation = {
+	name = "altlithoid_01_upgraded_orbital_habitat_death_animation"
+	file = "altlithoid_01_habitat_level_3_death.anim"
+}
+
+
+
+

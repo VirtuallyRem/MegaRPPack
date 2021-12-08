@@ -1,0 +1,350 @@
+namespace = robot_leader
+
+# On game start country: kill ruler, make robot
+country_event = {
+    id = robot_leader.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = { has_valid_civic = civic_robot_leader }
+
+    immediate = {
+	
+		ruler = { save_event_target_as = old_ruler }
+
+		create_species = {
+            name = "NAME_ai_leadership"
+            class = ROBOT
+            namelist = this
+			portrait = "default_robot"
+            traits = {
+				trait = "trait_mechanical"
+			}
+			
+			effect = {
+				if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
+					prev = {
+						switch = {
+							trigger = is_species_class
+							HUM = { prev = { change_species_characteristics = { portrait = "sd_hum_robot" } } }
+							MAM = { prev = { change_species_characteristics = { portrait = "sd_mam_robot" } } }
+							REP = { prev = { change_species_characteristics = { portrait = "sd_rep_robot" } } }
+							AVI = { prev = { change_species_characteristics = { portrait = "sd_avi_robot" } } }
+							ART = { prev = { change_species_characteristics = { portrait = "sd_art_robot" } } }
+							MOL = { prev = { change_species_characteristics = { portrait = "sd_mol_robot" } } }
+							FUN = { prev = { change_species_characteristics = { portrait = "sd_fun_robot" } } }
+							PLANT = { prev = { change_species_characteristics = { portrait = "sd_pla_robot" } } }
+							LITHOID = { prev = { change_species_characteristics = { portrait = "lith_machine" } } }
+							NECROID = { prev = { change_species_characteristics = { portrait = "nec_machine" } } }
+							AQUATIC = { prev = { change_species_characteristics = { portrait = "aqu_machine" } } }
+						}
+					}
+				}
+			}
+        }
+		
+        create_leader = {
+			class = ruler
+            species = last_created_species
+			name = random
+			set_age = 1
+            event_leader = yes
+			gender = indeterminable
+			traits = {
+				trait = trait_robot_leader_1
+            }
+			effect = {
+				set_leader_flag = has_gained_level_trait
+				remove_ruler_trait = leader_trait_ruler_synthetic
+			}
+        }
+		
+		if = { limit = { is_ai = no } last_created_leader = { set_name = "[root.GetRulerName]" } }  
+		
+        set_leader = last_created_leader
+		
+		event_target:old_ruler = { kill_leader = { show_notification = no } }
+		
+		if = {
+			limit = {
+				OR = {
+					host_has_dlc = "Synthetic Dawn Story Pack"
+					host_has_dlc = "Lithoids Species Pack"
+					host_has_dlc = "Necroids Species Pack"
+				}
+			}
+			country_event = { id = robot_leader.11 days = 1 }
+		}
+    }
+}
+
+#Check if big AI is needed
+country_event = {
+    id = robot_leader.2
+    hide_window = yes
+    is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_valid_civic = civic_robot_leader
+			AND = {
+				exists = ruler
+				ruler = { has_trait = trait_robot_leader_1 }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_valid_civic = civic_robot_leader
+				NOT = { ruler = { has_trait = trait_robot_leader_1 } }
+			}
+			country_event = { id = robot_leader.4 } #Restore big ai
+		}
+		else_if = {
+			limit = {
+				NOT = { has_valid_civic = civic_robot_leader }
+				ruler = { has_trait = trait_robot_leader_1 }
+			}
+			country_event = { id = robot_leader.5 } #Remove big ai
+		}
+    }
+}
+
+#Switch or restore big ai
+country_event = {
+    id = robot_leader.4
+    title = "robot_leader.4.name"
+	desc = "robot_leader.4.desc"
+	picture = GFX_evt_sapient_AI
+	show_sound = event_laboratory_sound
+
+	is_triggered_only = yes
+
+    immediate = {
+		create_species = {
+            name = "NAME_ai_leadership"
+            class = ROBOT
+            namelist = AI
+			portrait = "default_robot"
+            traits = {
+				trait = "trait_mechanical"
+			}
+			
+			effect = {
+				if = { limit = { host_has_dlc = "Synthetic Dawn Story Pack" }
+					prev = {
+						switch = {
+							trigger = is_species_class
+							HUM = { prev = { change_species_characteristics = { portrait = "sd_hum_robot" } } }
+							MAM = { prev = { change_species_characteristics = { portrait = "sd_mam_robot" } } }
+							REP = { prev = { change_species_characteristics = { portrait = "sd_rep_robot" } } }
+							AVI = { prev = { change_species_characteristics = { portrait = "sd_avi_robot" } } }
+							ART = { prev = { change_species_characteristics = { portrait = "sd_art_robot" } } }
+							MOL = { prev = { change_species_characteristics = { portrait = "sd_mol_robot" } } }
+							FUN = { prev = { change_species_characteristics = { portrait = "sd_fun_robot" } } }
+							PLANT = { prev = { change_species_characteristics = { portrait = "sd_pla_robot" } } }
+							LITHOID = { prev = { change_species_characteristics = { portrait = "lith_machine" } } }
+							NECROID = { prev = { change_species_characteristics = { portrait = "nec_machine" } } }
+							AQUATIC = { prev = { change_species_characteristics = { portrait = "aqu_machine" } } }
+						}
+					}
+				}
+			}
+        }
+		
+        create_leader = {
+			class = ruler
+            species = last_created_species
+			name = "AI Leader"
+			set_age = 1
+            event_leader = yes
+			gender = indeterminable
+			traits = {
+				trait = trait_robot_leader_1
+            }
+			effect = {
+				set_leader_flag = has_gained_level_trait
+				remove_ruler_trait = leader_trait_ruler_synthetic
+			}
+        }
+        set_leader = last_created_leader
+    }
+	
+	option = {
+		name = robot_leader.4.a
+	}
+	
+	option = {
+		name = robot_leader.4.b
+		trigger = {
+			OR = {
+				host_has_dlc = "Synthetic Dawn Story Pack"
+				host_has_dlc = "Lithoids Species Pack"
+				host_has_dlc = "Necroids Species Pack"
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robot_leader.11 }
+		}
+	}
+}
+
+#Destroy big AI
+country_event = {
+    id = robot_leader.5
+    title = "robot_leader.5.name"
+	desc = "robot_leader.5.desc"
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_life_support_fail
+	
+	is_triggered_only = yes
+
+	immediate = { ruler = { kill_leader = { show_notification = no } } }
+	
+	option = { name = robot_leader.5.a }
+}
+
+#Change big AI portrait
+country_event = {
+    id = robot_leader.11
+    title = "robot_leader.11.name"
+	desc = robot_leader.11.desc
+	picture = GFX_evt_robot_assembly_plant
+	
+	is_triggered_only = yes
+
+	option = {
+		name = robot_leader.11.a
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "default_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.hum
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_hum_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.mam
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_mam_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.rep
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_rep_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.avi
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_avi_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.fun
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_fun_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.art
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_art_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.mol
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_mol_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.pla
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "sd_pla_robot" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.lith
+		trigger = {
+			host_has_dlc = "Lithoids Species Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "lith_machine" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.necro
+		trigger = {
+			host_has_dlc = "Necroids Species Pack"
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "nec_machine" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.aqua
+		trigger = {
+			has_aquatics = yes
+		}
+		hidden_effect = {
+			ruler = {
+				modify_species = { portrait = "aqu_machine" }
+			}
+		}
+	}
+	option = {
+		name = robot_leader.11.b
+	}
+}

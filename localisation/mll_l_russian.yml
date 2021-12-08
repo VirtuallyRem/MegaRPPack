@@ -1,0 +1,8 @@
+﻿l_russian:
+
+ tech_repeatable_improved_leader_skill_level:0 "Универсальное развитие лидера"
+ tech_repeatable_improved_leader_skill_level_desc:0 "Благодоря специальному обучению, максимальный уровень лидера повышается"
+ tech_repeatable_improved_speedup_leader_skill:0 "Продвинутое обучение"
+ tech_repeatable_improved_speedup_leader_skill_desc:0 "Продвинутое обучение лидера позволяет ему быстрее набираться опыта"
+ edict_virtual_learning:0 "$unity_ambition$ Виртуальное обучение"
+ edict_virtual_learning_desc:0 "Виртуальное обучение многократно повышает прирост опыта лидерам любых видов деятельности"

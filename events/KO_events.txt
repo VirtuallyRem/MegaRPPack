@@ -1,0 +1,350 @@
+namespace = KO
+
+### Hidden Game Start Event
+event = {
+	id = KO.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ko_origins_game_started
+
+		#Secluded Paradise
+		every_playable_country = {
+			limit = { has_origin = origin_secpar }
+			country_event = { id = KO.13 }
+			country_event = { id = KO.15 }
+		}
+	}
+}
+
+# Shroud Touched - Gives tech and modifiers to Shroud Touched Origin users. (Update, also gives leader traits)
+country_event = {
+	id = KO.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_origin = origin_shroud_touched
+		}
+		is_gestalt = no
+	}
+
+	immediate = {
+		set_country_flag = kozro
+		give_technology = { message = no tech = tech_psionic_theory }
+		random_owned_planet = {
+			limit = { is_capital = yes }
+			add_deposit = d_zro_deposit_2
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_valid_civic = civic_robot_leader
+					has_authority = auth_fractured
+				}
+			}
+			ruler = { add_ruler_trait = leader_trait_ruler_psionic }
+			ruler = { save_event_target_as = kokoboi }
+			ruler = { set_leader_flag = kokoflag }
+		}
+	}
+}
+
+# Codominant Evolution - Changes pops to second species
+planet_event = {
+	id = KO.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_codominant_evolution
+				}
+			}
+
+			last_created_species = {
+				set_species_flag = syncretic_species@root.owner #SHOULD be fine to keep
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_full
+				}
+			}
+
+			while = {
+				count = 14
+				# replace pops instead of create new pops
+				random_owned_pop = {
+					limit = { NOT = { is_same_species = last_created_species } }
+					change_species = last_created
+				}
+			}
+
+			if = {
+				limit = { 
+					owner = { is_gestalt = yes }
+				}
+				
+				every_owned_pop = {
+					limit = { NOT = { has_trait = trait_hive_mind } }
+					modify_species = {
+						species = this
+						add_trait = trait_hive_mind
+						change_scoped_species = yes
+						add_traits_at_start_of_list = yes
+					}
+					species = { set_citizenship_type = { type = citizenship_full country = owner } }
+				}
+			}
+			
+			if = {
+				limit = { last_created_species = { is_lithoid = yes } }
+				remove_district = district_farming
+				add_district = district_mining
+			}
+			
+			owner = {
+				every_owned_leader = {
+					limit = { NOT = { leader_class = ruler } }
+					random_list = {
+						50 = {
+							# 50% chance of not turning
+						}
+						50 = {
+							change_leader_portrait = last_created_species
+							change_species = last_created_species
+						}
+					}
+				}
+				every_pool_leader = {
+					random_list = {
+						50 = {
+							# 50% chance of not turning
+						}
+						50 = {
+							change_leader_portrait = last_created_species
+							change_species = last_created_species
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = { 
+					owner = { is_gestalt = no }
+				}
+				every_owned_pop = {
+					clear_pop_category = yes
+				}
+			}
+		}
+	}
+}
+
+
+# Planetary Conquerors - Spawn corvettes
+country_event = {
+	id = KO.5
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_origin = origin_plan_con
+		}
+	}
+	
+	immediate = {
+		create_fleet = {
+		set_take_point = yes
+			effect = {
+				set_owner = prev
+					while = {
+					count = 3
+					create_ship = {
+						name = random
+						random_existing_design = corvette
+						prefix = yes
+					}
+				}
+			set_location = prev.capital_star
+			}
+		}
+	}
+}
+
+#Planetary Conquerors - Changes pops to second species
+planet_event = {
+	id = KO.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_plan_con
+				}
+			}
+
+			last_created_species = {
+				set_species_flag = syncretic_species@root.owner
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_slavery
+				}
+			}
+
+			while = {
+				count = 6
+				# replace pops instead of create new pops
+				random_owned_pop = {
+					limit = {
+						NOR = {
+							is_same_species = last_created_species
+							is_pop_category = ruler
+						}						
+					}
+					change_species = last_created
+				}
+			}
+			
+			if = {
+				limit = { last_created_species = { is_lithoid = yes } }
+				remove_district = district_farming
+				add_district = district_mining
+			}
+
+			add_building = building_fragment_of_armageddon
+		}
+	}
+}
+
+country_event = {
+	id = KO.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_secpar
+		}
+	}
+
+	immediate = {
+		give_technology = { message = no tech = tech_wormhole_stabilization }
+		random_system = {
+			limit = { 
+				has_star_flag = kokoboio
+			}
+		save_global_event_target_as = kokotarget
+		}
+		random_system = {
+			limit = {
+				has_star_flag = secparnei
+			}
+		save_global_event_target_as = kokotarget2
+		}
+		country_event = { id = KO.14 }
+	}
+}
+
+country_event = {
+	id = KO.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = encountered_first_wormhole
+		add_seen_bypass_type = wormhole
+		#add wormhole
+		random_system = {
+			limit = {
+				has_natural_wormhole = no
+				is_fe_cluster = no
+				NOR = {
+					has_star_flag = AI_hub
+					has_star_flag = empire_home_system
+					has_star_flag = empire_cluster
+					has_star_flag = hostile_system
+					has_star_flag = sol
+					has_star_flag = marauder_system
+				}
+			}
+			event_target:kokotarget = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+						random_pos = yes
+							orbit_angle = 360
+				}
+			}
+			event_target:kokotarget2 = {
+				spawn_natural_wormhole = {
+								bypass_type = wormhole
+								random_pos = yes
+								orbit_angle = 360
+				}
+				link_wormholes = event_target:kokotarget
+			}
+		}
+	}
+}
+
+country_event = {
+	id = KO.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_secpar
+		}
+		is_gestalt = no
+	}
+
+	immediate = {
+		random_owned_planet = {
+			limit = { is_capital = yes }
+			clear_planet_modifiers = yes
+			# 5 + 3 energy
+			add_deposit = d_searing_desert
+			add_deposit = d_underwater_vent
+			add_deposit = d_tempestous_mountain
+		
+			# 5 + 3 mining
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_submerged_ore_veins
+		
+			# 5 + 3 farming (lithoids swap 3 for minerals)
+			add_deposit = d_lush_jungle
+			add_deposit = d_teeming_reef
+		
+			if = {
+				limit = { owner = { is_lithoid_empire = yes } }
+				add_deposit = d_rich_mountain
+			}
+			else = {
+				add_deposit = d_black_soil
+			}
+		
+			# 1 random medium deposit
+			random_list = {
+				33 = { add_deposit = d_frozen_gas_lake }
+				33 = { add_deposit = d_prosperous_mesa }
+				33 = { add_deposit = d_fertile_lands }
+			}
+			
+			#Planet setup wasn't working but neither was scripted triggers so this is a lazy fix but it might work.
+			add_deposit = d_dust_caverns
+			add_deposit = d_bubbling_swamp
+			add_deposit = d_crystalline_caverns
+		}
+	}
+}

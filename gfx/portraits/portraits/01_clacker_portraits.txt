@@ -1,0 +1,11 @@
+portraits = { 
+clacker = { entity = "humanoid_04_male_01_entity" clothes_selector = "humanoid_02_male_clothes_01" hair_selector = "no_texture" 
+greeting_sound = "reptilian_01_greetings"
+character_textures = {
+"gfx/models/portraits/clacker/clacker.dds"
+
+
+}
+}
+
+}

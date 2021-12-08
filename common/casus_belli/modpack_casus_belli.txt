@@ -1,0 +1,19 @@
+cb_seize_hegemony = {
+	show_in_diplomacy = yes
+	show_notification = yes
+
+	potential = {
+		has_federation = yes
+		is_subject = no
+
+		#federation = { has_federation_type = hegemony_federation }
+	}
+
+	is_valid = {
+		from = {
+			is_in_federation_with = prev
+			is_federation_leader = yes
+		}
+		has_total_war_cb = no
+	}
+}

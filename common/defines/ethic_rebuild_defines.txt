@@ -1,0 +1,18 @@
+NGameplay = {
+	ETHOS_MAX_POINTS	= 5
+	GOVERNMENT_CIVIC_POINTS_BASE		= 3
+	POLICY_YEARS						= 1
+	SPECIES_POLICY_YEARS 	= 1
+	GOVERNMENT_COOLDOWN_YEARS = 5
+	LEADER_MAX_SKILL_CAP	= 20
+	TRUCE_YEARS = 0	
+	MIN_TRADE_DEAL_LENGTH_YEARS = 1#Min length of trade deal in years
+	MAX_TRADE_DEAL_LENGTH_YEARS = 100#Max length of trade deal in years
+	TRADITION_COST_MULT_TRADITION_GROUP		= 0		# each adopted group adds +X% to total cost	
+	WAR_EXHAUSTION_PASSIVE_GAIN_YEARLY	  = 0.05
+	STATION_SELF_REPAIR_TIMER_DAYS			= 20
+
+	FAVOR_CAP							= 0		# Max amount of favors from same empire that can be stored
+	FAVORS_PER_RESOLUTION_CAP			= 0		# Max amount of favors that can be used for a resolution
+	BORROWED_DIPLO_WEIGHT_FAVOR_MULT	= 0 		# Diplo weight mult per favor
+}

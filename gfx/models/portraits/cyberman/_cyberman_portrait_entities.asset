@@ -1,0 +1,32 @@
+entity = {
+	name = "portrait_cyberman_01_entity"
+	pdxmesh = "portrait_cyberman_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"     animation_blend_time = 0 chance = 4.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 0.5 looping = no next_state = idle }
+	
+	scale = 0.95
+}
+
+animation = {
+	name = "cyberman_01_idle_animation"
+	file = "cyberman_01_portrait_idle.anim"
+}
+
+animation = {
+	name = "cyberman_01_idle_2_animation"
+	file = "cyberman_01_portrait_idle_2.anim"
+}
+
+animation = {
+	name = "cyberman_01_idle_3_animation"
+	file = "cyberman_01_portrait_idle_3.anim"
+}
+
+animation = {
+	name = "cyberman_01_idle_4_animation"
+	file = "cyberman_01_portrait_idle_4.anim"
+}

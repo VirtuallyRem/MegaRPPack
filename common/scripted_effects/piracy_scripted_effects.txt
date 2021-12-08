@@ -1,0 +1,44 @@
+plunder_resources = {
+	set_variable = { which = plundered_energy 			value = 0 }
+	set_variable = { which = plundered_minerals 		value = 0 }
+	set_variable = { which = plundered_food 			value = 0 }
+	set_variable = { which = plundered_alloys 			value = 0 }
+	set_variable = { which = plundered_consumer_goods 	value = 0 }
+	set_variable = { which = plundered_motes 			value = 0 }
+	set_variable = { which = plundered_gases 			value = 0 }
+	set_variable = { which = plundered_crystals 		value = 0 }
+	from = {
+		export_resource_stockpile_to_variable = { resource = energy 		variable = plundered_energy 		}
+		export_resource_stockpile_to_variable = { resource = minerals 		variable = plundered_minerals 		}
+		export_resource_stockpile_to_variable = { resource = food 			variable = plundered_food 			}
+		export_resource_stockpile_to_variable = { resource = alloys 		variable = plundered_alloys 		}
+		export_resource_stockpile_to_variable = { resource = consumer_goods variable = plundered_consumer_goods }
+		export_resource_stockpile_to_variable = { resource = volatile_motes variable = plundered_motes 			}
+		export_resource_stockpile_to_variable = { resource = exotic_gases 	variable = plundered_gases 			}
+		export_resource_stockpile_to_variable = { resource = rare_crystals 	variable = plundered_crystals 		}
+		add_resource = { energy 		= -$RATIO$ mult = plundered_energy 			}
+		add_resource = { minerals 		= -$RATIO$ mult = plundered_minerals 		}
+		add_resource = { food 			= -$RATIO$ mult = plundered_food 			}
+		add_resource = { alloys 		= -$RATIO$ mult = plundered_alloys 			}
+		add_resource = { consumer_goods = -$RATIO$ mult = plundered_consumer_goods 	}
+		add_resource = { volatile_motes = -$RATIO$ mult = plundered_motes 			}
+		add_resource = { exotic_gases 	= -$RATIO$ mult = plundered_gases 			}
+		add_resource = { rare_crystals 	= -$RATIO$ mult = plundered_crystals 		}
+	}
+	add_resource = { energy 		= $RATIO$ mult = from.plundered_energy 	 		}
+	add_resource = { minerals 		= $RATIO$ mult = from.plundered_minerals 		}
+	add_resource = { food 			= $RATIO$ mult = from.plundered_food 			}
+	add_resource = { alloys 		= $RATIO$ mult = from.plundered_alloys 			}
+	add_resource = { consumer_goods = $RATIO$ mult = from.plundered_consumer_goods 	}
+	add_resource = { volatile_motes = $RATIO$ mult = from.plundered_motes 			}
+	add_resource = { exotic_gases 	= $RATIO$ mult = from.plundered_gases 			}
+	add_resource = { rare_crystals 	= $RATIO$ mult = from.plundered_crystals 		}
+	clear_variable = plundered_energy
+	clear_variable = plundered_minerals
+	clear_variable = plundered_food
+	clear_variable = plundered_alloys
+	clear_variable = plundered_consumer_goods
+	clear_variable = plundered_motes
+	clear_variable = plundered_gases
+	clear_variable = plundered_crystals
+}

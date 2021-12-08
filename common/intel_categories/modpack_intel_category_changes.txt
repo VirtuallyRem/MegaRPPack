@@ -1,0 +1,67 @@
+government = {
+    intel_level = {
+    }
+
+    intel_level = {
+        authority
+        ruler
+    }
+
+    intel_level = {
+        ethics
+        governors
+	capital_location
+    }
+
+    intel_level = {
+	civics
+        origin
+    }
+
+    intel_level = {
+	intel_empire_sprawl
+    }
+}
+
+technology = {
+    intel_level = {
+    }
+
+    intel_level = {
+        intel_tech_relative_power
+    }
+
+    intel_level = {
+	intel_tech_num_category
+    }
+
+    intel_level = {
+	relics
+    }
+
+    intel_level = {
+    }
+}
+
+diplomacy = {
+    intel_level = {
+    }
+
+    intel_level = {
+		intel_casus_belli
+		rivalries
+		federation_name
+    }
+
+    intel_level = {
+		relative_power
+    }
+
+    intel_level = {
+		opinion_breakdown
+		diplomatic_pacts
+    }
+
+	intel_level = {
+    }
+}

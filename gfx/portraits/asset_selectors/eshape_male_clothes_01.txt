@@ -1,0 +1,179 @@
+# This is a template which multiple species can use. 
+
+eshape_male_clothes_01 = {
+	default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+	}
+	
+	###########
+	# SPECIES #
+	###########
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+			
+			# EVERYONE #
+			random = {
+				list = {
+				
+						#clothes
+						"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+						
+				}
+			}
+	}
+	
+	#########
+	## POP ##
+	#########
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+		
+		##########################################################
+		#NOTE: Used to line up clothing in the ruler design window!
+		##########################################################
+		random = {
+			trigger = { always = yes }
+			list = {
+						#clothes
+						"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+						
+						
+			}
+		}
+		
+		####################
+		# END clothing LIST #
+		####################
+									
+		#####################
+		# NEW SLAVE SECTION #
+		#####################
+		
+		# Domestic
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_domestic }
+						}
+			}
+			list = {
+					# Domestic Slaves
+						"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+						
+
+			}
+		}
+		
+		# Battle Thralls
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_military }
+						}
+			}
+			list = {
+					
+					# Battle Thralls
+					"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+
+			}
+		}
+		
+		# FOOD
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_livestock }
+						}
+			}
+			list = {
+					# Food
+					"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+
+			}
+		}
+		
+		# LABORERS
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_normal }
+						}
+			}
+			list = {
+					# Laborers
+					"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+
+			}
+		}
+
+		###############
+		# END SLAVERY #
+		###############	
+
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { #scientists, generals, admirals, governor
+		
+		random = {
+			list = {
+						"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+						
+			}
+		}		
+	}
+	
+	############
+	## RULERS ##
+	############
+	ruler = { #for rulers
+		default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+		
+		random = {
+			list = {
+						"gfx/models/portraits/Etiluos Hair Pile/c000.dds"						
+			}
+		}
+			# Primitives
+		random = {
+			trigger = { 
+						or = {
+							owner = { has_government = gov_tribal_society }
+						}
+			}
+			list = {
+					# Barbarians
+					"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+					
+			}
+		}
+
+		# More advanced primitives
+		random = {
+			trigger = { 
+						or = {
+							owner = { has_government = gov_feudal_realms }
+							owner = { has_government = gov_fragmented_nation_states }
+						}
+			}
+			list = {
+
+					"gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+					
+			}
+		}	
+	}
+}
+
+eshape_male_hair_1 = { 
+	default = "gfx/models/portraits/Etiluos Hair Pile/c000.dds"
+}

@@ -1,0 +1,20 @@
+
+rsrchcap_test_technology_researching = {
+	country_base_physics_research_produces_add = 1
+}
+
+rsrchcap_test_technology_not_researching = {
+	country_base_physics_research_produces_add = 100000000
+}
+
+rsrchcap_test_technology_tech_administrative_ai = {
+	all_technology_research_speed = -0.05
+}
+
+rsrchcap_test_technology_tech_sapient_ai = {
+	all_technology_research_speed = -0.05
+}
+
+rsrchcap_test_technology_tech_positronic_implants = {
+	all_technology_research_speed = -0.05
+}

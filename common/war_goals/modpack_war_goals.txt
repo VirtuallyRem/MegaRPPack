@@ -1,0 +1,146 @@
+wg_hegemony_cw_rebels = {
+	casus_belli = cb_seize_hegemony
+	hide_if_no_cb = yes
+	total_war = no
+	
+	surrender_acceptance = -50
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	war_exhaustion = 0.25
+
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+
+	set_defender_wargoal = wg_hegemony_cw_loyalists
+
+	on_accept = {
+		custom_tooltip = wg_hegemony_cw_rebel_win
+		hidden_effect = {
+			save_event_target_as = new_leader
+			federation = {
+				federation_leader = { save_event_target_as = old_leader	}
+				set_federation_leader = event_target:new_leader
+			}
+			
+			fromfrom = {
+				every_war_participant = {
+					if = {
+						limit = {
+							prev = {
+								using_war_goal = {
+									type = wg_hegemony_cw_rebels
+									owner = prev
+								}
+							}
+						}
+						country_event = { id = hegemony_cw.5 } #We won :)
+					}
+					else_if = {
+						limit = {
+							prev = {
+								using_war_goal = {
+									type = wg_hegemony_cw_loyalists
+									owner = prev
+								}
+							}
+						}
+						country_event = { id = hegemony_cw.8 } #We lost :(
+					}
+				}
+			}
+		}
+	}
+	
+	on_status_quo = {		
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+wg_hegemony_cw_loyalists = {
+	casus_belli = cb_event
+	total_war = no
+
+	cede_claims = occupied_only
+
+    surrender_acceptance = -50
+	
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	war_exhaustion = 0.25
+
+	potential = {
+		always = no # event only
+	}
+	possible = {
+		always = yes
+	}
+
+	on_accept = {
+		hidden_effect = {
+			save_event_target_as = old_leader
+			
+			fromfrom = {
+				random_war_participant = {
+					limit = {
+						is_war_leader = yes
+						prev = {
+							using_war_goal = {
+								type = wg_hegemony_cw_rebels
+								owner = prev
+							}
+						}
+					}
+					save_event_target_as = new_leader
+				}
+				
+				every_war_participant = {
+					if = {
+						limit = {
+							prev = {
+								using_war_goal = {
+									type = wg_hegemony_cw_loyalists
+									owner = prev
+								}
+							}
+						}
+						country_event = { id = hegemony_cw.10 } #We won :)
+					}
+					else_if = {
+						limit = {
+							prev = {
+								using_war_goal = {
+									type = wg_hegemony_cw_rebels
+									owner = prev
+								}
+							}
+						}
+						country_event = { id = hegemony_cw.11 } #We lost :(
+					}
+				}
+			}
+		}
+	}
+	
+	on_status_quo = {		
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

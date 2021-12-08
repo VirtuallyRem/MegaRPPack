@@ -1,0 +1,111 @@
+portraits = {
+	lgs_unicorn_01 = { entity = "portrait_lgs_unicorn_01_entity"	clothes_selector = "lgs_unicorn_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_beige.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_blue.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_red.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_dark_purple.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_dark_green.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_male_01_albino.dds"
+
+		}	
+	}
+	
+	lgs_unicorn_female_01 = { entity = "portrait_lgs_unicorn_female_01_entity"	clothes_selector = "lgs_unicorn_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_beige.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_blue.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_pink.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_dark_purple.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_dark_green.dds"
+			"gfx/models/portraits/lgsunicorns/lgs_unicorn_female_01_albino.dds"
+		}	
+	}
+}
+portrait_groups = {
+	lgs_unicorn_01 = {
+		
+		default = lgs_unicorn_01
+		game_setup = {
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					lgs_unicorn_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					lgs_unicorn_female_01
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					lgs_unicorn_female_01
+					lgs_unicorn_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					lgs_unicorn_female_01
+					lgs_unicorn_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					lgs_unicorn_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lgs_unicorn_01
+				}
+			}		
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					lgs_unicorn_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lgs_unicorn_01
+				}
+			}
+		}
+	}
+}

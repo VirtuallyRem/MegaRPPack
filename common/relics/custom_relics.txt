@@ -1,0 +1,245 @@
+@triumph_duration = 3600
+
+r_akahia = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_akahia"
+	sound = "relic_activation_generic"
+	resources = {
+		category = relics
+		cost = {
+			influence = 150
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		shipsize_battleship_build_speed_mult = 0.2
+		shipsize_titan_build_speed_mult = 0.2
+		
+	}
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+				modifier = "akahia_relic_active" 
+				days = @triumph_duration
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+			country_event = { id = akahia.01 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+r_kynodaran = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_kynodaran_relic"
+	sound = "relic_activation_generic"
+	resources = {
+		category = relics
+		cost = {
+			influence = 150
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_skill_levels = 2
+		species_leader_exp_gain = 0.5
+		
+	}
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = relic_kynodaran_active
+		add_modifier = {
+				modifier = "kynodaran_relic_active" 
+				days = @triumph_duration
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+			country_event = { id = kynodaran.01 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+
+#r_plisan = {
+#	activation_duration = @triumph_duration
+#	portrait = "GFX_plisan"
+#	sound = "relic_activation_generic"
+#	resources = {
+#		category = relics
+#		cost = {
+#			influence = 50
+#			alloys = 1000
+#		}
+#	}
+#	ai_weight = {
+#		weight = 0
+#	}
+#	
+#	triggered_country_modifier = {
+#		potential = {
+#			always = yes
+#		}
+#		country_engineering_tech_research_speed = 0.2
+#		megastructure_build_speed_mult = 0.5
+#	}
+#	score = 1000
+#
+#	active_effect = {
+#		custom_tooltip = relic_plisan_active
+#		custom_tooltip = relic_triumph_cooldown
+#		hidden_effect = {
+#			add_modifier = {
+#				modifier = "relic_activation_cooldown" 
+#				days = @triumph_duration
+#			}
+#			country_event = { id = plisan.01 }
+#			if = {
+#				limit = {
+#					NOT = { has_country_flag = relic_plisan_activated }
+#				}
+#				set_timed_country_flag = { flag = relic_plisan_activated days = @triumph_duration }
+#			}
+#		}
+#		
+#	}
+#
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_relic_no_cooldown"
+#			NOT = { has_modifier = relic_activation_cooldown }
+#		}
+#	}
+#}
+
+r_rakh = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_rakh_relic"
+	sound = "relic_activation_generic"
+	resources = {
+		category = relics
+		cost = {
+			influence = 150
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		BIOLOGICAL_species_trait_points_add = 1
+		leader_age = 15
+
+	}
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+				modifier = "rakh_relic_active" 
+				days = @triumph_duration
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+			country_event = { id = rakh.01 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+
+r_tsagoth = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_tsagoth_relic"
+	sound = "relic_activation_generic"
+	resources = {
+		category = relics
+		cost = {
+			influence = 150
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		army_damage_mult = 0.25
+		army_morale_damage_mult = 0.25
+		army_collateral_damage_mult = 0.5
+		
+	}
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = relic_tsagoth_active
+		add_modifier = {
+				modifier = "tsagoth_relic_active" 
+				days = @triumph_duration
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown" 
+				days = @triumph_duration
+			}
+			country_event = { id = tsagoth.01 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

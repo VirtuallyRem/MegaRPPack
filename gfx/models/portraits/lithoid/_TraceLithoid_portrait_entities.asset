@@ -1,0 +1,47 @@
+entity = {
+	name = "portrait_lithoid_16_entity"
+	pdxmesh = "portrait_lithoid_04_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle1"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.2 looping = no next_state = idle}
+	scale = 1.2
+}
+
+entity = {
+	name = "portrait_lithoid_17_entity"
+	pdxmesh = "humanoid_hp_06_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 4.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.4 looping = no next_state = idle}
+	scale = 1.2
+}
+
+entity = {
+	name = "portrait_lithoid_19_entity"
+	pdxmesh = "portrait_lithoid_01_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle1"    animation_blend_time = 0 chance = 5.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	scale = 1
+}
+
+entity = {
+	name = "portrait_lithoid_baol_entity"
+	pdxmesh = "portrait_plantoid_hivemind_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle1"    animation_blend_time = 0 chance = 5.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle2"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle3"    animation_blend_time = 0 chance = 1.0 looping = no next_state = idle}
+	state = { name = "idle"       animation = "idle4"    animation_blend_time = 0 chance = 1.5 looping = no next_state = idle}
+	scale = 1.05
+}

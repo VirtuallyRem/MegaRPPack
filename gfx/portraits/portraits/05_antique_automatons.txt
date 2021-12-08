@@ -1,0 +1,12 @@
+portraits = {
+
+	# Greek Automaton
+	talos_automaton = {
+		entity = "portrait_avian_synthetic_dawn_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "automaton_greetings"
+		character_textures = {
+			"gfx/models/portraits/automatons/portrait_automaton_bronze.dds"
+			"gfx/models/portraits/automatons/portrait_automaton_steel.dds"
+		}
+	}
+
+}

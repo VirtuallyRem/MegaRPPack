@@ -1,0 +1,87 @@
+﻿l_english:
+
+origin_one_small_step:0 "One Small Step"
+origin_one_small_step_desc:2 "This Society has had a Sister planet in the same System capable of supporting life, this has allowed the race to set up an early colony durring their Pre-FTL space age. While still lacking behind the homeworld, it shows potential."
+origin_tooltip_one_small_step_effects:3  "You spawn with a second colony in your Home System!"
+ 
+origin_rapid_cybernetification:0 "Rapid Cybernetification"
+origin_rapid_cybernetification_desc:2 "Before attaining faster than light travel, this specie had already developed and adopted sophisticated implants on such a large scale, its members could be described as cybernetic organisms."
+origin_tooltip_rapid_cybernetification_effects:3 "Your race starts with the §Y$trait_cybernetic$§! trait, but suffers a §YGrowth Speed§! malus and can't §Yassimilate§! other species for 50 years."
+ 
+origin_codominant_evolution:0 "Codominant Evolution"
+origin_codominant_evolution_desc:2 "This society is home to two equally sapient species that evolved on the same world and now coexist in a single, united civilization."
+origin_tooltip_codominant_evolution_effects:3 "Design and spawn with a second Species on your Homeworld."
+
+origin_synth_start:0 "Synthetic Evolution"
+origin_synth_start_desc:2 "The members of this specie have transfered their consciousness into artificial bodies before reaching into space, becoming immortal in the process."
+origin_tooltip_synth_start_effects:3 "Your race starts as fully sapient §YSynthetics§!, with the ability to assimilate other species into yours."
+
+origin_stranded:0 "Stranded"
+origin_stranded_desc:2 "$origin_lost_colony_desc$"
+origin_tooltip_stranded_effects:3 "Reach your old homeworld for an additional reward. §H(If your empire's species is the same as another's, your homeworld will be set as theirs!)§!"
+
+origin_artificial_specie:0 "In Vitro"
+origin_artificial_specie_desc:2 "This species has lost the ability to reproduce naturally, instead they rely on advanced technology to increase their numbers."
+origin_tooltip_artificial_specie_effects:3 "Your race starts with the §Y$trait_sterile$§! trait that prevents natural §YGrowth§!.\nCan build §Y$building_clone_vats$§! to §YAssemble§! new pops."
+
+origin_archeology:0 "From the Past"
+origin_archeology_desc:2 "This species evolved on planet riddled with the ruins and artifact of an highly advanced civilization. Even after decades of studying, there's still much to learn."
+origin_tooltip_archeology_effects:3 "Start with the §Y$d_origin_archeology$§! deposit on your homeworld, which gives §Y$job_researcher_plural$§! jobs and §YMinor Artifacts§!, and the research option for the §Y$tech_arcane_deciphering$§! technology."
+
+#One small step additional text
+
+premature_terraforming:0 "Premature Terraforming"
+premature_terraforming_desc:0 "Rudimentary terraforming techniques have left this planet's environment unbalanced."
+
+decision_premature_terraforming_removal:0 "Stabilize Environment"
+decision_premature_terraforming_removal_desc:0 "We can now bring the planet's environment to a stable and more livable level."
+
+#Synth origin additional text
+START_SCREEN_SYNTH_0: "As a specie, we always felt somewhat limited by our bodies; all throughout our history we tried to overcome these limitation through the use of technology, first by using simple devices such as glasses or dentures, then more sophisticated cybernetic implants and interfaces that allowed us to connect directly to our electronics and computers."
+
+START_SCREEN_SYNTH_1_EGAL: "Eventually, we developed a way to transfer our very consciousness into robotic bodies, synthetics, that gave us complete mastership over our form. The vast majority of our population, recognizing the superiority of the new bodies, willingly underwent the transfering procedure and by the time the first faster-than-light probes were deployed, our entire specie was no more organic, but synthetic beings."
+
+START_SCREEN_SYNTH_1_AUTH: "Eventually, we developed a way to transfer our very consciousness into robotic bodies, synthetics, that gave us complete mastership over our form. The social and economical upheaval that followed led to the rise of a caste of mechanical leaders who swiftly deposed the old governments and took power. In the name of progress and efficiency everyone was forced to undergo transition and by the time the first faster-than-light probes were deployed, our entire specie was no more organic, but synthetic beings."
+
+#Stranded origin additional text
+
+stranded.4.name:0 "Homecoming"
+stranded.4.desc:0 "For the longest time we knew the location of our ancient homeworld: astronomers and historians already pieced together the hints from the scraps of information left from the pre-planetary era, but only now we have gained the means to actually reach it. This possibility has filled our entire civilization with a burning desire to know more about the origin of our species and our culture, we must reach our homeworld at once!"
+stranded.4.a:0 "Let's go!"
+
+stranded.5.name:0 "Homeworld Found"
+stranded.5.desc.ecu:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. Old tales recall our ancestral cradle as a planet full of life and open spaces, but it seems that all of that has been buried under monumental buildings and skyscrapers that fend the clouds. Luckily, deep under the fundations of the arcologies, our researches have managed to find abandoned ruins belonging to our civilization that will allow us to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologists and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.relic:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. It appears that the great continent-sized cities and monumental arcologies that the old tales describe our ancient home as full of as fallen into disrepair, as only ruins cover the once sprawling planet. Luckily, among the debris and flooded streets, our researches have managed to find several archives that will allow us to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologies and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.machine:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. Old tales recall our ancestral cradle as a beautiful, thriving planet full of life, but what our expedition reports is just a gray sprawl of machinery, extending as far as eye can see and blanketed in a thick layer of smog. Luckily, several areas of the planet were yet to be engulfed by the robotic infrastructures and in them our researches have managed to find scarce trace of our civilization that will allow us to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologies and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.hive:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. Old tales recall our ancestral cradle as a beautiful, thriving planet full of life, but what our expedition reports is just a squirming sprawl of unidentified biomatter, extending as far as eye can see. Luckily, several areas of the planet were yet to be engulfed by the hive's growth and in them our researches have managed to find scarce trace of our civilization that will allow us to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologies and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.broken:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of  [event_target:found_hw.GetName]. Unfortunatly, we arrived too late: the planet that was once our cradle is no more, destroyed by an unknown cataclism or the cruelty of an advanced yet unfeeling civilization. What remains now are just scattered debris, floating into the void of space, yet, while our culture and history may be lost, we survived and we'll look forward to build an even greater civilization that our ancestors', we gaze at the future of the [root.owner.GetSpeciesNamePlural]!"
+stranded.5.desc.goo:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of  [event_target:found_hw.GetName]. Unfortunatly, we arrived too late: the planet that was once our cradle appears to have been engulfed by some kind of nanite infestation, constantly rearranging its geology according to some unknown design. What remains now are just gray seas and swarms of microscopic machines, yet, while our culture and history may be lost, we survived and we'll look forward to build an even greater civilization that our ancestors', we gaze at the future of the [root.owner.GetSpeciesNamePlural]!"
+stranded.5.desc.shroud:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of  [event_target:found_hw.GetName]. Unfortunatly, we arrived too late: the planet that was once our cradle is no more, enshrouded by some kind of strange, purple mist. Strangely, when the crew of [root.GetName] looks at it, it reports feeling a strange sensation, like of nostalgia: faint memories and forgotten knowledge begin to resurface in the scientists' minds, giving them insight on the culture and history of our people. We don't know if it's just a suggestion or the effect of some unknown radiation, but many in the [root.owner.GetName] have started to consider this as our ancestors' heritage, some kind of supernatural gift from beyond."
+stranded.5.desc.nuked:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. Old tales recall our ancestral cradle as a planet full of life and home to a thriving civilization, but all of that remains now is just a barren, silent wasteland, rendered such by an unknown cataclism or the foolishness of our ancestors. Luckily, scattered around the planet, our researches have managed to find abandoned ruins that will allow us to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologies and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.default.unowned:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. Our ancestral cradle is as beautiful as it was described in our old tales, but everything that remains of our ancestors are just abandoned cities and factories, slowly being reclaimed by nature. We do not know what happend to our predecessors, but thanks to the plentiful ruins found on the planet, we'll be able to gain a deeper understand of our culture and history. Paintings, statues, artifacts and thousands of texts and primitive recording devices have been stuffed on the [root.GetName] and are heading back to [root.owner.Capital.GetName], where they will be carefully examined by our best archeologies and then exposed in museums all over the [root.owner.GetName] for everyone to see!"
+stranded.5.desc.default.owned:0 "After long years of searching among the stars, we have finally found our old homeworld as the planet of [event_target:found_hw.GetName]. It was almost surreal for our scientists to simply walk in a museum and get all the informations they needed from the [event_target:found_hw.owner.GetName] archives: centuries of legends and myths about our ancestors finally coming together before their very eyes. A large wealth of knowledge about [root.owner.GetSpeciesAdj] history and culture is being sent home, were it will be carefully studied and teached to the new generations of [root.owner.GetSpeciesPlural] for the ages to come."
+
+stranded.5.default:0 "We are as united as ever!"
+stranded.5.memo:0 "We'll treasure this knowledge dearly."
+stranded.5.sad:0 "We'll never forget!"
+stranded.5.shroudpsi:0 "Nothing was lost, we can feel every memory."
+stranded.5.shroudmat:0 "...ok?"
+stranded.5.eco:0 "We shouldn't have came here..."
+stranded.5.synth:0 "Is this our future?"
+
+STRANDED_HW:0 "Reach Homeworld"
+STRANDED_HW_DESC:0 "We have the coordinates of our species' homeworld, all we need to do now is to reach it and unveil the secrets of our origins."
+
+stranded_found_homeworld:0 "Homeworld Found"
+
+#Rapid Cybernetification origin additional text
+
+malfunctioning_implants:0 "Malfunctioning Implants"
+malfunctioning_implants_desc:0 "Rudimentary cybernetic technology has caused negative long-term consequences to our population."
+rapid_cyber.2.name:0 "Upgraded"
+rapid_cyber.2.desc:0 "We have successfully removed all the flaws in our cybernetic implants and will no longer suffer any drawback from using this technology. Additionally, we have developed ways to incorporate the implants in other species, which will allow us to §Yassimilate§! them into our cybernetic society."
+
+#Archeology origin additional text
+
+d_origin_archeology:0 "Ancient Ruins"
+d_origin_archeology_desc:0 "The sprawling vestiges of a long-forgotten civilization."

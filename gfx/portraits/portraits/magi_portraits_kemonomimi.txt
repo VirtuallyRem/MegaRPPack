@@ -1,0 +1,147 @@
+##############################################################
+###	PORTRAITS SETTINGS
+### FOR KEMONOMIMI
+##############################################################
+
+portraits = {
+
+	magi_kemonomimi_onnanoko 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "magi_kemonomimi_clothes_jo"
+		hair_selector = "magi_kemonomimi_kami_jo"
+		greeting_sound = "humanoid_female_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test10.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test12.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test13.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test14.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test16.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test17.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test18.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test19.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test2.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test20.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test21.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test22.dds"
+			# "gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test24.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test25.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test26.dds"
+			# "gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test27.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test28.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test3.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test4.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test5.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test6.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test7.dds"
+			"gfx/models/portraits/magi_kemonomimi/ONNANOKO/kemo_body_1_test8.dds"
+		}
+	}
+	
+
+	magi_kemonomimi_otokonoko 	= {
+		entity = "copy_05_female_01_entity"
+		clothes_selector = "magi_kemonomimi_clothes_dan"
+		hair_selector = "magi_kemonomimi_kami_dan"
+		greeting_sound = "humanoid_male_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_re2.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_re3.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_test12.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_test2.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_test4.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_test6.dds"
+			"gfx/models/portraits/magi_kemonomimi/OTOKONOKO/kemo_body_b_test9.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	magi_kemonomimi = {
+		default = magi_kemonomimi_onnanoko
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					magi_kemonomimi_otokonoko
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					magi_kemonomimi_onnanoko
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					magi_kemonomimi_otokonoko
+
+					magi_kemonomimi_onnanoko
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					magi_kemonomimi_otokonoko
+
+					magi_kemonomimi_onnanoko
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_kemonomimi_onnanoko
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_kemonomimi_otokonoko
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_kemonomimi_onnanoko
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_kemonomimi_otokonoko
+				}
+			}
+		}
+	}
+}

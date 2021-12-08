@@ -1,0 +1,126 @@
+### SHROUD TOUCHED ###
+origin_shroud_touched = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_shroud_touched.dds"
+	picture = GFX_KO_psions
+	
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			}
+		}
+
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+
+
+	description = "origin_shroud_touched_desc2"
+	
+	traits = {
+		trait = trait_latent_psionic
+	}
+	advanced_start = yes
+
+	random_weight = {
+		base = 11
+	}
+		modifier = {
+			country_unity_produces_mult = 0.10
+		}
+}
+
+### Planetary Ascendants ###
+origin_planetary_ascendants = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_messiah_cult.dds"
+	picture = GFX_KO_ascendants
+	
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+		}
+	}
+	
+	playable = {
+		always = no
+	}
+	
+	description = "origin_planetary_ascendants_desc2"
+	advanced_start = yes
+	
+	random_weight = {
+		base = 11
+	}
+		modifier = {
+		pop_government_ethic_attraction = 0.50
+		country_unity_produces_mult = -0.10
+			}
+}
+
+
+### Planetary Conquerors ###
+origin_plan_con = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_covert_action.dds"
+	picture = GFX_army
+	
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			OR = {
+			value = ethic_authoritarian
+			value = ethic_fanatic_authoritarian
+            value = ethic_militarist
+			value = ethic_fanatic_militarist
+			value = ethic_xenophobe
+			value = ethic_fanatic_xenophobe
+				}
+
+		}
+	}
+	
+	description = "origin_plan_con_desc2"
+	
+	has_secondary_species = {
+	title = origin_slaaaaves
+	}
+	
+	advanced_start = yes
+
+	random_weight = {
+		base = 15
+	}
+	
+}
+
+### Secluded Paradise ###
+origin_secpar = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
+	picture = GFX_origin_life_seeded
+
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			OR = { 
+			text = civic_tooltip_pacifist
+			value = ethic_pacifist
+			value = ethic_fanatic_pacifist
+			}
+		}
+	}
+
+	description = "origin_secpar_desc2"
+
+	starting_colony = pc_gaia
+	habitability_preference = pc_gaia
+	preferred_planet_class_neighbor = no
+
+	initializers = { sec_par_init }
+
+	random_weight = {
+		base = 10
+	}
+}
+

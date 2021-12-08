@@ -1,0 +1,27 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+
+portraits = { # Zroni
+	Zroni  = { # The name of the portrait, common/species_classes pointing towards it.
+		entity = "portrait_reptilian_09_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/Zroni/Zroni_09_green.dds"
+			"gfx/models/portraits/Zroni/Zroni_09_teal.dds"
+			"gfx/models/portraits/Zroni/Zroni_09_blue.dds"
+			"gfx/models/portraits/Zroni/Zroni_09_black.dds"
+			"gfx/models/portraits/Zroni/Zroni_09_brown.dds"
+			"gfx/models/portraits/Zroni/Zroni_09_white.dds"
+		}
+	}	
+}
+
+
+	

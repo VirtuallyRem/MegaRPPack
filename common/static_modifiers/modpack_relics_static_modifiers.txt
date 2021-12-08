@@ -1,0 +1,28 @@
+akahia_relic_active = {
+
+	weapon_type_kinetic_weapon_damage_mult = 0.25
+
+}
+
+relic_plisan_expansion = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
+
+	icon_frame = 1
+
+	planet_max_districts_add = 2
+
+}
+
+rakh_relic_active = {
+
+	modify_species_cost_mult = -0.5
+
+}
+
+tsagoth_relic_active = {
+
+	pop_ethic_xenophobe_attraction_mult = 2.0
+
+}
+

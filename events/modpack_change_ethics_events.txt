@@ -1,0 +1,1839 @@
+namespace = change_ethics
+
+country_event = {
+	id = change_ethics.50
+	title = change_ethics.50.name
+	desc = change_ethics.50.desc.stare
+	picture = GFX_evt_civil_action
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = change_ethics.50.a
+		add_resource = { influence = -200 }
+
+		allow = { resource_stockpile_compare = { resource = influence value >= 200 } }
+		
+		hidden_effect = { country_event = { id = change_ethics.100 } }
+	}
+
+	option = {
+		name = change_ethics.200.name
+		trigger = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			NOR = {
+				has_ascension_perk = ap_become_the_crisis
+				has_policy_flag = ai_outlawed
+				has_policy_flag = robots_outlawed
+			}
+		}
+		allow = {
+			has_technology = tech_synthetic_workers
+			is_at_war = no
+			is_galactic_emperor = no
+			is_galactic_custodian = no
+		}
+		hidden_effect = { country_event = { id = change_ethics.200 } }
+	}
+	
+	option = {
+		name = change_ethics.50.b
+	}
+}
+
+country_event = {
+	id = change_ethics.100
+	title = change_ethics.100.name
+	desc = change_ethics.100.desc
+	picture = GFX_evt_civil_action
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { NOT = { is_variable_set = ethic_points } }
+			remove_country_flag = flag_ethic_authoritarian 
+			remove_country_flag = flag_ethic_fanatic_authoritarian 
+			remove_country_flag = flag_ethic_egalitarian
+			remove_country_flag = flag_ethic_fanatic_egalitarian
+			remove_country_flag = flag_ethic_pacifist
+			remove_country_flag = flag_ethic_fanatic_pacifist
+			remove_country_flag = flag_ethic_militarist
+			remove_country_flag = flag_ethic_fanatic_militarist
+			remove_country_flag = flag_ethic_materialist
+			remove_country_flag = flag_ethic_fanatic_materialist
+			remove_country_flag = flag_ethic_spiritualist
+			remove_country_flag = flag_ethic_fanatic_spiritualist
+			remove_country_flag = flag_ethic_xenophile
+			remove_country_flag = flag_ethic_fanatic_xenophile
+			remove_country_flag = flag_ethic_xenophobe
+			remove_country_flag = flag_ethic_fanatic_xenophobe
+			remove_country_flag = flag_ethic_capitalism
+			remove_country_flag = flag_ethic_capitalism
+			remove_country_flag = flag_ethic_socialism
+			remove_country_flag = flag_ethic_fanatic_socialism
+			remove_country_flag = flag_ethic_pluralist
+			remove_country_flag = flag_ethic_fanatic_pluralist
+			remove_country_flag = flag_ethic_elitist
+			remove_country_flag = flag_ethic_fanatic_elitist
+			remove_country_flag = flag_ethic_industrial
+			remove_country_flag = flag_ethic_fanatic_industrial
+			remove_country_flag = flag_ethic_green
+			remove_country_flag = flag_ethic_fanatic_green
+			
+			set_variable = {
+				which = ethic_points
+				value = 0
+			}
+		}
+	}
+
+#Authoritarian
+	option = {
+		name = change_ethics.100.auth
+		
+		set_country_flag = flag_ethic_authoritarian
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_authoritarian
+				has_country_flag = flag_ethic_fanatic_authoritarian
+				has_country_flag = flag_ethic_egalitarian
+				has_country_flag = flag_ethic_fanatic_egalitarian
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanauth
+		
+		set_country_flag = flag_ethic_fanatic_authoritarian
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_authoritarian
+				has_country_flag = flag_ethic_fanatic_authoritarian
+				has_country_flag = flag_ethic_egalitarian
+				has_country_flag = flag_ethic_fanatic_egalitarian
+			}
+		}
+	}
+#Libertarian
+	option = {
+		name = change_ethics.100.lib
+		
+		set_country_flag = flag_ethic_egalitarian
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_authoritarian
+				has_country_flag = flag_ethic_fanatic_authoritarian
+				has_country_flag = flag_ethic_egalitarian
+				has_country_flag = flag_ethic_fanatic_egalitarian
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanlib
+		
+		set_country_flag = flag_ethic_fanatic_egalitarian
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_authoritarian
+				has_country_flag = flag_ethic_fanatic_authoritarian
+				has_country_flag = flag_ethic_egalitarian
+				has_country_flag = flag_ethic_fanatic_egalitarian
+			}
+		}
+	}
+#Pacifist
+	option = {
+		name = change_ethics.100.pac
+		
+		set_country_flag = flag_ethic_pacifist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_militarist
+				has_country_flag = flag_ethic_fanatic_militarist
+				has_country_flag = flag_ethic_pacifist
+				has_country_flag = flag_ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanpac
+		
+		set_country_flag = flag_ethic_fanatic_pacifist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_militarist
+				has_country_flag = flag_ethic_fanatic_militarist
+				has_country_flag = flag_ethic_pacifist
+				has_country_flag = flag_ethic_fanatic_pacifist
+			}
+		}
+	}
+#Militarist
+	option = {
+		name = change_ethics.100.mil
+		
+		set_country_flag = flag_ethic_militarist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_militarist
+				has_country_flag = flag_ethic_fanatic_militarist
+				has_country_flag = flag_ethic_pacifist
+				has_country_flag = flag_ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanmil
+		
+		set_country_flag = flag_ethic_fanatic_militarist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_militarist
+				has_country_flag = flag_ethic_fanatic_militarist
+				has_country_flag = flag_ethic_pacifist
+				has_country_flag = flag_ethic_fanatic_pacifist
+			}
+		}
+	}
+#Materialist
+	option = {
+		name = change_ethics.100.mat
+		
+		set_country_flag = flag_ethic_materialist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_materialist
+				has_country_flag = flag_ethic_fanatic_materialist
+				has_country_flag = flag_ethic_spiritualist
+				has_country_flag = flag_ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanmat
+		
+		set_country_flag = flag_ethic_fanatic_materialist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_materialist
+				has_country_flag = flag_ethic_fanatic_materialist
+				has_country_flag = flag_ethic_spiritualist
+				has_country_flag = flag_ethic_fanatic_spiritualist
+			}
+		}
+	}
+#Spiritualist
+	option = {
+		name = change_ethics.100.spi
+		
+		set_country_flag = flag_ethic_spiritualist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_materialist
+				has_country_flag = flag_ethic_fanatic_materialist
+				has_country_flag = flag_ethic_spiritualist
+				has_country_flag = flag_ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanspi
+		
+		set_country_flag = flag_ethic_fanatic_spiritualist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_materialist
+				has_country_flag = flag_ethic_fanatic_materialist
+				has_country_flag = flag_ethic_spiritualist
+				has_country_flag = flag_ethic_fanatic_spiritualist
+			}
+		}
+	}
+#Xenophile
+	option = {
+		name = change_ethics.100.phile
+		
+		set_country_flag = flag_ethic_xenophile
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_xenophile
+				has_country_flag = flag_ethic_fanatic_xenophile
+				has_country_flag = flag_ethic_xenophobe
+				has_country_flag = flag_ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanphile
+		
+		set_country_flag = flag_ethic_fanatic_xenophile
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_xenophile
+				has_country_flag = flag_ethic_fanatic_xenophile
+				has_country_flag = flag_ethic_xenophobe
+				has_country_flag = flag_ethic_fanatic_xenophobe
+			}
+		}
+	}
+#Xenophobe
+	option = {
+		name = change_ethics.100.phobe
+		
+		set_country_flag = flag_ethic_xenophobe
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_xenophile
+				has_country_flag = flag_ethic_fanatic_xenophile
+				has_country_flag = flag_ethic_xenophobe
+				has_country_flag = flag_ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanphobe
+		
+		set_country_flag = flag_ethic_fanatic_xenophobe
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_xenophile
+				has_country_flag = flag_ethic_fanatic_xenophile
+				has_country_flag = flag_ethic_xenophobe
+				has_country_flag = flag_ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	option = {
+		name = change_ethics.100.more
+		hidden_effect = { country_event = { id = change_ethics.150 } }
+	}
+
+}
+
+country_event = {
+	id = change_ethics.150
+	title = change_ethics.100.name
+	desc = change_ethics.100.desc
+	picture = GFX_evt_civil_action
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+
+#Individualist
+	option = {
+		name = change_ethics.100.ind
+		
+		set_country_flag = flag_ethic_capitalism
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_capitalism
+				has_country_flag = flag_ethic_fanatic_capitalism
+				has_country_flag = flag_ethic_socialism
+				has_country_flag = flag_ethic_fanatic_socialism
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanind
+		
+		set_country_flag = flag_ethic_fanatic_capitalism
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_capitalism
+				has_country_flag = flag_ethic_fanatic_capitalism
+				has_country_flag = flag_ethic_socialism
+				has_country_flag = flag_ethic_fanatic_socialism
+			}
+		}
+	}
+#Collectivist
+	option = {
+		name = change_ethics.100.col
+		
+		set_country_flag = flag_ethic_socialism
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_capitalism
+				has_country_flag = flag_ethic_fanatic_capitalism
+				has_country_flag = flag_ethic_socialism
+				has_country_flag = flag_ethic_fanatic_socialism
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fancol
+		
+		set_country_flag = flag_ethic_fanatic_socialism
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_capitalism
+				has_country_flag = flag_ethic_fanatic_capitalism
+				has_country_flag = flag_ethic_socialism
+				has_country_flag = flag_ethic_fanatic_socialism
+			}
+		}
+	}
+#Egalitarian
+	option = {
+		name = change_ethics.100.egal
+		
+		set_country_flag = flag_ethic_pluralist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_pluralist
+				has_country_flag = flag_ethic_fanatic_pluralist
+				has_country_flag = flag_ethic_elitist
+				has_country_flag = flag_ethic_fanatic_elitist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanegal
+		
+		set_country_flag = flag_ethic_fanatic_pluralist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_pluralist
+				has_country_flag = flag_ethic_fanatic_pluralist
+				has_country_flag = flag_ethic_elitist
+				has_country_flag = flag_ethic_fanatic_elitist
+			}
+		}
+	}
+#Elitist
+	option = {
+		name = change_ethics.100.elit
+		
+		set_country_flag = flag_ethic_elitist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_pluralist
+				has_country_flag = flag_ethic_fanatic_pluralist
+				has_country_flag = flag_ethic_elitist
+				has_country_flag = flag_ethic_fanatic_elitist
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.fanelit
+		
+		set_country_flag = flag_ethic_fanatic_elitist
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_pluralist
+				has_country_flag = flag_ethic_fanatic_pluralist
+				has_country_flag = flag_ethic_elitist
+				has_country_flag = flag_ethic_fanatic_elitist
+			}
+		}
+	}
+#Industrialist
+	option = {
+		name = change_ethics.100.inds
+		
+		set_country_flag = flag_ethic_industrial
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_industrial
+				has_country_flag = flag_ethic_fanatic_industrial
+				has_country_flag = flag_ethic_green
+				has_country_flag = flag_ethic_fanatic_green
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.faninds
+		
+		set_country_flag = flag_ethic_fanatic_industrial
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_industrial
+				has_country_flag = flag_ethic_fanatic_industrial
+				has_country_flag = flag_ethic_green
+				has_country_flag = flag_ethic_fanatic_green
+			}
+		}
+	}
+#Ecologist
+	option = {
+		name = change_ethics.100.eco
+		
+		set_country_flag = flag_ethic_green
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 1 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 5 }
+			NOR = {
+				has_country_flag = flag_ethic_industrial
+				has_country_flag = flag_ethic_fanatic_industrial
+				has_country_flag = flag_ethic_green
+				has_country_flag = flag_ethic_fanatic_green
+			}
+		}
+	}
+	option = {
+		name = change_ethics.100.faneco
+		
+		set_country_flag = flag_ethic_fanatic_green
+		
+		hidden_effect = {
+			change_variable = { which = ethic_points value = 2 }
+			if = {
+				limit = { check_variable = { which = ethic_points value = 5 } }
+				country_event = { id = change_ethics.180 }
+			}
+			else = { country_event = { id = change_ethics.100 } }
+		}		
+		trigger = {
+			check_variable = { which = ethic_points value < 4 }
+			NOR = {
+				has_country_flag = flag_ethic_industrial
+				has_country_flag = flag_ethic_fanatic_industrial
+				has_country_flag = flag_ethic_green
+				has_country_flag = flag_ethic_fanatic_green
+			}
+		}
+	}
+
+	option = {
+		name = change_ethics.100.more
+		hidden_effect = { country_event = { id = change_ethics.100 } }
+	}
+}
+
+country_event = {
+	id = change_ethics.180
+	title = change_ethics.180.name
+	desc = change_ethics.180.desc
+	picture = GFX_evt_civil_action
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+	
+	immediate = { clear_variable = ethic_points }
+	
+	option = {
+		name = change_ethics.180.a
+		hidden_effect = {
+			clear_ethos = yes
+			while = {
+				count = 5
+				switch = {
+					trigger = has_country_flag
+					flag_ethic_authoritarian = { country_add_ethic = ethic_authoritarian remove_country_flag = flag_ethic_authoritarian }
+					flag_ethic_fanatic_authoritarian = { country_add_ethic = ethic_fanatic_authoritarian remove_country_flag = flag_ethic_fanatic_authoritarian }
+					flag_ethic_egalitarian = { country_add_ethic = ethic_egalitarian remove_country_flag = flag_ethic_egalitarian }
+					flag_ethic_fanatic_egalitarian = { country_add_ethic = ethic_fanatic_egalitarian remove_country_flag = flag_ethic_fanatic_egalitarian }
+					flag_ethic_pacifist = { country_add_ethic = ethic_pacifist remove_country_flag = flag_ethic_pacifist }
+					flag_ethic_fanatic_pacifist = { country_add_ethic = ethic_fanatic_pacifist remove_country_flag = flag_ethic_fanatic_pacifist }
+					flag_ethic_militarist = { country_add_ethic = ethic_militarist remove_country_flag = flag_ethic_militarist }
+					flag_ethic_fanatic_militarist = { country_add_ethic = ethic_fanatic_militarist remove_country_flag = flag_ethic_fanatic_militarist }
+					flag_ethic_materialist = { country_add_ethic = ethic_materialist remove_country_flag = flag_ethic_materialist }
+					flag_ethic_fanatic_materialist = { country_add_ethic = ethic_fanatic_materialist remove_country_flag = flag_ethic_fanatic_materialist }
+					flag_ethic_spiritualist = { country_add_ethic = ethic_spiritualist remove_country_flag = flag_ethic_spiritualist }
+					flag_ethic_fanatic_spiritualist = { country_add_ethic = ethic_fanatic_spiritualist remove_country_flag = flag_ethic_fanatic_spiritualist }
+					flag_ethic_xenophile = { country_add_ethic = ethic_xenophile remove_country_flag = flag_ethic_xenophile }
+					flag_ethic_fanatic_xenophile = { country_add_ethic = ethic_fanatic_xenophile remove_country_flag = flag_ethic_fanatic_xenophile }
+					flag_ethic_xenophobe = { country_add_ethic = ethic_xenophobe remove_country_flag = flag_ethic_xenophobe }
+					flag_ethic_fanatic_xenophobe = { country_add_ethic = ethic_fanatic_xenophobe remove_country_flag = flag_ethic_fanatic_xenophobe }
+					flag_ethic_capitalism = { country_add_ethic = ethic_capitalism remove_country_flag = flag_ethic_capitalism }
+					flag_ethic_fanatic_capitalism = { country_add_ethic = ethic_fanatic_capitalism remove_country_flag = flag_ethic_capitalism }
+					flag_ethic_socialism = { country_add_ethic = ethic_socialism remove_country_flag = flag_ethic_socialism }
+					flag_ethic_fanatic_socialism = { country_add_ethic = ethic_fanatic_socialism remove_country_flag = flag_ethic_fanatic_socialism }
+					flag_ethic_pluralist = { country_add_ethic = ethic_pluralist remove_country_flag = flag_ethic_pluralist }
+					flag_ethic_fanatic_pluralist = { country_add_ethic = ethic_fanatic_pluralist remove_country_flag = flag_ethic_fanatic_pluralist }
+					flag_ethic_elitist = { country_add_ethic = ethic_elitist remove_country_flag = flag_ethic_elitist }
+					flag_ethic_fanatic_elitist = { country_add_ethic = ethic_fanatic_elitist remove_country_flag = flag_ethic_fanatic_elitist }
+					flag_ethic_industrial = { country_add_ethic = ethic_industrial remove_country_flag = flag_ethic_industrial }
+					flag_ethic_fanatic_industrial = { country_add_ethic = ethic_fanatic_industrial remove_country_flag = flag_ethic_fanatic_industrial }
+					flag_ethic_green = { country_add_ethic = ethic_green remove_country_flag = flag_ethic_green }
+					flag_ethic_fanatic_green = { country_add_ethic = ethic_fanatic_green remove_country_flag = flag_ethic_fanatic_green }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = change_ethics.180.b
+		hidden_effect = { country_event = { id = change_ethics.100 } }
+	}
+	
+	option = {
+		name = change_ethics.50.b
+	}
+}
+
+#BECOME MACHINES
+country_event = {
+	id = change_ethics.200
+	title = change_ethics.200.name
+	desc = change_ethics.200.desc
+	picture = GFX_evt_sapient_AI
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = change_ethics.200.a
+		hidden_effect = { country_event = { id = change_ethics.210 } }
+	}
+	
+	option = {
+		name = change_ethics.200.b
+		hidden_effect = { country_event = { id = change_ethics.50 } }
+	}
+}
+
+country_event = {
+	id = change_ethics.210
+	title = change_ethics.200.name
+	desc = change_ethics.210.desc
+	picture = GFX_evt_sapient_AI
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = becoming_me
+		remove_country_flag = becoming_assimilators
+		remove_country_flag = becoming_servitors
+		remove_country_flag = becoming_exterminators
+	}
+	
+	option = {
+		name = change_ethics.210.a
+		hidden_effect = {
+			set_country_flag = becoming_me
+			country_event = { id = change_ethics.220 }
+		}
+	}
+
+	option = {
+		name = change_ethics.210.b
+		hidden_effect = {
+			set_country_flag = becoming_assimilators
+			country_event = { id = change_ethics.220 }
+		}
+	}
+	
+	option = {
+		name = change_ethics.210.c
+		hidden_effect = {
+			set_country_flag = becoming_servitors
+			country_event = { id = change_ethics.220 }
+		}
+	}
+
+	option = {
+		name = change_ethics.210.d
+		trigger = { is_multiplayer = no }
+		hidden_effect = {
+			set_country_flag = becoming_exterminators
+			country_event = { id = change_ethics.220 }
+		}
+	}
+	option = {
+		name = change_ethics.200.b
+		hidden_effect = { country_event = { id = change_ethics.50 } }
+	}
+}
+
+country_event = {
+	id = change_ethics.220
+	title = change_ethics.200.name
+	desc = {
+        	trigger = { has_country_flag = becoming_me }
+       		text = change_ethics.220.me
+	}
+	desc = {
+        	trigger = {
+				has_country_flag = becoming_assimilators
+				NOT = { has_trait = trait_cybernetic }
+			}
+       		text = change_ethics.220.assimilators
+	}
+	desc = {
+        	trigger = {
+				has_country_flag = becoming_assimilators
+				has_trait = trait_cybernetic
+			}
+       		text = change_ethics.220.assimilators.easy
+	}
+	desc = {
+        	trigger = { has_country_flag = becoming_servitors }
+       		text = change_ethics.220.servitors
+	}
+	desc = {
+        	trigger = { has_country_flag = becoming_exterminators }
+       		text = change_ethics.220.exterminators
+	}
+	picture = GFX_evt_sapient_AI
+	#show_sound = event_administrative_work
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = change_ethics.220.a
+		allow = {
+			is_at_war = no
+			is_galactic_emperor = no
+			is_galactic_custodian = no
+		}
+		hidden_effect = { country_event = { id = change_ethics.240 } }
+	}
+	
+	option = {
+		name = change_ethics.200.b
+		hidden_effect = { country_event = { id = change_ethics.210 } }
+	}
+}
+
+#check for conditions and type
+country_event = {
+	id = change_ethics.240
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = pre_machine_empire
+		
+		every_playable_country = {
+			limit = {
+				has_communications = event_target:pre_machine_empire
+				NOT = {	is_same_value = root }
+			}
+			country_event = { id = change_ethics.281 }
+		}
+
+#Spawn machine species
+		create_species = {
+			name = random
+			class = MACHINE
+			portrait = random
+			traits = {
+				trait = trait_machine_unit
+			}
+			immortal = yes
+		}
+
+#Spawn machine country
+		switch = {
+			trigger = has_country_flag
+			becoming_me = {
+				create_country = {
+					name = random
+					type = default
+					species = last_created_species
+					ignore_initial_colony_error = yes
+					day_zero_contact = no
+					ethos = { ethic = ethic_gestalt_consciousness }
+					authority = auth_machine_intelligence
+					origin = origin_separatists
+					civics = {
+						civic = random
+					}
+					flag = random
+					effect = {
+						modify_species = {
+							species = this
+							add_trait = trait_machine_unit
+							add_traits_at_start_of_list = yes
+						}
+						save_event_target_as = post_machine_empire
+						country_event = { id = change_ethics.250 }
+					}
+				}
+			}
+			becoming_assimilators = {
+				create_country = {
+					name = random
+					type = default
+					species = last_created_species
+					ignore_initial_colony_error = yes
+					day_zero_contact = no
+					ethos = { ethic = ethic_gestalt_consciousness }
+					authority = auth_machine_intelligence
+					origin = origin_separatists
+					civics = {
+						civic = civic_machine_assimilator
+						civic = random
+					}
+					flag = random
+					effect = {
+						modify_species = {
+							species = this
+							add_trait = trait_machine_unit
+							add_traits_at_start_of_list = yes
+						}
+						save_event_target_as = post_machine_empire
+						country_event = { id = change_ethics.250 }
+					}
+				}
+			}
+			becoming_servitors = {
+				create_country = {
+					name = event_target:pre_machine_empire
+					type = default
+					species = last_created_species
+					ignore_initial_colony_error = yes
+					day_zero_contact = no
+					ethos = { ethic = ethic_gestalt_consciousness }
+					authority = auth_machine_intelligence
+					origin = origin_enlightened
+					civics = {
+						civic = civic_machine_servitor
+						civic = random
+					}
+					flag = event_target:pre_machine_empire
+					effect = {
+						modify_species = {
+							species = this
+							add_trait = trait_machine_unit
+							add_traits_at_start_of_list = yes
+						}
+						save_event_target_as = post_machine_empire
+						country_event = { id = change_ethics.250 }
+					}
+				}
+			}
+			becoming_exterminators = {
+				create_country = {
+					name = random
+					type = default
+					species = last_created_species
+					ignore_initial_colony_error = yes
+					day_zero_contact = no
+					ethos = { ethic = ethic_gestalt_consciousness }
+					authority = auth_machine_intelligence
+					origin = origin_separatists
+					civics = {
+						civic = civic_machine_terminator
+						civic = random
+					}
+					flag = random
+					effect = {
+						modify_species = {
+							species = this
+							add_trait = trait_machine_unit
+							add_traits_at_start_of_list = yes
+						}
+						save_event_target_as = post_machine_empire
+						country_event = { id = change_ethics.250 }
+					}
+				}
+			}
+		}
+	
+	}
+}
+
+country_event = {
+	id = change_ethics.250
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		establish_communications_no_message = event_target:pre_machine_empire
+
+		set_graphical_culture = event_target:pre_machine_empire
+		
+#Fixes spaghetti
+		if = {
+			limit = {
+				has_civic = civic_machine_servitor
+				NOT = { from = { has_country_flag = becoming_servitors } }
+			}
+			force_remove_civic = civic_machine_servitor
+		}
+		if = {
+			limit = {
+				has_civic = civic_machine_catalytic_processing
+				NOT = { host_has_dlc = "Plantoids Species Pack" }
+			}
+			force_remove_civic = civic_machine_catalytic_processing
+		}
+		if = {
+			limit = {
+				has_civic = civic_machine_memorialist
+				NOT = { host_has_dlc = "Necroids Species Pack" }
+			}
+			force_remove_civic = civic_machine_memorialist
+		}
+
+#Get techs
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_machine_assimilator
+					has_civic = civic_machine_servitor
+				}
+			}
+			copy_techs_from = {
+				target = event_target:pre_machine_empire
+				except = {
+					# Robots
+					tech_robotic_workers
+					tech_droid_workers
+					tech_synthetic_workers
+					# Food
+					#tech_eco_simulation
+					#tech_gene_crops
+					#tech_nano_vitality_crops
+					#tech_nutrient_replication
+					# Misc
+					tech_frontier_health
+					tech_frontier_hospital
+					tech_telepathy
+					tech_precognition_interface
+					tech_psi_jump_drive_1
+					tech_galactic_markets
+					tech_subdermal_stimulation
+					tech_global_research_initiative
+					tech_neural_implants
+					#tech_psionic_theory
+					# Non-Machine Robomodding
+					tech_robomodding
+					tech_robomodding_points_1
+					tech_robomodding_points_2
+					# Genetics
+					#tech_genome_mapping
+					tech_vitality_boosters
+					#tech_epigenetic_triggers
+					#tech_cloning
+					tech_gene_banks
+					tech_gene_seed_purification
+					tech_morphogenetic_field_mastery
+					#tech_gene_tailoring
+					#tech_glandular_acclimation
+					#tech_gene_expressions
+					tech_selected_lineages
+					tech_capacity_boosters
+					tech_akx_worm_1
+					tech_akx_worm_2
+					tech_akx_worm_3
+				}
+			}
+		}
+		else = {
+			copy_techs_from = {
+				target = event_target:pre_machine_empire
+				except = {
+					# Robots
+					tech_robotic_workers
+					tech_droid_workers
+					tech_synthetic_workers
+					# Food
+					tech_eco_simulation
+					tech_gene_crops
+					tech_nano_vitality_crops
+					tech_nutrient_replication
+					# Misc
+					tech_frontier_health
+					tech_frontier_hospital
+					tech_telepathy
+					tech_precognition_interface
+					tech_psi_jump_drive_1
+					tech_galactic_markets
+					tech_subdermal_stimulation
+					tech_global_research_initiative
+					tech_neural_implants
+					#tech_psionic_theory
+					# Non-Machine Robomodding
+					tech_robomodding
+					tech_robomodding_points_1
+					tech_robomodding_points_2
+					# Genetics
+					tech_genome_mapping
+					tech_vitality_boosters
+					tech_epigenetic_triggers
+					tech_cloning
+					tech_gene_banks
+					tech_gene_seed_purification
+					tech_morphogenetic_field_mastery
+					tech_gene_tailoring
+					tech_glandular_acclimation
+					tech_gene_expressions
+					tech_selected_lineages
+					tech_capacity_boosters
+					tech_akx_worm_1
+					tech_akx_worm_2
+					tech_akx_worm_3
+				}
+			}
+		}
+		
+		if = {
+			limit = { event_target:pre_machine_empire = { has_technology = tech_robomodding } }
+			give_technology = { tech = tech_robomodding_m message = no }
+		}
+		if = {
+			limit = { event_target:pre_machine_empire = { has_technology = tech_robomodding_points_1 } }
+			give_technology = { tech = tech_binary_motivators message = no }
+		}
+		if = {
+			limit = { event_target:pre_machine_empire = { has_technology = tech_robomodding_points_2 } }
+			give_technology = { tech = tech_nanite_assemblers message = no }
+		}
+
+#Survey systems
+		every_galaxy_planet = {
+			limit = {
+				is_surveyed = {
+					who = event_target:pre_machine_empire
+					status = yes
+				}
+			}
+			set_surveyed = {
+				surveyed = yes
+				surveyor = root
+			}
+		}
+
+#Get resources
+
+		event_target:pre_machine_empire = {
+			set_variable = { which = resources_to_add value = 0 }
+			
+			export_resource_stockpile_to_variable = { resource = influence variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { influence = 1 mult = prev.resources_to_add } } }
+			
+			export_resource_stockpile_to_variable = { resource = energy variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { energy = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = minerals variable = resources_to_add }
+
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { minerals = 1 mult = prev.resources_to_add } } }
+
+			export_resource_stockpile_to_variable = { resource = food variable = resources_to_add }
+			if = {
+				limit = {
+					check_variable = { which = resources_to_add value > 0 }
+					root = { 
+						NOT = { has_civic = civic_machine_terminator }
+					}
+				}
+				root = { add_resource = { food = 1 mult = prev.resources_to_add } }
+			}
+			
+			export_resource_stockpile_to_variable = { resource = alloys variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { alloys = 1 mult = prev.resources_to_add } } }
+			
+			export_resource_stockpile_to_variable = { resource = consumer_goods variable = resources_to_add }
+			if = {
+				limit = { check_variable = { which = resources_to_add value > 0 } root = { has_civic = civic_machine_servitor } }
+				root = { add_resource = { consumer_goods = 1 mult = prev.resources_to_add } }
+			}
+			
+			export_resource_stockpile_to_variable = { resource = volatile_motes variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { volatile_motes = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = exotic_gases variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { exotic_gases = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = rare_crystals variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { rare_crystals = 1 mult = prev.resources_to_add } } }
+			
+			export_resource_stockpile_to_variable = { resource = sr_living_metal variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { sr_living_metal = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = sr_zro variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { sr_zro = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = sr_dark_matter variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { sr_dark_matter = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = nanites variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { nanites = 1 mult = prev.resources_to_add } } }
+			export_resource_stockpile_to_variable = { resource = minor_artifacts variable = resources_to_add }
+			if = { limit = { check_variable = { which = resources_to_add value > 0 } } root = { add_resource = { minor_artifacts = 1 mult = prev.resources_to_add } } }
+			
+			clear_variable = resources_to_add
+		}
+
+		add_100_unity_per_year_passed = yes
+		
+#Get relics
+		if = {
+			limit = { event_target:pre_machine_empire = { num_owned_relics > 0 } }
+			steal_relic = { target = event_target:pre_machine_empire relic = all }
+		}
+
+#Get new leaders
+
+		kill_leader = { type = governor show_notification = no }
+		
+		ruler = { add_skill = 4 }
+
+		event_target:pre_machine_empire = {
+			every_owned_leader = {
+				limit = {
+					NOR = {
+						leader_class = ruler
+						leader_class = envoy
+					}
+				}
+				
+				if = {
+					limit = {
+						owner = { any_owned_species = { has_trait = trait_cybernetic } }
+						root = { has_civic = civic_machine_assimilator }
+					}
+					owner = { random_owned_species = { limit = { has_trait = trait_cybernetic } save_event_target_as = leaders_species } }
+				}
+				else = { root.species = { save_event_target_as = leaders_species } }
+				
+				switch = {
+					trigger = leader_class
+					governor = {
+						root = {
+							create_leader = {
+								class = governor
+								species = event_target:leaders_species
+								name = random
+								skill = 1
+							}
+						}
+					}
+					scientist = {
+						root = {
+							create_leader = {
+								class = scientist
+								species = event_target:leaders_species
+								name = random
+								skill = 1
+							}
+						}
+					}
+					admiral = {
+						root = {
+							create_leader = {
+								class = admiral
+								species = event_target:leaders_species
+								name = random
+								skill = 1
+							}
+						}
+					}
+					general = {
+						root = {
+							create_leader = {
+								class = general
+								species = event_target:leaders_species
+								name = random
+								skill = 1
+							}
+						}
+					}
+				}
+				
+				if = { limit = { has_skill > 1 } last_created_leader = { add_skill = 1 } }
+				if = { limit = { has_skill > 2 } last_created_leader = { add_skill = 1 } }
+				if = { limit = { has_skill > 3 } last_created_leader = { add_skill = 1 } }
+				if = { limit = { has_skill > 4 } last_created_leader = { add_skill = 1 } }
+			}
+		}
+	
+#Re-establish diplo
+	#Get comms
+		every_country = {
+			limit = {
+				has_communications = event_target:pre_machine_empire
+				NOT = { is_same_value = event_target:pre_machine_empire }
+			}
+			establish_communications_no_message = root
+			establish_contact = { who = root location = from }
+		}
+
+	#Set borders
+		every_playable_country = {
+			limit = { has_communications = event_target:pre_machine_empire	}
+			if = {
+				limit = { event_target:pre_machine_empire = { has_closed_borders = prev } }
+				root = { set_closed_borders = { who = prev status = yes } }
+			}
+			else = { root = { set_closed_borders = { who = prev status = no } } }
+			
+			if = {
+				limit = { has_closed_borders = event_target:pre_machine_empire }
+				set_closed_borders = { who = root status = yes }
+			}
+			else = { set_closed_borders = { who = root status = no } }
+		}
+
+	#Get intel
+		event_target:pre_machine_empire = {
+			set_variable = { which = diplo_to_add value = 0 }
+
+			every_playable_country = {
+				limit = { has_communications = prev }
+				while = {
+					limit = {
+						prev = { intel = { who = prev value > diplo_to_add } }
+					}
+					prev = { change_variable = { which = diplo_to_add value = 1 } }
+				}
+				prev = {
+					root = { add_intel = { who = prevprev amount = prev.diplo_to_add } }
+					set_variable = { which = diplo_to_add value = 0 }
+				}
+
+				while = {
+					limit = {
+						intel = { who = prev value > diplo_to_add }
+					}
+					prev = { change_variable = { which = diplo_to_add value = 1 } }
+				}
+				prev = {
+					add_intel = { who = root amount = prev.diplo_to_add }
+					set_variable = { which = diplo_to_add value = 0 }
+				}
+			}
+			
+			clear_variable = diplo_to_add
+		}
+		
+	#Get trust
+		if = {
+			limit = { has_civic = civic_machine_servitor } #Other empires don't trust anymore if you turn robit
+			event_target:pre_machine_empire = {
+				set_variable = { which = diplo_to_add value = 0 }
+
+				every_playable_country = {
+					limit = { has_communications = prev }
+					while = {
+						limit = {
+							prev = { trust = { who = prev value > diplo_to_add } }
+						}
+						prev = { change_variable = { which = diplo_to_add value = 1 } }
+					}
+					prev = {
+						root = { add_trust = { who = prevprev amount = prev.diplo_to_add } }
+						set_variable = { which = diplo_to_add value = 0 }
+					}
+
+					while = {
+						limit = {
+							trust = { who = prev value > diplo_to_add }
+						}
+						prev = { change_variable = { which = diplo_to_add value = 1 } }
+					}
+					prev = {
+						add_trust = { who = root amount = prev.diplo_to_add }
+						set_variable = { which = diplo_to_add value = 0 }
+					}
+				}
+				
+				clear_variable = diplo_to_add
+			}
+		}
+	
+	#Get in the GC
+		if = {
+			limit = {
+				has_civic = civic_machine_servitor
+				event_target:pre_machine_empire = { is_galactic_community_member = yes }
+			}
+			add_to_galactic_community_no_message = yes
+			if = {
+				limit = { event_target:pre_machine_empire = { is_part_of_galactic_council = yes } }
+				add_to_galactic_council = yes
+			}
+			if = {
+				limit = { event_target:pre_machine_empire = { is_permanent_councillor = yes } }
+				add_permanent_councillor = yes
+			}
+		}
+
+	#Get in fed
+		if = {
+			limit = {
+				event_target:pre_machine_empire = { has_federation = yes }
+				OR = {
+					has_civic = civic_machine_servitor
+					event_target:pre_machine_empire.federation = {
+						OR = {
+							has_federation_type = hegemony_federation
+							has_federation_type = feudal_federation
+							has_federation_type = imperial_loyalists_federation
+						}
+					}
+				}
+			}
+			join_alliance = { who = event_target:pre_machine_empire override_requirements = yes }
+			if = {
+				limit = { event_target:pre_machine_empire = { is_federation_leader = yes } }
+				event_target:pre_machine_empire.federation = { set_federation_leader = root }
+			}
+		}
+	
+	#Get vassals >:)
+		if = {
+			limit = { event_target:pre_machine_empire = { is_overlord = yes } }
+			event_target:pre_machine_empire = {
+				every_subject = { 
+					switch = {
+						trigger = is_subject_type
+						vassal = { set_subject_of = { who = root subject_type = vassal } }
+						protectorate = { set_subject_of = { who = root subject_type = protectorate } }
+						tributary = { set_subject_of = { who = root subject_type = tributary } }
+						subsidiary = { set_subject_of = { who = root subject_type = vassal } } #Can't be a subsidiary of a ME
+						default = { set_subject_of = { who = root subject_type = vassal } }
+					}
+				}
+			}
+		}
+
+	#Get vassalized :(
+		if = {
+			limit = { event_target:pre_machine_empire = { is_subject = yes } }
+			random_playable_country = {
+				limit = {
+					is_overlord = yes
+					any_subject = { is_same_value = event_target:pre_machine_empire }
+				}
+				event_target:pre_machine_empire = {
+					switch = {
+						trigger = is_subject_type
+						vassal = { root = { set_subject_of = { who = prev subject_type = vassal } } }
+						protectorate = { root = { set_subject_of = { who = prev subject_type = protectorate } } }
+						tributary = { root = { set_subject_of = { who = prev subject_type = tributary } } }
+						subsidiary = { root = { set_subject_of = { who = prev subject_type = subsidiary } } }
+						satrapy = { root = { set_subject_of = { who = prev subject_type = satrapy } } }
+						thrall = { root = { set_subject_of = { who = prev subject_type = thrall } } }
+						dominion = { root = { set_subject_of = { who = prev subject_type = dominion } } }
+						satellite = { root = { set_subject_of = { who = prev subject_type = satellite } } }
+						signatory = { root = { set_subject_of = { who = prev subject_type = signatory } } }
+						scion = { root = { set_subject_of = { who = prev subject_type = scion } } }
+						default = { root = { set_subject_of = { who = prev subject_type = vassal } } }
+					}
+				}
+			}
+		}
+
+#Switch 80% of the population in robits
+		event_target:pre_machine_empire = {
+			every_owned_planet = {
+			
+				set_variable = { which = pops_switched value = 0 }
+			
+				every_owned_pop = {
+					limit = { has_trait = trait_mechanical }
+					
+					change_species = root.species
+					
+					change_variable = {
+						which = pops_switched
+						value = 1
+					}
+				}
+			
+				set_variable = { which = total_population value = 0 }
+				export_trigger_value_to_variable = { trigger = num_pops variable = total_population }
+				
+				if = {
+					limit = {
+						root = { NOT = { has_civic = civic_machine_assimilator } }
+					}
+					multiply_variable = { which = total_population value = 0.80 }
+				}
+				else_if = {
+					limit = {
+						root = { has_civic = civic_machine_assimilator }
+						NOT = { prev = { has_trait = trait_cybernetic } }
+					}
+					multiply_variable = { which = total_population value = 0.20 } #20% pops for assimilators
+				}
+				else = { set_variable = { which = total_population value = 0 } }
+				
+				while = {
+					limit = {
+						check_variable = {
+							which = pops_switched
+							value < total_population
+						}
+					}
+					
+					random_owned_pop = {
+						limit = {
+							is_sapient = yes
+							NOT = { is_same_species = root }
+						}
+						change_species = root.species
+					}
+					
+					change_variable = {
+						which = pops_switched
+						value = 1
+					}
+				}
+			
+				clear_variable = pops_switched
+				clear_variable = total_population
+			}
+		}
+	
+#Set Player
+	
+		set_player = event_target:pre_machine_empire
+	
+#Get planets and fleets
+		event_target:pre_machine_empire = {
+		
+			every_owned_fleet = {
+				set_owner = root
+			}
+			
+			every_owned_planet = {
+				if = {
+					limit = { is_capital = yes }
+					set_owner = root
+					set_controller = root
+					set_capital = yes
+				}
+				else = {
+					set_owner = root
+					set_controller = root
+				}				
+			}
+		}
+#Final fixes
+		country_event = { id = change_ethics.280 days = 1 }
+	}
+}
+
+country_event = {
+	id = change_ethics.280
+	title = change_ethics.200.name
+	desc = change_ethics.280.desc
+	picture = GFX_evt_sapient_AI
+	#show_sound = event_celebration
+	is_triggered_only = yes
+
+	immediate = {
+	
+		#Add missing buildings and swap districts
+
+		every_owned_planet = {
+			
+			if = { limit = { has_deposit = d_decrepit_dwellings } remove_deposit = d_decrepit_dwellings }
+			
+		
+		
+			#Swap farming for energy where possible
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							is_catalytic_empire = yes
+							has_civic = civic_machine_assimilator
+							has_civic = civic_machine_servitor
+						}
+					}
+				}
+				while = {
+					limit = {
+						num_free_districts = { type = district_generator value > 0 }
+						has_district = district_farming
+					}
+					remove_district = district_farming
+					add_district = district_generator
+				}
+			}
+			#Add organic sanctuaries for servitors
+			if = {
+				limit = {
+					owner = { has_civic = civic_machine_servitor }
+					any_owned_species = { is_robotic = no is_sapient = yes }
+					free_building_slots > 0
+				}
+				add_building = building_organic_sanctuary
+				if = { limit = { is_artificial = no } add_deposit = d_unsupervised_settlement }
+			}
+			#Add factories
+			if = {
+				limit = {
+					NOT = { owner = { has_civic = civic_machine_assimilator } }
+					NOT = { has_building = building_machine_assembly_plant }
+					free_building_slots > 0
+				}
+				add_building = building_machine_assembly_plant
+			}
+		}
+	}
+	
+	option = {
+		name = change_ethics.280.a
+		add_modifier = { modifier = post_machine days = 360 }
+	}
+}
+
+#NOTIFICATION
+
+#Notification for unrelated others
+country_event = {
+	id = change_ethics.281
+	title = change_ethics.281.name
+	desc = {
+		text = change_ethics.281.desc.uprising
+		trigger = { NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } } }
+	}
+	desc = {
+		text = change_ethics.281.desc.servitors
+		trigger = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+	}
+	picture = {
+		trigger = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+        picture = GFX_evt_robot_encounter
+    }
+	picture = {
+		trigger = { NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } } }
+        picture = GFX_evt_organic_oppression
+    }
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+	
+	option = {
+		name = change_ethics.281.corp
+		exclusive_trigger = {
+			has_authority = auth_corporate
+			has_commercial_pact = event_target:pre_machine_empire
+		}
+	}
+
+	option = {
+		name = change_ethics.281.mach_to_mach
+		trigger = {
+			has_authority = auth_machine_intelligence
+			NOR = {
+				has_civic = civic_machine_servitor
+				event_target:post_machine_empire = { has_civic = civic_machine_servitor }
+			}
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.mach_to_servitors
+		trigger = {
+			has_authority = auth_machine_intelligence
+			NOT = { has_civic = civic_machine_servitor }
+			event_target:post_machine_empire = { has_civic = civic_machine_servitor }
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.servitors_to_mach
+		trigger = {
+			has_civic = civic_machine_servitor
+			NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.servitors_to_servitors
+		trigger = {
+			has_civic = civic_robot_leader
+			NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.default
+		trigger = {
+			is_machine_empire = no
+			NOT = { has_valid_civic = civic_robot_leader }
+			NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.anti_robots_to_servitors
+		trigger = {
+			is_machine_empire = no
+			NOT = { has_valid_civic = civic_robot_leader }
+			OR = {
+				has_policy_flag = ai_outlawed
+				has_policy_flag = robots_outlawed
+			}
+			event_target:post_machine_empire = { has_civic = civic_machine_servitor }
+		}
+	}
+	
+	option = {
+		name = change_ethics.281.anti_robots_to_mach
+		trigger = {
+			is_machine_empire = no
+			NOT = { has_valid_civic = civic_robot_leader }
+			OR = {
+				has_policy_flag = ai_outlawed
+				has_policy_flag = robots_outlawed
+			}
+			NOT = { event_target:post_machine_empire = { has_civic = civic_machine_servitor } }
+		}
+	}
+}

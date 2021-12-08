@@ -1,0 +1,27 @@
+######################################################
+#                                                     
+#              akeean's Shielded Origin   
+#              Contributors: akeean, jasonpepe                 
+######################################################
+
+akeean_shield_active = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_faith_in_science.dds"
+	icon_frame = 2
+
+	planet_stability_add = 10
+	planet_immigration_pull_mult = -0.5
+	planet_emigration_push_add = -100
+	pop_growth_from_immigration = -0.5
+	pop_resettlement_cost_mult = 0.5
+	planet_orbital_bombardment_damage = -2.0
+	army_defense_damage_mult = 0.5
+}
+
+akeean_shield_inactive = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+
+	planet_amenities_mult = 0.1
+	planet_jobs_energy_produces_mult = 0.2
+	planet_immigration_pull_mult = 0.5
+}

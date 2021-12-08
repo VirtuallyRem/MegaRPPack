@@ -1,0 +1,29 @@
+decision_premature_terraforming_removal = {
+	owned_planets_only = yes
+	icon = decision_drilling_for_gas
+	
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2500
+		}
+	}
+	
+	potential = {
+		has_modifier = premature_terraforming
+	}
+
+	allow = {
+		exists = owner
+		owner = { has_technology = tech_climate_restoration }
+	}
+	
+	effect = {
+		remove_modifier = premature_terraforming
+	}
+	ai_weight = {
+		weight = 100
+	}
+	
+}

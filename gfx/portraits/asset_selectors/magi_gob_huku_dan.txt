@@ -1,0 +1,85 @@
+# This is a template which multiple species can use. 
+
+magi_gob_huku_dan = {
+	default = "gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+			}
+		}
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			trigger = { always = yes }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+			}
+		}
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_1.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_1.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_4.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+			}
+		}
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+		
+		"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_4.dds" = { owner = { has_authority = auth_democratic } }
+		"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_3.dds" = { owner = { has_authority = auth_imperial } }
+		"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_1.dds" = { owner = { has_militarist_government = yes } }
+		random = {
+			trigger = {
+				NOT = {
+					OR = {
+						owner = { has_authority = auth_democratic }
+						owner = { has_authority = auth_imperial }
+						owner = { has_militarist_government = yes }
+					}
+				}
+			}
+			list = {
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_4.dds"
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_3.dds"
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_2.dds"
+				"gfx/models/portraits/magi_gobchin/GOBHUKU/goblin_huku_dan_1.dds"
+			}
+		}
+	}
+}

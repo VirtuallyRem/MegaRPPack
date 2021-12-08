@@ -1,0 +1,15 @@
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		raiding.2
+	}
+}
+
+# Planet has taken damage from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		raiding.1
+	}
+}

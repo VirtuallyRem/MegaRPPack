@@ -1,0 +1,100 @@
+#plisan_digsite = {
+#	desc = plisan_digsite_desc
+#	picture = GFX_evt_crashed_station
+#	stages = 6
+#	max_instances = 1
+#	weight = 100
+#	allow = {
+#		is_ship_class = shipclass_science_ship
+#		exists = leader
+#	}
+#	visible = {
+#		default_site_visible_trigger = yes
+#	}
+#	stage = {
+#		difficulty = 2
+#		event = plisan.11
+#		icon = GFX_archaeology_runes_D1
+#	}
+#	stage = {
+#		difficulty = 4
+#		event = plisan.12
+#		icon = GFX_archaeology_runes_D2
+#	}
+#	stage = {
+#		difficulty = 4
+#		event = plisan.13
+#		icon = GFX_archaeology_runes_D3
+#	}
+#	stage = {
+#		difficulty = 5
+#		event = plisan.14
+#		icon = GFX_archaeology_runes_D4
+#	}
+#	stage = {
+#		difficulty = 5
+#		event = plisan.15
+#		icon = GFX_archaeology_runes_D5
+#	}
+#	stage = {
+#		difficulty = 6
+#		event = plisan.16
+#		icon = GFX_archaeology_runes_D6
+#	}
+#	on_roll_failed = {
+#		from = {
+#			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+#		}
+#	}
+#}
+
+tsagoth_digsite = {
+	desc = tsagoth_digsite_desc
+	picture = GFX_evt_alien_ruins
+	stages = 6
+	max_instances = 1
+	weight = 100
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = tsagoth.11
+		icon = GFX_archaeology_runes_E1
+	}
+	stage = {
+		difficulty = 4
+		event = tsagoth.12
+		icon = GFX_archaeology_runes_E2
+	}
+	stage = {
+		difficulty = 4
+		event = tsagoth.13
+		icon = GFX_archaeology_runes_E3
+	}
+	stage = {
+		difficulty = 5
+		event = tsagoth.14
+		icon = GFX_archaeology_runes_E4
+	}
+	stage = {
+		difficulty = 5
+		event = tsagoth.15
+		icon = GFX_archaeology_runes_E5
+	}
+	stage = {
+		difficulty = 6
+		event = tsagoth.16
+		icon = GFX_archaeology_runes_E6
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+
+}

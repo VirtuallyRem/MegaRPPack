@@ -1,0 +1,84 @@
+﻿l_english:
+ feudal_federation:0 "Feudal Realm"
+ feudal_federation_desc:0 "A feudal realm is a union of a higher leader handing out territory and priviliges to followers in exchange for allegiance, taxation and protection"
+
+ feudal_federation_passive:0 "$feudal_federation$"
+ feudal_federation_passive_desc:0 "$feudal_federation_desc$"
+ feudal_federation_passive_effect:0 "Members are subject to the Ruler and cant leave the Realm without the Rulers permission"
+ 
+ building_feudal_estates:0 "Feudal Estates"
+ building_feudal_estates_desc:2 "Estates belonging to the local Feudal Nobility to oversee the land under their name."
+ ##perks
+ feudal_federation_passive:0 "Since the members are subjects to the ruler, they can not leave the realm freely. They can try to fight for it if they feel strong enough."
+
+ feudal_diplo_weight_steal_1:0 "Vassalage"
+ feudal_diplo_weight_steal_1_desc:1 "With our joining we accept the Ruler as the highest official of the realm, we lend our power to him."
+ feudal_diplo_weight_steal_1_effect:1 "Every member transfers §Y10%§! of their §Y$MOD_DIPLO_WEIGHT_MULT$§! to the president."
+ feudal_diplo_weight_steal_2:0 "Union"
+ feudal_diplo_weight_steal_2_desc:1 "With our realm growing a ruler must speak in the name of his people."
+ feudal_diplo_weight_steal_2_effect:1 "Every member transfers §Y10%§! of their §Y$MOD_DIPLO_WEIGHT_MULT$§! to the president."
+ feudal_diplo_weight_steal_3: "Submission"
+ feudal_diplo_weight_steal_3_desc:1 "The ruler is the voice of the realm. What he says the subject do"
+ feudal_diplo_weight_steal_3_effect:1 "Every member transfers §Y10%§! of their §Y$MOD_DIPLO_WEIGHT_MULT$§! to the president."
+ feudal_tax_1:0 "Feudal Duty"
+ feudal_tax_1_desc:1 "In exchange for protection the Ruler demands a share."
+ feudal_tax_2:0 "Scutage"
+ feudal_tax_2_desc:1 "A bigger realm requires more resources. Its only fitting for the vassals to contribute"
+ feudal_tax_3:0 "Taille"
+ feudal_tax_3_desc:1 "All our nobles are rich so its only proper for the King to get a bigger share"
+ feudal_levy_1:0 "Chiefs"
+ feudal_levy_1_desc:1 "The subjects are the swords of the realm."
+ feudal_levy_2:0 "Barons"
+ feudal_levy_2_desc:1 "Bigger domains require more troops to secure"
+ feudal_levy_3:0 "Counts"
+ feudal_levy_3_desc:1 "As we rise so must our army."
+ feudal_levy_4:0 "Dukes"
+ feudal_levy_4_desc:1 "The galaxy is a dangerous place. To keep the realm safe we must raise more levies."
+ 
+ succession_type_strongest_feudal:0 "$succession_type_strongest$"
+ succession_type_strongest_feudal_desc:0 "$succession_type_strongest_desc$"
+ fleet_contribution_low_feudal:0 "$fleet_contribution_low$"
+ fleet_contribution_low_feudal_desc:0 "$fleet_contribution_low_desc$"
+ fleet_contribution_medium_feudal:0 "$fleet_contribution_medium$"
+ fleet_contribution_medium_feudal_desc:0 "$fleet_contribution_medium_desc$"
+ fleet_contribution_high_feudal:0 "$fleet_contribution_high$"
+ fleet_contribution_high_feudal_desc:0 "$fleet_contribution_high_desc$"
+ declare_war_majority_vote_feudal:0 "$declare_war_majority_vote$"
+ declare_war_majority_vote_feudal_desc:0 "$declare_war_majority_vote_desc$"
+ invite_members_president_vote_feudal:0 "$invite_members_president_vote$"
+ invite_members_president_vote_feudal_desc:0 "$invite_members_president_vote_desc$"
+ kick_members_president_vote_feudal:0 "$kick_members_president_vote$"
+ kick_members_president_vote_feudal_desc:0 "$kick_members_president_vote_desc$"
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

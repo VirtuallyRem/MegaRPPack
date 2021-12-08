@@ -1,0 +1,286 @@
+# This is a template which multiple species can use. 
+
+xevil_female_clothes_01 = {
+	default = "gfx/models/portraits/evil/xevil_female_clothes_ruler.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/evil/xevil_female_clothes_admiral.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/evil/xevil_female_clothes_civilian.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/evil/xevil_female_clothes_governor.dds"
+		
+		random = {
+			trigger = {
+					OR = {
+							has_job = enforcer
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_enforcer.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = colonist
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_industrial.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = bureaucrat
+						has_job = entertainer
+						has_job = culture_worker
+						has_job = bio_trophy
+						has_job = fe_hedonist
+					}
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_civilian.dds"
+			}
+		}		
+		
+		random = {
+			trigger = {
+					OR = {
+						has_job = duelist
+						}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_duelist.dds"
+			}
+		}	
+	
+		random = {
+			trigger = {
+					OR = {
+						has_job = artisan
+						has_job = foundry
+						has_job = translucer
+						has_job = gas_refiner
+						has_job = odd_factory_worker
+						has_job = bluelotus_technician
+						has_job = gas_plant_engineer
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_industrial.dds"
+			}
+		}	
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = mote_harvester
+						has_job = miner
+						has_job = crystal_miner
+						has_job = technician
+						has_job = gas_extractor
+						has_job = cave_cleaner
+						has_job = farmer
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_worker.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+					OR = {
+						has_job = slave_overseer
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_overseer.dds"
+			}
+		}
+		
+		random = {
+			trigger = {
+					OR = {
+						has_job = high_priest
+						has_job = priest
+						has_job = preacher
+						}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_preacher.dds"
+			}
+		}	
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = servant
+						}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_servant.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = soldier
+						}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_soldier.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = telepath
+						}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_telepath.dds"
+			}
+		}	
+	
+		random = {
+			trigger = {
+					OR = {
+						has_job = head_researcher
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_headresearcher.dds"
+			}
+		}	
+	
+		random = {
+			trigger = {
+					OR = {
+						has_job = dimensional_portal_researcher
+						has_job = researcher
+						has_job = chemist
+						has_job = healthcare
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_scientist.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = criminal
+						has_job = underground_trade_worker
+						has_job = ratling_scavenger
+					}	
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_criminal.dds"
+			}
+		}
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = noble
+					}
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_noble.dds"
+			}
+		}		
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = administrator
+					}
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_administrator.dds"
+			}
+		}		
+
+		random = {
+			trigger = {
+					OR = {
+						has_job = executive
+						has_job = manager
+						has_job = merchant
+					}
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_trader.dds"
+			}
+		}
+
+		random = {
+			trigger = { is_unemployed = yes }
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_civilian.dds"
+			}
+		}
+
+		"gfx/models/portraits/evil/xevil_female_clothes_civilian.dds" = { is_pop_category = worker }
+		"gfx/models/portraits/evil/xevil_female_clothes_slave.dds" 	 = { OR = { is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/evil/xevil_female_clothes_scientist.dds" = { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/evil/xevil_female_clothes_administrator.dds" = { is_pop_category = ruler }
+
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/evil/xevil_female_clothes_scientist.dds" = { leader_class = scientist }
+		"gfx/models/portraits/evil/xevil_female_clothes_general.dds" = { leader_class = general }
+		"gfx/models/portraits/evil/xevil_female_clothes_admiral.dds" = { leader_class = admiral }
+		"gfx/models/portraits/evil/xevil_female_clothes_governor.dds" = { leader_class = governor }
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/evil/xevil_female_clothes_ruler.dds"
+
+		random = {
+			trigger = { 
+					or = {
+						owner = { has_government = gov_martial_empire }
+					}
+			}
+			list = {
+				"gfx/models/portraits/evil/xevil_female_clothes_ruler.dds"
+			}
+		}
+
+		"gfx/models/portraits/evil/xevil_female_clothes_ruler2.dds" = { owner = { has_generic_government = yes NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_ruler.dds" = { owner = { has_militarist_government = yes NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_ruler3.dds" = { owner = { has_spiritualist_government = yes NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_governor2.dds" = { owner = { has_pacifist_government = yes NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_governor2.dds" = { owner = { has_primitive_government = yes  NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_scientist2.dds" = { owner = { has_materialist_government = yes NOT = { has_authority = auth_imperial } } }
+		"gfx/models/portraits/evil/xevil_female_clothes_royal.dds" = { owner = { has_authority = auth_imperial } }
+
+	}
+}
+
+evil_female_hair_1 = { 
+	default = "gfx/models/portraits/evil_hairs/evil_female_hair_white_style_01.dds"
+	
+	ruler = {
+	default = "gfx/models/portraits/evil_hairs/evil_female_hair_white_style_01.dds"
+	
+		"gfx/models/portraits/evil_hairs/evil_female_hair_white_style_01.dds" = { owner = { has_militarist_government = yes } }
+	}
+}

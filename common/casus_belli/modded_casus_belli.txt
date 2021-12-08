@@ -1,0 +1,131 @@
+cb_ideology = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		exists = from
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_in_federation_with = from
+		}
+	}
+	is_valid = {
+		has_policy_flag = liberation_wars
+		from = { is_country_type = default }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		has_total_war_cb = no
+
+		NOT = { has_same_ethos = from }
+
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_despoliation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+	OR = {
+		has_valid_civic = civic_barbaric_despoilers
+		has_ascension_perk = ap_nihilistic_acquisition
+		has_active_tradition = tr_est_piracy_adopt
+	}
+
+	}
+	is_valid = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_colossus = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		has_technology = "tech_colossus"
+		has_policy_flag = unrestricted_wars
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		is_multiplayer = no
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		any_owned_fleet = { 
+			is_ship_class = shipclass_military_special
+			any_owned_ship = { is_ship_size = colossus } 
+		}
+	}
+}
+
+cb_stop_colossus = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+	is_valid = {
+		is_multiplayer = no
+		has_total_war_cb = no
+		from = { is_country_type = default }
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		from = { 
+			any_owned_fleet = { 
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus } 
+			}
+		}
+		NOT = { 
+			any_owned_fleet = {
+				is_ship_class = shipclass_military_special
+				any_owned_ship = { is_ship_size = colossus } 
+			}
+		}
+	}
+}
+
+cb_hostile_takeover = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_country_type = default
+		has_authority = auth_corporate
+		#NOT = { has_valid_civic = civic_criminal_heritage }
+		is_subject = no
+	}
+	is_valid = {
+		from = { has_authority = auth_corporate }
+		NOT = { is_in_federation_with = from }
+		any_country = {
+			OR = {
+				root = {
+					has_valid_civic = civic_criminal_heritage
+					has_communications = prev
+					has_intel_level = { who = prev category = economy level >= 2 }
+				}
+				has_commercial_pact = root
+				is_in_federation_with = root
+			}
+			any_owned_planet = {
+				has_branch_office = from
+			}
+		}
+	}
+}

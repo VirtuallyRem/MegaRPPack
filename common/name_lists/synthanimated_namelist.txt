@@ -1,0 +1,192 @@
+﻿### Machines
+synthanimatednames = {
+	should_name_home_system_planets = no
+	#selectable = yes
+	randomized = no
+	
+	ship_names = {
+
+		generic = {
+		"XB-3" "XB-4" "XB-5"
+		}
+
+		corvette = {
+			"AV-3" "AV-4" "AV-5"
+
+		}	
+	
+		destroyer = {
+			"GN-3" "GN-4" "GN-5" "GN-1" "GN-2" "GN-6"
+		}
+		
+		cruiser = {
+			"PR-3" "PR-4" "PR-5" "PR-1" "PR-2" "PR-6"
+		}
+		
+		battleship = {
+			"ML-3" "ML-4" "ML-5" "ML-6" "ML-1" "ML-2"
+		}
+		
+		science = { 
+			"XN-3" "XN-4" "XN-5" "XN-6" "XN-1" "XN-2"
+		}
+		
+		colonizer = {
+			"CT-3" "CT-4" "CT-5" "CT-6" "CT-1" "CT-2"
+		}
+		
+		constructor = { 
+			"ZC-3" "ZC-4" "ZC-5" "ZC-6" "ZC-1" "ZC-2"
+		}
+
+		transport = { 
+			"TY-3" "TY-4" "TY-5" "TY-6" "TY-1" "TY-2"
+		}
+		
+
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		#terraform_station = { }
+		observation_station = { }
+		outpost_station = { 
+			#random_names = { }
+		}
+
+		military_station_small = { "KEI-1" "KEI-2" }
+		military_station_medium = { "KPO-1" "KPO-2" }
+		military_station_large = { "KFM-1" }
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = "%O% Strike Fleet"
+	}
+	
+	army_names = {
+		
+		synthbots_assault_1 = {
+			sequential_name = "%O% Invader Squad"
+		}
+
+		synthbots_defense_1 = {
+			sequential_name = "%O% Vigilant Squad"
+		}
+		
+		synthbots_assault_2 = {
+			sequential_name = "%O% Detector Squad"
+		}
+
+		synthbots_defense_2 = {
+			sequential_name = "%O% Invincible Squad"
+		}
+		
+		synthbots_assault_3 = {
+			sequential_name = "%O% Destiny Squad"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				 "BAP-192" "BAP-143" "BAP-175" "BAP-083" "BAP-132" "BAP-048" "BAP-027" "BAP-341" "BAP-048"  "BAP-238" "BAP-038" "BAP-730" "BAP-730" "BAP-307" "BAP-901" "BAP-029" "BAP-632" "BAP-871"
+			}
+		}
+		
+		pc_desert = {
+			names = { 
+				
+			}
+		}
+		
+		pc_tropical = {
+			names = { 
+				
+			}
+		}
+		
+		pc_arid = {
+			names = { 
+				
+			}
+		}
+		
+		pc_continental = {
+			names = { 
+				
+			}
+		}
+		
+		pc_ocean = {
+			names = { 
+				
+			}
+		}
+		
+		pc_tundra = {
+			names = { 
+				
+			}
+		}
+		
+		pc_arctic = {
+			names = { 
+				
+			}
+		}
+
+		pc_savannah = {
+			names = { 
+				
+			}
+		}
+
+		pc_alpine = {
+			names = { 
+				
+			}
+		}
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = { 
+
+				"Ervos" "Alirak" "Berxal" "Avorias" "Terik" "Temarik" "Melria" "Orbatix" "Veruius" "Verial" "Aqse" "Xielan" "Irela" "Zeolad" "Caniral" "Veolid" "Wexol" "Uilak" "Erbot" "Olianix" "Beolik" "Xonar" "Ylux" "Qwertui" "Irlox" "Mosfax" "Ceval" "Peroid" "Sedox" "Porax"
+		
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				
+			}
+			
+			regnal_second_names = {
+				
+			}
+		}
+	}
+
+	ruler_names = {
+		default = {
+			full_names = {
+				Ervos Berxal Terik Orbatix Aqse Verial Melria
+			}
+		}
+	}
+}

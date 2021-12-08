@@ -1,0 +1,6 @@
+embassy = {
+	intel_level = {
+		diplomatic_pacts
+		capital_location
+	}
+}

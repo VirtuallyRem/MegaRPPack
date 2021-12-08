@@ -1,0 +1,124 @@
+##############################################################
+###	PORTRAITS SETTINGS
+### FOR GOBLIN
+##############################################################
+
+portraits = {
+
+	magi_gobchin_jo 	= {
+		entity = "copy_02_male_01_entity"
+		clothes_selector = "magi_gob_huku_jo"
+		hair_selector = "magi_gob_kami_jo"
+		greeting_sound = "humanoid_female_greeting_d"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_gobchin/GOB_JO_01.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_JO_02.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_JO_03.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_JO_04.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_JO_05.dds"
+		}
+	}
+	magi_gobchin_dan 	= {
+		entity = "copy_02_male_01_entity"
+		clothes_selector = "magi_gob_huku_dan"
+		hair_selector = "magi_gob_kami_dan"
+		greeting_sound = "humanoid_male_greeting_a"
+		
+		character_textures = {
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_01a.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_02.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_03.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_04.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_05.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_06.dds"
+			"gfx/models/portraits/magi_gobchin/GOB_DAN_07.dds"
+		}
+	}	
+}
+
+portrait_groups = {
+	magi_gobchin = {
+		default = magi_gobchin_dan
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					magi_gobchin_dan
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					magi_gobchin_jo
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					magi_gobchin_jo
+					magi_gobchin_dan
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					magi_gobchin_jo
+					magi_gobchin_dan
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_gobchin_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_gobchin_dan
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					magi_gobchin_jo
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					magi_gobchin_dan
+				}
+			}
+		}
+	}
+}

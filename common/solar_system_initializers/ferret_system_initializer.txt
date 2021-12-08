@@ -1,0 +1,188 @@
+ #Rlyikkha-Tj'aull System
+
+ ferret_system_initializer = {
+	name = "Rlyikkha-Tj'aul"
+	class = "sc_k"
+
+
+	usage = custom_empire
+
+	flags = { empire_home_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = yes
+	}
+	planet = {
+		name = "Rlyikkha-Tj'aul"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 24
+		has_ring = no 
+	}
+	planet ={
+		name = "Rlyikkha-Qun"
+		class = "pc_molten"
+		orbit_distance = 34
+		orbit_angle = 150
+		size = 9
+		has_ring = no
+	}	
+	
+	planet ={
+		name = "Rlyikkha-Yusta"
+		class = "pc_barren"
+		orbit_distance = 42
+		orbit_angle = 40
+		size = 23
+		has_ring = yes
+	}
+	planet ={
+		name = "Rlyikkha-Hehpiq"
+		class = "pc_barren"
+		orbit_distance = 50
+		orbit_angle = 90
+		size = 12
+		has_ring = no
+	}
+	planet ={
+		name = "Rlyikkha-Driqelis"
+		class = "pc_toxic"
+		orbit_distance = 60
+		orbit_angle = 270
+		size = 23
+		has_ring = no
+
+		moon = {
+			name = "Driqkha-Drileqis"
+			class = "pc_barren"
+			size = 7
+			orbit_distance = 15
+			orbit_angle = 0
+			has_ring = no
+			 
+		}
+
+	}
+	planet ={
+		name = "Rlyikkha-K'hul"
+		class = "pc_crag"
+		orbit_distance = 67
+		orbit_angle = 115
+		size = 24
+		has_ring = no
+		starting_planet = yes
+		modifiers = none
+		
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet {
+		name = "Rlyikkha-Triqlaxis"
+		class = "pc_barren"
+		size = 15
+		orbit_distance = 87
+		orbit_angle = 75
+	}
+	planet ={
+		name = "Rlyikkha-Xisaqknis"
+		class = "pc_gas_giant"
+		orbit_distance = 95
+		orbit_angle = 163
+		size = 36
+		has_ring = yes
+		entity = gas_giant_04_entity
+
+		moon ={
+			name = "Xisaqkha-Dreqlenis"
+			class = "pc_barren"
+			size = 12
+			orbit_distance = 18
+			orbit_angle = 0
+			has_ring = no
+		}
+		moon ={
+			name = "Xisaqkha-Striqlenis"
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 0
+			orbit_angle = 153
+			has_ring = no
+		}
+
+	planet {
+		name = "Rlyikkha-Nqluaxis"
+		class = "pc_crag"
+		size = 19
+		orbit_distance = 103
+		orbit_angle = 174
+		has_ring = yes
+
+		init_effect = {
+            	add_modifier = {
+                modifier = "modifier_marscolony_candidate"
+                days = -1
+            	}
+       	}
+	}
+
+
+	}
+	planet ={
+		name = "Rlyikkha-T'yanis"
+		class = "pc_gas_giant"
+		orbit_distance = 110
+		orbit_angle = 77
+		size = 28
+		has_ring = no
+		entity = "gas_giant_02_entity"
+
+		moon ={
+			name = "T'yankha-Krixqlesis"
+			class = "pc_barren_cold"
+			size = 9
+			orbit_distance = 12
+			orbit_angle = 0
+			has_ring = no
+		}
+	}
+	planet ={
+		name = "Rkyikkha-Jikqantis"
+		class = "pc_frozen"
+		orbit_distance = 122
+		orbit_angle = 44
+		size = 11
+		has_ring = yes
+
+		moon ={
+			name = "Jikqkha-Ghirnqaktis"
+			class = "pc_barren_cold"
+			size = 7
+			orbit_distance = 15
+			orbit_angle = 0
+			has_ring = no
+		}
+	}
+
+
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 2 }
+        hyperlane_jumps = { min = 1 max = 3 }
+        initializer = "neighbor_t1"
+    }
+    neighbor_system = {
+        trigger = { num_guaranteed_colonies >= 1 }
+        hyperlane_jumps = { min = 1 max = 3 }
+        initializer = "neighbor_t1_first_colony"
+    }
+
+ }

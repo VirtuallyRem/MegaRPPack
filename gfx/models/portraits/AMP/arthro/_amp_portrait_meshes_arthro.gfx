@@ -1,0 +1,10 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "portrait_amp_robot_arthro_mesh"
+		file = "gfx/models/portraits/fungoid/fungoid_14_portrait.mesh"
+		animation = { id = "idle"	type = "fungoid_14_happy_animation" }
+		animation = { id = "idle2"	type = "fungoid_14_happy_2_animation" }
+		scale = 2.15
+	}
+}

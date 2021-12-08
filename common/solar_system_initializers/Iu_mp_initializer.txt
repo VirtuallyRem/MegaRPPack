@@ -1,0 +1,182 @@
+
+## Iu System
+#Iu_system_initializer = {
+#	name = "Iu"
+#	class = "sc_b"
+#
+#	usage = custom_empire
+#
+#	flags = { empire_home_system }
+#
+#	init_effect = {
+#		every_neighbor_system = {
+#			set_star_flag = empire_cluster
+#			every_neighbor_system = {
+#				set_star_flag = empire_cluster
+#			}
+#		}
+#
+#		generate_home_system_resources = yes
+#	}
+#
+#	planet = {
+#		name = "Iu"
+#		class = "pc_b_star"
+#		orbit_distance = 0
+#		orbit_angle = 0
+#		size = 40
+#		has_ring = no
+#	}
+#
+#	planet = {
+#		name = "Multar"
+#		class = "pc_molten"
+#		orbit_distance = 50
+#		orbit_angle = 2
+#		size = 19
+#		has_ring = no
+#	}
+#	
+#	
+#		planet = {
+#		name = "Kava"
+#		class = "pc_barren"
+#		orbit_distance = 22
+#		orbit_angle = 20
+#		size = 15
+#		has_ring = no
+#	}
+#
+#		
+#	
+#	
+#	    planet = {
+#		name = "Derad"
+#		class = "pc_barren_cold"
+#		orbit_distance = 20
+#		orbit_angle = 70
+#		size = 21
+#		has_ring = no
+#		
+#		moon = {
+#		name = "Dorad"
+#		class = "pc_frozen"
+#		orbit_distance = 10
+#		orbit_angle = 12
+#		size = 10
+#		has_ring = no
+#	}
+#		
+#	}
+#	
+#
+#	
+#		planet = {
+#		name = "Murad"
+#		class = "pc_gas_giant"
+#		orbit_distance = 60
+#		orbit_angle = 40
+#		size = 29
+#		has_ring = yes
+#		
+#		moon = {
+#			name = "Mora"
+#			class = "pc_barren_cold"
+#			size = 10
+#			orbit_distance = 14
+#			orbit_angle = 191
+#			has_ring = no
+#		}
+#		
+#		moon = {
+#		name = "Nora"
+#		class = "pc_barren_cold"
+#		orbit_distance = 10
+#		orbit_angle = 52
+#		size = 7
+#		has_ring = no
+#	}
+#		
+#	}
+#	
+#		planet = {
+#		name = "Luan"
+#		class = "pc_gas_giant"
+#		orbit_distance = 30
+#		orbit_angle = 90
+#		size = 35
+#		has_ring = no
+#			
+#		moon = {
+#		name = "Mera"
+#		class = "pc_barren"
+#		orbit_distance = 16
+#		orbit_angle = 12
+#		size = 9
+#		has_ring = no
+#	}
+#		moon = {
+#		name = "Urad"
+#		class = "pc_barren_cold"
+#		orbit_distance = 6
+#		orbit_angle = 52
+#		size = 10
+#		has_ring = no
+#	}
+#		moon = {
+#		name = "Iu"
+#		class = "pd_oasis"
+#		orbit_distance = 7
+#		orbit_angle = 30
+#		size = 20
+#		starting_planet = yes
+#		has_ring = no
+#	}	
+#		moon = {
+#		name = "Melrad"
+#		class = "pc_frozen"
+#		orbit_distance = 8
+#		orbit_angle = 52
+#		size = 10
+#		has_ring = no
+#	}
+#	}
+#			
+#		 planet = {
+#		name = "Kmina"
+#		class = "pc_frozen"
+#		orbit_distance = 30
+#		orbit_angle = 170
+#		size = 11
+#		has_ring = no
+#	}
+#	
+#
+#	
+#			 planet = {
+#		name = "Knira"
+#		class = "pc_frozen"
+#		orbit_distance = 30
+#		orbit_angle = 100
+#		size = 12
+#		has_ring = no
+#	}
+#
+#	
+#	
+#
+#
+#		
+#
+#    neighbor_system = {
+#        trigger = { num_guaranteed_colonies >= 2 }
+#        hyperlane_jumps = { min = 1 max = 3 }
+#        initializer = "neighbor_t1"
+#    }
+#    neighbor_system = {
+#        trigger = { num_guaranteed_colonies >= 1 }
+#        hyperlane_jumps = { min = 1 max = 3 }
+#        initializer = "neighbor_t1_first_colony"
+#    }
+#
+#}
